@@ -12,7 +12,7 @@
 .header {
   .inner {
     @include layout-justify-center;
-    padding: 24px 25px;
+    padding: 24px 0 25px;
   }
   .logo {
     display: block;
@@ -35,7 +35,11 @@
     @include font(18px, 500);
   }
   .depth2 {
-    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;right: 0;
+    @include layout-center;
+    background-color: #f9f9f9;
   }
   
 }
