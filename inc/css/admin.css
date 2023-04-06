@@ -63,8 +63,8 @@
   margin-left: 60px;
 }
 .header .nav-item {
-  font-family: 18px;
-  font-size: 500;
+  font-size: 18px;
+  font-weight: 500;
 }
 .header .depth2 {
   display: none;
