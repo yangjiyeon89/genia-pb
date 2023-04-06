@@ -37,4 +37,35 @@
 	*/
 .inner {
   width: 1240px;
+  margin: auto;
+}
+
+.header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 25px;
+}
+.header .logo {
+  display: block;
+  width: 161px;
+  height: 31px;
+  background: url(../../images/common/logo.png);
+}
+.header .nav, .header .left-wrap {
+  display: flex;
+  align-items: center;
+}
+.header .nav {
+  margin-left: 80px;
+}
+.header .nav-list + .nav-list {
+  margin-left: 60px;
+}
+.header .nav-item {
+  font-family: 18px;
+  font-size: 500;
+}
+.header .depth2 {
+  display: none;
 }

@@ -2,6 +2,40 @@
 @import "_mixin.scss";
 @import "_setting.scss";
 
+// common
 .inner {
   width: 1240px;
+  margin: auto;
+}
+
+// header
+.header {
+  .inner {
+    @include layout-justify-center;
+    padding: 24px 25px;
+  }
+  .logo {
+    display: block;
+    width: 161px;
+    height: 31px;
+    background: url(../../images/common/logo.png);
+  }
+  .nav, .left-wrap {
+    @include layout-center;
+  }
+  .nav {
+    margin-left: 80px;
+  }
+  .nav-list {
+    & + .nav-list {
+      margin-left: 60px;
+    }
+  }
+  .nav-item {
+    @include font(18px, 500);
+  }
+  .depth2 {
+    display: none;
+  }
+  
 }

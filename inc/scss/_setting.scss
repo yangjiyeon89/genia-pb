@@ -43,10 +43,14 @@
 	animation: progress_on_animate 2s 0.5s infinite;
 }
 
-@mixin font($fontFamily, $fontSize, $lineheight, $color) {
+@mixin font($fontFamily, $fontSize) {
 	font-family: $fontFamily;
 	font-size: $fontSize;
-	line-height: $lineheight;
+} 
+
+@mixin fontC($fontFamily, $fontSize, $color) {
+	font-family: $fontFamily;
+	font-size: $fontSize;
 	color: $color;
 } 
 
