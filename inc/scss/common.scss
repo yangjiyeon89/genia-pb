@@ -1,3 +1,121 @@
 @charset "UTF-8";
 @import "_mixin.scss";
 @import "_setting.scss";
+
+.guide {
+	padding: 0 30px 60px;
+	background-color: #fafafa;
+	h1 {
+		margin: 60px 0px 15px;
+    font-size: 22px;
+	}
+	h2 {
+		margin: 40px 0px 10px;
+    font-size: 18px;
+	}
+	> button {
+		margin-bottom: 10px;
+	}
+	.btn-wrap {
+		margin-bottom: 10px;
+	}
+}
+
+// components
+
+// button
+[class^='btn-'] , [class^='a.btn-'] {
+	@include layout-center-center;
+	box-sizing: border-box;
+}
+.btn-lg {
+	min-width: 200px;
+	height: 45px;
+	color: #fff;
+	font-size: 15px;
+	background-color: #333;
+}
+.btn-md {
+	min-width: 80px;
+	height: 34px;
+	color: #fff;
+	font-size: 15px;
+	background-color: #333;
+
+padding: 0 16px;
+}
+.btn-sm {
+	min-width: 80px;
+	height: 30px;
+	color: #fff;
+	font-size: 15px;
+	background-color: #333;
+	padding: 0 16px;
+}
+.btn-xs {
+	min-width: 70px;
+	height: 25px;
+	color: #fff;
+	font-size: 15px;
+	background-color: #333;
+}
+.bg-blue {
+	background-color: #108eff;
+}
+.bg-gray {
+	background-color: #6a6a6a;
+}
+
+.btn-wrap {
+	@include layout-center-center;
+	gap: 10px;
+
+	&.full {
+		button {
+			flex: 1;
+		}
+	}
+}
+
+//tab
+.tab-wrap {
+.contents {
+	display: none;
+	&.on {
+		display: block;
+	}
+}
+}
+[class^='tab-menu-'] {
+@include content-center;
+li {
+	a {
+		@include content-center-center;
+		font-size: 16px;
+		box-sizing: border-box;
+	}
+}
+}
+.tab-menu-type01 {
+li {
+	a {
+		width: 200px;
+		height: 50px;
+		background-color: #fff;
+		border: 1px solid $color-line;
+		border-left: 0;
+	}
+	&:nth-child(1) { 
+		a {
+			border-left: 1px solid $color-line; 
+		}
+	}
+	&.active {
+		a {
+			color: #fff;
+			border: 1px solid #333333;
+			background-color: #333333;
+		}
+	}
+}
+}

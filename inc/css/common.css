@@ -17,3 +17,115 @@
 	* 100% 보다 더 크게 적용 하고 싶으면 return 부분을 수정하면됨.
 	* 참고사이트 http://sassbreak.com/viewport-relative-headings-with-sass/
 	*/
+.guide {
+  padding: 0 30px 60px;
+  background-color: #fafafa;
+}
+.guide h1 {
+  margin: 60px 0px 15px;
+  font-size: 22px;
+}
+.guide h2 {
+  margin: 40px 0px 10px;
+  font-size: 18px;
+}
+.guide > button {
+  margin-bottom: 10px;
+}
+.guide .btn-wrap {
+  margin-bottom: 10px;
+}
+
+[class^=btn-], [class^="a.btn-"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.btn-lg {
+  min-width: 200px;
+  height: 45px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #333;
+}
+
+.btn-md {
+  min-width: 80px;
+  height: 34px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #333;
+  padding: 0 16px;
+}
+
+.btn-sm {
+  min-width: 80px;
+  height: 30px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #333;
+  padding: 0 16px;
+}
+
+.btn-xs {
+  min-width: 70px;
+  height: 25px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #333;
+}
+
+.bg-blue {
+  background-color: #108eff;
+}
+
+.bg-gray {
+  background-color: #6a6a6a;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.btn-wrap.full button {
+  flex: 1;
+}
+
+.tab-wrap .contents {
+  display: none;
+}
+.tab-wrap .contents.on {
+  display: block;
+}
+
+[class^=tab-menu-] {
+  display: inline-flex;
+  align-items: center;
+}
+[class^=tab-menu-] li a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.tab-menu-type01 li a {
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #cbcbcb;
+  border-left: 0;
+}
+.tab-menu-type01 li:nth-child(1) a {
+  border-left: 1px solid #cbcbcb;
+}
+.tab-menu-type01 li.active a {
+  color: #fff;
+  border: 1px solid #333333;
+  background-color: #333333;
+}

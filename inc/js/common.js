@@ -23,4 +23,25 @@ $(function(){
   $(document).ready(function(){
     checkCurrentGnb();
   })
+
+  
+  // tab
+  let tabBtn = $('.ui-tab-btn');
+
+  function tabUI() {
+    let _this = $(this);
+    let _cnt = $(this).parents('.tab-wrap').find('.contents');
+    let _idx = $(this).index();
+
+
+    if (!_this.hasClass('active')) {
+      _this.siblings().removeClass('active');
+      _this.addClass('active');
+      _cnt.removeClass('on');
+      _cnt.eq(_idx).addClass('on');
+    }
+    console.log(_idx)
+  }
+
+  tabBtn.on('click', tabUI);
 })
