@@ -291,57 +291,62 @@ input[type="checkbox"] {
     }
   }
 }
-.select-btn {
-  position: relative;
-  @include layout-center;
-  width: 100px;
-	height: 30px;
-  padding: 10px 8px;
-  margin-bottom: 0;
-  color: #333;
-	font-size: 14px;
-  border: 1px solid $color-line;
-  box-sizing: border-box;
-  background-color: #fff;
-
-  &::after {
-    position: absolute;
-    right: 7px;
-    top: 50%;
-    @include virtual-selector;
-    width: 9px;
-		height: 8px;
-    margin-top: -4px;
-    background: url(../../images/common/select_arrow.png) no-repeat;
-    background-size: contain;    
-  }
-  &.active {
-    &::after {
-      transform: rotate(-180deg);
-    }
-  }
-}
-.select-list {
-  display: none;
-  overflow-y: overlay;
-  position: relative;
-  top: -2px;
-  width: 100px;
-  background: #fff;
-  border: 1px solid $color-line;
-  box-sizing: border-box;
-  z-index: 1;
-  a {
-    display: block;
-    padding: 0px 13px 10px;
-    color: #333;
+.select-wrap {
+	position: relative;
+	display: inline-block;
+	.select-btn {
+		position: relative;
+		@include layout-center;
+		width: 100px;
+		height: 30px;
+		padding: 10px 8px;
+		margin-bottom: 0;
+		color: #333;
 		font-size: 14px;
-    box-sizing: border-box;
-  }
-	li {
-		&:nth-child(1) {
-			a {
-				padding-top: 10px;
+		border: 1px solid $color-line;
+		box-sizing: border-box;
+		background-color: #fff;
+		&::after {
+			position: absolute;
+			right: 7px;
+			top: 50%;
+			@include virtual-selector;
+			width: 9px;
+			height: 8px;
+			margin-top: -4px;
+			background: url(../../images/common/select_arrow.png) no-repeat;
+			background-size: contain;    
+		}
+		&.active {
+			&::after {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	.select-list {
+		display: none;
+		overflow-y: overlay;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		margin-top: -1px;
+		background: #fff;
+		border: 1px solid $color-line;
+		box-sizing: border-box;
+		z-index: 1;
+		a {
+			display: block;
+			padding: 0px 13px 10px;
+			color: #333;
+			font-size: 14px;
+			box-sizing: border-box;
+		}
+		li {
+			&:nth-child(1) {
+				a {
+					padding-top: 10px;
+				}
 			}
 		}
 	}

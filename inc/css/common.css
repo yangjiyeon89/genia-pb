@@ -321,7 +321,11 @@ input[type=checkbox]:checked + label::before {
   background-size: contain;
 }
 
-.select-btn {
+.select-wrap {
+  position: relative;
+  display: inline-block;
+}
+.select-wrap .select-btn {
   position: relative;
   display: flex;
   align-items: center;
@@ -335,7 +339,7 @@ input[type=checkbox]:checked + label::before {
   box-sizing: border-box;
   background-color: #fff;
 }
-.select-btn::after {
+.select-wrap .select-btn::after {
   position: absolute;
   right: 7px;
   top: 50%;
@@ -348,29 +352,29 @@ input[type=checkbox]:checked + label::before {
   background: url(../../images/common/select_arrow.png) no-repeat;
   background-size: contain;
 }
-.select-btn.active::after {
+.select-wrap .select-btn.active::after {
   transform: rotate(-180deg);
 }
-
-.select-list {
+.select-wrap .select-list {
   display: none;
   overflow-y: overlay;
-  position: relative;
-  top: -2px;
-  width: 100px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  margin-top: -1px;
   background: #fff;
   border: 1px solid #cbcbcb;
   box-sizing: border-box;
   z-index: 1;
 }
-.select-list a {
+.select-wrap .select-list a {
   display: block;
   padding: 0px 13px 10px;
   color: #333;
   font-size: 14px;
   box-sizing: border-box;
 }
-.select-list li:nth-child(1) a {
+.select-wrap .select-list li:nth-child(1) a {
   padding-top: 10px;
 }
 
