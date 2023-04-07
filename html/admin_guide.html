@@ -191,7 +191,7 @@
   </div>
 
   <h1>Popup</h1>
-  <h2>type A</h2>
+  <h2>table type</h2>
   <div class="pop-wrap table-type">
     <div class="pop-inner">
       <div class="pop-header">
@@ -199,11 +199,133 @@
         <button type="button" class="pop-close"></button>
       </div>
       <div class="pop-content">
-        <div style="height: 50px;">임시 div</div>
+        <table>
+          <colgroup>
+            <col width="150px">
+            <col width="*">
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>출판사</th>
+              <td>
+                <div class="select-wrap full">
+                  <button type="button" class="select-btn">선택</button>
+                  <ul class="select-list">
+                    <li>
+                      <a href="javascript:;">선택1</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">선택2</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>교과서명</th>
+              <td>
+                <input type="text" class="full" placeholder="교과서명을 입력하세요.">
+              </td>
+            </tr>
+            <tr>
+              <th>학교급</th>
+              <td>
+                <div class="select-wrap full">
+                  <button type="button" class="select-btn">선택</button>
+                  <ul class="select-list">
+                    <li>
+                      <a href="javascript:;">선택1</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">선택2</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>학년</th>
+              <td>
+                <div class="select-wrap full">
+                  <button type="button" class="select-btn">선택</button>
+                  <ul class="select-list">
+                    <li>
+                      <a href="javascript:;">선택1</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">선택2</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>학기</th>
+              <td>
+                <div class="select-wrap full">
+                  <button type="button" class="select-btn">선택</button>
+                  <ul class="select-list">
+                    <li>
+                      <a href="javascript:;">선택1</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">선택2</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>과목</th>
+              <td>
+                <div class="select-wrap full">
+                  <button type="button" class="select-btn">선택</button>
+                  <ul class="select-list">
+                    <li>
+                      <a href="javascript:;">선택1</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">선택2</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>교육과정</th>
+              <td>
+                <div class="select-wrap full">
+                  <button type="button" class="select-btn">선택</button>
+                  <ul class="select-list">
+                    <li>
+                      <a href="javascript:;">선택1</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">선택2</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="pop-footer">
         <button type="button" class="btn-lg">취소</button>
         <button type="button" class="btn-lg">등록</button>
+      </div>
+    </div>
+  </div>
+  <h2>alert type</h2>
+  <div class="pop-wrap alert-type">
+    <div class="pop-inner">
+      <div class="pop-content">
+        <button type="button" class="pop-close"></button>
+        <span class="txt">선택한 항목을<br>삭제하시겠습니까?</span>
+      </div>
+      <div class="pop-footer">
+        <button type="button" class="btn-lg">확인</button>
+        <button type="button" class="btn-lg">취소</button>
       </div>
     </div>
   </div>
