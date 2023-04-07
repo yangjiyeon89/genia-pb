@@ -45,6 +45,24 @@
   height: 100vh;
 }
 
+.scroll-inner {
+  overflow: auto;
+}
+.scroll-inner::-webkit-scrollbar {
+  width: 20px;
+  border: 1px solid #cbcbcb;
+}
+.scroll-inner::-webkit-scrollbar-thumb {
+  border: 1px solid #cbcbcb;
+  border-bottom: 0;
+  border-top: 0;
+  background-color: #ececec;
+}
+.scroll-inner::-webkit-scrollbar-button:start:decrement, .scroll-inner::-webkit-scrollbar-button:end:increment {
+  display: block;
+  height: 1px;
+}
+
 .header {
   position: relative;
 }
