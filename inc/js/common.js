@@ -24,7 +24,6 @@ $(function(){
   let _navItem = $('.nav li');
   let _dep1Item = $('.nav-item')
   let _dep2List = $('.depth2-wrap');
-  let _dep2Item = $('.depth2-item');
 
   function inMenu(){
 
