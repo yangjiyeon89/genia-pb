@@ -7,6 +7,10 @@
   width: 1240px;
   margin: auto;
 }
+.h100 {
+  position: relative;
+  height: 100vh;
+}
 
 // header
 .header {
@@ -90,5 +94,104 @@
       background-size: 161px 31px;
       background-position: center;
     }
+  }
+}
+.login-cnt {
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  .login-tit {
+    margin-bottom: 55px;
+    @include font(34px, 500);    
+  }
+  .form-wrap {
+    width: 384px;
+    padding-bottom: 30px;
+    margin: 0 auto 30px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .id-input, .pw-input, .btn-login {
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+  }
+  .id-wrap, .pw-wrap {
+    position: relative;
+  }
+  .pw-wrap {
+    margin-top: 10px;
+  }
+  .id-input, .pw-input {
+    padding: 20px 50px 20px 20px;
+    font-size: 16px;
+    border: 1px solid #d1d1d1;
+    outline: 0;
+    box-sizing: border-box;
+    &:focus {
+      border-color: #108eff;
+    }
+    &::placeholder {
+      color: #a4a4a4;
+    }
+  }
+  .id-input {
+    &:focus {
+      & + label {
+        background: url(../../images/common/ico_person_on.png) no-repeat;
+      }
+    }
+  }
+  .pw-input {
+    &:focus {
+      & + label {
+        background: url(../../images/common/ico_lock_on.png) no-repeat;
+      }
+    }
+  }
+  .id-label, .pw-label {
+    position: absolute;
+  }
+  .id-label {
+    top: 17px;right: 21px;
+    width: 19px;height: 22px;
+    background: url(../../images/common/ico_person.png) no-repeat;
+  }
+  .pw-label {
+    top: 15px;right: 18px;
+    width: 22px;height: 28px;
+    background: url(../../images/common/ico_lock.png) no-repeat;
+  }
+  .btn-login {
+    color: #fff;
+    font-size: 18px;
+    background-color: #108eff;
+  }
+  .chk-wrap {
+    margin: 24px 0 20px;
+    text-align: left;
+  }
+  .id-save {
+    & + label {
+      padding-left: 34px;
+      font-weight: 500;
+      &::before {
+        top: 4px;
+        width: 24px;height: 24px;
+        border-radius: 100%;
+        background: url(../../images/common/ico_check.png) no-repeat center;
+      }
+    }
+    &:checked {
+      & + label {
+        &::before {
+          background: url(../../images/common/ico_check_on.png) no-repeat center;
+        }
+      }
+    }
+  }
+  .desc {
+    color: #909090;
+    font-size: 15px;
   }
 }
