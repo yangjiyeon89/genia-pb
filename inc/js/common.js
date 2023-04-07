@@ -26,8 +26,6 @@ $(function(){
   let _dep2List = $('.depth2-wrap');
 
   function inMenu(){
-
-    $(this).parents('.header').addClass('on');
     let _this = $(this).find('> a');
 
     if(!_this.hasClass('active')){
