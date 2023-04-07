@@ -67,4 +67,39 @@ $(function(){
   }
 
   tabBtn.on('click', tabUI);
+
+
+  // select
+  let selectBtn = $('.select-btn');
+
+  function selectUI() {
+    let _this = $(this);
+    let _cnt = $(this).next();
+
+    if (!_this.hasClass('active')) {
+      _this.addClass('active');
+      _cnt.stop().slideDown('fast');
+    } else {
+      _cnt.stop().slideUp('fast', function () {
+        _this.removeClass('active');
+      })
+    }
+  }
+  selectBtn.on('click', selectUI);
+
+
+  // paging
+  let pageBtn = $('.page');
+
+  function pageFunc() {
+    let _this = $(this);
+
+    if (!_this.hasClass('active')) {
+      pageBtn.removeClass('active');
+      _this.addClass('active')
+    }
+  }
+
+  pageBtn.on('click', pageFunc);
+  
 });
