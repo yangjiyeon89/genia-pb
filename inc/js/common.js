@@ -3,26 +3,72 @@ $(function(){
   function checkCurrentGnb () {
     var _className = $('#wrap').attr('class'),
       _afterStr = _className ? _className.split(" ") : '',
-      _gnbMenuLink = $('.nav > ul > li');
-      _gnbMenuLinkDepth02 = $('.depth2').find('li');
-      _gnbMenuLinkMo = $('.menu-list > li');
+      _gnbMenuLink = $('.nav-list');
+      _gnbDepth02 = $('.depth2-wrap');
+      _gnbDepth02Item = $('.depth2-list');
 
     switch (_afterStr[0]) {
       case 'admin01_01':
-        _gnbMenuLink.eq(0).addClass('active');
-        _gnbMenuLink.eq(0).find(_gnbMenuLinkDepth02).eq(0).addClass('active');
-        
-        _gnbMenuLinkMo.eq(0).find('> a').addClass('active');
-        _gnbMenuLinkMo.eq(0).find('> a').find('em').text('-');
-        _gnbMenuLinkMo.eq(0).find('.depth2').slideDown();
-        _gnbMenuLinkMo.eq(0).find(_gnbMenuLinkDepth02).eq(0).addClass('active');
+        _gnbMenuLink.eq(0).find('> a').addClass('active');
+        _gnbMenuLink.eq(0).find(_gnbDepth02).addClass('on');
+        _gnbMenuLink.eq(0).find(_gnbDepth02).find(_gnbDepth02Item).eq(0).find('> a').addClass('active');
 
         break;
     }
   }
   $(document).ready(function(){
     checkCurrentGnb();
+    dep2Menu();
   })
+
+  //header
+  let _navItem = $('.nav li');
+  let _dep1Item = $('.nav-item')
+  let _dep2List = $('.depth2-wrap');
+  let _dep2Item = $('.depth2-item');
+
+  function inMenu(){
+
+
+    let _this = $(this).find('> a');
+
+    if(!_this.hasClass('active')){
+      $('.depth2-item').removeClass('active');
+      _dep1Item.removeClass('active');
+      _this.addClass('active');
+      _dep2List.removeClass('on');
+      _this.next(_dep2List).addClass('on');
+    }
+
+    _this.on('mouseout', function(){
+      _dep1Item.removeClass('active');
+      _dep2List.removeClass('on');
+      checkCurrentGnb();
+    })
+  }
+
+  _navItem.on('mouseover', inMenu);
+
+  function dep2Menu(){
+    let arr = [];
+
+    $('.nav-list').each(function(){
+      let _left = $(this).find('.nav-item').position().left;    
+      arr.push(_left);
+    })
+
+    console.log(arr)
+
+    for(var i = 0; i < 3; i++) {
+      $('.nav-list').eq(i).find('.depth2').css('left' , arr[i]);
+    }
+  }
+  
+  $(window).resize(function(){
+    dep2Menu();
+  })
+   
+  
 
   
   // tab
@@ -44,4 +90,4 @@ $(function(){
   }
 
   tabBtn.on('click', tabUI);
-})
+});
