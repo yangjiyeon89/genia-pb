@@ -62,7 +62,7 @@
   display: block;
   width: 161px;
   height: 31px;
-  background: url(../../images/common/logo.png);
+  background: url(../../images/common/logo.png) no-repeat;
 }
 .header .nav, .header .left-wrap {
   display: flex;
@@ -110,4 +110,16 @@
 }
 .header .depth2-item:hover, .header .depth2-item.active {
   color: #333;
+}
+
+.admin-login .header {
+  border-bottom: 1px solid #dddddd;
+}
+.admin-login .header::after {
+  display: none;
+}
+.admin-login .header .logo {
+  height: 80px;
+  background-size: 161px 31px;
+  background-position: center;
 }
