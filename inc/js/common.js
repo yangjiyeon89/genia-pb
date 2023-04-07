@@ -18,7 +18,6 @@ $(function(){
   }
   $(document).ready(function(){
     checkCurrentGnb();
-    dep2Menu();
   })
 
   //header
@@ -29,7 +28,7 @@ $(function(){
 
   function inMenu(){
 
-
+    $(this).parents('.header').addClass('on');
     let _this = $(this).find('> a');
 
     if(!_this.hasClass('active')){
@@ -48,27 +47,6 @@ $(function(){
   }
 
   _navItem.on('mouseover', inMenu);
-
-  function dep2Menu(){
-    let arr = [];
-
-    $('.nav-list').each(function(){
-      let _left = $(this).find('.nav-item').position().left;    
-      arr.push(_left);
-    })
-
-    console.log(arr)
-
-    for(var i = 0; i < 3; i++) {
-      $('.nav-list').eq(i).find('.depth2').css('left' , arr[i]);
-    }
-  }
-  
-  $(window).resize(function(){
-    dep2Menu();
-  })
-   
-  
 
   
   // tab

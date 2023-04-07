@@ -10,6 +10,14 @@
 
 // header
 .header {
+  position: relative;
+  &::after {
+    @include virtual-selector;
+    width: 100%;height: 50px;
+    position: absolute;
+    top: 100%;
+    background-color: #f9f9f9;
+  }
   .inner {
     @include layout-justify-center;
   }
@@ -25,7 +33,9 @@
   .nav {
     margin-left: 50px;
   }
-
+  .nav-list {
+    position: relative;
+  }
   .nav-item {
     display: block;
     padding: 24px 30px 25px;
@@ -37,9 +47,10 @@
   .depth2-wrap {
     display: none;
     position: absolute;
-    top: 70px;
-    left: 0;right: 0;
-    background-color: #f9f9f9;
+    top: 100%;
+    left: 0;
+    width: max-content;
+    z-index: 1;
     &.on {
       display: block;
     }
@@ -51,13 +62,13 @@
   .depth2-list {
     &:nth-child(1) {
       .depth2-item {
-        padding-left: 0;
+        padding-left: 30px;
       }
     }
   }
   .depth2-item {
     display: block;
-    padding: 18px 13px 17px;
+    padding: 15px 13px 14px;
     color: #9e9e9e;
     font-weight: 500;
     &:hover, &.active {
