@@ -140,6 +140,20 @@
   <h2>Inputbox</h2>
   <input type="text" placeholder="검색어 입력">
   <input type="text" class="full" placeholder="검색어를 입력해주세요">
+  <div class="input-wrap">
+    <div class="select-wrap">
+      <button type="button" class="select-btn">선택</button>
+      <ul class="select-list">
+        <li>
+          <a href="javascript:;">선택1</a>
+        </li>
+        <li>
+          <a href="javascript:;">선택2</a>
+        </li>
+      </ul>
+    </div>
+    <input type="text" placeholder="검색어 입력">
+  </div>
   
   <h2>Radio&Checkbox</h2>
 
@@ -191,49 +205,129 @@
   </div>
 
   <h1>Table</h1>
+  <h2>type 01</h2>
   <div class="table-wrap type01">
-
-  </div>
-  <div class="table-wrap type02">
     <table>
       <colgroup>
-        <col width="150px">
+        <col width="130px">
+        <col width="*">
+        <col width="130px">
+        <col width="*">
+        <col width="130px">
         <col width="*">
       </colgroup>
       <tbody>
         <tr>
           <th>출판사</th>
           <td>
-            
+            <div class="select-wrap w200">
+              <button type="button" class="select-btn">선택</button>
+              <ul class="select-list">
+                <li>
+                  <a href="javascript:;">선택1</a>
+                </li>
+                <li>
+                  <a href="javascript:;">선택2</a>
+                </li>
+              </ul>
+            </div>
           </td>
-        </tr>
-        <tr>
-          <th>교과서명</th>
-          <td>
-          </td>
-        </tr>
-        <tr>
           <th>학교급</th>
           <td>
-            
+            <div class="select-wrap w200">
+              <button type="button" class="select-btn">선택</button>
+              <ul class="select-list">
+                <li>
+                  <a href="javascript:;">선택1</a>
+                </li>
+                <li>
+                  <a href="javascript:;">선택2</a>
+                </li>
+              </ul>
+            </div>
           </td>
-        </tr>
-        <tr>
           <th>학년</th>
           <td>
-
+            <div class="select-wrap w200">
+              <button type="button" class="select-btn">선택</button>
+              <ul class="select-list">
+                <li>
+                  <a href="javascript:;">선택1</a>
+                </li>
+                <li>
+                  <a href="javascript:;">선택2</a>
+                </li>
+              </ul>
+            </div>
           </td>
         </tr>
         <tr>
           <th>학기</th>
           <td>
-
+            <div class="select-wrap w200">
+              <button type="button" class="select-btn">선택</button>
+              <ul class="select-list">
+                <li>
+                  <a href="javascript:;">선택1</a>
+                </li>
+                <li>
+                  <a href="javascript:;">선택2</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+          <th>과목</th>
+          <td>
+            <div class="select-wrap w200">
+              <button type="button" class="select-btn">선택</button>
+              <ul class="select-list">
+                <li>
+                  <a href="javascript:;">선택1</a>
+                </li>
+                <li>
+                  <a href="javascript:;">선택2</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+          <th>교육과정</th>
+          <td>
+            <div class="select-wrap w200">
+              <button type="button" class="select-btn">선택</button>
+              <ul class="select-list">
+                <li>
+                  <a href="javascript:;">선택1</a>
+                </li>
+                <li>
+                  <a href="javascript:;">선택2</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>검색</th>
+          <td colspan="2">
+            <div class="input-wrap">
+              <div class="select-wrap">
+                <button type="button" class="select-btn">선택</button>
+                <ul class="select-list">
+                  <li>
+                    <a href="javascript:;">선택1</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">선택2</a>
+                  </li>
+                </ul>
+              </div>
+              <input type="text" placeholder="검색어 입력">
+            </div>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-
+  
   <h1>Popup</h1>
   <h2>table type</h2>
   <div class="pop-wrap table-type">
@@ -243,116 +337,118 @@
         <button type="button" class="pop-close"></button>
       </div>
       <div class="pop-content">
-        <table>
-          <colgroup>
-            <col width="150px">
-            <col width="*">
-          </colgroup>
-          <tbody>
-            <tr>
-              <th>출판사</th>
-              <td>
-                <div class="select-wrap full">
-                  <button type="button" class="select-btn">선택</button>
-                  <ul class="select-list">
-                    <li>
-                      <a href="javascript:;">선택1</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;">선택2</a>
-                    </li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>교과서명</th>
-              <td>
-                <input type="text" class="full" placeholder="교과서명을 입력하세요.">
-              </td>
-            </tr>
-            <tr>
-              <th>학교급</th>
-              <td>
-                <div class="select-wrap full">
-                  <button type="button" class="select-btn">선택</button>
-                  <ul class="select-list">
-                    <li>
-                      <a href="javascript:;">선택1</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;">선택2</a>
-                    </li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>학년</th>
-              <td>
-                <div class="select-wrap full">
-                  <button type="button" class="select-btn">선택</button>
-                  <ul class="select-list">
-                    <li>
-                      <a href="javascript:;">선택1</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;">선택2</a>
-                    </li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>학기</th>
-              <td>
-                <div class="select-wrap full">
-                  <button type="button" class="select-btn">선택</button>
-                  <ul class="select-list">
-                    <li>
-                      <a href="javascript:;">선택1</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;">선택2</a>
-                    </li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>과목</th>
-              <td>
-                <div class="select-wrap full">
-                  <button type="button" class="select-btn">선택</button>
-                  <ul class="select-list">
-                    <li>
-                      <a href="javascript:;">선택1</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;">선택2</a>
-                    </li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <th>교육과정</th>
-              <td>
-                <div class="select-wrap full">
-                  <button type="button" class="select-btn">선택</button>
-                  <ul class="select-list">
-                    <li>
-                      <a href="javascript:;">선택1</a>
-                    </li>
-                    <li>
-                      <a href="javascript:;">선택2</a>
-                    </li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrap type01">
+          <table>
+            <colgroup>
+              <col width="150px">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>출판사</th>
+                <td>
+                  <div class="select-wrap full">
+                    <button type="button" class="select-btn">선택</button>
+                    <ul class="select-list">
+                      <li>
+                        <a href="javascript:;">선택1</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">선택2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>교과서명</th>
+                <td>
+                  <input type="text" class="full" placeholder="교과서명을 입력하세요.">
+                </td>
+              </tr>
+              <tr>
+                <th>학교급</th>
+                <td>
+                  <div class="select-wrap full">
+                    <button type="button" class="select-btn">선택</button>
+                    <ul class="select-list">
+                      <li>
+                        <a href="javascript:;">선택1</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">선택2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>학년</th>
+                <td>
+                  <div class="select-wrap full">
+                    <button type="button" class="select-btn">선택</button>
+                    <ul class="select-list">
+                      <li>
+                        <a href="javascript:;">선택1</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">선택2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>학기</th>
+                <td>
+                  <div class="select-wrap full">
+                    <button type="button" class="select-btn">선택</button>
+                    <ul class="select-list">
+                      <li>
+                        <a href="javascript:;">선택1</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">선택2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>과목</th>
+                <td>
+                  <div class="select-wrap full">
+                    <button type="button" class="select-btn">선택</button>
+                    <ul class="select-list">
+                      <li>
+                        <a href="javascript:;">선택1</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">선택2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>교육과정</th>
+                <td>
+                  <div class="select-wrap full">
+                    <button type="button" class="select-btn">선택</button>
+                    <ul class="select-list">
+                      <li>
+                        <a href="javascript:;">선택1</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">선택2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <div class="pop-footer">
         <button type="button" class="btn-lg">취소</button>

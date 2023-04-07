@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터 관리자</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common.css">
+  <link rel="stylesheet" href="../inc/css/admin.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div id="wrap" class="admin03_01">
+    <div class="header">
+      <div class="inner">
+        <div class="left-wrap">
+          <div class="logo-wrap">
+            <a href="javascirpt:;" class="logo"></a>
+          </div>
+          <div class="gnb">
+            <ul class="nav">
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">콘텐츠 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">문항 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">차시별 콘텐츠 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">기초 데이터 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">교과서 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">성취기준 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">시중고재 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">서비스 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">기초 데이터 등록</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">운영 통계</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">사이트 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-xs bg-gray">로그아웃</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="inner">
+        <div class="tab-wrap">
+          <ul class="tab-menu-type01">
+            <li class="ui-tab-btn active">
+              <a href="javascript:;">교과서</a>
+            </li>
+            <li class="ui-tab-btn">
+              <a href="javascript:;">성취기준</a>
+            </li>
+            <li class="ui-tab-btn">
+              <a href="javascript:;">시중교재</a>
+            </li>
+          </ul>
+          <div class="contents on">
+            <div class="table-wrap type01">
+              <table>
+                <colgroup>
+                  <col width="130px">
+                  <col width="*">
+                  <col width="130px">
+                  <col width="*">
+                  <col width="130px">
+                  <col width="*">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>출판사</th>
+                    <td>
+                      <div class="select-wrap w200">
+                        <button type="button" class="select-btn">선택</button>
+                        <ul class="select-list">
+                          <li>
+                            <a href="javascript:;">선택1</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;">선택2</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <th>학교급</th>
+                    <td>
+                      <div class="select-wrap w200">
+                        <button type="button" class="select-btn">선택</button>
+                        <ul class="select-list">
+                          <li>
+                            <a href="javascript:;">선택1</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;">선택2</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <th>학년</th>
+                    <td>
+                      <div class="select-wrap w200">
+                        <button type="button" class="select-btn">선택</button>
+                        <ul class="select-list">
+                          <li>
+                            <a href="javascript:;">선택1</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;">선택2</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>학기</th>
+                    <td>
+                      <div class="select-wrap w200">
+                        <button type="button" class="select-btn">선택</button>
+                        <ul class="select-list">
+                          <li>
+                            <a href="javascript:;">선택1</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;">선택2</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <th>과목</th>
+                    <td>
+                      <div class="select-wrap w200">
+                        <button type="button" class="select-btn">선택</button>
+                        <ul class="select-list">
+                          <li>
+                            <a href="javascript:;">선택1</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;">선택2</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                    <th>교육과정</th>
+                    <td>
+                      <div class="select-wrap w200">
+                        <button type="button" class="select-btn">선택</button>
+                        <ul class="select-list">
+                          <li>
+                            <a href="javascript:;">선택1</a>
+                          </li>
+                          <li>
+                            <a href="javascript:;">선택2</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>검색</th>
+                    <td colspan="2">
+                      <div class="input-wrap">
+                        <div class="select-wrap">
+                          <button type="button" class="select-btn">선택</button>
+                          <ul class="select-list">
+                            <li>
+                              <a href="javascript:;">선택1</a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">선택2</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <input type="text" placeholder="검색어 입력">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btn-wrap md-default">
+              <button type="button" class="btn-md">초기화</button>
+              <button type="button" class="btn-md bg-blue">검색</button>
+            </div>
+            <div class="table-wrap type02">
+              <div class="table-top">
+                <div class="">
+                  <span>총 0개</span>
+                  <div class="select-wrap">
+                    <button type="button" class="select-btn">30개</button>
+                    <ul class="select-list">
+                      <li>
+                        <a href="javascript:;">60개</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">90개</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn-wrap">
+                  <button type="button" class="btn-md">등록</button>
+                  <button type="button" class="btn-md">삭제</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contents">
+            [sub03_01_02.html] 탭으로 구현
+          </div>
+          <div class="contents">
+            [sub03_01_03.html] 탭으로 구현
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

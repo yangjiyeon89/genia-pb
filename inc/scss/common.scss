@@ -38,6 +38,23 @@
 	position: relative;
 	height: 100vh;
 }
+.scroll-inner {
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 20px;
+    border: 1px solid #cbcbcb;
+  }
+  &::-webkit-scrollbar-thumb {  
+    border: 1px solid #cbcbcb;
+    border-bottom: 0 ;
+    border-top: 0;
+    background-color: #ececec;    
+  } 
+  &::-webkit-scrollbar-button:start:decrement, &::-webkit-scrollbar-button:end:increment{
+    display:block;
+    height:1px;
+  }
+}
 .dim {
   display: none;
   position: fixed;
@@ -365,6 +382,10 @@ input[type="checkbox"] {
 		width: 100%;
 		.select-btn { width: 100%; }
 	}
+	&.w200 {
+		width: 200px;
+		.select-btn { width: 200px; }
+	}
 }
 .date-wrap {
   .date-box {
@@ -389,6 +410,11 @@ input[type="checkbox"] {
   span {
     margin: 0 6px 0 5px;
   }
+}
+
+.input-wrap {
+	@include content-center-center;
+	gap: 10px;
 }
 
 //tab
@@ -464,6 +490,32 @@ input[type="checkbox"] {
   }
 }
 
+//table 
+.table-wrap {
+	width: 100%;
+	&.type01 {
+		table {
+			width: 100%;
+			border: 1px solid $color-line;
+			tr {
+				border-bottom: 1px solid $color-line;
+			}
+			th {
+				text-align: center;
+				background-color: #f0f4f8;
+				color: #222;
+				@include font(16px, 500);
+			}
+			td {
+				padding: 8px 12px;
+			}
+		}
+	}
+	.table-top {
+		@include layout-justify-center;
+	}
+}
+
 // popup
 .pop-wrap {
   display: none;  
@@ -510,23 +562,8 @@ input[type="checkbox"] {
 		.pop-content {
 			padding: 20px;
 		}
-		table {
-			width: 100%;
-			border: 1px solid $color-line;
-			tr {
-				border-bottom: 1px solid $color-line;
-			}
-			th {
-				text-align: center;
-				background-color: #f0f4f8;
-				color: #222;
-				@include font(16px, 500);
-			}
-			td {
-				padding: 8px 12px;
-			}
-		}
 	}
+	
 	&.alert-type {
 		.pop-inner {
 			width: 410px;

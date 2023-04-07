@@ -2,4 +2,9 @@
 @import "_mixin.scss";
 @import "_setting.scss";
 @import "_admin_jy.scss";
-@import "_admin_sh.scss";
+
+.container {
+	.inner {
+		margin: 77px auto 0;
+	}
+}

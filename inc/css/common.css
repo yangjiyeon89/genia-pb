@@ -54,6 +54,24 @@
   height: 100vh;
 }
 
+.scroll-inner {
+  overflow: auto;
+}
+.scroll-inner::-webkit-scrollbar {
+  width: 20px;
+  border: 1px solid #cbcbcb;
+}
+.scroll-inner::-webkit-scrollbar-thumb {
+  border: 1px solid #cbcbcb;
+  border-bottom: 0;
+  border-top: 0;
+  background-color: #ececec;
+}
+.scroll-inner::-webkit-scrollbar-button:start:decrement, .scroll-inner::-webkit-scrollbar-button:end:increment {
+  display: block;
+  height: 1px;
+}
+
 .dim {
   display: none;
   position: fixed;
@@ -399,6 +417,12 @@ input[type=checkbox]:checked + label::before {
 .select-wrap.full .select-btn {
   width: 100%;
 }
+.select-wrap.w200 {
+  width: 200px;
+}
+.select-wrap.w200 .select-btn {
+  width: 200px;
+}
 
 .date-wrap .date-box {
   position: relative;
@@ -421,6 +445,13 @@ input[type=checkbox]:checked + label::before {
 }
 .date-wrap span {
   margin: 0 6px 0 5px;
+}
+
+.input-wrap {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .tab-wrap .contents {
@@ -491,6 +522,32 @@ input[type=checkbox]:checked + label::before {
   background: url(../../images/common/ico_page_arr_first.png) no-repeat;
 }
 
+.table-wrap {
+  width: 100%;
+}
+.table-wrap.type01 table {
+  width: 100%;
+  border: 1px solid #cbcbcb;
+}
+.table-wrap.type01 table tr {
+  border-bottom: 1px solid #cbcbcb;
+}
+.table-wrap.type01 table th {
+  text-align: center;
+  background-color: #f0f4f8;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+}
+.table-wrap.type01 table td {
+  padding: 8px 12px;
+}
+.table-wrap .table-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .pop-wrap {
   display: none;
   position: fixed;
@@ -535,23 +592,6 @@ input[type=checkbox]:checked + label::before {
 }
 .pop-wrap.table-type .pop-content {
   padding: 20px;
-}
-.pop-wrap.table-type table {
-  width: 100%;
-  border: 1px solid #cbcbcb;
-}
-.pop-wrap.table-type table tr {
-  border-bottom: 1px solid #cbcbcb;
-}
-.pop-wrap.table-type table th {
-  text-align: center;
-  background-color: #f0f4f8;
-  color: #222;
-  font-size: 16px;
-  font-weight: 500;
-}
-.pop-wrap.table-type table td {
-  padding: 8px 12px;
 }
 .pop-wrap.alert-type .pop-inner {
   width: 410px;
