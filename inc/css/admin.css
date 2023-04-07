@@ -56,12 +56,11 @@
   align-items: center;
 }
 .header .nav {
-  margin-left: 80px;
-  gap: 60px;
+  margin-left: 50px;
 }
 .header .nav-item {
   display: block;
-  padding: 24px 0 25px;
+  padding: 24px 30px 25px;
   font-size: 18px;
   font-weight: 500;
 }

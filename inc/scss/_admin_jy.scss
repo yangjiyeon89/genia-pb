@@ -23,13 +23,12 @@
     @include layout-center;
   }
   .nav {
-    margin-left: 80px;
-    gap: 60px;
+    margin-left: 50px;
   }
 
   .nav-item {
     display: block;
-    padding: 24px 0 25px;
+    padding: 24px 30px 25px;
     @include font(18px, 500);
     &:hover, &.active {
       color: #108eff;
