@@ -40,6 +40,11 @@
   margin: auto;
 }
 
+.h100 {
+  position: relative;
+  height: 100vh;
+}
+
 .header {
   position: relative;
 }
@@ -122,4 +127,97 @@
   height: 80px;
   background-size: 161px 31px;
   background-position: center;
+}
+
+.login-cnt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.login-cnt .login-tit {
+  margin-bottom: 55px;
+  font-size: 34px;
+  font-weight: 500;
+}
+.login-cnt .form-wrap {
+  width: 384px;
+  padding-bottom: 30px;
+  margin: 0 auto 30px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.login-cnt .id-input, .login-cnt .pw-input, .login-cnt .btn-login {
+  width: 100%;
+  height: 55px;
+  border-radius: 8px;
+}
+.login-cnt .id-wrap, .login-cnt .pw-wrap {
+  position: relative;
+}
+.login-cnt .pw-wrap {
+  margin-top: 10px;
+}
+.login-cnt .id-input, .login-cnt .pw-input {
+  padding: 20px 50px 20px 20px;
+  font-size: 16px;
+  border: 1px solid #d1d1d1;
+  outline: 0;
+  box-sizing: border-box;
+}
+.login-cnt .id-input:focus, .login-cnt .pw-input:focus {
+  border-color: #108eff;
+}
+.login-cnt .id-input::placeholder, .login-cnt .pw-input::placeholder {
+  color: #a4a4a4;
+}
+.login-cnt .id-input:focus + label {
+  background: url(../../images/common/ico_person_on.png) no-repeat;
+}
+.login-cnt .pw-input:focus + label {
+  background: url(../../images/common/ico_lock_on.png) no-repeat;
+}
+.login-cnt .id-label, .login-cnt .pw-label {
+  position: absolute;
+}
+.login-cnt .id-label {
+  top: 17px;
+  right: 21px;
+  width: 19px;
+  height: 22px;
+  background: url(../../images/common/ico_person.png) no-repeat;
+}
+.login-cnt .pw-label {
+  top: 15px;
+  right: 18px;
+  width: 22px;
+  height: 28px;
+  background: url(../../images/common/ico_lock.png) no-repeat;
+}
+.login-cnt .btn-login {
+  color: #fff;
+  font-size: 18px;
+  background-color: #108eff;
+}
+.login-cnt .chk-wrap {
+  margin: 24px 0 20px;
+  text-align: left;
+}
+.login-cnt .id-save + label {
+  padding-left: 34px;
+  font-weight: 500;
+}
+.login-cnt .id-save + label::before {
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background: url(../../images/common/ico_check.png) no-repeat center;
+}
+.login-cnt .id-save:checked + label::before {
+  background: url(../../images/common/ico_check_on.png) no-repeat center;
+}
+.login-cnt .desc {
+  color: #909090;
+  font-size: 15px;
 }

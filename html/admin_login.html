@@ -16,7 +16,7 @@
   <script src="../inc/js/common.js"></script>
 </head>
 <body>
-  <div id="wrap" class="admin-login">
+  <div id="wrap" class="admin-login h100">
     <div class="header">
       <div class="inner">
         <div class="left-wrap">
@@ -32,15 +32,20 @@
           <p class="login-tit">로그인</p>
           <div class="form-wrap">
             <div class="id-pw-wrap">
-              <div class="input-box sprite">
-                <input type="text" placeholder="아이디" class="id-input ">
+              <div class="id-wrap">
+                <input type="text" placeholder="아이디" class="id-input" id="login-id">
+                <label for="login-id" class="id-label"></label>
+              </div>
+              <div class="pw-wrap">
+                <input type="password" placeholder="비밀번호" class="pw-input" id="login-pw">
+                <label for="login-pw" class="pw-label"></label>
               </div>
             </div>
             <div class="chk-wrap">
-              <input type="checkbox" name="" id="">
-              <label for="">아이디 저장</label>
+              <input type="checkbox" name="" id="chk01_01" class="id-save">
+              <label for="chk01_01">아이디 저장</label>
             </div>
-            <button type="button" class="btn-lg bg-blue">로그인</button>
+            <button type="button" class="btn-login">로그인</button>
           </div>
           <em class="desc">* 아이디/비밀번호가 기억나지 않을 경우, 담당자에게 문의하시길 바랍니다.<br>담당자: 홍길동 (02-0000-0000)</em>
         </div>
