@@ -25,7 +25,7 @@
     display: block;
     width: 161px;
     height: 31px;
-    background: url(../../images/common/logo.png);
+    background: url(../../images/common/logo.png) no-repeat;
   }
   .nav, .left-wrap {
     @include layout-center;
@@ -73,6 +73,22 @@
     font-weight: 500;
     &:hover, &.active {
       color: #333;
+    }
+  }
+}
+
+// login
+.admin-login {
+  .header {
+    // height: 80px;
+    border-bottom: 1px solid #dddddd;
+    &::after {
+      display: none;
+    }
+    .logo {
+      height: 80px;
+      background-size: 161px 31px;
+      background-position: center;
     }
   }
 }
