@@ -338,6 +338,7 @@
       </div>
     </div>
     <div class="dim"></div>
+
     <!-- 삭제 팝업 -->
     <div class="pop-wrap alert-type" data-pop="del-pop">
       <div class="pop-inner">
@@ -360,10 +361,9 @@
           <button type="button" class="pop-close"></button>
         </div>
         <div class="pop-content">
-
           <div class="inner">
             <!-- 1단계 문항 선택 -->
-            <div class="test-add-step01">
+            <div class="test-add-step01 step-cnt" style="display:none;">
               <div class="pop-cnt-tit bold">1단계 문항 선택</div>
               <div class="justify-section">
                 <div class="class-list-wrap">
@@ -584,7 +584,7 @@
                     </div>
                     <div class="que-content">
                       <!-- 초기 화면 -->
-                      <div class="init-view" style="display:none;">
+                      <div class="init-view">
                         <span class="txt">분류체계를 선택해주세요.</span>
                       </div>
         
@@ -631,7 +631,7 @@
                       </div>
 
                       <!-- 문항목록 문항 화면 -->
-                      <div class="table-wrap type02">
+                      <div class="table-wrap type02" style="display:none;">
                         <table>
                           <colgroup>
                             <col width="60px;">
@@ -654,7 +654,7 @@
                               <th>교과역량</th>
                               <th>
                                 난이도
-                                <button type="button" class="aroow ui-arr">▼</button>
+                                <button type="button" class="arrow ui-arr">▼</button>
                               </th>
                             </tr>
                           </thead>
@@ -674,8 +674,8 @@
                             </tr>
                             <tr>
                               <td>
-                                <input type="checkbox" id="chk01_03">
-                                <label for="chk01_03"></label>
+                                <input type="checkbox" id="chk03_03">
+                                <label for="chk03_03"></label>
                               </td>
                               <td>29</td>
                               <td class="font-c">0000</td>
@@ -932,13 +932,364 @@
               </div>
             </div>
             
+            <!-- 2단계 시험지 속성 추가 -->
+            <div class="test-add-step02 step-cnt">
+              <div class="pop-cnt-tit bold">2단계 시험지 속성 추가</div>
+              <div class="justify-section">
+                
+                <div class="que-list-wrap">
+                  <div class="scroll-inner">
+                    <div class="radio-wrap">
+                      <input type="radio" id="radio01_01" name="radio01" checked="">
+                      <label for="radio01_01">미리보기</label>
+                      <input type="radio" id="radio01_02" name="radio01">
+                      <label for="radio01_02">문항목록</label>
+                    </div>
+
+                    <!-- 미리보기 시험지 속성 추가 화면 -->
+                    <ul class="que-area" style="display: none;">
+                      <li class="que-list">
+                        <div class="que-item">
+                          <span class="que-tit">문항 ID  000000</span>
+                          <div class="que-view">
+                            <img src="../images/sub/sample_que.png" alt="" style="width: 100%;height: 300px;">
+                          </div>
+                        </div>
+                      </li>
+                      <li class="que-list">
+                        <div class="que-item">
+                          <span class="que-tit">문항 ID  000000</span>
+                          <div class="que-view">
+                            <img src="../images/sub/sample_que.png" alt="" style="width: 100%;height: 300px;">
+                          </div>
+                        </div>
+                      </li>
+                      <li class="que-list">
+                        <div class="que-item">
+                          <span class="que-tit">문항 ID  000000</span>
+                          <div class="que-view">
+                            <img src="../images/sub/sample_que.png" alt="" style="width: 100%;height: 300px;">
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <!-- 문항목록 시험지 속성 추가 화면 -->
+                    <div class="table-wrap type02">
+                      <table>
+                        <colgroup>
+                          <col width="64px;">
+                          <col width="102px;">
+                          <col width="101px">
+                          <col width="95px;">
+                          <col width="*;">
+                          <col width="141px;">
+                          <col width="95px;">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>번호</th>
+                            <th>문항ID</th>
+                            <th>지문ID</th>
+                            <th>문항형태</th>
+                            <th>내용영역</th>
+                            <th>교과역량</th>
+                            <th>
+                              난이도
+                              <button type="button" class="arrow ui-arr">▼</button>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>30</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>자료와 가능성</td>
+                            <td>추론</td>
+                            <td>상</td>
+                          </tr>
+                          <tr>
+                            <td>29</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>수와 연산</td>
+                            <td>문제해결</td>
+                            <td>상</td>
+                          </tr>
+                          <tr>
+                            <td>28</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>수와 연산</td>
+                            <td>문제해결</td>
+                            <td>상</td>
+                          </tr>
+                          <tr>
+                            <td>27</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>측정</td>
+                            <td>창의융합</td>
+                            <td>상</td>
+                          </tr>
+                          <tr>
+                            <td>26</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>도형</td>
+                            <td>정보처리</td>
+                            <td>상</td>
+                          </tr>
+                          <tr>
+                            <td>25</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>규칙성</td>
+                            <td>의사소통</td>
+                            <td>상</td>
+                          </tr>
+                          <tr>
+                            <td>24</td>
+                            <td class="font-c">0000</td>
+                            <td class="font-c">0000</td>
+                            <td>5지 선택</td>
+                            <td>자료와 가능성</td>
+                            <td>추론</td>
+                            <td>중</td>
+                          </tr>
+                          <tr>
+                            <td>23</td>
+                            <td class="font-c">0000</td>
+                            <td class="font-c">0000</td>
+                            <td>5지 선택</td>
+                            <td>수와 연산</td>
+                            <td>문제해결</td>
+                            <td>중</td>
+                          </tr>
+                          <tr>
+                            <td>22</td>
+                            <td class="font-c">0000</td>
+                            <td class="font-c">0000</td>
+                            <td>5지 선택</td>
+                            <td>수와 연산</td>
+                            <td>문제해결</td>
+                            <td>중</td>
+                          </tr>
+                          <tr>
+                            <td>21</td>
+                            <td class="font-c">0000</td>
+                            <td class="font-c">0000</td>
+                            <td>5지 선택</td>
+                            <td>측정</td>
+                            <td>창의융합</td>
+                            <td>중</td>
+                          </tr>
+                          <tr>
+                            <td>20</td>
+                            <td class="font-c">0000</td>
+                            <td class="font-c">0000</td>
+                            <td>5지 선택</td>
+                            <td>도형</td>
+                            <td>정보처리</td>
+                            <td>중</td>
+                          </tr>
+                          <tr>
+                            <td>19</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>규칙성</td>
+                            <td>의사소통</td>
+                            <td>중</td>
+                          </tr>
+                          <tr>
+                            <td>18</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>자료와 가능성</td>
+                            <td>추론</td>
+                            <td>하</td>
+                          </tr>
+                          <tr>
+                            <td>17</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>수와 연산</td>
+                            <td>문제해결</td>
+                            <td>하</td>
+                          </tr>
+                          <tr>
+                            <td>16</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>수와 연산</td>
+                            <td>문제해결</td>
+                            <td>하</td>
+                          </tr>
+                          <tr>
+                            <td>15</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>측정</td>
+                            <td>창의융합</td>
+                            <td>하</td>
+                          </tr>
+                          <tr>
+                            <td>14</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>도형</td>
+                            <td>정보처리</td>
+                            <td>하</td>
+                          </tr>
+                          <tr>
+                            <td>13</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>자료와 가능성</td>
+                            <td>의사소통</td>
+                            <td>하</td>
+                          </tr>
+                          <tr>
+                            <td>12</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>수와 연산</td>
+                            <td>추론</td>
+                            <td>상</td>
+                          </tr>
+                          <tr>
+                            <td>10</td>
+                            <td class="font-c">0000</td>
+                            <td>-</td>
+                            <td>5지 선택</td>
+                            <td>수와 연산</td>
+                            <td>문제해결</td>
+                            <td>상</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="que-info-wrap">
+                  <div class="que-table">
+                    <span class="que-table-tit">문항 속성</span>
+                    <div class="table-wrap type01">
+                      <table>
+                        <colgroup>
+                          <col width="120px">
+                          <col width="*">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>시험지ID</th>
+                            <td>자동부여</td>
+                          </tr>
+                          <tr>
+                            <th>시험지명</th>
+                            <td>
+                              <input type="text" placeholder="시험지명 입력" class="full">
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>학교급</th>
+                            <td>
+                              <div class="select-wrap full">
+                                <button type="button" class="select-btn">초등</button>
+                                <ul class="select-list">
+                                  <li>
+                                    <a href="javascript:;">초등</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>학년</th>
+                            <td>
+                              <div class="select-wrap full">
+                                <button type="button" class="select-btn">6학년</button>
+                                <ul class="select-list">
+                                  <li>
+                                    <a href="javascript:;">6학년</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>학기</th>
+                            <td>
+                              <div class="select-wrap full">
+                                <button type="button" class="select-btn">1학기</button>
+                                <ul class="select-list">
+                                  <li>
+                                    <a href="javascript:;">1학기</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>과목</th>
+                            <td>
+                              <div class="select-wrap full">
+                                <button type="button" class="select-btn">수학</button>
+                                <ul class="select-list">
+                                  <li>
+                                    <a href="javascript:;">수학</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>시험지 구분</th>
+                            <td>
+                              <div class="select-wrap full">
+                                <button type="button" class="select-btn">진단평가</button>
+                                <ul class="select-list">
+                                  <li>
+                                    <a href="javascript:;">진단평가</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="btn-wrap full">
+                    <button type="button" class="btn-lg pop-btn">이전</button>
+                    <button type="button" class="btn-lg pop-btn">등록</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- 문항 선택 완료 팝업 -->
-    <div class="pop-wrap alert-type" data-pop="del-pop">
+    <div class="pop-wrap alert-type">
       <div class="pop-inner">
         <div class="pop-content">
           <button type="button" class="pop-close"></button>
@@ -951,11 +1302,51 @@
     </div>
 
     <!-- 문항 미선택 팝업 -->
-    <div class="pop-wrap alert-type" data-pop="del-pop">
+    <div class="pop-wrap alert-type">
       <div class="pop-inner">
         <div class="pop-content">
           <button type="button" class="pop-close"></button>
           <span class="txt">추가할 문항을<br>선택해주세요.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 시험지 등록 팝업 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">입력하신 정보로<br>시험지를 등록하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">취소</button>
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 시험지 등록 완료 팝업 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">시험지 등록이<br>완료되었습니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 시험지 속성 미등록 팝업 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">시험지 속성을<br>빠짐없이 입력해주세요./span>
         </div>
         <div class="pop-footer">
           <button type="button" class="btn-lg">확인</button>

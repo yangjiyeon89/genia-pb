@@ -505,13 +505,27 @@
   height: 48px;
   padding: 13px 20px;
 }
+.admin01 .step-cnt table td {
+  padding: 6px 12px;
+  font-size: 15px;
+}
+.admin01 .step-cnt table .font-c {
+  color: #108eff;
+}
+.admin01 .step-cnt table .arrow {
+  position: relative;
+  top: -2px;
+  font-size: 10px;
+}
 .admin01 .test-add-step01 .btn-wrap {
-  margin-top: 20px;
+  position: static;
+  margin: 20px 0;
 }
 .admin01 .test-add-step01 .contents {
   height: 840px;
 }
 .admin01 .test-add-step01 .que-content-wrap {
+  position: relative;
   height: 890px;
 }
 .admin01 .test-add-step01 .que-content-wrap .scroll-inner::-webkit-scrollbar {
@@ -524,12 +538,12 @@
   height: auto;
 }
 .admin01 .test-add-step01 .init-view {
-  height: 668px;
+  height: 760px;
 }
 .admin01 .test-add-step01 .que-list-wrap {
   width: 100%;
   height: auto;
-  padding: 0 20px 20px;
+  padding: 0 20px;
 }
 .admin01 .test-add-step01 .que-list {
   margin-top: 35px;
@@ -543,14 +557,49 @@
 .admin01 .test-add-step01 .table-wrap {
   padding: 0 20px;
 }
-.admin01 .test-add-step01 table th {
-  padding: 17px 0;
+.admin01 .test-add-step02 .que-list-wrap {
+  width: 900px;
+  height: 890px;
+  border: 1px solid #cbcbcb;
+  border-right: 0;
 }
-.admin01 .test-add-step01 table td {
-  padding: 6px 12px;
+.admin01 .test-add-step02 .que-list-wrap .scroll-inner::-webkit-scrollbar {
+  border-right: 0;
 }
-.admin01 .test-add-step01 table .font-c {
-  color: #108eff;
+.admin01 .test-add-step02 .que-list-wrap .scroll-inner::-webkit-scrollbar-thumb {
+  border-right: 0;
+}
+.admin01 .test-add-step02 .que-info-wrap {
+  position: relative;
+  width: calc(100% - 900px);
+  height: 890px;
+  border: 1px solid #cbcbcb;
+}
+.admin01 .test-add-step02 .que-list {
+  margin-top: 60px;
+}
+.admin01 .test-add-step02 .que-list:first-child {
+  margin-top: 30px;
+}
+.admin01 .test-add-step02 .que-item {
+  width: 100%;
+  padding: 0;
+  border: 0;
+}
+.admin01 .test-add-step02 .que-tit {
+  margin-bottom: 26px;
+  padding-left: 0;
+}
+.admin01 .test-add-step02 .select-btn {
+  font-size: 16px;
+}
+.admin01 .test-add-step02 .btn-wrap {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 40px);
+}
+.admin01 .test-add-step02 .table-wrap {
+  margin-top: 13px;
 }
 
 .admin01-02 .contents {
