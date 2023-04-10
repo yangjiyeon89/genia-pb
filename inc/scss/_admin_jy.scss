@@ -479,21 +479,3 @@
     }
   }
 }
-
-
-// common.css
-.content {
-  display: none;
-  &.on {
-    display: block;
-  }
-}
-
-.pop-wrap {
-  &.full-type {
-    .pop-inner {
-      width: 100%;
-      height: 100%;
-    }
-  }
-}

@@ -460,6 +460,12 @@ input[type=checkbox]:checked + label::before {
 .tab-wrap .contents.on {
   display: block;
 }
+.tab-wrap .content {
+  display: none;
+}
+.tab-wrap .content.on {
+  display: block;
+}
 
 [class^=tab-menu-] {
   display: inline-flex;
@@ -524,12 +530,6 @@ input[type=checkbox]:checked + label::before {
 
 .table-wrap {
   width: 100%;
-}
-.table-wrap .content {
-  display: none;
-}
-.table-wrap .content.on {
-  display: block;
 }
 .table-wrap.type01 table {
   width: 100%;
