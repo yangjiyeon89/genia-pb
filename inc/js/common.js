@@ -70,7 +70,15 @@ $(function(){
       _cnt.removeClass('on');
       _cnt.eq(_idx).addClass('on');
     }
-    console.log(_idx)
+    
+    if(_this.parents('div').hasClass('contents')) {
+      if (!_this.hasClass('active')) {
+        _this.siblings().removeClass('active');
+        _this.addClass('active');
+        _this.parents('.contents').find('.content').removeClass('on');
+        _this.parents('.contents').find('.content').eq(_idx).addClass('on');
+      }
+    }
   }
 
   tabBtn.on('click', tabUI);
