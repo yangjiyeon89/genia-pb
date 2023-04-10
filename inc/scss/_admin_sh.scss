@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@import "_mixin.scss";
+@import "_setting.scss";
+
+// 서비스 관리
+.admin03-01 {
+  .table-wrap {
+    &.type01 {
+      margin: 10px 0 20px 0;
+    }
+    &.type02 {
+      margin-top: 20px;
+    }
+  }
+  .paging-wrap {
+    margin-top: 30px;
+  }
+  .down {
+    @include layout-center-center;
+    box-sizing: border-box;
+    min-width: 80px;
+    height: 34px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #333;
+    padding: 0 16px;
+  }
+  .tbl-acc {
+    tr {
+      &:nth-child(n+3):nth-child(n){
+        display: none;
+      }
+    }
+    &.active {
+      .tbl-acc-btn {
+        i {
+          &.show {
+            background: url(../../images/common/ico_tbl_hide.png) no-repeat;
+          }
+        }
+      }
+    }
+  }
+  .tbl-acc-btn {
+    padding-top: 3px;
+    i {
+      display: inline-block;
+      width: 18px;
+      height: 19px;
+      background-repeat: no-repeat;
+      background-position: center;
+      &.show {
+        background: url(../../images/common/ico_tbl_show.png) no-repeat;
+      }
+    }
+  }
+  .date-cnt {
+    display: flex;
+    gap: 10px;
+    
+    input[type="text"], input[type="number"] {
+      &.w75 {
+        width: 75px;
+      }
+    }
+  }
+}
+
+// 일괄등록 팝업
+.pop-wrap {
+  &.file-pop {
+    .file-upload {
+      .file-box {
+        border: 1px solid $color-line;
+        input[type="file"] {
+          position: absolute;
+          width: 0;
+          height: 0;
+          padding: 0;
+          overflow: hidden;
+          border: 0;
+        }
+        label {
+          @include content-center-center;
+          width: 100px;
+          height: 30px;
+          background-color: #333;
+          @include font(15px, 400);
+          color: #fff;
+          cursor: pointer
+          
+        }
+        .ip-upload {
+          width: 348px;
+          height: 45px;
+          border: 0;
+          box-sizing: border-box;
+          @include font(16px, 400);
+          padding: 0 17px;
+          pointer-events: none;
+          @include text-overflow;
+        }
+      }
+      .desc {
+        margin-top: 5px;
+        text-align: right;
+        @include font(15px, 400);
+        color: #9e9e9e;
+      }
+    }
+    .btn-wrap {
+      width: 100%;
+      flex-direction: column;
+      button, a {
+        width: 100%;
+        flex: auto;
+      }
+      .down {
+        @include layout-center-center;
+        box-sizing: border-box;
+        width: 100%;
+        height: 50px;
+        color: #fff;
+        font-size: 15px;
+        background-color: #108eff;
+      }
+    }
+  }
+}

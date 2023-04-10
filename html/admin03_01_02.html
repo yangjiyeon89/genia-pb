@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../inc/css/font.css">
   <link rel="stylesheet" href="../inc/css/reset.css">
   <link rel="stylesheet" href="../inc/css/common.css">
-  <link rel="stylesheet" href="../inc/css/admin_sh.css">
+  <link rel="stylesheet" href="../inc/css/admin.css">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
@@ -208,10 +208,10 @@
                   </div>
                 </div>
                 <div class="btn-wrap">
-                  <button type="button" class="btn-md pop-btn" data-pop="">개별등록</button>
-                  <button type="button" class="btn-md pop-btn" data-pop="">일괄등록</button>
-                  <button type="button" class="btn-md pop-btn" data-pop="">엑셀 다운로드</button>
-                  <button type="button" class="btn-md pop-btn" data-pop="">삭제</button>
+                  <button type="button" class="btn-md pop-btn" data-pop="each-add-pop">개별등록</button>
+                  <button type="button" class="btn-md pop-btn" data-pop="all-add-pop">일괄등록</button>
+                  <a href="javascript:;" download="" class="down">엑셀 다운로드</a>
+                  <button type="button" class="btn-md pop-btn" data-pop="delete-pop">삭제</button>
                 </div>
               </div>
               <table>
@@ -392,7 +392,219 @@
         </div>
       </div>
     </div>
+    <div class="dim"></div>
+    <!--S: 개별등록 팝업-->
+    <div class="pop-wrap table-type" data-pop="each-add-pop">
+      <div class="pop-inner">
+        <div class="pop-header">
+          <span>성취기준 개별등록</span>
+          <button type="button" class="pop-close"></button>
+        </div>
+        <div class="pop-content">
+          <div class="table-wrap type01">
+            <table>
+              <colgroup>
+                <col width="150px">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>학교급</th>
+                  <td>
+                    <div class="select-wrap full">
+                      <button type="button" class="select-btn">초등</button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>학년</th>
+                  <td>
+                    <div class="select-wrap full">
+                      <button type="button" class="select-btn">6학년</button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>과목</th>
+                  <td>
+                    <div class="select-wrap full">
+                      <button type="button" class="select-btn">수학</button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>내용영역</th>
+                  <td>
+                    <div class="select-wrap full">
+                      <button type="button" class="select-btn">수와연산</button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>성취코드</th>
+                  <td>
+                    <input type="text" class="full" placeholder="성취코드를 입력하세요.">
+                  </td>
+                </tr>
+                <tr>
+                  <th>성취기준</th>
+                  <td>
+                    <input type="text" class="full" placeholder="성취기준을 입력하세요.">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">취소</button>
+          <button type="button" class="btn-lg">등록</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 개별등록 팝업-->
+  
+    <!--S: 일괄등록 팝업-->
+    <div class="pop-wrap table-type file-pop" data-pop="all-add-pop">
+      <div class="pop-inner">
+        <div class="pop-header">
+          <span>성취기준 일괄등록</span>
+          <button type="button" class="pop-close"></button>
+        </div>
+        <div class="pop-content">
+          <div class="file-upload">
+            <div class="file-box">
+              <input class="ip-upload" value="" placeholder="파일명">
+              <label for="file">파일 첨부</label> 
+              <input type="file" id="file">
+            </div>
+            <div class="desc">※ 최대 00Mb까지 등록 가능합니다.</div>
+          </div>
+        </div>
+        <div class="pop-footer">
+          <div class="btn-wrap">
+            <a href="javascript:;" download="" class="down">양식 다운로드</a>
+            <button type="button" class="btn-lg">등록</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--E: 일괄등록 팝업-->
+  
+    <!--S: 개별등록, 일괄등록 팝업 > 등록 완료-->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">등록되었습니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 개별등록, 일괄등록 팝업 > 등록 완료-->
+  
+    <!--S: 개별등록 팝업 > 미입력한 항목 존재-->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">성취기준 정보를<br>모두 입력해주세요.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 개별등록 팝업 > 미입력한 항목 존재-->
+  
+    <!--S: 삭제 버튼 알럿 팝업 -->
+    <div class="pop-wrap alert-type" data-pop="delete-pop">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">선택한 항목을<br>삭제하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">취소</button>
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--S: 삭제 버튼 알럿 팝업-->
+  
+    <!--S: 삭제 버튼 알럿 팝업 > 삭제 처리 후 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">삭제가 완료되었습니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 삭제 버튼 알럿 팝업 > 삭제 처리 후 -->
+  
+    <!--S: 삭제 버튼 알럿 팝업 > 항목 미선택 한 경우 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">항목을 선택해주세요.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 삭제 버튼 알럿 팝업 > 항목 미선택 한 경우 -->
   </div>
-  <div class="dim"></div>
 </body>
 </html>
+<script>
+  $(function(){
+    
+    let file = $(".file-upload #file");
+
+    file.on('change',function(){
+      let fileName = $("#file").val();
+      $(".ip-upload").val(fileName);
+    });
+
+  });
+</script>

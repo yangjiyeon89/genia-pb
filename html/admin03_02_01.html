@@ -16,7 +16,7 @@
   <script src="../inc/js/common.js"></script>
 </head>
 <body>
-  <div id="wrap" class="admin03_01">
+  <div id="wrap" class="admin03_02">
     <div class="header">
       <div class="inner">
         <div class="left-wrap">
@@ -83,118 +83,103 @@
         <div class="tab-wrap">
           <ul class="tab-menu-type01">
             <li class="ui-tab-btn active">
-              <a href="javascript:;">교과서</a>
+              <a href="javascript:;">문항 통계</a>
             </li>
             <li class="ui-tab-btn">
-              <a href="javascript:;">성취기준</a>
+              <a href="javascript:;">시험지 통계</a>
             </li>
             <li class="ui-tab-btn">
-              <a href="javascript:;">시중교재</a>
+              <a href="javascript:;">리포트 관리</a>
             </li>
           </ul>
           <div class="contents on">
-            <div class="table-wrap type01">
+            <div class="table-wrap type01 tbl-acc">
               <table>
                 <colgroup>
-                  <col width="130px">
-                  <col width="*">
-                  <col width="130px">
-                  <col width="*">
                   <col width="130px">
                   <col width="*">
                 </colgroup>
                 <tbody>
                   <tr>
-                    <th>출판사</th>
+                    <th>조회기간</th>
                     <td>
-                      <div class="select-wrap w200">
-                        <button type="button" class="select-btn">선택</button>
-                        <ul class="select-list">
-                          <li>
-                            <a href="javascript:;">선택1</a>
-                          </li>
-                          <li>
-                            <a href="javascript:;">선택2</a>
-                          </li>
-                        </ul>
+                      <div class="date-cnt">
+                        <div class="date-wrap">
+                          <div class="date-box">
+                            <input type="text" id="from" name="from" autocomplete="off">
+                          </div>
+                          <span>~</span>
+                          <div class="date-box">
+                            <input type="text" id="to" name="to" autocomplete="off">
+                          </div>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="btn-line">1일</button>
+                          <button type="button" class="btn-line">1주</button>
+                          <button type="button" class="btn-line">3주</button>
+                          <button type="button" class="btn-line">1개월</button>
+                          <button type="button" class="btn-line">3개월</button>
+                          <input type="text" class="w75" placeholder="직접 입력">
+                        </div>
                       </div>
                     </td>
+                  </tr>
+                  <tr>
+                    <th>검색조건</th>
+                    <td>
+                      <div class="input-wrap">
+                        <div class="select-wrap">
+                          <button type="button" class="select-btn">문항ID</button>
+                          <ul class="select-list">
+                            <li>
+                              <a href="javascript:;">선택1</a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">선택2</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="select-wrap">
+                          <button type="button" class="select-btn">난이도</button>
+                          <ul class="select-list">
+                            <li>
+                              <a href="javascript:;">선택1</a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">선택2</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="select-wrap">
+                          <button type="button" class="select-btn">문제형태</button>
+                          <ul class="select-list">
+                            <li>
+                              <a href="javascript:;">선택1</a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">선택2</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="select-wrap">
+                          <button type="button" class="select-btn">전체</button>
+                          <ul class="select-list">
+                            <li>
+                              <a href="javascript:;">선택1</a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">선택2</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <input type="text" placeholder="검색어 입력">
+                        <button class="tbl-acc-btn"><i class="show"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
                     <th>학교급</th>
                     <td>
-                      <div class="select-wrap w200">
-                        <button type="button" class="select-btn">선택</button>
-                        <ul class="select-list">
-                          <li>
-                            <a href="javascript:;">선택1</a>
-                          </li>
-                          <li>
-                            <a href="javascript:;">선택2</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                    <th>학년</th>
-                    <td>
-                      <div class="select-wrap w200">
-                        <button type="button" class="select-btn">선택</button>
-                        <ul class="select-list">
-                          <li>
-                            <a href="javascript:;">선택1</a>
-                          </li>
-                          <li>
-                            <a href="javascript:;">선택2</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>학기</th>
-                    <td>
-                      <div class="select-wrap w200">
-                        <button type="button" class="select-btn">선택</button>
-                        <ul class="select-list">
-                          <li>
-                            <a href="javascript:;">선택1</a>
-                          </li>
-                          <li>
-                            <a href="javascript:;">선택2</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                    <th>과목</th>
-                    <td>
-                      <div class="select-wrap w200">
-                        <button type="button" class="select-btn">선택</button>
-                        <ul class="select-list">
-                          <li>
-                            <a href="javascript:;">선택1</a>
-                          </li>
-                          <li>
-                            <a href="javascript:;">선택2</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                    <th>교육과정</th>
-                    <td>
-                      <div class="select-wrap w200">
-                        <button type="button" class="select-btn">선택</button>
-                        <ul class="select-list">
-                          <li>
-                            <a href="javascript:;">선택1</a>
-                          </li>
-                          <li>
-                            <a href="javascript:;">선택2</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>검색</th>
-                    <td colspan="5">
                       <div class="input-wrap">
                         <div class="select-wrap">
                           <button type="button" class="select-btn">선택</button>
@@ -207,8 +192,49 @@
                             </li>
                           </ul>
                         </div>
-                        <input type="text" placeholder="검색어 입력">
                       </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>학년</th>
+                    <td>
+                      상위값에 따라 자동 노출
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>학기</th>
+                    <td>
+                      <div class="input-wrap">
+                        <div class="select-wrap">
+                          <button type="button" class="select-btn">선택</button>
+                          <ul class="select-list">
+                            <li>
+                              <a href="javascript:;">선택1</a>
+                            </li>
+                            <li>
+                              <a href="javascript:;">선택2</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>과목</th>
+                    <td>
+                      상위값에 따라 자동 노출
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>단원</th>
+                    <td>
+                      상위값에 따라 자동 노출
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>차시</th>
+                    <td>
+                      상위값에 따라 자동 노출
                     </td>
                   </tr>
                 </tbody>
@@ -234,179 +260,214 @@
                     </ul>
                   </div>
                 </div>
-                <div class="btn-wrap">
-                  <button type="button" class="btn-md pop-btn" data-pop="book-add-pop">등록</button>
-                  <button type="button" class="btn-md pop-btn" data-pop="delete-pop">삭제</button>
-                </div>
               </div>
               <table>
                 <colgroup>
-                  <col width="60px;">
                   <col width="45px;">
-                  <col width="115px;">
+                  <col width="88px;">
+                  <col width="88px;">
+                  <col width="88px;">
+                  <col width="88px;">
+                  <col width="88px;">
+                  <col width="88px;">
+                  <col width="88px;">
+                  <col width="70px;">
+                  <col width="88px;">
+                  <col width="88px;">
+                  <col width="88px;">
+                  <col width="88px;">
+                  <col width="88px;">
                   <col width="*">
-                  <col width="135px;">
-                  <col width="115px;">
-                  <col width="115px;">
-                  <col width="115px;">
-                  <col width="185px;">
                 </colgroup>
                 <thead>
                   <tr>
-                    <th>
-                      <input type="checkbox" id="chk01_00" class="allCheck">
-                      <label for="chk01_00"></label>
-                    </th>
                     <th>번호</th>
-                    <th>출판사</th>
-                    <th>교과서명</th>
+                    <th>문항ID</th>
                     <th>학교급</th>
                     <th>학년</th>
                     <th>학기</th>
                     <th>과목</th>
-                    <th>교육과정</th>
+                    <th>단원</th>
+                    <th>차시</th>
+                    <th>난이도</th>
+                    <th>문제형태</th>
+                    <th>내용영역</th>
+                    <th>교과역량</th>
+                    <th>성취코드</th>
+                    <th>학습개념</th>
+                    <th>출제 횟수</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_01">
-                      <label for="chk01_01"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_02">
-                      <label for="chk01_02"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_03">
-                      <label for="chk01_03"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_04">
-                      <label for="chk01_04"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_05">
-                      <label for="chk01_05"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_06">
-                      <label for="chk01_06"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_07">
-                      <label for="chk01_07"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_08">
-                      <label for="chk01_08"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_09">
-                      <label for="chk01_09"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                   <tr>
-                    <td>
-                      <input type="checkbox" id="chk01_10">
-                      <label for="chk01_10"></label>
-                    </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td><button class="pop-btn">0000</button></td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>단원명</td>
+                    <td>차시명</td>
+                    <td>상</td>
+                    <td>5지 선택</td>
+                    <td>내용영역</td>
+                    <td>교과역량</td>
+                    <td>성취코드</td>
+                    <td>학습개념</td>
+                    <td>00</td>
                   </tr>
                 </tbody>
               </table>
@@ -433,11 +494,11 @@
       </div>
     </div>
     <div class="dim"></div>
-    <!--S: 교과서 등록 팝업-->
+    <!--S: 교재 등록 팝업-->
     <div class="pop-wrap table-type" data-pop="book-add-pop">
       <div class="pop-inner">
         <div class="pop-header">
-          <span>교과서 등록</span>
+          <span>교재 등록</span>
           <button type="button" class="pop-close"></button>
         </div>
         <div class="pop-content">
@@ -465,9 +526,9 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>교과서명</th>
+                  <th>교재명</th>
                   <td>
-                    <input type="text" class="full" placeholder="교과서명을 입력하세요.">
+                    <input type="text" class="full" placeholder="교재명을 입력하세요.">
                   </td>
                 </tr>
                 <tr>
@@ -535,7 +596,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th>교육과정</th>
+                  <th>출판년도</th>
                   <td>
                     <div class="select-wrap full">
                       <button type="button" class="select-btn">선택</button>
@@ -560,78 +621,73 @@
         </div>
       </div>
     </div>
-    <!--E: 교과서 등록 팝업-->
-    
-    <!--S: 삭제 버튼 알럿 팝업 -->
-    <div class="pop-wrap alert-type" data-pop="delete-pop">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">선택한 항목을<br>삭제하시겠습니까?</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">취소</button>
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-    <!--S: 삭제 버튼 알럿 팝업-->
-  
-    <!--S: 삭제 버튼 알럿 팝업 > 삭제 처리 후 -->
-    <div class="pop-wrap alert-type">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">삭제가 완료되었습니다.</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-    <!--E: 삭제 버튼 알럿 팝업 > 삭제 처리 후 -->
-  
-    <!--S: 삭제 버튼 알럿 팝업 > 항목 미선택 한 경우 -->
-    <div class="pop-wrap alert-type">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">항목을 선택해주세요.</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-    <!--E: 삭제 버튼 알럿 팝업 > 항목 미선택 한 경우 -->
-  
-    <!--S: 교과서 등록 팝업 > 등록 완료 -->
-    <div class="pop-wrap alert-type">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">등록되었습니다.</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-    <!--E: 교과서 등록 팝업 > 등록 완료 -->
-  
-    <!--S: 교과서 등록 팝업 > 미입력한 항목 존재 -->
-    <div class="pop-wrap alert-type">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">교과서 정보를<br>모두 등록해주세요.</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-    <!--E: 교과서 등록 팝업 > 미입력한 항목 존재 -->
+    <!--E: 교재 등록 팝업-->
   </div>
 </body>
 </html>
+<script>
+  $(function(){
+
+    let tblAccBtn = $('.tbl-acc-btn');
+    let tblAccCnt = $('.tbl-acc tr:nth-child(n+3):nth-child(n)');
+
+    function tblAccFunc() {
+      $('.tbl-acc').toggleClass('active');
+      if ( $('.tbl-acc').hasClass('active') ) {
+        tblAccCnt.show();
+      } else {
+        tblAccCnt.hide();
+      };
+    };
+    
+    tblAccBtn.on('click', tblAccFunc);
+
+    //datepicker
+    var dateFormat = "yy.mm.dd",
+      from = $("#from")
+      .datepicker({
+        defaultDate: "+1w",
+        changeMonth: false,
+        numberOfMonths: 1,
+        dateFormat: "yy.mm.dd",
+        showOn: "button",
+        buttonImage: "../images/common/ico_calendar.png",
+        buttonImageOnly: true,
+        buttonText: "Select date",
+        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"]
+      })
+      .on("change", function () {
+        to.datepicker("option", "minDate", getDate(this));
+      }),
+      to = $("#to").datepicker({
+        defaultDate: "+1w",
+        changeMonth: false,
+        numberOfMonths: 1,
+        dateFormat: "yy.mm.dd",
+        showOn: "button",
+        buttonImage: "../images/common/ico_calendar.png",
+        buttonImageOnly: true,
+        buttonText: "Select date",
+        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"]
+
+      })
+      .on("change", function () {
+        from.datepicker("option", "maxDate", getDate(this));
+      });
+
+    function getDate(element) {
+      var date;
+      try {
+        date = $.datepicker.parseDate(dateFormat, element.value);
+      } catch (error) {
+        date = null;
+      }
+
+      return date;
+    }
+    $(".ui-datepicker-trigger").removeAttr("title");
+
+  });
+</script>

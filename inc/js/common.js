@@ -23,6 +23,11 @@ $(function(){
       _gnbMenuLink.eq(2).find(_gnbDepth02).addClass('on');
       _gnbMenuLink.eq(2).find(_gnbDepth02).find(_gnbDepth02Item).eq(0).find('> a').addClass('active');
         break;
+      case 'admin03_02':
+    _gnbMenuLink.eq(2).find('> a').addClass('active');
+    _gnbMenuLink.eq(2).find(_gnbDepth02).addClass('on');
+    _gnbMenuLink.eq(2).find(_gnbDepth02).find(_gnbDepth02Item).eq(1).find('> a').addClass('active');
+      break;
     }
   }
   $(document).ready(function(){

@@ -609,6 +609,137 @@
   height: 705px;
 }
 
+/**
+	* Computes a CSS calc function that betweens a value from
+	* A to B over viewport-width A to viewport-width B.
+	* Requires a media query to cap the value at B.
+	* vw 단위를 활용하여 미디어쿼리 분기의 중간 상태값을
+	* 계산해주는 SASS 함수.
+	* 간격이나 폰트사이즈에 적용하면 자연스러운
+	* 반응형 사이즈 처리가 가능 함.
+	* 참고사이트 http://dohoons.com/blog/1364
+	*/
+/**
+	* Read the article: http://sassbreak.com/viewport-relative-headings-with-sass
+	* px 를 vw 로 자동으로 바꿔 줌.
+	* max-breakpoint 를 설정하면 미디어쿼리 브레이크 포인트가 됨.
+	* 그래서 미디어쿼리 브레이크 포인트에 맞춰 px 가 vw 로 변환됨.
+	* 100% 보다 더 크게 적용 하고 싶으면 return 부분을 수정하면됨.
+	* 참고사이트 http://sassbreak.com/viewport-relative-headings-with-sass/
+	*/
+.admin03-01 .table-wrap.type01 {
+  margin: 10px 0 20px 0;
+}
+.admin03-01 .table-wrap.type02 {
+  margin-top: 20px;
+}
+.admin03-01 .paging-wrap {
+  margin-top: 30px;
+}
+.admin03-01 .down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 80px;
+  height: 34px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #333;
+  padding: 0 16px;
+}
+.admin03-01 .tbl-acc tr:nth-child(n+3):nth-child(n) {
+  display: none;
+}
+.admin03-01 .tbl-acc.active .tbl-acc-btn i.show {
+  background: url(../../images/common/ico_tbl_hide.png) no-repeat;
+}
+.admin03-01 .tbl-acc-btn {
+  padding-top: 3px;
+}
+.admin03-01 .tbl-acc-btn i {
+  display: inline-block;
+  width: 18px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.admin03-01 .tbl-acc-btn i.show {
+  background: url(../../images/common/ico_tbl_show.png) no-repeat;
+}
+.admin03-01 .date-cnt {
+  display: flex;
+  gap: 10px;
+}
+.admin03-01 .date-cnt input[type=text].w75, .admin03-01 .date-cnt input[type=number].w75 {
+  width: 75px;
+}
+
+.pop-wrap.file-pop .file-upload .file-box {
+  border: 1px solid #cbcbcb;
+}
+.pop-wrap.file-pop .file-upload .file-box input[type=file] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+.pop-wrap.file-pop .file-upload .file-box label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  background-color: #333;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+}
+.pop-wrap.file-pop .file-upload .file-box .ip-upload {
+  width: 348px;
+  height: 45px;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 17px;
+  pointer-events: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -moz-binding: url(ellipsis.xml#ellipsis);
+}
+.pop-wrap.file-pop .file-upload .desc {
+  margin-top: 5px;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 400;
+  color: #9e9e9e;
+}
+.pop-wrap.file-pop .btn-wrap {
+  width: 100%;
+  flex-direction: column;
+}
+.pop-wrap.file-pop .btn-wrap button, .pop-wrap.file-pop .btn-wrap a {
+  width: 100%;
+  flex: auto;
+}
+.pop-wrap.file-pop .btn-wrap .down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  font-size: 15px;
+  background-color: #108eff;
+}
+
 .container .inner {
-  margin: 77px auto 0;
+  margin: 77px auto 50px;
 }
