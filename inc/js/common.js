@@ -224,4 +224,19 @@ $(function(){
 
   accBtn.on('click', accFunc);
 
+
+  // filter arrow
+  let filterArr = $('.ui-arr');
+
+  filterArr.on('click' , function(){
+    let _this = $(this);
+
+    if(!_this.hasClass('on')) {
+      _this.addClass('on');
+      _this.text('▲');
+    } else {
+      _this.removeClass('on');
+      _this.text('▼');
+    }
+  })
 });
