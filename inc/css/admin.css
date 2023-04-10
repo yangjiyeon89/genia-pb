@@ -499,6 +499,11 @@
   display: block;
 }
 
+.pop-wrap.full-type .pop-inner {
+  width: 100%;
+  height: 100%;
+}
+
 .container .inner {
   margin: 77px auto 0;
 }

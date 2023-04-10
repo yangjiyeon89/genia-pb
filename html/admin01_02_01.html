@@ -207,11 +207,11 @@
                           <div class="que-class-add">
                             <div class="add-item">
                               <span class="add-item-txt">(분수)÷(분수)를 알아볼까요 (1) 형성평가</span>
-                              <button type="button" class="add-item-del">삭제</button>
+                              <button type="button" class="add-item-del pop-btn" data-pop="del-pop">삭제</button>
                             </div>
                             <div class="add-item">
                               <span class="add-item-txt">(분수)÷(분수)를 알아볼까요 (1) 형성평가</span>
-                              <button type="button" class="add-item-del">삭제</button>
+                              <button type="button" class="add-item-del pop-btn" data-pop="del-pop">삭제</button>
                             </div>
                           </div>
                         </li>
@@ -328,49 +328,40 @@
             </div>
           </div>
           <div class="contents">
-            성취기준(2)
+            [admin01_02_02] 탭으로 구현
           </div>
           <div class="contents">
-            시중교재(3)
+            [admin01_02_03] 탭으로 구현
           </div>
         </div>
         
       </div>
     </div>
     <div class="dim"></div>
-    <div class="pop-wrap alert-type" data-pop="alert-pop">
+    <!-- 삭제 팝업 -->
+    <div class="pop-wrap alert-type" data-pop="del-pop">
       <div class="pop-inner">
         <div class="pop-content">
           <button type="button" class="pop-close"></button>
-          <span class="txt">등록이 완료되었습니다.</span>
+          <span class="txt">자료를 삭제하시겠습니까?</span>
         </div>
         <div class="pop-footer">
           <button type="button" class="btn-lg">확인</button>
+          <button type="button" class="btn-lg">취소</button>
         </div>
+      </div>
+    </div>
+
+    <!-- 시험지 추가 팝업 -->
+    <div class="pop-wrap full-type" style="display: block;">
+      <div class="pop-inner">
+        <div class="pop-header">
+          <span>시험지 추가</span>
+          <button type="button" class="pop-close"></button>
+        </div>
+        <div class="pop-content"></div>
       </div>
     </div>
   </div>
 </body>
-
-<script>
-  // accordion
-  let accBtn = $('.ui-acc-btn');
-
-  function accFunc() {
-    let _this = $(this);
-
-    _this.toggleClass('active');
-
-    if (_this.hasClass('active')) {
-      _this.find('.arrow').text('▲');
-      _this.next('.ui-acc-cnt').stop().slideDown('fast');
-    } else {
-      _this.find('.arrow').text('▼');
-      _this.next('.ui-acc-cnt').stop().slideUp('fast');
-    }
-
-  }
-
-  accBtn.on('click', accFunc);
-</script>
 </html>
