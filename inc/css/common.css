@@ -708,3 +708,10 @@ input[type=checkbox]:checked + label::before {
   font-size: 18px;
   font-weight: 400;
 }
+.pop-wrap.full-type {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: none;
+}
