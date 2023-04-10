@@ -170,6 +170,7 @@ $(function(){
       _this.parent(classList).siblings(classList).find(classItem).removeClass('active');
       _this.addClass('active');
     }
+
   }
 
   classItem.on('click', classNavFunc);

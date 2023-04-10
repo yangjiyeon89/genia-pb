@@ -257,7 +257,7 @@
   height: 0;
 }
 .admin01 .bold {
-  font-weight: 500;
+  font-weight: 700;
 }
 .admin01 .class-list-wrap {
   width: 300px;
@@ -281,6 +281,8 @@
   display: flex;
   padding: 12px 22px;
   border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+  user-select: none;
 }
 .admin01 .class-list-wrap .class-item .arrow {
   position: relative;
@@ -288,6 +290,9 @@
   display: inline-block;
   margin-right: 9px;
   font-size: 9px;
+}
+.admin01 .class-list-wrap .chk-item .arrow {
+  top: -2px;
 }
 .admin01 .class-list-wrap .class-area {
   display: none;
@@ -448,6 +453,9 @@
   border: 1px solid #cbcbcb;
   border-bottom: 0;
 }
+.admin01 .que-class-wrap .que-class-tit {
+  font-weight: 500;
+}
 .admin01 .que-class-wrap .que-class-btn {
   display: flex;
   justify-content: space-between;
@@ -466,6 +474,9 @@
 }
 .admin01 .que-class-wrap .class-item-txt {
   font-size: 15px;
+}
+.admin01 .que-class-wrap .class-item-txt .class {
+  font-weight: 500;
 }
 .admin01 .que-class-wrap .que-class-add {
   padding: 8px 20px 8px 38px;
@@ -489,7 +500,43 @@
 }
 .admin01 .pop-cnt-tit {
   margin-bottom: 20px;
-  font-weight: 700;
+}
+.admin01 .top-wrap {
+  height: 50px;
+  padding: 14px 20px;
+}
+.admin01 .test-add-step01 .btn-wrap {
+  margin-top: 20px;
+}
+.admin01 .test-add-step01 .que-content-wrap {
+  height: 800px;
+}
+.admin01 .test-add-step01 .que-content-wrap .scroll-inner::-webkit-scrollbar {
+  border-right: 0;
+}
+.admin01 .test-add-step01 .que-content-wrap .scroll-inner::-webkit-scrollbar-thumb {
+  border-right: 0;
+}
+.admin01 .test-add-step01 .que-content {
+  height: auto;
+  padding-bottom: 20px;
+}
+.admin01 .test-add-step01 .init-view {
+  height: 668px;
+}
+.admin01 .test-add-step01 .que-list-wrap {
+  width: 100%;
+  height: auto;
+  padding: 0 20px 20px;
+}
+.admin01 .test-add-step01 .que-list {
+  margin-top: 35px;
+}
+.admin01 .test-add-step01 .que-list:first-child {
+  margin-top: 0;
+}
+.admin01 .test-add-step01 .que-item {
+  width: 100%;
 }
 
 .admin01-02 .contents {
