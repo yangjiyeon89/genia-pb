@@ -160,6 +160,23 @@ $(function(){
     }
   }
 
-  classItem.on('click', classNavFunc)
+  classItem.on('click', classNavFunc);
+
+
+  // checkbox
+  let chkAll = $('.allCheck');
+
+  function checkFunc() {
+    let _this = $(this);
+
+    if (_this.prop('checked')) {
+      _this.parents('table').find('input[type=checkbox]').prop('checked', true);
+    } else {
+      _this.parents('table').find('input[type=checkbox]').prop('checked', false);
+    }
+
+  }
+
+  chkAll.on('click', checkFunc);
   
 });
