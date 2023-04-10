@@ -541,11 +541,101 @@ input[type=checkbox]:checked + label::before {
 }
 .table-wrap.type01 table td {
   padding: 8px 12px;
+  background-color: #fff;
+}
+.table-wrap.type02 table {
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #ddd;
+}
+.table-wrap.type02 table.on tr {
+  background-color: #f0f4f8;
+}
+.table-wrap.type02 table tr {
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+.table-wrap.type02 table tr.on {
+  background-color: #f0f4f8;
+}
+.table-wrap.type02 table th {
+  text-align: center;
+  background-color: #f6f6f6;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px 0;
+  border-right: 1px solid #ddd;
+}
+.table-wrap.type02 table td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -moz-binding: url(ellipsis.xml#ellipsis);
+  text-align: center;
+  padding: 8px 12px;
+  border-right: 1px solid #ddd;
+  word-break: break-all;
+}
+.table-wrap.type02 table input[type=checkbox] + label {
+  padding-left: 15px;
+}
+.table-wrap.type02 table input[type=checkbox] + label::before {
+  width: 15px;
+  height: 15px;
+  margin-top: -7px;
+}
+.table-wrap.type03 table {
+  width: 100%;
+  table-layout: fixed;
+}
+.table-wrap.type03 table tr {
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+.table-wrap.type03 table th {
+  border-top: 1px solid #757575;
+  text-align: center;
+  padding: 20px 0;
+  border-right: 1px solid #ddd;
+  font-size: 16px;
+  font-weight: 500;
+}
+.table-wrap.type03 table th:nth-last-child(1) {
+  border-right: 0;
+}
+.table-wrap.type03 table td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -moz-binding: url(ellipsis.xml#ellipsis);
+  text-align: center;
+  padding: 14px;
+  border-right: 1px solid #ddd;
+  word-break: break-all;
+}
+.table-wrap.type03 table td.a-left {
+  text-align: left;
+}
+.table-wrap.type03 table td:nth-last-child(1) {
+  border-right: 0;
 }
 .table-wrap .table-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
+}
+.table-wrap .table-top .left-cnt {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-wrap .table-top .left-cnt span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 10px;
 }
 
 .pop-wrap {
