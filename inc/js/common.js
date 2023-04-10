@@ -203,7 +203,7 @@ $(function(){
 
   chkAll.on('click', checkFunc);
 
-  
+
   // accordion
   let accBtn = $('.ui-acc-btn');
 
@@ -220,5 +220,7 @@ $(function(){
       _this.next('.ui-acc-cnt').stop().slideUp('fast');
     }
   }
+
+  accBtn.on('click', accFunc);
 
 });
