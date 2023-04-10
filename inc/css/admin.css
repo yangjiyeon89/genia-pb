@@ -484,6 +484,13 @@
 .admin01 .que-class-wrap .add-item-del {
   color: #9e9ea3;
 }
+.admin01 .pop-content {
+  margin-top: 20px;
+}
+.admin01 .pop-cnt-tit {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
 
 .admin01-02 .contents {
   margin-top: 10px;
