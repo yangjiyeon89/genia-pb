@@ -502,14 +502,17 @@
   margin-bottom: 20px;
 }
 .admin01 .top-wrap {
-  height: 50px;
-  padding: 14px 20px;
+  height: 48px;
+  padding: 13px 20px;
 }
 .admin01 .test-add-step01 .btn-wrap {
   margin-top: 20px;
 }
+.admin01 .test-add-step01 .contents {
+  height: 840px;
+}
 .admin01 .test-add-step01 .que-content-wrap {
-  height: 800px;
+  height: 890px;
 }
 .admin01 .test-add-step01 .que-content-wrap .scroll-inner::-webkit-scrollbar {
   border-right: 0;
@@ -519,7 +522,6 @@
 }
 .admin01 .test-add-step01 .que-content {
   height: auto;
-  padding-bottom: 20px;
 }
 .admin01 .test-add-step01 .init-view {
   height: 668px;
@@ -537,6 +539,18 @@
 }
 .admin01 .test-add-step01 .que-item {
   width: 100%;
+}
+.admin01 .test-add-step01 .table-wrap {
+  padding: 0 20px;
+}
+.admin01 .test-add-step01 table th {
+  padding: 17px 0;
+}
+.admin01 .test-add-step01 table td {
+  padding: 6px 12px;
+}
+.admin01 .test-add-step01 table .font-c {
+  color: #108eff;
 }
 
 .admin01-02 .contents {

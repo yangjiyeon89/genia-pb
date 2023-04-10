@@ -485,15 +485,18 @@
     margin-bottom: 20px;
   }
   .top-wrap {
-    height: 50px;
-    padding: 14px 20px;
+    height: 48px;
+    padding: 13px 20px;
   }
   .test-add-step01 {
     .btn-wrap {
       margin-top: 20px;
     }
+    .contents {
+      height: 840px;
+    }
     .que-content-wrap {
-      height: 800px;
+      height: 890px;
       .scroll-inner {
         &::-webkit-scrollbar {
           border-right: 0;
@@ -505,7 +508,6 @@
     }
     .que-content {
       height: auto;
-      padding-bottom: 20px;
     }
     .init-view {
       height: 668px;
@@ -523,6 +525,20 @@
     }
     .que-item {
       width: 100%;
+    }
+    .table-wrap {
+      padding: 0 20px;
+    }
+    table {
+      th {
+        padding: 17px 0;
+      }
+      td {
+        padding: 6px 12px;
+      }
+      .font-c {
+        color: #108eff;
+      }
     }
   }
 }
