@@ -62,14 +62,6 @@ $(function(){
     let _this = $(this);
     let _cnt = $(this).parents('.tab-wrap').find('.contents');
     let _idx = $(this).index();
-
-
-    if (!_this.hasClass('active')) {
-      _this.siblings().removeClass('active');
-      _this.addClass('active');
-      _cnt.removeClass('on');
-      _cnt.eq(_idx).addClass('on');
-    }
     
     if(_this.parents('div').hasClass('contents')) {
       if (!_this.hasClass('active')) {
@@ -77,6 +69,13 @@ $(function(){
         _this.addClass('active');
         _this.parents('.contents').find('.content').removeClass('on');
         _this.parents('.contents').find('.content').eq(_idx).addClass('on');
+      }
+    } else {
+      if (!_this.hasClass('active')) {
+        _this.siblings().removeClass('active');
+        _this.addClass('active');
+        _cnt.removeClass('on');
+        _cnt.eq(_idx).addClass('on');
       }
     }
   }
