@@ -493,6 +493,12 @@ input[type="checkbox"] {
 //table 
 .table-wrap {
 	width: 100%;
+	.content {
+		display: none;
+		&.on {
+			display: block;
+		}
+	}
 	&.type01 {
 		table {
 			width: 100%;

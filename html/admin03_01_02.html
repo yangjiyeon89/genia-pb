@@ -82,16 +82,19 @@
       <div class="inner">
         <div class="tab-wrap">
           <ul class="tab-menu-type01">
-            <li class="ui-tab-btn active">
+            <li class="ui-tab-btn">
               <a href="javascript:;">교과서</a>
             </li>
-            <li class="ui-tab-btn">
+            <li class="ui-tab-btn active">
               <a href="javascript:;">성취기준</a>
             </li>
             <li class="ui-tab-btn">
               <a href="javascript:;">시중교재</a>
             </li>
           </ul>
+          <div class="contents">
+            [sub03_01_01.html] 탭으로 구현
+          </div>
           <div class="contents on">
             <div class="table-wrap type01">
               <table>
@@ -105,20 +108,6 @@
                 </colgroup>
                 <tbody>
                   <tr>
-                    <th>출판사</th>
-                    <td>
-                      <div class="select-wrap w200">
-                        <button type="button" class="select-btn">선택</button>
-                        <ul class="select-list">
-                          <li>
-                            <a href="javascript:;">선택1</a>
-                          </li>
-                          <li>
-                            <a href="javascript:;">선택2</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
                     <th>학교급</th>
                     <td>
                       <div class="select-wrap w200">
@@ -147,22 +136,6 @@
                         </ul>
                       </div>
                     </td>
-                  </tr>
-                  <tr>
-                    <th>학기</th>
-                    <td>
-                      <div class="select-wrap w200">
-                        <button type="button" class="select-btn">선택</button>
-                        <ul class="select-list">
-                          <li>
-                            <a href="javascript:;">선택1</a>
-                          </li>
-                          <li>
-                            <a href="javascript:;">선택2</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
                     <th>과목</th>
                     <td>
                       <div class="select-wrap w200">
@@ -177,7 +150,9 @@
                         </ul>
                       </div>
                     </td>
-                    <th>교육과정</th>
+                  </tr>
+                  <tr>
+                    <th>내용영역</th>
                     <td>
                       <div class="select-wrap w200">
                         <button type="button" class="select-btn">선택</button>
@@ -191,10 +166,8 @@
                         </ul>
                       </div>
                     </td>
-                  </tr>
-                  <tr>
                     <th>검색</th>
-                    <td colspan="5">
+                    <td colspan="3">
                       <div class="input-wrap">
                         <div class="select-wrap">
                           <button type="button" class="select-btn">선택</button>
@@ -235,21 +208,22 @@
                   </div>
                 </div>
                 <div class="btn-wrap">
-                  <button type="button" class="btn-md pop-btn" data-pop="book-add-pop">등록</button>
-                  <button type="button" class="btn-md pop-btn" data-pop="delete-pop">삭제</button>
+                  <button type="button" class="btn-md pop-btn" data-pop="">개별등록</button>
+                  <button type="button" class="btn-md pop-btn" data-pop="">일괄등록</button>
+                  <button type="button" class="btn-md pop-btn" data-pop="">엑셀 다운로드</button>
+                  <button type="button" class="btn-md pop-btn" data-pop="">삭제</button>
                 </div>
               </div>
               <table>
                 <colgroup>
                   <col width="60px;">
                   <col width="45px;">
-                  <col width="115px;">
-                  <col width="*">
-                  <col width="135px;">
-                  <col width="115px;">
-                  <col width="115px;">
-                  <col width="115px;">
+                  <col width="85px;">
+                  <col width="85px">
+                  <col width="85px;">
+                  <col width="155px;">
                   <col width="185px;">
+                  <col width="*">
                 </colgroup>
                 <thead>
                   <tr>
@@ -258,13 +232,12 @@
                       <label for="chk01_00"></label>
                     </th>
                     <th>번호</th>
-                    <th>출판사</th>
-                    <th>교과서명</th>
                     <th>학교급</th>
                     <th>학년</th>
-                    <th>학기</th>
                     <th>과목</th>
-                    <th>교육과정</th>
+                    <th>내용영역</th>
+                    <th>성취코드</th>
+                    <th>성취기준</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -274,13 +247,12 @@
                       <label for="chk01_01"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>기초 이론을 토대로 응용할 수 있다.</td>
                   </tr>
                   <tr>
                     <td>
@@ -288,13 +260,12 @@
                       <label for="chk01_02"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>기초 이론을 토대로 응용할 수 있다. 기초 이론을 토대로 응용할 수 있다. 기초 이론을 토대로 응용할 수 있다. 기초 이론을 토대로 응용할 수 있다.</td>
                   </tr>
                   <tr>
                     <td>
@@ -302,13 +273,12 @@
                       <label for="chk01_03"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>기초 이론을 토대로 응용할 수 있다.</td>
                   </tr>
                   <tr>
                     <td>
@@ -316,13 +286,12 @@
                       <label for="chk01_04"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>성취기준이 들어갑니다.</td>
                   </tr>
                   <tr>
                     <td>
@@ -330,13 +299,12 @@
                       <label for="chk01_05"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>성취기준이 들어갑니다.</td>
                   </tr>
                   <tr>
                     <td>
@@ -344,13 +312,12 @@
                       <label for="chk01_06"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>성취기준이 들어갑니다.</td>
                   </tr>
                   <tr>
                     <td>
@@ -358,13 +325,12 @@
                       <label for="chk01_07"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>성취기준이 들어갑니다.</td>
                   </tr>
                   <tr>
                     <td>
@@ -372,13 +338,12 @@
                       <label for="chk01_08"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>성취기준이 들어갑니다.</td>
                   </tr>
                   <tr>
                     <td>
@@ -386,13 +351,12 @@
                       <label for="chk01_09"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>성취기준이 들어갑니다.</td>
                   </tr>
                   <tr>
                     <td>
@@ -400,13 +364,12 @@
                       <label for="chk01_10"></label>
                     </td>
                     <td>30</td>
-                    <td>천재교과서</td>
-                    <td>교과서명</td>
                     <td>초등</td>
-                    <td>5학년</td>
-                    <td>2학기</td>
+                    <td>1</td>
                     <td>수학</td>
-                    <td>2015개정 교육과정</td>
+                    <td>수와연산</td>
+                    <td>6수01-11</td>
+                    <td>성취기준이 들어갑니다.</td>
                   </tr>
                 </tbody>
               </table>
@@ -424,9 +387,6 @@
             </div>
           </div>
           <div class="contents">
-            [sub03_01_02.html] 탭으로 구현
-          </div>
-          <div class="contents">
             [sub03_01_03.html] 탭으로 구현
           </div>
         </div>
@@ -434,204 +394,5 @@
     </div>
   </div>
   <div class="dim"></div>
-  <!--S: 교과서 등록 팝업-->
-  <div class="pop-wrap table-type" data-pop="book-add-pop">
-    <div class="pop-inner">
-      <div class="pop-header">
-        <span>교과서 등록</span>
-        <button type="button" class="pop-close"></button>
-      </div>
-      <div class="pop-content">
-        <div class="table-wrap type01">
-          <table>
-            <colgroup>
-              <col width="150px">
-              <col width="*">
-            </colgroup>
-            <tbody>
-              <tr>
-                <th>출판사</th>
-                <td>
-                  <div class="select-wrap full">
-                    <button type="button" class="select-btn">선택</button>
-                    <ul class="select-list">
-                      <li>
-                        <a href="javascript:;">선택1</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">선택2</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th>교과서명</th>
-                <td>
-                  <input type="text" class="full" placeholder="교과서명을 입력하세요.">
-                </td>
-              </tr>
-              <tr>
-                <th>학교급</th>
-                <td>
-                  <div class="select-wrap full">
-                    <button type="button" class="select-btn">선택</button>
-                    <ul class="select-list">
-                      <li>
-                        <a href="javascript:;">선택1</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">선택2</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th>학년</th>
-                <td>
-                  <div class="select-wrap full">
-                    <button type="button" class="select-btn">선택</button>
-                    <ul class="select-list">
-                      <li>
-                        <a href="javascript:;">선택1</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">선택2</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th>학기</th>
-                <td>
-                  <div class="select-wrap full">
-                    <button type="button" class="select-btn">선택</button>
-                    <ul class="select-list">
-                      <li>
-                        <a href="javascript:;">선택1</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">선택2</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th>과목</th>
-                <td>
-                  <div class="select-wrap full">
-                    <button type="button" class="select-btn">선택</button>
-                    <ul class="select-list">
-                      <li>
-                        <a href="javascript:;">선택1</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">선택2</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th>교육과정</th>
-                <td>
-                  <div class="select-wrap full">
-                    <button type="button" class="select-btn">선택</button>
-                    <ul class="select-list">
-                      <li>
-                        <a href="javascript:;">선택1</a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">선택2</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="pop-footer">
-        <button type="button" class="btn-lg">취소</button>
-        <button type="button" class="btn-lg">등록</button>
-      </div>
-    </div>
-  </div>
-  <!--E: 교과서 등록 팝업-->
-  
-  <!--S: 삭제 버튼 알럿 팝업 -->
-  <div class="pop-wrap alert-type" data-pop="delete-pop">
-    <div class="pop-inner">
-      <div class="pop-content">
-        <button type="button" class="pop-close"></button>
-        <span class="txt">선택한 항목을<br>삭제하시겠습니까?</span>
-      </div>
-      <div class="pop-footer">
-        <button type="button" class="btn-lg">취소</button>
-        <button type="button" class="btn-lg">확인</button>
-      </div>
-    </div>
-  </div>
-  <!--S: 삭제 버튼 알럿 팝업-->
-
-  <!--S: 삭제 버튼 알럿 팝업 > 삭제 처리 후 -->
-  <div class="pop-wrap alert-type">
-    <div class="pop-inner">
-      <div class="pop-content">
-        <button type="button" class="pop-close"></button>
-        <span class="txt">삭제가 완료되었습니다.</span>
-      </div>
-      <div class="pop-footer">
-        <button type="button" class="btn-lg">확인</button>
-      </div>
-    </div>
-  </div>
-  <!--E: 삭제 버튼 알럿 팝업 > 삭제 처리 후 -->
-
-  <!--S: 삭제 버튼 알럿 팝업 > 항목 미선택 한 경우 -->
-  <div class="pop-wrap alert-type">
-    <div class="pop-inner">
-      <div class="pop-content">
-        <button type="button" class="pop-close"></button>
-        <span class="txt">항목을 선택해주세요.</span>
-      </div>
-      <div class="pop-footer">
-        <button type="button" class="btn-lg">확인</button>
-      </div>
-    </div>
-  </div>
-  <!--E: 삭제 버튼 알럿 팝업 > 항목 미선택 한 경우 -->
-
-  <!--S: 교과서 등록 팝업 > 등록 버튼 선택 시 -->
-  <div class="pop-wrap alert-type">
-    <div class="pop-inner">
-      <div class="pop-content">
-        <button type="button" class="pop-close"></button>
-        <span class="txt">등록되었습니다.</span>
-      </div>
-      <div class="pop-footer">
-        <button type="button" class="btn-lg">확인</button>
-      </div>
-    </div>
-  </div>
-  <!--E: 교과서 등록 팝업 > 등록 버튼 선택 시 -->
-
-  <!--S: 교과서 등록 팝업 > 미입력한 항목 존재 시 -->
-  <div class="pop-wrap alert-type">
-    <div class="pop-inner">
-      <div class="pop-content">
-        <button type="button" class="pop-close"></button>
-        <span class="txt">교과서 정보를<br>모두 등록해주세요.</span>
-      </div>
-      <div class="pop-footer">
-        <button type="button" class="btn-lg">확인</button>
-      </div>
-    </div>
-  </div>
-  <!--E: 교과서 등록 팝업 > 미입력한 항목 존재 시 -->
 </body>
 </html>
