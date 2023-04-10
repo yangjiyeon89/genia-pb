@@ -716,3 +716,11 @@ input[type=checkbox]:checked + label::before {
   transform: none;
   background-color: #fff;
 }
+.pop-wrap.full-type .pop-header {
+  padding: 18px 40px;
+  background-color: #f6f6f6;
+}
+.pop-wrap.full-type .pop-close {
+  top: 21px;
+  right: 40px;
+}
