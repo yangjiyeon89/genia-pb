@@ -132,5 +132,34 @@ $(function(){
 
   popBtn.on('click', popFunc);
   closePop.on('click', popClose);
+
+
+  //left nav
+  let classArea = $('.class-area');
+  let classList = $('.class-list');
+  let classItem = $('.class-item');
+
+  function classNavFunc(){
+    let _this = $(this);
+    if(!_this.hasClass('active')) {
+      _this.addClass('active');
+      _this.find('.arrow').text('▲');
+      _this.next(classArea).show();
+    } else {
+      _this.removeClass('active');
+      _this.find('.arrow').text('▼');
+      _this.next(classArea).hide();
+      _this.next(classArea).find(classArea).hide();
+      _this.next(classArea).find(classItem).removeClass('active');
+      _this.next(classArea).find(classItem).find('.arrow').text('▼');
+    }
+
+    if(_this.parents(classArea).hasClass('last-area')) {
+      _this.parent(classList).siblings(classList).find(classItem).removeClass('active');
+      _this.addClass('active');
+    }
+  }
+
+  classItem.on('click', classNavFunc)
   
 });

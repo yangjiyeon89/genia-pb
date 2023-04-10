@@ -212,3 +212,112 @@
     font-size: 15px;
   }
 }
+
+// 콘텐츠관리
+.admin01 {
+  .justify-section {
+    @include layout-justify-start;
+  }
+  .class-list-wrap {
+    width: 300px;
+    .tab-menu-type01 {
+      li {
+        a {
+          width: 100px;
+        }
+      }
+    }
+    .contents {
+      overflow: hidden;      
+      border: 1px solid #cbcbcb;
+      border-top: 0;
+      .scroll-inner {
+        height: 750px;
+        &::-webkit-scrollbar {
+          border-right: 0;
+          border-top: 0;
+          border-bottom: 0;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-right: 0;
+        }
+        &::-webkit-scrollbar-button:start:decrement, &::-webkit-scrollbar-button:end:increment {
+          height: 0;
+        }
+      }
+    }
+    .class-item {
+      display: flex;
+      padding: 12px 22px;
+      border-bottom: 1px solid #e5e5e5;
+      .arrow {
+        position: relative;
+        top: 4px;
+        display: inline-block;
+        margin-right: 9px;
+        font-size: 9px;
+      }
+    }
+    .class-area {
+      display: none;
+    }
+    .depth1-area {
+      display: block;
+    }
+    .depth2-area {
+      .class-item {
+        padding-left: 32px;
+      }
+    }
+    .depth3-area {
+      .class-item {
+        padding-left: 42px;
+      }
+    }
+    .depth4-area {
+      .class-item {
+        padding-left: 52px;
+      }
+    }
+    .depth5-area {
+      .class-item {
+        padding-left: 62px;
+      }
+    }
+    .depth6-area {
+      .class-item {
+        padding-left: 72px;
+      }
+    }
+    .last-area {
+      .class-item {
+        padding-left: 92px;
+      }
+      .active {
+        background-color: #f6f6f6;
+      }
+    }
+  }
+  .que-content-wrap {
+    width: 100%;
+    border: 1px solid #cbcbcb;
+    border-left: 0;
+    .search-wrap {
+      @include layout-center;
+      padding: 8px 13px 8px 21px;
+      border-bottom: 1px solid #cbcbcb;
+      background-color: #f1f1f1;
+    }
+    .search-tit {
+      flex: none;
+      margin-right: 18px;
+      font-weight: 500;
+    }
+    .form-wrap {
+      display: flex;
+    }
+  }
+  .que-content {
+    height: 750px;
+  }
+}

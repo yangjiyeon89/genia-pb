@@ -240,6 +240,99 @@
   font-size: 15px;
 }
 
+.admin01 .justify-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.admin01 .class-list-wrap {
+  width: 300px;
+}
+.admin01 .class-list-wrap .tab-menu-type01 li a {
+  width: 100px;
+}
+.admin01 .class-list-wrap .contents {
+  overflow: hidden;
+  border: 1px solid #cbcbcb;
+  border-top: 0;
+}
+.admin01 .class-list-wrap .contents .scroll-inner {
+  height: 750px;
+}
+.admin01 .class-list-wrap .contents .scroll-inner::-webkit-scrollbar {
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+.admin01 .class-list-wrap .contents .scroll-inner::-webkit-scrollbar-thumb {
+  border-right: 0;
+}
+.admin01 .class-list-wrap .contents .scroll-inner::-webkit-scrollbar-button:start:decrement, .admin01 .class-list-wrap .contents .scroll-inner::-webkit-scrollbar-button:end:increment {
+  height: 0;
+}
+.admin01 .class-list-wrap .class-item {
+  display: flex;
+  padding: 12px 22px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.admin01 .class-list-wrap .class-item .arrow {
+  position: relative;
+  top: 4px;
+  display: inline-block;
+  margin-right: 9px;
+  font-size: 9px;
+}
+.admin01 .class-list-wrap .class-area {
+  display: none;
+}
+.admin01 .class-list-wrap .depth1-area {
+  display: block;
+}
+.admin01 .class-list-wrap .depth2-area .class-item {
+  padding-left: 32px;
+}
+.admin01 .class-list-wrap .depth3-area .class-item {
+  padding-left: 42px;
+}
+.admin01 .class-list-wrap .depth4-area .class-item {
+  padding-left: 52px;
+}
+.admin01 .class-list-wrap .depth5-area .class-item {
+  padding-left: 62px;
+}
+.admin01 .class-list-wrap .depth6-area .class-item {
+  padding-left: 72px;
+}
+.admin01 .class-list-wrap .last-area .class-item {
+  padding-left: 92px;
+}
+.admin01 .class-list-wrap .last-area .active {
+  background-color: #f6f6f6;
+}
+.admin01 .que-content-wrap {
+  width: 100%;
+  border: 1px solid #cbcbcb;
+  border-left: 0;
+}
+.admin01 .que-content-wrap .search-wrap {
+  display: flex;
+  align-items: center;
+  padding: 8px 13px 8px 21px;
+  border-bottom: 1px solid #cbcbcb;
+  background-color: #f1f1f1;
+}
+.admin01 .que-content-wrap .search-tit {
+  flex: none;
+  margin-right: 18px;
+  font-weight: 500;
+}
+.admin01 .que-content-wrap .form-wrap {
+  display: flex;
+}
+.admin01 .que-content {
+  height: 750px;
+}
+
 .container .inner {
   margin: 77px auto 0;
 }
