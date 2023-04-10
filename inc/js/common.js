@@ -163,6 +163,16 @@ $(function(){
   classItem.on('click', classNavFunc);
 
 
+  // checkbox on
+  let tblChk = $('.table-wrap.type02 input[type=checkbox]');
+
+  function tblchkFunc() {
+    let _this = $(this);
+    _this.parents('tr').toggleClass('on'); 
+  }
+  
+  tblChk.on('click', tblchkFunc);
+
   // checkbox
   let chkAll = $('.allCheck');
 
@@ -171,12 +181,14 @@ $(function(){
 
     if (_this.prop('checked')) {
       _this.parents('table').find('input[type=checkbox]').prop('checked', true);
+      _this.parents('table').find('tr').addClass('on');
     } else {
       _this.parents('table').find('input[type=checkbox]').prop('checked', false);
+      _this.parents('table').find('tr').removeClass('on');
     }
 
   }
 
   chkAll.on('click', checkFunc);
-  
+
 });
