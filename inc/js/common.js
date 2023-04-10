@@ -203,4 +203,22 @@ $(function(){
 
   chkAll.on('click', checkFunc);
 
+  
+  // accordion
+  let accBtn = $('.ui-acc-btn');
+
+  function accFunc() {
+    let _this = $(this);
+
+    _this.toggleClass('active');
+
+    if (_this.hasClass('active')) {
+      _this.find('.arrow').text('▲');
+      _this.next('.ui-acc-cnt').stop().slideDown('fast');
+    } else {
+      _this.find('.arrow').text('▼');
+      _this.next('.ui-acc-cnt').stop().slideUp('fast');
+    }
+  }
+
 });
