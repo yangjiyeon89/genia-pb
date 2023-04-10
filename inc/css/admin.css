@@ -505,6 +505,9 @@
   height: 48px;
   padding: 13px 20px;
 }
+.admin01 .step-cnt {
+  margin-bottom: 50px;
+}
 .admin01 .step-cnt table td {
   padding: 6px 12px;
   font-size: 15px;
