@@ -227,10 +227,10 @@ $(function(){
     if(_this.parents('*').hasClass('ui-acc-area')) {
       if (_this.hasClass('active')) {
         _this.text('▲');
-        _this.parents(accArea).find('.ui-acc-cnt').stop().slideDown('fast');
+        _this.parents(accArea).next('.ui-acc-cnt').stop().slideDown('fast');
       } else {
         _this.text('▼');
-        _this.parents(accArea).find('.ui-acc-cnt').stop().slideUp('fast');
+        _this.parents(accArea).next('.ui-acc-cnt').stop().slideUp('fast');
       }
     } else {
       if (_this.hasClass('active')) {
