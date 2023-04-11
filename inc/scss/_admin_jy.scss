@@ -597,6 +597,16 @@
       margin-top: 13px;
     }
   }
+  .data-add-wrap {
+    margin-top: 0;
+    .inner-tit {
+      margin-bottom: 20px;
+      @include font(15px, 500);
+    }
+    .radio-area {
+      margin-bottom: 12px;
+    }
+  }
 }
 
 // 차시별콘텐츠 관리
@@ -609,4 +619,5 @@
       height: 705px;
     }
   }
+ 
 }

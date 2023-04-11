@@ -604,6 +604,17 @@
 .admin01 .test-add-step02 .table-wrap {
   margin-top: 13px;
 }
+.admin01 .data-add-wrap {
+  margin-top: 0;
+}
+.admin01 .data-add-wrap .inner-tit {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.admin01 .data-add-wrap .radio-area {
+  margin-bottom: 12px;
+}
 
 .admin01-02 .contents {
   margin-top: 10px;
