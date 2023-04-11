@@ -639,6 +639,9 @@
 .admin01 .admin02-content-area .txt {
   font-weight: 500;
 }
+.admin01 .admin02-content-area .class-item-tit {
+  padding: 15px 20px 15px 27px;
+}
 .admin01 .update-type .que-class-btn {
   padding: 12px 18px;
   justify-content: flex-start;
