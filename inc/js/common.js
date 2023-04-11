@@ -258,4 +258,21 @@ $(function(){
     $(this).siblings('.upload-name').val(filename);
   });
 
+
+  // radio tab
+  let radioWrap = $('.ui-radio-wrap')
+  let radioSelect = $('.ui-radio-sel');
+  let radioSelectCnt = $('.ui-radio-cnt')
+
+  function radioSelFunc(){
+    
+    let _this = $(this);
+    let radioData = _this.data('tab');
+
+    _this.parents(radioWrap).find(radioSelectCnt).hide();
+    $(".ui-radio-cnt[data-tab='" + radioData + "']").show();
+
+  }
+
+  radioSelect.on('click' , radioSelFunc)
 });

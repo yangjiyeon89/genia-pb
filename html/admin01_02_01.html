@@ -1295,123 +1295,70 @@
           <button type="button" class="pop-close"></button>
         </div>
         <div class="pop-content">
-          <div class="table-wrap type01">
+          <div class="table-wrap type01 ui-radio-wrap">
             <p class="inner-tit">학습 자료 추가하기</p>
             <div class="radio-area">
-              <input type="radio" id="radio03_01" name="radio03" checked>
+              <input type="radio" id="radio03_01" name="radio03" class="ui-radio-sel" data-tab="radio03_01" checked>
               <label for="radio03_01">파일로 추가</label>
-              <input type="radio" id="radio03_02" name="radio03">
+              <input type="radio" id="radio03_02" name="radio03" class="ui-radio-sel" data-tab="radio03_02">
               <label for="radio03_02">URL로 추가</label>
             </div>
-            <table>
-              <colgroup>
-                <col width="150px">
-                <col width="*">
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th>출판사</th>
-                  <td>
-                    <div class="file-area bs3-primary">
-                      <input type="text" class="upload-name" value="이미지파일(jpg, png, bmp 등)만 등록 가능합니다 / 최대 5MB까지 첨부 가능 / 최대 첨부 개수: 1개" disabled="disabled">			
-                      <label for="ex_filename" class="file-btn btn-sm">파일찾기</label>
-                      <input type="file" id="ex_filename" class="upload-hidden">
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>교과서명</th>
-                  <td>
-                    <input type="text" class="full" placeholder="교과서명을 입력하세요.">
-                  </td>
-                </tr>
-                <tr>
-                  <th>학교급</th>
-                  <td>
-                    <div class="select-wrap full">
-                      <button type="button" class="select-btn">선택</button>
-                      <ul class="select-list">
-                        <li>
-                          <a href="javascript:;">선택1</a>
-                        </li>
-                        <li>
-                          <a href="javascript:;">선택2</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>학년</th>
-                  <td>
-                    <div class="select-wrap full">
-                      <button type="button" class="select-btn">선택</button>
-                      <ul class="select-list">
-                        <li>
-                          <a href="javascript:;">선택1</a>
-                        </li>
-                        <li>
-                          <a href="javascript:;">선택2</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>학기</th>
-                  <td>
-                    <div class="select-wrap full">
-                      <button type="button" class="select-btn">선택</button>
-                      <ul class="select-list">
-                        <li>
-                          <a href="javascript:;">선택1</a>
-                        </li>
-                        <li>
-                          <a href="javascript:;">선택2</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>과목</th>
-                  <td>
-                    <div class="select-wrap full">
-                      <button type="button" class="select-btn">선택</button>
-                      <ul class="select-list">
-                        <li>
-                          <a href="javascript:;">선택1</a>
-                        </li>
-                        <li>
-                          <a href="javascript:;">선택2</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th>교육과정</th>
-                  <td>
-                    <div class="select-wrap full">
-                      <button type="button" class="select-btn">선택</button>
-                      <ul class="select-list">
-                        <li>
-                          <a href="javascript:;">선택1</a>
-                        </li>
-                        <li>
-                          <a href="javascript:;">선택2</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- 파일로 추가 -->
+            <div data-tab="radio03_01" class="ui-radio-cnt">
+              <table>
+                <colgroup>
+                  <col width="150px">
+                  <col width="*">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>자료명 입력</th>
+                    <td>
+                      <input type="text" class="full" placeholder="자료명을 입력하세요.">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>자료 업로드</th>
+                    <td>
+                      <div class="file-area bs3-primary">
+                        <input type="text" class="upload-name" value="최대 00MB까지 첨부 가능" disabled="disabled">			
+                        <label for="ex_filename" class="file-btn btn-sm">파일찾기</label>
+                        <input type="file" id="ex_filename" class="upload-hidden">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <!-- URL로 추가 -->
+            <div data-tab="radio03_02" class="ui-radio-cnt">
+              <table>
+                <colgroup>
+                  <col width="150px">
+                  <col width="*">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>자료명 입력</th>
+                    <td>
+                      <input type="text" class="full" placeholder="자료명을 입력하세요.">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>URL을 입력하세요.</th>
+                    <td>
+                      <input type="text" class="full" placeholder="자료명을 입력하세요.">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
           </div>
         </div>
         <div class="pop-footer">
-          <button type="button" class="btn-lg">취소</button>
-          <button type="button" class="btn-lg">등록</button>
+          <button type="button" class="btn-lg full">추가하기</button>
         </div>
       </div>
     </div>
