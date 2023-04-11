@@ -213,8 +213,9 @@
   }
 }
 
-// 콘텐츠관리
+
 .admin01 {
+  // 콘텐츠관리
   .justify-section {
     @include layout-justify-start;
     height: 100%;
@@ -230,9 +231,6 @@
     }
     &.btn-include {
       height: calc(100% - 80px);
-      &::-webkit-scrollbar {
-        border-bottom: 1px solid #cbcbcb;
-      }
     }
   }
   .bold {
@@ -618,15 +616,66 @@
       margin-bottom: 12px;
     }
   }
+
+  // 기초 데이터 관리
   .admin02-content-area {
     position: relative;
+    height: 798px;
     padding-bottom: 80px;
+    border: 0;
     .btm-btn {
       position: absolute;
       bottom: 0;
     }
     .txt {
       font-weight: 500;
+    }
+  }
+  .update-type {
+    .que-class-btn {
+      padding: 12px 18px;
+      justify-content: flex-start;
+    }
+    .class-item-tit {
+      padding: 12px 18px 12px 28px;
+      justify-content: flex-start;
+    }
+    .input-text {
+      width: 610px;
+      margin-right: 10px;
+    }
+    .que-class-tit {
+      margin-right: 12px;
+    }
+    .class-item-txt {
+      margin-right: 15px;
+    }
+    .unit-btn {
+      padding-right: 22px;
+      color: #9e9e9e;
+      font-size: 14px;
+    }
+    .unit-add {
+      position: relative;
+      margin-right: 20px;
+      background: url(../../images/common/ico_add.png) no-repeat right center;
+      &::after {
+        position: absolute;
+        right: -13px;top: 50%;
+        @include virtual-selector;
+        width: 1px;height: 14px;
+        background-color: #cbcbcb;
+        transform: translateY(-50%);
+      }
+    }
+    .unit-del {
+      background: url(../../images/common/ico_del.png) no-repeat right center;
+    }
+    .unit-btn-wrap {
+      & + .arrow {
+        margin-left: 20px;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -647,5 +696,10 @@
 .admin02-01 {
   .que-content {
     height: 798px;
+  }
+  .scroll-inner {
+    &::-webkit-scrollbar {
+      border-bottom: 1px solid #cbcbcb;
+    }
   }
 }

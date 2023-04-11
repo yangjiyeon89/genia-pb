@@ -216,19 +216,30 @@ $(function(){
 
 
   // accordion
+  let accArea = $('.ui-acc-area');
   let accBtn = $('.ui-acc-btn');
 
   function accFunc() {
     let _this = $(this);
-
+    
     _this.toggleClass('active');
 
-    if (_this.hasClass('active')) {
-      _this.find('.arrow').text('▲');
-      _this.next('.ui-acc-cnt').stop().slideDown('fast');
+    if(!_this.parents('*').hasClass(accArea)) {
+      if (_this.hasClass('active')) {
+        _this.text('▲');
+        _this.parents(accArea).find('.ui-acc-cnt').stop().slideDown('fast');
+      } else {
+        _this.text('▼');
+        _this.parents(accArea).find('.ui-acc-cnt').stop().slideUp('fast');
+      }
     } else {
-      _this.find('.arrow').text('▼');
-      _this.next('.ui-acc-cnt').stop().slideUp('fast');
+      if (_this.hasClass('active')) {
+        _this.find('.arrow').text('▲');
+        _this.next('.ui-acc-cnt').stop().slideDown('fast');
+      } else {
+        _this.find('.arrow').text('▼');
+        _this.next('.ui-acc-cnt').stop().slideUp('fast');
+      }
     }
   }
 

@@ -179,187 +179,38 @@
               </div>
               
 
-              <!-- 문항 화면 -->
-              <div class="que-list-add admin02-content-area">
-                <div class="scroll inner">
-
+              <!-- 교과서 정보 목록 추가 -->
+              <div class="que-class-wrap admin02-content-area update-type">
+                <div class="scroll-inner">
+                  <ul class="que-class-area">
+                    <li class="que-class-list ui-acc-area">
+                      <div class="que-class-btn active">
+                        <span class="que-class-tit bold">1단원</span>
+                        <input type="text" placeholder="단원명을 입력하세요." class="input-text">
+                        <div class="unit-btn-wrap">
+                          <button class="unit-add unit-btn" type="button">단원 추가</button>
+                          <button class="unit-del unit-btn" type="button">단원 삭제</button>
+                        </div>
+                        <button type="button" class="ui-acc-btn arrow">▲</button>
+                      </div>
+                      <ul class="que-class-cnt ui-acc-cnt" style="display:block;">
+                        <li class="que-class-item">
+                          <div class="class-item-tit">
+                            <span class="class-item-txt bold">1차시</span>
+                            <input type="text" placeholder="차시명을 입력하세요." class="input-text">
+                            <div class="unit-btn-wrap">
+                              <button class="unit-add unit-btn" type="button">차시 추가</button>
+                              <button class="unit-del unit-btn" type="button">차시 삭제</button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
                 <div class="btn-wrap btm-btn">
                   <a href="javascript:;" class="btn-lg">취소</a>
                   <a href="javascript:;" class="btn-lg">저장</a>
-                </div>
-              </div>
-              <div class="justify-section" style="display: none;">
-                <div class="que-list-wrap">
-                  <div class="scroll-inner">
-                    <div class="radio-wrap">
-                      <input type="radio" id="radio01_01" name="radio01" checked>
-                      <label for="radio01_01">전체 문항 보기</label>
-                      <input type="radio" id="radio01_02" name="radio01">
-                      <label for="radio01_02">geniA Tutor 문항만 보기</label>
-                    </div>
-                    <ul class="que-area">
-                      <li class="que-list">
-                        <div class="chk-box">
-                          <input type="checkbox" id="chk01_01" checked>
-                          <label for="chk01_01"></label>
-                        </div>
-                        <div class="que-item">
-                          <span class="que-tit">문항 ID  000000</span>
-                          <div class="que-view">
-                            <img src="../images/sub/sample_que.png" alt="">
-                          </div>
-                          <em class="que-label complete">작업 완료</em>
-                        </div>
-                      </li>
-                      <li class="que-list">
-                        <div class="chk-box">
-                          <input type="checkbox" id="chk01_02">
-                          <label for="chk01_02"></label>
-                        </div>
-                        <div class="que-item">
-                          <span class="que-tit">문항 ID  000000</span>
-                          <div class="que-view">
-                            <img src="../images/sub/sample_que.png" alt="">
-                          </div>
-                          <em class="que-label necessity">작업 필요</em>
-                        </div>
-                      </li>
-                      <li class="que-list">
-                        <div class="chk-box">
-                          <input type="checkbox" id="chk01_03">
-                          <label for="chk01_03"></label>
-                        </div>
-                        <div class="que-item">
-                          <span class="que-tit">문항 ID  000000</span>
-                          <div class="que-view">
-                            <img src="../images/sub/sample_que.png" alt="">
-                          </div>
-                          <em class="que-label complete">작업 완료</em>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="que-info-wrap">
-                  <div class="que-table">
-                    <span class="que-table-tit">문항 속성</span>
-                    <div class="table-wrap type01">
-                      <table>
-                        <colgroup>
-                          <col width="120px">
-                          <col width="*">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th>문제상태</th>
-                            <td>등록</td>
-                          </tr>
-                          <tr>
-                            <th rowspan="2">문제형태 지정</th>
-                            <td>5가지선택</td>
-                          </tr>
-                          <tr>
-                            <td>-</td>
-                          </tr>
-                          <tr>
-                            <th>난이도</th>
-                            <td>최하</td>
-                          </tr>
-                          <tr>
-                            <th>공유여부</th>
-                            <td>공유 </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="que-table">
-                    <span class="que-table-tit">분석 속성</span>
-                    <div class="table-wrap type01">
-                      <table>
-                        <colgroup>
-                          <col width="120px">
-                          <col width="*">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th>분석속성</th>
-                            <td>2015개정 교육과정</td>
-                          </tr>
-                          <tr>
-                            <th>교육과정</th>
-                            <td>5가지선택</td>
-                          </tr>
-                          <tr>
-                            <th>내용영역</th>
-                            <td>전체</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="que-table">
-                    <span class="que-table-tit">속성 추가</span>
-                    <div class="table-wrap type01">
-                      <table>
-                        <colgroup>
-                          <col width="120px">
-                          <col width="*">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th>내용영역</th>
-                            <td>
-                              <div class="select-wrap full">
-                                <button type="button" class="select-btn">자료와 가능성</button>
-                                <ul class="select-list">
-                                  <li>
-                                    <a href="javascript:;">자료와 가능성</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>성취기준</th>
-                            <td>
-                              <div class="select-wrap full">
-                                <button type="button" class="select-btn">사건이 일어날 가능성을사건이 일어날 가능성을</button>
-                                <ul class="select-list">
-                                  <li>
-                                    <a href="javascript:;">사건이 일어날 가능성을사건이 일어날 가능성을</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>교과역량</th>
-                            <td>
-                              <div class="select-wrap full">
-                                <button type="button" class="select-btn">추론</button>
-                                <ul class="select-list">
-                                  <li>
-                                    <a href="javascript:;">추론</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>학습개념</th>
-                            <td>
-                              <input type="text" class="full" placeholder="학습 개념 입력">
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="btn-wrap full">
-                    <button type="button" class="btn-lg pop-btn" data-pop="alert-pop">등록하기</button>
-                  </div>
                 </div>
               </div>
             </div>
