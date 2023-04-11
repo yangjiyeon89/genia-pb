@@ -38,7 +38,7 @@
 }
 .guide > .pop-wrap {
   display: block;
-  position: relative;
+  position: relative !important;
   top: inherit;
   left: inherit;
   transform: none;
@@ -452,6 +452,24 @@ input[type=checkbox]:checked + label::before {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.file-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.file-area .file-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 105px;
+  padding-bottom: 2px;
+}
+.file-area .upload-name {
+  width: calc(100% - 110px);
+  background-color: #fff;
 }
 
 .tab-wrap .contents {

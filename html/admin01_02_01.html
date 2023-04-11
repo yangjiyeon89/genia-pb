@@ -1287,6 +1287,135 @@
       </div>
     </div>
 
+    <!-- 학습 자료 추가 팝업 -->
+    <div class="pop-wrap table-type" style="display: block;">
+      <div class="pop-inner">
+        <div class="pop-header">
+          <span>학습 자료 추가</span>
+          <button type="button" class="pop-close"></button>
+        </div>
+        <div class="pop-content">
+          <div class="table-wrap type01">
+            <p class="inner-tit">학습 자료 추가하기</p>
+            <div class="radio-area">
+              <input type="radio" id="radio03_01" name="radio03" checked>
+              <label for="radio03_01">파일로 추가</label>
+              <input type="radio" id="radio03_02" name="radio03">
+              <label for="radio03_02">URL로 추가</label>
+            </div>
+            <table>
+              <colgroup>
+                <col width="150px">
+                <col width="*">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>출판사</th>
+                  <td>
+                    <div class="file-area bs3-primary">
+                      <input type="text" class="upload-name" value="이미지파일(jpg, png, bmp 등)만 등록 가능합니다 / 최대 5MB까지 첨부 가능 / 최대 첨부 개수: 1개" disabled="disabled">			
+                      <label for="ex_filename" class="file-btn btn-sm">파일찾기</label>
+                      <input type="file" id="ex_filename" class="upload-hidden">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>교과서명</th>
+                  <td>
+                    <input type="text" class="full" placeholder="교과서명을 입력하세요.">
+                  </td>
+                </tr>
+                <tr>
+                  <th>학교급</th>
+                  <td>
+                    <div class="select-wrap full">
+                      <button type="button" class="select-btn">선택</button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>학년</th>
+                  <td>
+                    <div class="select-wrap full">
+                      <button type="button" class="select-btn">선택</button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>학기</th>
+                  <td>
+                    <div class="select-wrap full">
+                      <button type="button" class="select-btn">선택</button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>과목</th>
+                  <td>
+                    <div class="select-wrap full">
+                      <button type="button" class="select-btn">선택</button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>교육과정</th>
+                  <td>
+                    <div class="select-wrap full">
+                      <button type="button" class="select-btn">선택</button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">취소</button>
+          <button type="button" class="btn-lg">등록</button>
+        </div>
+      </div>
+    </div>
+
     <!-- 문항 선택 완료 팝업 -->
     <div class="pop-wrap alert-type">
       <div class="pop-inner">
@@ -1345,7 +1474,20 @@
       <div class="pop-inner">
         <div class="pop-content">
           <button type="button" class="pop-close"></button>
-          <span class="txt">시험지 속성을<br>빠짐없이 입력해주세요./span>
+          <span class="txt">시험지 속성을<br>빠짐없이 입력해주세요.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 학습 자료 추가 완료 팝업 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">학습 자료가<br>추가되었습니다.</span>
         </div>
         <div class="pop-footer">
           <button type="button" class="btn-lg">확인</button>

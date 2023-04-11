@@ -40,3 +40,13 @@ template{display:none}
 a .hide-txt{font-size:0}
 a:before{content:'　';position:absolute;font-size:0}
 select {appearance:none;}
+input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}

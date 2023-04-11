@@ -22,7 +22,7 @@
 	}
 	> .pop-wrap {
 		display: block;
-    position: relative;
+    position: relative !important;
     top: inherit;
     left: inherit;
     transform: none;
@@ -415,6 +415,20 @@ input[type="checkbox"] {
 .input-wrap {
 	@include content-center-center;
 	gap: 10px;
+}
+
+.file-area {
+	@include layout-justify-center;
+	gap: 5px;
+	.file-btn {
+		@include content-center-center;
+		width: 105px;
+		padding-bottom: 2px;
+	}
+	.upload-name {
+		width: calc(100% - 110px);
+		background-color: #fff;
+	}
 }
 
 //tab
