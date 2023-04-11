@@ -710,7 +710,7 @@ input[type=checkbox]:checked + label::before {
 }
 .pop-wrap.full-type {
   overflow: auto;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
