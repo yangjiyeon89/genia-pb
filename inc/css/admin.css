@@ -847,6 +847,10 @@
 .admin03-01 .chart-wrap .chk-wrap label {
   font-size: 15px;
 }
+.admin03-01 .chart-wrap .txt {
+  font-size: 16px;
+  font-weight: 500;
+}
 .admin03-01 .form-wrap {
   display: flex;
   gap: 10px;

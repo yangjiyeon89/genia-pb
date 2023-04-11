@@ -132,6 +132,9 @@
         font-size: 15px;
       }
     }
+    .txt {
+      @include font(16px, 500);
+    }
   }
   .form-wrap {
     display: flex;
