@@ -719,8 +719,14 @@
 .admin03-01 .table-wrap.type01 {
   margin: 10px 0 20px 0;
 }
+.admin03-01 .table-wrap.type01 .chk-wrap label {
+  font-size: 15px;
+}
 .admin03-01 .table-wrap.type02 {
   margin-top: 20px;
+}
+.admin03-01 .table-wrap.type02 .pop-btn.line {
+  text-decoration: underline;
 }
 .admin03-01 .paging-wrap {
   margin-top: 30px;
@@ -762,6 +768,47 @@
 }
 .admin03-01 .date-cnt input[type=text].w75, .admin03-01 .date-cnt input[type=number].w75 {
   width: 75px;
+}
+.admin03-01 .chk-wrap label {
+  margin-right: 15px;
+}
+.admin03-01 .chk-wrap label:nth-last-child(1) {
+  margin-right: 0;
+}
+.admin03-01 .flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  border: 1px solid #cbcbcb;
+  margin-top: 20px;
+}
+.admin03-01 .flex-box .table-wrap {
+  margin-top: 0;
+  margin: 20px;
+}
+.admin03-01 .chart-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 506px;
+  border-right: 1px solid #cbcbcb;
+  flex-shrink: 0;
+  padding: 18px;
+  gap: 20px;
+}
+.admin03-01 .chart-wrap .tit {
+  font-size: 16px;
+  font-weight: 500;
+}
+.admin03-01 .chart-wrap .chart-cnt {
+  width: 100%;
+  height: 270px;
+}
+.admin03-01 .chart-wrap .chk-wrap label {
+  font-size: 15px;
 }
 
 .pop-wrap.file-pop .file-upload .file-box {
@@ -827,6 +874,19 @@
   color: #fff;
   font-size: 15px;
   background-color: #108eff;
+}
+.pop-wrap .pop-que-info {
+  border: 1px solid #cbcbcb;
+  padding: 13px;
+  box-sizing: border-box;
+}
+.pop-wrap .pop-que-info .tit {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.pop-wrap .pop-que-info .tit .num {
+  margin-left: 7px;
 }
 
 .container .inner {
