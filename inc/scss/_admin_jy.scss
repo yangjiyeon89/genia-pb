@@ -238,6 +238,11 @@
   .bold {
     font-weight: 700;
   }
+  .btm-btn {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    color: #fff;
+  }
   .class-list-wrap {
     width: 300px;
     .tab-menu-type01 {
@@ -613,6 +618,17 @@
       margin-bottom: 12px;
     }
   }
+  .admin02-content-area {
+    position: relative;
+    padding-bottom: 80px;
+    .btm-btn {
+      position: absolute;
+      bottom: 0;
+    }
+    .txt {
+      font-weight: 500;
+    }
+  }
 }
 
 // 차시별콘텐츠 관리
@@ -625,5 +641,11 @@
       height: 705px;
     }
   }
- 
+}
+
+// 교과서 관리
+.admin02-01 {
+  .que-content {
+    height: 798px;
+  }
 }

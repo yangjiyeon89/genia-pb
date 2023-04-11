@@ -265,6 +265,11 @@
 .admin01 .bold {
   font-weight: 700;
 }
+.admin01 .btm-btn {
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  color: #fff;
+}
 .admin01 .class-list-wrap {
   width: 300px;
 }
@@ -621,12 +626,27 @@
 .admin01 .data-add-wrap .radio-area {
   margin-bottom: 12px;
 }
+.admin01 .admin02-content-area {
+  position: relative;
+  padding-bottom: 80px;
+}
+.admin01 .admin02-content-area .btm-btn {
+  position: absolute;
+  bottom: 0;
+}
+.admin01 .admin02-content-area .txt {
+  font-weight: 500;
+}
 
 .admin01-02 .contents {
   margin-top: 10px;
 }
 .admin01-02 .class-list-wrap .content {
   height: 705px;
+}
+
+.admin02-01 .que-content {
+  height: 798px;
 }
 
 /**
