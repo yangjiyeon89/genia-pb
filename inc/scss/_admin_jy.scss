@@ -233,6 +233,9 @@
       height: calc(100% - 80px);
     }
   }
+  .bd-none {
+    border: 0;
+  }
   .bold {
     font-weight: 700;
     & > * {
@@ -620,7 +623,7 @@
     }
   }
 
-  // 기초 데이터 관리
+  // 기초 데이터 관리  
   .admin02-content-area {
     position: relative;
     height: 798px;
@@ -634,9 +637,17 @@
       font-weight: 500;
     }
     .class-item-tit {
-      padding: 15px 20px 15px 27px;
+      padding: 0 20px 0 27px;
+      min-height: 50px;
     }
-
+    &.btn-none {
+      padding-bottom: 0;
+      .scroll-inner {
+        &::-webkit-scrollbar {
+          border-bottom: 0;
+        }
+      }
+    }
   }
   .update-type {
     .que-class-btn {

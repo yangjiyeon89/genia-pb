@@ -259,6 +259,9 @@
 .admin01 .scroll-inner.btn-include {
   height: calc(100% - 80px);
 }
+.admin01 .bd-none {
+  border: 0;
+}
 .admin01 .bold {
   font-weight: 700;
 }
@@ -640,7 +643,14 @@
   font-weight: 500;
 }
 .admin01 .admin02-content-area .class-item-tit {
-  padding: 15px 20px 15px 27px;
+  padding: 0 20px 0 27px;
+  min-height: 50px;
+}
+.admin01 .admin02-content-area.btn-none {
+  padding-bottom: 0;
+}
+.admin01 .admin02-content-area.btn-none .scroll-inner::-webkit-scrollbar {
+  border-bottom: 0;
 }
 .admin01 .update-type .que-class-btn {
   position: relative;
