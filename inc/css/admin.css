@@ -262,6 +262,9 @@
 .admin01 .bold {
   font-weight: 700;
 }
+.admin01 .bold > * {
+  font-weight: 700;
+}
 .admin01 .btm-btn {
   width: calc(100% - 40px);
   margin: 20px auto;
@@ -680,7 +683,7 @@
   background: url(../../images/common/ico_del.png) no-repeat right center;
 }
 .admin01 .update-type .unit-btn-wrap + .arrow {
-  margin-left: 20px;
+  margin-left: 18px;
   cursor: pointer;
 }
 

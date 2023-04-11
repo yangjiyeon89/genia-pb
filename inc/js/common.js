@@ -224,7 +224,7 @@ $(function(){
     
     _this.toggleClass('active');
 
-    if(!_this.parents('*').hasClass(accArea)) {
+    if(_this.parents('*').hasClass('ui-acc-area')) {
       if (_this.hasClass('active')) {
         _this.text('▲');
         _this.parents(accArea).find('.ui-acc-cnt').stop().slideDown('fast');
