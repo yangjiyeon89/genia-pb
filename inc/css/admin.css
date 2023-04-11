@@ -256,6 +256,12 @@
 .admin01 .scroll-inner::-webkit-scrollbar-button:start:decrement, .admin01 .scroll-inner::-webkit-scrollbar-button:end:increment {
   height: 0;
 }
+.admin01 .scroll-inner.btn-include {
+  height: calc(100% - 80px);
+}
+.admin01 .scroll-inner.btn-include::-webkit-scrollbar {
+  border-bottom: 1px solid #cbcbcb;
+}
 .admin01 .bold {
   font-weight: 700;
 }

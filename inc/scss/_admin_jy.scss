@@ -228,6 +228,12 @@
     &::-webkit-scrollbar-button:start:decrement, &::-webkit-scrollbar-button:end:increment {
       height: 0;
     }
+    &.btn-include {
+      height: calc(100% - 80px);
+      &::-webkit-scrollbar {
+        border-bottom: 1px solid #cbcbcb;
+      }
+    }
   }
   .bold {
     font-weight: 700;

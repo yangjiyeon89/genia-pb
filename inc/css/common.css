@@ -219,10 +219,10 @@
   align-items: center;
   gap: 10px;
 }
-.btn-wrap.full button {
+.btn-wrap.full button, .btn-wrap.full a {
   flex: 1;
 }
-.btn-wrap.md-default button {
+.btn-wrap.md-default button, .btn-wrap.md-default a {
   width: 113px;
 }
 

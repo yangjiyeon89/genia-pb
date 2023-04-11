@@ -187,12 +187,12 @@
 	gap: 10px;
 
 	&.full {
-		button {
+		button, a {
 			flex: 1;
 		}
 	}
 	&.md-default {
-		button {
+		button, a {
 			width: 113px;
 		}
 	}
