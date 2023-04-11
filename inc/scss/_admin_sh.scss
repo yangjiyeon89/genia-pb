@@ -20,6 +20,17 @@
           text-decoration: underline;
         }
       }
+      a {
+        &.btn-link {
+          @include content-center-center;
+          width: 70px;
+          height: 25px;
+          color: #fff;
+          font-size: 15px;
+          background-color: #6a6a6a;
+        }
+      }
+
     }
   }
   .paging-wrap {
@@ -67,10 +78,18 @@
   .date-cnt {
     display: flex;
     gap: 10px;
-    
     input[type="text"], input[type="number"] {
       &.w75 {
         width: 75px;
+      }
+    }
+    .date-wrap {
+      flex-shrink: 0;
+    }
+    .input-wrap {
+      width: 100%;
+      input {
+        width: 100%;
       }
     }
   }
@@ -112,6 +131,13 @@
       label {
         font-size: 15px;
       }
+    }
+  }
+  .form-wrap {
+    display: flex;
+    gap: 10px;
+    .select-btn {
+      width: 221px;
     }
   }
 }
