@@ -30,7 +30,6 @@
           background-color: #6a6a6a;
         }
       }
-
     }
   }
   .paging-wrap {
@@ -145,8 +144,76 @@
   }
 }
 
-// 서비스 관리 - 운영 통계 > 리포트 관리
-
+// 서비스 관리 - 리포트 관리
+.admin03-02 {
+  .table-wrap {
+    &.type03 {
+      margin-top: 20px;
+      .unit-tit {
+        @include font(14px, 400);
+        color: #108eff;
+      }
+      .badge {
+        @include content-center-center;
+        padding: 5px 15px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        @include font(15px, 500);
+        &.type01 {
+          color: #8356ff;
+          border: 1px solid #8356ff;
+        }
+        &.type02 {
+          color: #108eff;
+          border: 1px solid #108eff;
+        }
+        &.type03 {
+          color: #ff569a;
+          border: 1px solid #ff569a;
+        }
+      }
+      .color-wrap {
+        @include content-center-center;
+        gap: 10px;
+        @include font(16px, 500);
+      }
+      .color {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        &.type01 {
+          background-color: #54c103;
+        }
+        &.type02 {
+          background-color: #f7fa20;
+        }
+        &.type03 {
+          background-color: #ffdb22;
+        }
+        &.type04 {
+          background-color: #ff741b;
+        }
+      }
+      .tit-sort {
+        @include content-center-center;
+        gap: 6px;
+      }
+    }
+  }
+  .btn-sort {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../../images/common/ico_sort.png) center no-repeat;
+  }
+  .btn-report {
+    display: inline-block;
+    width: 27px;
+    height: 28px;
+    background: url(../../images/common/ico_report.png) center no-repeat;
+  }
+}
 
 // 팝업
 .pop-wrap {

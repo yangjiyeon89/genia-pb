@@ -859,6 +859,81 @@
   width: 221px;
 }
 
+.admin03-02 .table-wrap.type03 {
+  margin-top: 20px;
+}
+.admin03-02 .table-wrap.type03 .unit-tit {
+  font-size: 14px;
+  font-weight: 400;
+  color: #108eff;
+}
+.admin03-02 .table-wrap.type03 .badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 500;
+}
+.admin03-02 .table-wrap.type03 .badge.type01 {
+  color: #8356ff;
+  border: 1px solid #8356ff;
+}
+.admin03-02 .table-wrap.type03 .badge.type02 {
+  color: #108eff;
+  border: 1px solid #108eff;
+}
+.admin03-02 .table-wrap.type03 .badge.type03 {
+  color: #ff569a;
+  border: 1px solid #ff569a;
+}
+.admin03-02 .table-wrap.type03 .color-wrap {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.admin03-02 .table-wrap.type03 .color {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.admin03-02 .table-wrap.type03 .color.type01 {
+  background-color: #54c103;
+}
+.admin03-02 .table-wrap.type03 .color.type02 {
+  background-color: #f7fa20;
+}
+.admin03-02 .table-wrap.type03 .color.type03 {
+  background-color: #ffdb22;
+}
+.admin03-02 .table-wrap.type03 .color.type04 {
+  background-color: #ff741b;
+}
+.admin03-02 .table-wrap.type03 .tit-sort {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.admin03-02 .btn-sort {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../../images/common/ico_sort.png) center no-repeat;
+}
+.admin03-02 .btn-report {
+  display: inline-block;
+  width: 27px;
+  height: 28px;
+  background: url(../../images/common/ico_report.png) center no-repeat;
+}
+
 .pop-wrap.file-pop .file-upload .file-box {
   border: 1px solid #cbcbcb;
 }
