@@ -236,12 +236,6 @@
   .bd-none {
     border: 0;
   }
-  .bold {
-    font-weight: 700;
-    & > * {
-      font-weight: 700;
-    }
-  }
   .btm-btn {
     width: calc(100% - 40px);
     margin: 20px auto;
@@ -718,5 +712,27 @@
     &::-webkit-scrollbar {
       border-bottom: 1px solid #cbcbcb;
     }
+  }
+}
+
+// 공지사항
+.admin03-03-04 {
+  .input-wrap {
+    width: 500px;
+  }
+  .table-wrap {
+    .list-tit {
+      padding: 8px 12px 2px;
+      text-align: left;
+    }
+  }
+  .tit-link {
+    @include text-overflow;
+    display: inline-block;
+    max-width: calc(100% - 20px);
+  }
+  .file {
+    position: relative;
+    top: -5px;
   }
 }

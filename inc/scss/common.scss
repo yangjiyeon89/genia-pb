@@ -63,6 +63,12 @@
   background-color: rgba(0,0,0,0.5);
   z-index: 3;
 }
+.bold {
+	font-weight: 700;
+	& > * {
+		font-weight: 700;
+	}
+}
 
 // header
 .header {

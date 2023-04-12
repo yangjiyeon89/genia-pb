@@ -83,6 +83,13 @@
   z-index: 3;
 }
 
+.bold {
+  font-weight: 700;
+}
+.bold > * {
+  font-weight: 700;
+}
+
 .header {
   position: relative;
 }
