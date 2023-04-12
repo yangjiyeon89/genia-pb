@@ -324,22 +324,6 @@
 </html>
 <script>
   $(function(){
-
-    let sortBtn = $('.sort-btn');
-
-    function sortBtnFunc() {
-      let _this = $(this);
-      _this.toggleClass('on');
-
-      if (_this.hasClass('on')) {
-        _this.text('▲');
-      } else {
-        _this.text('▼');
-      }
-
-    }
-    sortBtn.on('click', sortBtnFunc);
-
     //datepicker
     var dateFormat = "yy.mm.dd",
       from = $("#from")
