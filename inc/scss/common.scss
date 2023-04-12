@@ -513,6 +513,13 @@ input[type="checkbox"] {
 //table 
 .table-wrap {
 	width: 100%;
+	table {
+		th, td {
+			&.font-c {
+        color: #108eff;
+      }
+		}
+	}
 	&.type01 {
 		table {
 			width: 100%;

@@ -549,6 +549,9 @@ input[type=checkbox]:checked + label::before {
 .table-wrap {
   width: 100%;
 }
+.table-wrap table th.font-c, .table-wrap table td.font-c {
+  color: #108eff;
+}
 .table-wrap.type01 table {
   width: 100%;
   border: 1px solid #cbcbcb;
