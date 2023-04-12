@@ -727,6 +727,14 @@
   position: relative;
   top: -5px;
 }
+.admin03-03-04 .view-main-tit {
+  margin-top: 30px;
+}
+.admin03-03-04 .upload-name {
+  width: 100%;
+  color: #9e9e9e;
+  border: 0;
+}
 
 /**
 	* Computes a CSS calc function that betweens a value from

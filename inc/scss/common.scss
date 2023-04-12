@@ -143,6 +143,7 @@
 [class^='btn-'] , [class^='a.btn-'] {
 	@include layout-center-center;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 .btn-lg {
 	width: 200px;

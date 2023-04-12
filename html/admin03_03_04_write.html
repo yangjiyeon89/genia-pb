@@ -105,7 +105,51 @@
             [sub03_03_03.html] 탭으로 구현
           </div>
           <div class="contents on">
-            <div class="view-main-tit bold">공지사항 등록</div>
+            <p class="view-main-tit bold">공지사항 등록</p>
+            <div class="table-wrap type01">
+              <table>
+                <colgroup>
+                  <col width="130px"> 
+                  <col width="490px">
+                  <col width="130px">
+                  <col width="490px">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>제목</th>
+                    <td>
+                      <input type="text" placeholder="천재초등학교 활용 사례">
+                    </td>
+                    <th>구분</th>
+                    <td>
+                      <div class="chk-wrap">
+                        <input type="checkbox" id="chk01_01" checked="">
+                        <label for="chk01_01">고정</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>공지 내용</th>
+                    <td colspan="3">
+                      <div style="height: 380px;border: 1px solid #cbcbcb;">
+                        editor 영역
+                      </div>
+                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>대용량 첨부파일</th>
+                    <td colspan="3">
+                      <div class="file-area bs3-primary">
+                        <label for="ex_filename" class="file-btn btn-sm">첨부하기</label>
+                        <input type="file" id="ex_filename" class="upload-hidden">
+                        <input type="text" class="upload-name" value="*jpg,png,xls,pdf,hwp 등을 등록할 수 있으며 제한 용량은 00mb입니다." disabled="disabled">	
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div class="btn-wrap md-default">
               <a javascript:; class="btn-md">목록</a>
               <button type="button" class="btn-md bg-blue">등록</button>
