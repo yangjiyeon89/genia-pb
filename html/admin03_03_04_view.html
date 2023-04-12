@@ -105,8 +105,8 @@
             [sub03_03_03.html] 탭으로 구현
           </div>
           <div class="contents on">
-            <p class="view-main-tit bold">공지사항 등록</p>
-            <div class="table-wrap type01">
+            <p class="view-main-tit bold">공지사항 상세</p>
+            <div class="table-wrap type01 table-view-type">
               <table>
                 <colgroup>
                   <col width="130px"> 
@@ -117,89 +117,40 @@
                 <tbody>
                   <tr>
                     <th>제목</th>
-                    <td>
-                      <input type="text" placeholder="천재초등학교 활용 사례" maxlength="30">
-                    </td>
+                    <td>시스템 점검 안내 드립니다.</td>
                     <th>구분</th>
-                    <td>
-                      <div class="chk-wrap">
-                        <input type="checkbox" id="chk01_01" checked="">
-                        <label for="chk01_01">고정</label>
-                      </div>
-                    </td>
+                    <td>고정</td>
                   </tr>
                   <tr>
                     <th>공지 내용</th>
                     <td colspan="3">
-                      <div style="height: 380px;border: 1px solid #cbcbcb;">
-                        editor 영역
+                      <div class="view-detail scroll-inner">
+                        공지사항이 내용내용내용으로..<br>이어이어이어서…내용내용내용
                       </div>
-                      
                     </td>
                   </tr>
                   <tr>
                     <th>대용량 첨부파일</th>
                     <td colspan="3">
-                      <div class="file-area bs3-primary">
-                        <span class="upload-name"></span>
-                        <label for="ex_filename" class="file-btn btn-md">첨부하기</label>
-                        <input type="file" id="ex_filename" class="upload-hidden">
-                        <span class="file-desc">*jpg,png,xls,pdf,hwp 등을 등록할 수 있으며 제한 용량은 00mb입니다.</span>
-                      </div>
+                      <a href="javascript:;" download="" class="file-down-area">
+                        <em class="file-img"><img src="../images/common/ico_file_c.png" alt=""></em>
+                        <span class="file-name">시스템 점검.png</span>
+                        <span class="file-vol">(00MB)</span>
+                      </a>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div class="btn-wrap md-default">
-              <button type="button" class="btn-md pop-btn" data-pop="list-pop">목록</button>
-              <button type="button" class="btn-md bg-blue pop-btn" data-pop="complete-pop">등록</button>
+              <a href="javascript:;" class="btn-md">목록</a>
+              <a href="javascript:;" class="btn-md bg-blue">수정</a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="dim"></div>
-
-    <!-- 파일 형식 오류 팝업 -->
-    <div class="pop-wrap alert-type">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">파일형식을 확인해 주세요.</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 등록 팝업 -->
-    <div class="pop-wrap alert-type" data-pop="complete-pop">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">등록되었습니다.</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 목록 팝업 -->
-    <div class="pop-wrap alert-type" data-pop="list-pop">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">작성 중인 내용이 있습니다.<br>목록으로 돌아가시겠습니까?</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-          <button type="button" class="btn-lg">취소</button>
-        </div>
-      </div>
-    </div>
   </div>
 </body>
 </html>

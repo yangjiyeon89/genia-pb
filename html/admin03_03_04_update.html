@@ -105,7 +105,7 @@
             [sub03_03_03.html] 탭으로 구현
           </div>
           <div class="contents on">
-            <p class="view-main-tit bold">공지사항 등록</p>
+            <p class="view-main-tit bold">공지사항 수정</p>
             <div class="table-wrap type01">
               <table>
                 <colgroup>
@@ -118,7 +118,7 @@
                   <tr>
                     <th>제목</th>
                     <td>
-                      <input type="text" placeholder="천재초등학교 활용 사례" maxlength="30">
+                      <input type="text" value="시스템점검 안내드립니다." maxlength="30">
                     </td>
                     <th>구분</th>
                     <td>
@@ -141,8 +141,9 @@
                     <th>대용량 첨부파일</th>
                     <td colspan="3">
                       <div class="file-area bs3-primary">
-                        <span class="upload-name"></span>
-                        <label for="ex_filename" class="file-btn btn-md">첨부하기</label>
+                        <span class="upload-name">시스템 점검.png</span>
+                        <button type="button" class="file-del"><img src="../images/common/ico_del_type02.png" alt=""></button>
+                        <label for="ex_filename" class="file-btn btn-md">파일 첨부</label>
                         <input type="file" id="ex_filename" class="upload-hidden">
                         <span class="file-desc">*jpg,png,xls,pdf,hwp 등을 등록할 수 있으며 제한 용량은 00mb입니다.</span>
                       </div>
