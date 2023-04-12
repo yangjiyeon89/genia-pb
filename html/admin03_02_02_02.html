@@ -194,7 +194,7 @@
                       <th>차시</th>
                       <th>시험지 구분</th>
                       <th>시험지명</th>
-                      <th>출제<br>횟수<button class="sort-btn">▼</button></th>
+                      <th>출제<br>횟수<button class="ui-arr">▼</button></th>
                       <th>합계</th>
                     </tr>
                   </thead>
@@ -345,22 +345,6 @@
 </html>
 <script>
   $(function(){
-
-    let sortBtn = $('.sort-btn');
-
-    function sortBtnFunc() {
-      let _this = $(this);
-      _this.toggleClass('on');
-
-      if (_this.hasClass('on')) {
-        _this.text('▲');
-      } else {
-        _this.text('▼');
-      }
-
-    }
-    sortBtn.on('click', sortBtnFunc);
-
     //datepicker
     var dateFormat = "yy.mm.dd",
       from = $("#from")
