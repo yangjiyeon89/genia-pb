@@ -262,12 +262,6 @@
 .admin01 .bd-none {
   border: 0;
 }
-.admin01 .bold {
-  font-weight: 700;
-}
-.admin01 .bold > * {
-  font-weight: 700;
-}
 .admin01 .btm-btn {
   width: calc(100% - 40px);
   margin: 20px auto;
@@ -526,9 +520,6 @@
   padding: 6px 12px;
   font-size: 15px;
 }
-.admin01 .step-cnt table .font-c {
-  color: #108eff;
-}
 .admin01 .step-cnt table .arrow {
   position: relative;
   top: -2px;
@@ -714,6 +705,65 @@
 }
 .admin02-01 .scroll-inner::-webkit-scrollbar {
   border-bottom: 1px solid #cbcbcb;
+}
+
+.admin03-03-04 .input-wrap {
+  width: 500px;
+}
+.admin03-03-04 .table-wrap .list-tit {
+  padding: 8px 12px 2px;
+  text-align: left;
+}
+.admin03-03-04 .table-wrap.table-view-type td {
+  padding: 15px 12px;
+}
+.admin03-03-04 .tit-link {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -moz-binding: url(ellipsis.xml#ellipsis);
+  display: inline-block;
+  max-width: calc(100% - 20px);
+}
+.admin03-03-04 .file {
+  position: relative;
+  top: -5px;
+}
+.admin03-03-04 .view-main-tit {
+  margin-top: 30px;
+}
+.admin03-03-04 .upload-name {
+  width: auto;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.admin03-03-04 .file-desc {
+  width: 100%;
+  color: #9e9e9e;
+  font-size: 14px;
+  border: 0;
+}
+.admin03-03-04 .file-del {
+  position: relative;
+  top: -1px;
+  margin-right: 20px;
+}
+.admin03-03-04 .view-detail {
+  display: flex;
+  align-items: center;
+  height: 380px;
+}
+.admin03-03-04 .file-name {
+  color: #108eff;
+  font-size: 14px;
+}
+.admin03-03-04 .file-vol {
+  color: #9e9e9e;
+  font-size: 13px;
+}
+.admin03-03-04 .file-btn {
+  width: 137px;
 }
 
 /**

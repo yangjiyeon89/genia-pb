@@ -63,6 +63,12 @@
   background-color: rgba(0,0,0,0.5);
   z-index: 3;
 }
+.bold {
+	font-weight: 700;
+	& > * {
+		font-weight: 700;
+	}
+}
 
 // header
 .header {
@@ -137,6 +143,7 @@
 [class^='btn-'] , [class^='a.btn-'] {
 	@include layout-center-center;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 .btn-lg {
 	width: 200px;
@@ -513,6 +520,13 @@ input[type="checkbox"] {
 //table 
 .table-wrap {
 	width: 100%;
+	table {
+		th, td {
+			&.font-c {
+        color: #108eff;
+      }
+		}
+	}
 	&.type01 {
 		table {
 			width: 100%;

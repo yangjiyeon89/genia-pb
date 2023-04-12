@@ -287,6 +287,7 @@ $(function(){
     }
 
     $(this).siblings('.upload-name').val(filename);
+    $(this).siblings('.upload-name').text(filename);
   });
 
 

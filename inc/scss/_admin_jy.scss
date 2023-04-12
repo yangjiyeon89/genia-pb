@@ -236,12 +236,6 @@
   .bd-none {
     border: 0;
   }
-  .bold {
-    font-weight: 700;
-    & > * {
-      font-weight: 700;
-    }
-  }
   .btm-btn {
     width: calc(100% - 40px);
     margin: 20px auto;
@@ -510,9 +504,6 @@
         padding: 6px 12px;
         font-size: 15px;
       }
-      .font-c {
-        color: #108eff;
-      }
       .arrow {
         position: relative;
         top: -2px;
@@ -721,5 +712,66 @@
     &::-webkit-scrollbar {
       border-bottom: 1px solid #cbcbcb;
     }
+  }
+}
+
+// 공지사항
+.admin03-03-04 {
+  .input-wrap {
+    width: 500px;
+  }
+  .table-wrap {
+    .list-tit {
+      padding: 8px 12px 2px;
+      text-align: left;
+    }
+    &.table-view-type {
+      td {
+        padding: 15px 12px;
+      }
+    }
+  }
+  .tit-link {
+    @include text-overflow;
+    display: inline-block;
+    max-width: calc(100% - 20px);
+  }
+  .file {
+    position: relative;
+    top: -5px;
+  }
+  .view-main-tit {
+    margin-top: 30px;
+  }
+  .upload-name {
+    width: auto;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .file-desc {
+    width: 100%;
+    color: #9e9e9e;
+    font-size: 14px;
+    border: 0;
+  }
+  .file-del {
+    position: relative;
+    top: -1px;
+    margin-right: 20px;
+  }
+  .view-detail {
+    @include layout-center;
+    height: 380px;
+  }
+  .file-name {
+    color: #108eff;
+    font-size: 14px;
+  }
+  .file-vol {
+    color: #9e9e9e;
+    font-size: 13px;
+  }
+  .file-btn {
+    width: 137px;
   }
 }

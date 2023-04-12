@@ -83,6 +83,13 @@
   z-index: 3;
 }
 
+.bold {
+  font-weight: 700;
+}
+.bold > * {
+  font-weight: 700;
+}
+
 .header {
   position: relative;
 }
@@ -160,6 +167,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .btn-lg {
@@ -548,6 +556,9 @@ input[type=checkbox]:checked + label::before {
 
 .table-wrap {
   width: 100%;
+}
+.table-wrap table th.font-c, .table-wrap table td.font-c {
+  color: #108eff;
 }
 .table-wrap.type01 table {
   width: 100%;
