@@ -576,6 +576,12 @@ input[type="checkbox"] {
 				padding: 8px 12px;
 				border-right: 1px solid #ddd;
 				word-break: break-all;
+				&.list-tit {
+					text-align: left;
+				}
+				.tit-link {
+					color: #108eff;
+				}
 			}
 			input[type="checkbox"] {
 				& + label {

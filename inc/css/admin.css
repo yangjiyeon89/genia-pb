@@ -787,8 +787,36 @@
 .admin03-01 .table-wrap.type01 {
   margin: 10px 0 20px 0;
 }
+.admin03-01 .table-wrap.type01 .chk-wrap {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 .admin03-01 .table-wrap.type01 .chk-wrap label {
   font-size: 15px;
+}
+.admin03-01 .table-wrap.type01 .img-upload-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #cbcbcb;
+  padding: 20px;
+}
+.admin03-01 .table-wrap.type01 .img-upload-box .upload-name {
+  font-size: 14px;
+  font-weight: 400;
+}
+.admin03-01 .table-wrap.type01 .img-upload-box .file-del {
+  margin-right: 15px;
+}
+.admin03-01 .table-wrap.type01 .img-upload-box .file-desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: #9e9e9e;
+  flex-shrink: 0;
+  margin-right: 15px;
 }
 .admin03-01 .table-wrap.type02 {
   margin-top: 20px;
@@ -805,6 +833,27 @@
   color: #fff;
   font-size: 15px;
   background-color: #6a6a6a;
+}
+.admin03-01 .table-wrap.type02 .ui-sortable td:nth-child(1) {
+  width: 60px;
+}
+.admin03-01 .table-wrap.type02 .ui-sortable td:nth-child(2) {
+  width: 90px;
+}
+.admin03-01 .table-wrap.type02 .ui-sortable td:nth-child(3) {
+  width: 90px;
+}
+.admin03-01 .table-wrap.type02 .ui-sortable td:nth-child(4) {
+  width: 663px;
+}
+.admin03-01 .table-wrap.type02 .ui-sortable td:nth-child(5) {
+  width: 146px;
+}
+.admin03-01 .table-wrap.type02 .ui-sortable td:nth-child(6) {
+  width: 90px;
+}
+.admin03-01 .table-wrap.type02 .ui-sortable td:nth-child(7) {
+  width: 120px;
 }
 .admin03-01 .paging-wrap {
   margin-top: 30px;
@@ -907,6 +956,26 @@
 }
 .admin03-01 .form-wrap .select-btn {
   width: 221px;
+}
+.admin03-01 .toggle-btn {
+  overflow: inherit;
+  border: 0;
+  border-radius: 0;
+}
+.admin03-01 .toggle-btn .checkbox:checked + .knobs::after {
+  content: "노출";
+}
+.admin03-01 .toggle-btn .knobs::after {
+  content: "비노출";
+  display: block;
+  clear: both;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.admin03-01 .view-main-tit {
+  margin-top: 30px;
 }
 
 .admin03-02 .table-wrap.type03 {
@@ -1180,7 +1249,7 @@
   margin-left: 7px;
 }
 
-.table-wrap {
+.table-wrap.type04 {
   border-top: 1px solid #757575;
 }
 .table-wrap.type04 tr {

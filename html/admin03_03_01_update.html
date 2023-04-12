@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터 관리자</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common.css">
+  <link rel="stylesheet" href="../inc/css/admin.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div id="wrap" class="admin03_03">
+    <div class="header">
+      <div class="inner">
+        <div class="left-wrap">
+          <div class="logo-wrap">
+            <a href="javascirpt:;" class="logo"></a>
+          </div>
+          <div class="gnb">
+            <ul class="nav">
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">콘텐츠 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">문항 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">차시별 콘텐츠 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">기초 데이터 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">교과서 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">성취기준 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">시중고재 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">서비스 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">기초 데이터 등록</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">운영 통계</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">사이트 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-xs bg-gray">로그아웃</button>
+        </div>
+      </div>
+    </div>
+    <div class="container admin03-01">
+      <div class="inner">
+        <div class="tab-wrap">
+          <ul class="tab-menu-type01">
+            <li class="ui-tab-btn active">
+              <a href="javascript:;">메인 배너</a>
+            </li>
+            <li class="ui-tab-btn">
+              <a href="javascript:;">도입기관 및 학교</a>
+            </li>
+            <li class="ui-tab-btn">
+              <a href="javascript:;">활용 사례</a>
+            </li>
+            <li class="ui-tab-btn">
+              <a href="javascript:;">공지사항</a>
+            </li>
+          </ul>
+          <div class="contents on">
+            <p class="view-main-tit bold">메인 배너 수정</p>
+            <div class="table-wrap type01">
+              <table>
+                <colgroup>
+                  <col width="130px"> 
+                  <col width="*">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>게시 시간</th>
+                    <td>
+                      <div class="date-cnt">
+                        <div class="date-wrap">
+                          <div class="date-box">
+                            <input type="text" id="from" name="from" autocomplete="off">
+                          </div>
+                          <span>~</span>
+                          <div class="date-box">
+                            <input type="text" id="to" name="to" autocomplete="off">
+                          </div>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="btn-line">1일</button>
+                          <button type="button" class="btn-line">1주</button>
+                          <button type="button" class="btn-line">3주</button>
+                          <button type="button" class="btn-line">1개월</button>
+                          <button type="button" class="btn-line">3개월</button>
+                          <input type="text" class="w75" placeholder="직접 입력">
+                        </div>
+                        <div class="chk-wrap">
+                          <input type="checkbox" id="chk01_01" checked="">
+                          <label for="chk01_01">상시노출</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>제목</th>
+                    <td><input type="text" placeholder="제목 입력" maxlength="30" value="2023 상반기 광고 배너 1"></td>
+                  </tr>
+                  <tr>
+                    <th>첨부 이미지</th>
+                    <td>
+                      <div class="img-upload-box">
+                        <div class="file-area bs3-primary">
+                          <span class="upload-name">지니아 상반기 광고 배너.png</span>
+                          <button type="button" class="file-del"><img src="../images/common/ico_del_type02.png" alt=""></button>
+                          <label for="ex_filename" class="file-btn btn-md">파일첨부</label>
+                          <input type="file" id="ex_filename" class="upload-hidden">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>노출 여부</th>
+                    <td>
+                      <div class="chk-wrap">
+                        <input type="radio" id="radio01_01" name="radio01">
+                        <label for="radio01_01">노출</label>
+                        <input type="radio" id="radio01_02" name="radio01" checked>
+                        <label for="radio01_02">비노출</label>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btn-wrap md-default">
+              <button type="button" class="btn-md pop-btn" data-pop="list-pop">목록</button>
+              <button type="button" class="btn-md bg-blue pop-btn" data-pop="update-pop">수정</button>
+            </div>
+          </div>
+          <div class="contents">
+            [sub03_03_02.html] 탭으로 구현
+          </div>
+          <div class="contents">
+            [sub03_03_03.html] 탭으로 구현
+          </div>
+          <div class="contents">
+            [sub03_03_04.html] 탭으로 구현
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dim"></div>
+    <!--S: 파일 형식 오류 팝업 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">지원하지 않는 형식의 파일입니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 파일 형식 오류 팝업 -->
+
+    <!--S: 파일 용량 오류 팝업 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">첨부파일은 5MB를 초과할 수 없습니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 파일 용량 오류 팝업 -->
+
+    <!--S: 전체 항목 미입력 시 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">전체 항목을 입력해주세요.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 전체 항목 미입력 시 -->
+
+    <!--S: 수정 팝업 -->
+    <div class="pop-wrap alert-type" data-pop="update-pop">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">수정되었습니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 수정 팝업 -->
+
+    <!--S: 목록 팝업 -->
+    <div class="pop-wrap alert-type" data-pop="list-pop">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">작성 중인 내용이 있습니다.<br>목록으로 돌아가시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+          <button type="button" class="btn-lg">취소</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 목록 팝업 -->
+
+  </div>
+</body>
+</html>
+<script>
+  $(function(){
+
+    //datepicker
+    var dateFormat = "yy.mm.dd",
+      from = $("#from")
+      .datepicker({
+        defaultDate: "+1w",
+        changeMonth: false,
+        numberOfMonths: 1,
+        dateFormat: "yy.mm.dd",
+        showOn: "button",
+        buttonImage: "../images/common/ico_calendar.png",
+        buttonImageOnly: true,
+        buttonText: "Select date",
+        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"]
+      })
+      .on("change", function () {
+        to.datepicker("option", "minDate", getDate(this));
+      }),
+      to = $("#to").datepicker({
+        defaultDate: "+1w",
+        changeMonth: false,
+        numberOfMonths: 1,
+        dateFormat: "yy.mm.dd",
+        showOn: "button",
+        buttonImage: "../images/common/ico_calendar.png",
+        buttonImageOnly: true,
+        buttonText: "Select date",
+        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"]
+
+      })
+      .on("change", function () {
+        from.datepicker("option", "maxDate", getDate(this));
+      });
+
+    function getDate(element) {
+      var date;
+      try {
+        date = $.datepicker.parseDate(dateFormat, element.value);
+      } catch (error) {
+        date = null;
+      }
+
+      return date;
+    }
+    $(".ui-datepicker-trigger").removeAttr("title");
+
+  });
+</script>

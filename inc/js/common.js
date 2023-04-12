@@ -206,7 +206,7 @@ $(function(){
 
   function tblchkFunc() {
     let _this = $(this);
-    _this.parents('tr').toggleClass('on'); 
+    _this.parents('tr').toggleClass('on');
   }
   
   tblChk.on('click', tblchkFunc);
@@ -214,7 +214,7 @@ $(function(){
   // checkbox
   let chkAll = $('.allCheck');
 
-  function checkFunc() {
+  function checkFunc(e) {
     let _this = $(this);
 
     if (_this.prop('checked')) {
@@ -224,11 +224,9 @@ $(function(){
       _this.parents('table').find('input[type=checkbox]').prop('checked', false);
       _this.parents('table').find('tr').removeClass('on');
     }
-
   }
 
   chkAll.on('click', checkFunc);
-
 
   // accordion
   let accArea = $('.ui-acc-area');
@@ -306,5 +304,13 @@ $(function(){
 
   }
 
-  radioSelect.on('click' , radioSelFunc)
+  radioSelect.on('click' , radioSelFunc);
+
+  // table drag
+  $( "#table-1" ).sortable({
+    handle: '.dragHandle',
+  });
+
+  $( "#table-1" ).disableSelection();
+
 });
