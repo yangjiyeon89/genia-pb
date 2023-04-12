@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터 관리자</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common.css">
+  <link rel="stylesheet" href="../inc/css/admin.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div id="wrap" class="admin03_02">
+    <div class="header">
+      <div class="inner">
+        <div class="left-wrap">
+          <div class="logo-wrap">
+            <a href="javascirpt:;" class="logo"></a>
+          </div>
+          <div class="gnb">
+            <ul class="nav">
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">콘텐츠 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">문항 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">차시별 콘텐츠 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">기초 데이터 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">교과서 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">성취기준 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">시중고재 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">서비스 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">기초 데이터 등록</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">운영 통계</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">사이트 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-xs bg-gray">로그아웃</button>
+        </div>
+      </div>
+    </div>
+    <div class="container admin03-02">
+      <div class="inner">
+        <div class="report-top">
+          <div class="title-wrap">
+            <span class="title">1단원 진단평가 리포트</span>
+            <div class="btn-wrap">
+              <button type="button" class="btn-download"></button>
+              <button type="button" class="btn-print"></button>
+            </div>
+          </div>
+          <div class="user-wrap">
+            <span class="info">천재초  ·  5학년 1반  ·  수학  ·  <em>이지니</em> 선생님</span>
+            <span class="badge">교사용</span>
+          </div>
+        </div>
+        <div class="report-cnt">
+          <div class="scroll-inner">
+            <span class="title">종합</span>
+            <div class="justify-box">
+              <div class="box">
+                <div class="table-wrap type04">
+                  <table>
+                    <colgroup>
+                      <col width="15%;">
+                      <col width="*">
+                      <col width="80px;">
+                    </colgroup>
+                    <tbody>
+                      <tr class="fc-blue">
+                        <th>내용 영역</th>
+                        <td colspan="2">수와 연산</td>
+                      </tr>
+                      <tr>
+                        <th>단원</th>
+                        <td colspan="2">4. 약분과 통분</td>
+                      </tr>
+                      <tr>
+                        <th>평가기간</th>
+                        <td colspan="2">22.09.13 ~ 22.09.20</td>
+                      </tr>
+                      <tr>
+                        <th rowspan="6">진단 성취기준별<br>정답률</th>
+                        <td><em>[4수01-05]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈의 계산 원리를 이해하고 그 계산을 할 수 있다.</td>
+                        <td class="percent">89%</td>
+                      </tr>
+                      <tr>
+                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                        <td class="percent">90%</td>
+                      </tr>
+                      <tr>
+                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                        <td class="percent">90%</td>
+                      </tr>
+                      <tr>
+                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                        <td class="percent">90%</td>
+                      </tr>
+                      <tr>
+                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                        <td class="percent">90%</td>
+                      </tr>
+                      <tr>
+                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                        <td class="percent">90%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-box">
+                <div class="box">
+                  <div class="chart-wrap" style="background-color: #bee0ff;">chart 영역</div>
+                </div>
+                <div class="box">
+                  <div class="chart-wrap" style="background-color: #bee0ff;">chart 영역</div>
+                </div>
+              </div>
+            </div>
+            <span class="title">학생·문제별 현황</span>
+            <div class="table-wrap type04">
+              <table>
+                <colgroup>
+                  <col width="45px;">
+                  <col width="30%;">
+                  <col width="8%">
+                  <col width="65px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                  <col width="50px;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">학번/이름</th>
+                    <th>정답율</th>
+                    <td>Q1</td>
+                    <td>Q2</td>
+                    <td>Q3</td>
+                    <td>Q4</td>
+                    <td>Q5</td>
+                    <td>Q6</td>
+                    <td>Q7</td>
+                    <td>Q8</td>
+                    <td>Q9</td>
+                    <td>Q10</td>
+                    <td>Q11</td>
+                    <td>Q12</td>
+                    <td>Q13</td>
+                    <td>Q14</td>
+                    <td>Q15</td>
+                    <td>Q16</td>
+                    <td>Q17</td>
+                    <td>Q18</td>
+                    <td>Q19</td>
+                    <td>Q20</td>
+                  </tr>
+                  <tr>
+                    <th>성취율</th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <span class="title">문제별 응답결과</span>
+            <div class="justify-box">
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
