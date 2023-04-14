@@ -203,6 +203,7 @@ $(function(){
 
   // checkbox on
   let tblChk = $('.table-wrap.type02 input[type=checkbox]');
+  let toggleBtnChk = $('.toggle-btn input[type=checkbox]');
 
   function tblchkFunc() {
     let _this = $(this);
@@ -210,18 +211,19 @@ $(function(){
   }
   
   tblChk.on('click', tblchkFunc);
+  toggleBtnChk.off('click', tblchkFunc);
 
-  // checkbox
+  // all checkbox
   let chkAll = $('.allCheck');
 
   function checkFunc(e) {
     let _this = $(this);
 
     if (_this.prop('checked')) {
-      _this.parents('table').find('input[type=checkbox]').prop('checked', true);
+      _this.parents('table').find('tr td:first-child > input[type=checkbox]').prop('checked', true);
       _this.parents('table').find('tr').addClass('on');
     } else {
-      _this.parents('table').find('input[type=checkbox]').prop('checked', false);
+      _this.parents('table').find('tr td:first-child > input[type=checkbox]').prop('checked', false);
       _this.parents('table').find('tr').removeClass('on');
     }
   }

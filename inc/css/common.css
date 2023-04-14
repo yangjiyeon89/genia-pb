@@ -761,3 +761,7 @@ input[type=checkbox]:checked + label::before {
   top: 21px;
   right: 40px;
 }
+
+.ui-sortable-helper {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

@@ -78,17 +78,17 @@
         </div>
       </div>
     </div>
-    <div class="container admin03-01">
+    <div class="container admin03-01 admin03-03-04">
       <div class="inner">
         <div class="tab-wrap">
           <ul class="tab-menu-type01">
             <li class="ui-tab-btn">
               <a href="javascript:;">메인 배너</a>
             </li>
-            <li class="ui-tab-btn active">
+            <li class="ui-tab-btn">
               <a href="javascript:;">도입기관 및 학교</a>
             </li>
-            <li class="ui-tab-btn">
+            <li class="ui-tab-btn active">
               <a href="javascript:;">활용 사례</a>
             </li>
             <li class="ui-tab-btn">
@@ -98,8 +98,11 @@
           <div class="contents">
             [sub03_03_01.html] 탭으로 구현
           </div>
+          <div class="contents">
+            [sub03_03_02.html] 탭으로 구현
+          </div>
           <div class="contents on">
-            <p class="view-main-tit bold">N번 이미지 수정</p>
+            <p class="view-main-tit bold">활용 사례 상세</p>
             <div class="table-wrap type01">
               <table>
                 <colgroup>
@@ -109,29 +112,15 @@
                 <tbody>
                   <tr>
                     <th>제목</th>
-                    <td><input type="text" placeholder="제목 입력" maxlength="30" value="서울시교육청"></td>
-                  </tr>
-                  <tr>
-                    <th>첨부 이미지</th>
                     <td>
-                      <div class="img-upload-box">
-                        <div class="file-area bs3-primary">
-                          <span class="upload-name">서울시교육청 로고.png</span>
-                          <button type="button" class="file-del"><img src="../images/common/ico_del_type02.png" alt=""></button>
-                          <label for="ex_filename" class="file-btn btn-md">파일첨부</label>
-                          <input type="file" id="ex_filename" class="upload-hidden">
-                        </div>
-                      </div>
+                      <input type="text" placeholder="" maxlength="30">
                     </td>
                   </tr>
                   <tr>
-                    <th>노출 여부</th>
-                    <td>
-                      <div class="chk-wrap">
-                        <input type="radio" id="radio01_01" name="radio01">
-                        <label for="radio01_01">노출</label>
-                        <input type="radio" id="radio01_02" name="radio01" checked>
-                        <label for="radio01_02">비노출</label>
+                    <th>내용</th>
+                    <td colspan="3">
+                      <div style="height: 380px; border: 1px solid #cbcbcb;">
+                        editor 영역
                       </div>
                     </td>
                   </tr>
@@ -144,57 +133,12 @@
             </div>
           </div>
           <div class="contents">
-            [sub03_03_03.html] 탭으로 구현
-          </div>
-          <div class="contents">
             [sub03_03_04.html] 탭으로 구현
           </div>
         </div>
       </div>
     </div>
     <div class="dim"></div>
-    <!--S: 파일 형식 오류 팝업 -->
-    <div class="pop-wrap alert-type">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">지원하지 않는 형식의 파일입니다.</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-    <!--E: 파일 형식 오류 팝업 -->
-
-    <!--S: 파일 용량 오류 팝업 -->
-    <div class="pop-wrap alert-type">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">첨부파일은 5MB를 초과할 수 없습니다.</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-    <!--E: 파일 용량 오류 팝업 -->
-
-    <!--S: 전체 항목 미입력 시 -->
-    <div class="pop-wrap alert-type">
-      <div class="pop-inner">
-        <div class="pop-content">
-          <button type="button" class="pop-close"></button>
-          <span class="txt">전체 항목을 입력해주세요.</span>
-        </div>
-        <div class="pop-footer">
-          <button type="button" class="btn-lg">확인</button>
-        </div>
-      </div>
-    </div>
-    <!--E: 전체 항목 미입력 시 -->
-
     <!--S: 수정 팝업 -->
     <div class="pop-wrap alert-type" data-pop="update-pop">
       <div class="pop-inner">
@@ -223,59 +167,6 @@
       </div>
     </div>
     <!--E: 목록 팝업 -->
-
   </div>
 </body>
 </html>
-<script>
-  $(function(){
-
-    //datepicker
-    var dateFormat = "yy.mm.dd",
-      from = $("#from")
-      .datepicker({
-        defaultDate: "+1w",
-        changeMonth: false,
-        numberOfMonths: 1,
-        dateFormat: "yy.mm.dd",
-        showOn: "button",
-        buttonImage: "../images/common/ico_calendar.png",
-        buttonImageOnly: true,
-        buttonText: "Select date",
-        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"]
-      })
-      .on("change", function () {
-        to.datepicker("option", "minDate", getDate(this));
-      }),
-      to = $("#to").datepicker({
-        defaultDate: "+1w",
-        changeMonth: false,
-        numberOfMonths: 1,
-        dateFormat: "yy.mm.dd",
-        showOn: "button",
-        buttonImage: "../images/common/ico_calendar.png",
-        buttonImageOnly: true,
-        buttonText: "Select date",
-        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"]
-
-      })
-      .on("change", function () {
-        from.datepicker("option", "maxDate", getDate(this));
-      });
-
-    function getDate(element) {
-      var date;
-      try {
-        date = $.datepicker.parseDate(dateFormat, element.value);
-      } catch (error) {
-        date = null;
-      }
-
-      return date;
-    }
-    $(".ui-datepicker-trigger").removeAttr("title");
-
-  });
-</script>

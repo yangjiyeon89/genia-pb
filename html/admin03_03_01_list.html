@@ -184,7 +184,7 @@
                 </div>
                 <div class="btn-wrap">
                   <a href="javascript:;" class="btn-md">등록</a>
-                  <button type="button" class="btn-md">삭제</button>
+                  <button type="button" class="btn-md pop-btn" data-pop="delete-pop">삭제</button>
                 </div>
               </div>
               <table>
@@ -192,7 +192,7 @@
                   <col width="60px;">
                   <col width="90px;">
                   <col width="90px;">
-                  <col width="663px">
+                  <col width="643px">
                   <col width="146px;">
                   <col width="90px;">
                   <col width="120px;">
@@ -459,6 +459,63 @@
         </div>
       </div>
     </div>
+    <div class="dim"></div>
+    <!--S: 삭제 팝업-->
+    <div class="pop-wrap alert-type" data-pop="delete-pop">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">선택한 항목을<br>삭제하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+          <button type="button" class="btn-lg">취소</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 삭제 팝업-->
+
+    <!--S: 삭제 완료 팝업-->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">삭제가 완료되었습니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 삭제 완료 팝업-->
+
+    <!--S: 항목 미선택 시 팝업-->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">항목을 선택해주세요.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 항목 미선택 시 팝업-->
+
+    <!--S: 항목 미선택 시 팝업-->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">(비)노출 처리되었습니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 항목 미선택 시 팝업-->
   </div>
 </body>
 </html>
