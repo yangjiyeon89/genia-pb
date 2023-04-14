@@ -244,16 +244,34 @@
     height: 32px;
     border-radius: 50%;
     &.type01 {
-      background-color: #54c103;
+      background-color: #ff7c80;
     }
     &.type02 {
-      background-color: #f7fa20;
+      background-color: #ff9964;
     }
     &.type03 {
-      background-color: #ffdb22;
+      background-color: #ffb648;
     }
     &.type04 {
-      background-color: #ff741b;
+      background-color: #ffd32b;
+    }
+    &.type05 {
+      background-color: #fff00f;
+    }
+    &.type06 {
+      background-color: #e4f400;
+    }
+    &.type07 {
+      background-color: #adde00;
+    }
+    &.type08 {
+      background-color: #76c800;
+    }
+    &.type09 {
+      background-color: #3fb200;
+    }
+    &.type10 {
+      background-color: #089b01;
     }
   }
   .report-top {
@@ -337,10 +355,13 @@
       border-radius: 17px;
       border: 1px solid #e8e8e8;
       flex: 1;
+      .scroll-inner {
+        height: 357px;
+      }
     }
     .chart-wrap {
       width: 230px;
-      height: 130px;
+      height: 140px;
     }
   }
   // 버튼

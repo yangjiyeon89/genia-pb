@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>지니아튜터 관리자</title>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="../inc/css/font.css">
@@ -13,6 +15,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
   <script src="../inc/js/common.js"></script>
 </head>
 <body>
@@ -98,66 +101,71 @@
             <span class="title">종합</span>
             <div class="justify-box">
               <div class="box">
-                <div class="table-wrap type04">
-                  <table>
-                    <colgroup>
-                      <col width="15%;">
-                      <col width="*">
-                      <col width="80px;">
-                    </colgroup>
-                    <tbody>
-                      <tr class="fc-blue">
-                        <th>내용 영역</th>
-                        <td colspan="2">수와 연산</td>
-                      </tr>
-                      <tr>
-                        <th>단원</th>
-                        <td colspan="2">4. 약분과 통분</td>
-                      </tr>
-                      <tr>
-                        <th>평가기간</th>
-                        <td colspan="2">22.09.13 ~ 22.09.20</td>
-                      </tr>
-                      <tr>
-                        <th rowspan="6">진단 성취기준별<br>정답률</th>
-                        <td><em>[4수01-05]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈의 계산 원리를 이해하고 그 계산을 할 수 있다.</td>
-                        <td class="percent">89%</td>
-                      </tr>
-                      <tr>
-                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
-                        <td class="percent">90%</td>
-                      </tr>
-                      <tr>
-                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
-                        <td class="percent">90%</td>
-                      </tr>
-                      <tr>
-                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
-                        <td class="percent">90%</td>
-                      </tr>
-                      <tr>
-                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
-                        <td class="percent">90%</td>
-                      </tr>
-                      <tr>
-                        <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
-                        <td class="percent">90%</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="scroll-inner">
+                  <div class="table-wrap type04">
+                    <table>
+                      <colgroup>
+                        <col width="15%;">
+                        <col width="*">
+                        <col width="80px;">
+                      </colgroup>
+                      <tbody>
+                        <tr class="fc-blue">
+                          <th>내용 영역</th>
+                          <td colspan="2">수와 연산</td>
+                        </tr>
+                        <tr>
+                          <th>단원</th>
+                          <td colspan="2">4. 약분과 통분</td>
+                        </tr>
+                        <tr>
+                          <th>평가기간</th>
+                          <td colspan="2">22.09.13 ~ 22.09.20</td>
+                        </tr>
+                        <tr>
+                          <th rowspan="6">진단 성취기준별<br>정답률</th>
+                          <td><em>[4수01-05]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈의 계산 원리를 이해하고 그 계산을 할 수 있다.</td>
+                          <td class="percent">89%</td>
+                        </tr>
+                        <tr>
+                          <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                          <td class="percent">90%</td>
+                        </tr>
+                        <tr>
+                          <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                          <td class="percent">90%</td>
+                        </tr>
+                        <tr>
+                          <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                          <td class="percent">90%</td>
+                        </tr>
+                        <tr>
+                          <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                          <td class="percent">90%</td>
+                        </tr>
+                        <tr>
+                          <td><em>[4수01-06]</em> 곱하는 수가 한 자리 수 또는 두 자리 수인 곱셈에서 계산 결과를 어림할 수 있다.</td>
+                          <td class="percent">90%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
               <div class="col-box">
                 <div class="box">
-                  <div class="chart-wrap" style="background-color: #bee0ff;">chart 영역</div>
+                  <div class="chart-wrap">
+                    <canvas id="myChart"></canvas>
+                  </div>
                 </div>
                 <div class="box">
-                  <div class="chart-wrap" style="background-color: #bee0ff;">chart 영역</div>
+                  <div class="chart-wrap">
+                  </div>
                 </div>
               </div>
             </div>
-            <span class="title">학생·문제별 현황</span>
-            <div class="table-wrap type04">
+            <!--<span class="title">학생·문제별 현황</span>-->
+            <!--<div class="table-wrap type04">
               <table>
                 <colgroup>
                   <col width="45px;">
@@ -215,16 +223,53 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <span class="title">문제별 응답결과</span>
+            </div>-->
+            <!--<span class="title">문제별 응답결과</span>
             <div class="justify-box">
               <div class="box"></div>
               <div class="box"></div>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
     </div>
   </div>
 </body>
+<script>
+  $(function () {
+    var ctx = document.getElementById("myChart").getContext('2d');
+    let gradient = ctx.createLinearGradient(0, 0, 150, 0);
+    gradient.addColorStop(0, 'rgba(32, 139, 255, 1)');
+    gradient.addColorStop(1, 'rgba(125, 94, 255, 1)');
+    let value = 75;
+    var data = {
+      labels: ['학급성취율'],
+      datasets: [{
+        label: '학급성취율',
+        data: [value, 100 - value],
+        backgroundColor: [ gradient, '#f4f4f4' ],
+
+      }]
+    };
+
+    var myRadarChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      options: {
+        rotation: -90,
+        circumference: 180,
+        cutout: '70%',
+        hover: { mode: null },
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            enabled: false,
+          },
+        }
+      }
+    });
+  });
+</script>
 </html>

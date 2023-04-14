@@ -1029,16 +1029,34 @@
   border-radius: 50%;
 }
 .admin03-02 .color.type01 {
-  background-color: #54c103;
+  background-color: #ff7c80;
 }
 .admin03-02 .color.type02 {
-  background-color: #f7fa20;
+  background-color: #ff9964;
 }
 .admin03-02 .color.type03 {
-  background-color: #ffdb22;
+  background-color: #ffb648;
 }
 .admin03-02 .color.type04 {
-  background-color: #ff741b;
+  background-color: #ffd32b;
+}
+.admin03-02 .color.type05 {
+  background-color: #fff00f;
+}
+.admin03-02 .color.type06 {
+  background-color: #e4f400;
+}
+.admin03-02 .color.type07 {
+  background-color: #adde00;
+}
+.admin03-02 .color.type08 {
+  background-color: #76c800;
+}
+.admin03-02 .color.type09 {
+  background-color: #3fb200;
+}
+.admin03-02 .color.type10 {
+  background-color: #089b01;
 }
 .admin03-02 .report-top {
   margin-bottom: 30px;
@@ -1142,9 +1160,12 @@
   border: 1px solid #e8e8e8;
   flex: 1;
 }
+.admin03-02 .report-cnt .box .scroll-inner {
+  height: 357px;
+}
 .admin03-02 .report-cnt .chart-wrap {
   width: 230px;
-  height: 130px;
+  height: 140px;
 }
 .admin03-02 .btn-sort {
   display: inline-block;
