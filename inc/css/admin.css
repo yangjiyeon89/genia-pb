@@ -1164,8 +1164,14 @@
   height: 357px;
 }
 .admin03-02 .report-cnt .chart-wrap {
+  position: relative;
   width: 230px;
   height: 140px;
+  overflow: hidden;
+}
+.admin03-02 .report-cnt .chart-wrap canvas {
+  position: absolute;
+  top: -40px;
 }
 .admin03-02 .btn-sort {
   display: inline-block;

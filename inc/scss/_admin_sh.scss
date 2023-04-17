@@ -360,8 +360,14 @@
       }
     }
     .chart-wrap {
+      position: relative;
       width: 230px;
       height: 140px;
+      overflow: hidden;
+      canvas {
+        position: absolute;
+        top: -40px;
+      }
     }
   }
   // 버튼

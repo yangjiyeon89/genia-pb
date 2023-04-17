@@ -155,11 +155,12 @@
               <div class="col-box">
                 <div class="box">
                   <div class="chart-wrap">
-                    <canvas id="myChart"></canvas>
+                    <canvas id="applicantChart"></canvas>
                   </div>
                 </div>
                 <div class="box">
                   <div class="chart-wrap">
+                    <canvas id="achieveChart"></canvas>
                   </div>
                 </div>
               </div>
@@ -237,39 +238,148 @@
 </body>
 <script>
   $(function () {
-    var ctx = document.getElementById("myChart").getContext('2d');
-    let gradient = ctx.createLinearGradient(0, 0, 150, 0);
-    gradient.addColorStop(0, 'rgba(32, 139, 255, 1)');
-    gradient.addColorStop(1, 'rgba(125, 94, 255, 1)');
-    let value = 75;
-    var data = {
-      labels: ['학급성취율'],
-      datasets: [{
-        label: '학급성취율',
-        data: [value, 100 - value],
-        backgroundColor: [ gradient, '#f4f4f4' ],
+    function applicantChartRender(){
+      let doughnutCanvas = document.getElementById("applicantChart").getContext('2d');
+      let gradient = doughnutCanvas.createLinearGradient(0, 0, 150, 0);
+      gradient.addColorStop(0, 'rgba(32, 139, 255, 1)');
+      gradient.addColorStop(1, 'rgba(125, 94, 255, 1)');
+      let value = 20;
+      let data = {
+        labels: ['응시인원'],
+        datasets: [
+          {
+            label: 'dataSet',
+            data: [value, 25 - value],
+            backgroundColor: [ gradient , '#f4f4f4']
+          }
+        ]
+      }
+      new Chart(doughnutCanvas, {
+        type: 'doughnut',
+        data: data,
+        options:{
+          responsive: true,
+          rotation: -90,
+          circumference: 180,
+          cutout: '75%',
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+          },
+          hover: {
+            mode: null
+          },
+        },
+        plugins: [{
+          afterDraw: function(chart) {
+            let width = chart.width
+            let height = chart.height
+            let ctx = chart.ctx;
+            console.log(ctx);
 
-      }]
+            ctx.restore();
+
+            var text = chart.config.data.datasets[0].data[0] + '/' + '25'
+              fontSize = 26;
+            ctx.font = "bold " + fontSize + "px noto Sans KR";
+            ctx.fillStyle = "#108eff";
+            textX = Math.round((width - ctx.measureText(text).width) / 2);
+            textY = height / 1.7;
+
+            ctx.fillText(text, textX, textY);
+
+            var text2 = chart.config.data.labels[0],
+              fontSize2 = 19;
+            ctx.font = "bold " + fontSize2 + "px noto Sans KR";
+            ctx.fillStyle = "#000";
+            textX = Math.round((width - ctx.measureText(text2).width) / 2);
+            textY = height / 1.4;
+
+            ctx.fillText(text2, textX, textY);
+
+            ctx.save();
+          }
+        }]
+      });
     };
 
-    var myRadarChart = new Chart(ctx, {
-      type: 'doughnut',
-      data: data,
-      options: {
-        rotation: -90,
-        circumference: 180,
-        cutout: '70%',
-        hover: { mode: null },
-        plugins: {
-          legend: {
-            display: false,
-          },
-          tooltip: {
-            enabled: false,
-          },
-        }
+    function achieveChartRender(){
+      let doughnutCanvas = document.getElementById("achieveChart").getContext('2d');
+      let gradient = doughnutCanvas.createLinearGradient(0, 0, 150, 0);
+      gradient.addColorStop(0, 'rgba(32, 139, 255, 1)');
+      gradient.addColorStop(1, 'rgba(125, 94, 255, 1)');
+      let value = 25;
+      let data = {
+        labels: ['학급성취율'],
+        datasets: [
+          {
+            label: 'dataSet',
+            data: [value, 100 - value],
+            backgroundColor: [ gradient , '#f4f4f4']
+          }
+        ]
       }
-    });
+      new Chart(doughnutCanvas, {
+        type: 'doughnut',
+        data: data,
+        options:{
+          responsive: true,
+          rotation: -90,
+          circumference: 180,
+          cutout: '75%',
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+          },
+          hover: {
+            mode: null
+          },
+        },
+        plugins: [{
+          afterDraw: function(chart) {
+            let width = chart.width
+            let height = chart.height
+            let ctx = chart.ctx;
+            console.log(ctx);
+
+            ctx.restore();
+
+            var text = chart.config.data.datasets[0].data[0] + "%",
+              fontSize = 26;
+            ctx.font = "bold " + fontSize + "px noto Sans KR";
+            ctx.fillStyle = "#108eff";
+            textX = Math.round((width - ctx.measureText(text).width) / 2);
+            textY = height / 1.7;
+
+            ctx.fillText(text, textX, textY);
+
+            var text2 = chart.config.data.labels[0],
+              fontSize2 = 19;
+            ctx.font = "bold " + fontSize2 + "px noto Sans KR";
+            ctx.fillStyle = "#000";
+            textX = Math.round((width - ctx.measureText(text2).width) / 2);
+            textY = height / 1.4;
+
+            ctx.fillText(text2, textX, textY);
+
+            ctx.save();
+          }
+        }]
+      });
+    };
+
+    $(document).ready(function(){
+      achieveChartRender();
+      applicantChartRender();
+    })
   });
 </script>
 </html>

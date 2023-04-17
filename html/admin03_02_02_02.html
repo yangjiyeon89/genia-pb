@@ -13,6 +13,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
   <script src="../inc/js/common.js"></script>
 </head>
 <body>
@@ -153,8 +154,8 @@
             <div class="flex-box">
               <div class="chart-wrap">
                 <span class="tit">출제 횟수(비율)</span>
-                <div class="chart-cnt" style="background-color: #bee0ff;">
-                  Chart 영역
+                <div class="chart-cnt">
+                  <canvas id="questionChart"></canvas>
                 </div>
                 <div class="chk-wrap">
                   <input type="checkbox" id="chk02_01">
@@ -391,6 +392,54 @@
     }
     $(".ui-datepicker-trigger").removeAttr("title");
 
+
+    //chart
+    function questionChartRender(){
+      let pieCanvas = document.getElementById("questionChart").getContext('2d');
+      let data = {
+        labels: ['진단평가','형성평가','단원평가'],
+        datasets: [
+          {
+            label: 'dataSet',
+            data: [40, 36, 24],
+            data2: [170, 150, 100],
+            backgroundColor: ['#494949' , '#6a6a6a', '#a2a2a2']
+          }
+        ]
+      }
+      new Chart(pieCanvas, {
+        type: 'pie',
+        data: data,
+        options:{
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: true,
+              titleFont: { size: 15 },
+              bodyFont: { size: 15 },
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              callbacks: {
+                label: function(context) {
+                  return context.label + ': ' 
+                  + context.dataset.data2[context.dataIndex] + '개' 
+                  + ', ' + context.formattedValue + '%';
+                }
+              }
+            },
+          },
+          hover: {
+            mode: null
+          }
+        }
+      });
+    };
+    
+    $(document).ready(function(){
+      questionChartRender();
+      renderDataValues();
+    });
   });
 </script>
 </html>
