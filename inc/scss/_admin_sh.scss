@@ -2,7 +2,7 @@
 @import "_mixin.scss";
 @import "_setting.scss";
 
-// 서비스 관리 - 기초 데이터 등록, 운영 통계
+// 서비스 관리
 .admin03-01 {
   .table-wrap {
     &.type01 {
@@ -199,7 +199,7 @@
   }
 }
 
-// 서비스 관리 - 리포트 관리
+// 서비스 관리 - 리포트 관리 부분
 .admin03-02 {
   .table-wrap {
     &.type03 {
@@ -207,25 +207,6 @@
       .unit-tit {
         @include font(14px, 400);
         color: #108eff;
-      }
-      .badge {
-        @include content-center-center;
-        padding: 5px 15px;
-        border-radius: 5px;
-        box-sizing: border-box;
-        @include font(15px, 500);
-        &.type01 {
-          color: #8356ff;
-          border: 1px solid #8356ff;
-        }
-        &.type02 {
-          color: #108eff;
-          border: 1px solid #108eff;
-        }
-        &.type03 {
-          color: #ff569a;
-          border: 1px solid #ff569a;
-        }
       }
       .tit-sort {
         @include content-center-center;
@@ -238,44 +219,9 @@
     gap: 10px;
     @include font(16px, 500);
   }
-  .color {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    &.type01 {
-      background-color: #ff7c80;
-    }
-    &.type02 {
-      background-color: #ff9964;
-    }
-    &.type03 {
-      background-color: #ffb648;
-    }
-    &.type04 {
-      background-color: #ffd32b;
-    }
-    &.type05 {
-      background-color: #fff00f;
-    }
-    &.type06 {
-      background-color: #e4f400;
-    }
-    &.type07 {
-      background-color: #adde00;
-    }
-    &.type08 {
-      background-color: #76c800;
-    }
-    &.type09 {
-      background-color: #3fb200;
-    }
-    &.type10 {
-      background-color: #089b01;
-    }
-  }
   .report-top {
-    margin-bottom: 30px;
+    width: 1240px;
+    margin: 77px auto 30px;
     .title-wrap {
       @include layout-justify-center;
       padding-bottom: 25px;
@@ -338,10 +284,34 @@
         background: url(../../images/common/ico_tit_chk.png) center no-repeat;
       }
     }
+    .report-title {
+      display: block;
+      @include font(20px, 500);
+      margin: 30px 0 20px;
+    }
     .justify-box {
       @include layout-justify-start;
-      gap: 20px;
-      height: 100%;
+      &.col-type {
+        flex-direction: column;
+        gap: 30px;
+        .box {
+          @include layout-justify-start;
+          flex-direction: column;
+          width: 100%;
+          padding: 20px 30px 30px;
+          box-sizing: border-box;
+          .scroll-inner {
+            width: 100%;
+            height: 135px;
+          }
+        }
+      }
+      .table-wrap {
+        width: 500px;
+        .scroll-inner {
+          height: 420px;
+        }
+      }
     }
     .col-box {
       @include layout-justify-start;
@@ -351,12 +321,21 @@
     .box {
       @include layout-center-center;
       box-shadow: 1px 2px 7px rgb(0 0 0 / 9%);
-      padding: 30px;
       border-radius: 17px;
       border: 1px solid #e8e8e8;
-      flex: 1;
-      .scroll-inner {
-        height: 357px;
+      &.w360 { width: 360px; height: 420px; padding: 40px; }
+      &.w420 { width: 420px; height: 420px; }
+      &.w700 { width: 700px; height: 420px; }
+      &.type02 {
+        @include layout-justify-start;
+        width: 100%;
+        .scroll-inner {
+          height: 750px;
+          padding: 30px;
+          box-sizing: border-box;
+          &:nth-child(1) { width: 20%; }
+          &:nth-child(2) { width: 80%; }
+        }
       }
     }
     .chart-wrap {
@@ -367,6 +346,88 @@
       canvas {
         position: absolute;
         top: -40px;
+      }
+    }
+    .tab-wrap {
+      .contents {
+        width: 1240px;
+        margin: 60px auto 50px;
+      }
+    }
+    .unit-title {
+      @include content-center-center;
+      padding: 0 30px;
+      height: 40px;
+      @include font(17px, 700);
+      color: #fff;
+      background-image: linear-gradient(to right, #1f8bff , #8257ff);
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+    .unit {
+      @include layout-justify-center;
+      width: 100%;
+      & + .unit {
+        margin-top: 30px;
+      }
+      .bar-wrap {
+        @include layout-justify-center;
+        gap: 25px;
+        &.lowest {
+          .bar {
+            .percent { background-color: #ff569a; }
+          }
+        }
+        .bar {
+          position: relative;
+          width: 550px;
+          height: 20px;
+          background-color: #e8e8e8;
+          border-radius: 10px;
+          overflow: hidden;
+          .percent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            background-color: #acacac;
+            border-radius: 10px;
+          }
+        }
+        .num {
+          @include font(18px, 500);
+          margin-right: 10px;
+        }
+      }
+    }
+    .student-name {
+      @include font(24px, 700);
+    }
+    .keyword-wrap {
+      display: flex;
+      gap: 10px;
+      margin: 15px 0;
+      .keyword {
+        @include content-center-center;
+        padding: 0 15px;
+        height: 36px;
+        border-radius: 18px;
+        em {
+          @include font(16px, 700);
+          margin-right: 7px;
+        }
+        &.type01 {
+          border: 1px solid #1d8bff;
+          em {
+            color: #1d8bff;
+          }
+        }
+        &.type02 {
+          border: 1px solid #ff569a;
+          em {
+            color: #ff569a;
+          }
+        }
       }
     }
   }
@@ -503,6 +564,49 @@
       em {
         @include font(16px, 700);
       }
+    }
+  }
+
+  &.type05 {
+    border-top: 1px solid #757575;
+    tr {
+      border-bottom: 1px solid #e8e8e8;
+      &.lowest {
+        td {
+          background-color: #fff6fa;
+          color: #ff569a;
+        }
+      }
+      &.active {
+        td,.btn-name {
+          @include font(16px, 700);
+          color: #108eff;
+        }
+      }
+    }
+    th {
+      border-left: 1px solid #e8e8e8;
+      padding: 15px 0;
+      @include font(16px, 500);
+      text-align: center;
+      &:nth-child(1) {
+        border-left: 0;
+      }
+    }
+    td {
+      padding: 15px;
+      border-left: 1px solid #e8e8e8;
+      text-align: center;
+      &:nth-child(1) {
+        border-left: 0;
+      }
+      &.a-left {
+        text-align: left;
+        border-left: 1px solid #e8e8e8;
+      }
+    }
+    .btn-name {
+      margin: 0 auto;
     }
   }
 }

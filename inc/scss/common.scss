@@ -487,6 +487,33 @@ input[type="checkbox"] {
 	}
 }
 
+.tab-menu-wrap {
+	@include layout-center-center;
+	width: 100%;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+	background-color: #f8f8f8;
+}
+.tab-menu-type02 {
+	width: 1280px;
+	li {
+		@include content-center-center;
+		flex: 1;
+		a {
+			width: auto;
+			height: 70px;
+			@include font(18px, 500);
+			color: #969696;
+		}
+		&.active {
+			a {
+				color: #000;
+				border-bottom: 2px solid #000;
+			}
+		}
+	}
+}
+
 //paging
 .paging-wrap {
   @include layout-center-center;

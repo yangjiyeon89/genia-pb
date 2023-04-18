@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>지니아튜터 관리자</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common.css">
+  <link rel="stylesheet" href="../inc/css/admin.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div id="wrap" class="admin03_02">
+    <div class="header">
+      <div class="inner">
+        <div class="left-wrap">
+          <div class="logo-wrap">
+            <a href="javascirpt:;" class="logo"></a>
+          </div>
+          <div class="gnb">
+            <ul class="nav">
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">콘텐츠 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">문항 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">차시별 콘텐츠 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">기초 데이터 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">교과서 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">성취기준 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">시중고재 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">서비스 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">기초 데이터 등록</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">운영 통계</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">사이트 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <a type="a" class="btn-xs bg-gray">로그아웃</a>
+        </div>
+      </div>
+    </div>
+    <div class="container admin03-02">
+      <div class="report-top">
+        <div class="title-wrap">
+          <span class="title">5학년 1반 1학기 종합 리포트</span>
+          <div class="btn-wrap">
+            <a type="a" class="btn-download"></a>
+            <a type="a" class="btn-print"></a>
+          </div>
+        </div>
+        <div class="user-wrap">
+          <span class="info">천재초  ·  5학년 1반  ·  수학  ·  <em>이지니</em> 선생님</span>
+          <span class="badge">교사용</span>
+        </div>
+      </div>
+      <div class="report-cnt">
+        <div class="tab-wrap">
+          <div class="tab-menu-wrap">
+            <ul class="tab-menu-type02">
+              <li class="ui-tab-btn">
+                <a href="javascript:;">학급 성취 분석</a>
+              </li>
+              <li class="ui-tab-btn active">
+                <a href="javascript:;">학생 성취 분석</a>
+              </li>
+            </ul>  
+          </div>
+          <div class="contents">
+            [sub03_02_03_03.html] 탭으로 구현
+          </div>
+          <div class="contents on">
+            <span class="title">학생 성취 분석</span>
+            <div class="box type02">
+              <div class="scroll-inner">
+                <div class="table-wrap type05">
+                  <table>
+                    <colgroup>
+                      <col width="10%">
+                      <col width="*">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>번호</th>
+                        <th>이름</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="active">
+                        <td>1</td>
+                        <td><a href="javascript:;" class="btn-name">김천재</a></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td><a href="javascript:;" class="btn-name">이지니</a></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td><a href="javascript:;" class="btn-name">김천재</a></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td><a href="javascript:;" class="btn-name">이지니</a></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td><a href="javascript:;" class="btn-name">김천재</a></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td><a href="javascript:;" class="btn-name">이지니</a></td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td><a href="javascript:;" class="btn-name">김천재</a></td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td><a href="javascript:;" class="btn-name">이지니</a></td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td><a href="javascript:;" class="btn-name">김천재</a></td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td><a href="javascript:;" class="btn-name">이지니</a></td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td><a href="javascript:;" class="btn-name">김천재</a></td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td><a href="javascript:;" class="btn-name">이지니</a></td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td><a href="javascript:;" class="btn-name">김천재</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="scroll-inner">
+                <p class="student-name">1번 김천재</p>
+                <div class="keyword-wrap">
+                  <div class="keyword type01">
+                    <span><em>우수 교과역량</em> 문제해결, 창의융합</span>
+                  </div>
+                  <div class="keyword type02">
+                    <span><em>취약 교과역량</em> 의사소통, 추론</span>
+                  </div>
+                </div>
+                <div class="table-wrap type05">
+                  <table>
+                    <colgroup>
+                      <col width="7%">
+                      <col width="10%">
+                      <col width="*">
+                      <col width="10%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>번호</th>
+                        <th>내용영역</th>
+                        <th>주요 성취기준</th>
+                        <th>성취율</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="2">1</td>
+                        <td rowspan="2">수와 연산</td>
+                        <td class="a-left">약수, 공약수, 최대공약수의 의미를 알고 구할 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">배수, 공배수, 최소공배수의 의미를 알고 구할 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">2</td>
+                        <td rowspan="2">도형</td>
+                        <td class="a-left">분모가 다른 분수의 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">직육면체와 정육면체의 겨냥도와 전개도를 그릴 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">3</td>
+                        <td rowspan="2">측정</td>
+                        <td class="a-left">직사각형의 넓이를 구하는 방법을 이해하고, 이를 통하여 직사각형과 정사각형의 넓이를 구할 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">실생활 장면에서 이상, 이하, 초과, 미만의 의미와 쓰임을 알고, 이를 활용하여 수의 범위를 나타낼 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">4</td>
+                        <td rowspan="2">규칙성</td>
+                        <td class="a-left">비율을 이해하고, 비율을 분수, 소수, 백분율로 나타낼 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">두 양의 크기를 비교하는 상황을 통해 비의 개념을 이해하고, 그 관계를 비로 나타낼 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">5</td>
+                        <td rowspan="2">자료와 가능성</td>
+                        <td class="a-left">실생활 자료를 그림그래프로 나타내고, 이를 활용할 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">평균의 의미를 알고, 주어진 자료의 평균을 구할 수 있으며, 이를 활용할 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">1</td>
+                        <td rowspan="2">수와 연산</td>
+                        <td class="a-left">약수, 공약수, 최대공약수의 의미를 알고 구할 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">배수, 공배수, 최소공배수의 의미를 알고 구할 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">2</td>
+                        <td rowspan="2">도형</td>
+                        <td class="a-left">분모가 다른 분수의 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">직육면체와 정육면체의 겨냥도와 전개도를 그릴 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">3</td>
+                        <td rowspan="2">측정</td>
+                        <td class="a-left">직사각형의 넓이를 구하는 방법을 이해하고, 이를 통하여 직사각형과 정사각형의 넓이를 구할 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">실생활 장면에서 이상, 이하, 초과, 미만의 의미와 쓰임을 알고, 이를 활용하여 수의 범위를 나타낼 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">4</td>
+                        <td rowspan="2">규칙성</td>
+                        <td class="a-left">비율을 이해하고, 비율을 분수, 소수, 백분율로 나타낼 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">두 양의 크기를 비교하는 상황을 통해 비의 개념을 이해하고, 그 관계를 비로 나타낼 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2">5</td>
+                        <td rowspan="2">자료와 가능성</td>
+                        <td class="a-left">실생활 자료를 그림그래프로 나타내고, 이를 활용할 수 있다.</td>
+                        <td>89%</td>
+                      </tr>
+                      <tr>
+                        <td class="a-left">평균의 의미를 알고, 주어진 자료의 평균을 구할 수 있으며, 이를 활용할 수 있다.</td>
+                        <td>91%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script>
+  $(function () {
+
+    // 학생 이름 버튼
+    let _nameBtn = $('.table-wrap.type05 .btn-name');
+
+    function nameBtnClickFunc(){
+      let _this = $(this);
+      if(!_this.parents('tr').hasClass('active')) {
+        _this.parents('table').find('tr').removeClass('active');
+        _this.parents('tr').addClass('active');
+      };
+    }
+
+    _nameBtn.on('click', nameBtnClickFunc);
+
+  });
+</script>

@@ -521,6 +521,37 @@ input[type=checkbox]:checked + label::before {
   background-color: #333333;
 }
 
+.tab-menu-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  background-color: #f8f8f8;
+}
+
+.tab-menu-type02 {
+  width: 1280px;
+}
+.tab-menu-type02 li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.tab-menu-type02 li a {
+  width: auto;
+  height: 70px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #969696;
+}
+.tab-menu-type02 li.active a {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
 .paging-wrap {
   display: flex;
   justify-content: center;

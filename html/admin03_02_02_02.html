@@ -393,7 +393,7 @@
     $(".ui-datepicker-trigger").removeAttr("title");
 
 
-    //chart
+    // 출제 횟수 차트
     function questionChartRender(){
       let pieCanvas = document.getElementById("questionChart").getContext('2d');
       let data = {
@@ -423,7 +423,7 @@
               callbacks: {
                 label: function(context) {
                   return context.label + ': ' 
-                  + context.dataset.data2[context.dataIndex] + '개' 
+                  + context.dataset.data2[context.dataIndex] 
                   + ', ' + context.formattedValue + '%';
                 }
               }
@@ -438,7 +438,6 @@
     
     $(document).ready(function(){
       questionChartRender();
-      renderDataValues();
     });
   });
 </script>
