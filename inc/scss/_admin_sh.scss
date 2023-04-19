@@ -203,7 +203,9 @@
 .admin03-02 {
   .table-wrap {
     &.type03 {
-      margin-top: 20px;
+      .table-top {
+        margin-top: 20px;
+      }
       .unit-tit {
         @include font(14px, 400);
         color: #108eff;
@@ -340,7 +342,6 @@
         }
         .table-wrap {
           &.type03 {
-            margin-top: 0;
             td {
               white-space: normal;
             }

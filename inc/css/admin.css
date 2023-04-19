@@ -978,7 +978,7 @@
   margin-top: 30px;
 }
 
-.admin03-02 .table-wrap.type03 {
+.admin03-02 .table-wrap.type03 .table-top {
   margin-top: 20px;
 }
 .admin03-02 .table-wrap.type03 .unit-tit {
@@ -1161,9 +1161,6 @@
 }
 .admin03-02 .report-cnt .box.type02 .scroll-inner:nth-child(2) {
   width: 80%;
-}
-.admin03-02 .report-cnt .box.type02 .table-wrap.type03 {
-  margin-top: 0;
 }
 .admin03-02 .report-cnt .box.type02 .table-wrap.type03 td {
   white-space: normal;
