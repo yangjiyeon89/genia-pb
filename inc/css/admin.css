@@ -992,14 +992,6 @@
   align-items: center;
   gap: 6px;
 }
-.admin03-02 .color-wrap {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  font-weight: 500;
-}
 .admin03-02 .report-top {
   width: 1240px;
   margin: 77px auto 30px;
@@ -1107,10 +1099,10 @@
   width: 100%;
   height: 135px;
 }
-.admin03-02 .report-cnt .justify-box .table-wrap {
+.admin03-02 .report-cnt .justify-box .table-wrap.type03 {
   width: 500px;
 }
-.admin03-02 .report-cnt .justify-box .table-wrap .scroll-inner {
+.admin03-02 .report-cnt .justify-box .table-wrap.type03 .scroll-inner {
   height: 420px;
 }
 .admin03-02 .report-cnt .col-box {
@@ -1118,7 +1110,7 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 .admin03-02 .report-cnt .box {
   display: flex;
@@ -1127,6 +1119,10 @@
   box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.09);
   border-radius: 17px;
   border: 1px solid #e8e8e8;
+}
+.admin03-02 .report-cnt .box.w300 {
+  width: 300px;
+  height: 200px;
 }
 .admin03-02 .report-cnt .box.w360 {
   width: 360px;
@@ -1140,6 +1136,14 @@
 .admin03-02 .report-cnt .box.w700 {
   width: 700px;
   height: 420px;
+}
+.admin03-02 .report-cnt .box.w920 {
+  width: 920px;
+  height: 420px;
+}
+.admin03-02 .report-cnt .box.w920 .scroll-inner {
+  height: 420px;
+  padding: 30px;
 }
 .admin03-02 .report-cnt .box.type02 {
   display: flex;
@@ -1158,6 +1162,12 @@
 .admin03-02 .report-cnt .box.type02 .scroll-inner:nth-child(2) {
   width: 80%;
 }
+.admin03-02 .report-cnt .box.type02 .table-wrap.type03 {
+  margin-top: 0;
+}
+.admin03-02 .report-cnt .box.type02 .table-wrap.type03 td {
+  white-space: normal;
+}
 .admin03-02 .report-cnt .chart-wrap {
   position: relative;
   width: 230px;
@@ -1166,7 +1176,7 @@
 }
 .admin03-02 .report-cnt .chart-wrap canvas {
   position: absolute;
-  top: -40px;
+  top: -50px;
 }
 .admin03-02 .report-cnt .tab-wrap .contents {
   width: 1240px;
@@ -1223,6 +1233,9 @@
   font-size: 18px;
   font-weight: 500;
   margin-right: 10px;
+}
+.admin03-02 .report-cnt .student-cnt + .student-cnt {
+  margin-top: 50px;
 }
 .admin03-02 .report-cnt .student-name {
   font-size: 24px;
@@ -1360,76 +1373,69 @@
 .pop-wrap .pop-que-info .tit .num {
   margin-left: 7px;
 }
-
-.table-wrap.type04 {
-  border-top: 1px solid #757575;
+.pop-wrap.que-pop .pop-inner {
+  width: 600px;
 }
-.table-wrap.type04 tr {
-  border-bottom: 1px solid #e8e8e8;
+.pop-wrap.que-pop .scroll-inner {
+  height: 800px;
+  padding: 20px;
 }
-.table-wrap.type04 tr.fc-blue th, .table-wrap.type04 tr.fc-blue td {
-  color: #108eff;
-}
-.table-wrap.type04 th {
-  border-right: 1px solid #e8e8e8;
-  padding: 15px 0;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-}
-.table-wrap.type04 td {
-  padding: 15px;
-}
-.table-wrap.type04 td.percent {
-  text-align: center;
+.pop-wrap.que-pop .que-tit {
   font-size: 18px;
-  font-weight: 700;
-  color: #108eff;
-  background-color: #f8fcff;
+  font-weight: 500;
 }
-.table-wrap.type04 td em {
-  font-size: 16px;
-  font-weight: 700;
+.pop-wrap.que-pop .que-img {
+  margin-top: 20px;
 }
-.table-wrap.type05 {
-  border-top: 1px solid #757575;
+.pop-wrap.que-pop .choice-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
 }
-.table-wrap.type05 tr {
-  border-bottom: 1px solid #e8e8e8;
-}
-.table-wrap.type05 tr.lowest td {
-  background-color: #fff6fa;
-  color: #ff569a;
-}
-.table-wrap.type05 tr.active td, .table-wrap.type05 tr.active .btn-name {
-  font-size: 16px;
-  font-weight: 700;
-  color: #108eff;
-}
-.table-wrap.type05 th {
-  border-left: 1px solid #e8e8e8;
-  padding: 15px 0;
+.pop-wrap.que-pop .choice-list ol {
+  position: relative;
   font-size: 16px;
   font-weight: 500;
-  text-align: center;
+  z-index: 1;
 }
-.table-wrap.type05 th:nth-child(1) {
-  border-left: 0;
+.pop-wrap.que-pop .choice-list ol em {
+  margin-right: 7px;
 }
-.table-wrap.type05 td {
-  padding: 15px;
-  border-left: 1px solid #e8e8e8;
-  text-align: center;
+.pop-wrap.que-pop .choice-list ol.answer::before {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  top: -8px;
+  left: -1px;
+  width: 23px;
+  height: 22px;
+  background: url(../../images/common/ico_answer.png) no-repeat;
+  z-index: 2;
 }
-.table-wrap.type05 td:nth-child(1) {
-  border-left: 0;
+.pop-wrap.que-pop .reponse-cnt {
+  margin-top: 40px;
 }
-.table-wrap.type05 td.a-left {
-  text-align: left;
-  border-left: 1px solid #e8e8e8;
+.pop-wrap.que-pop .reponse-cnt .tit {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 45px;
 }
-.table-wrap.type05 .btn-name {
-  margin: 0 auto;
+.pop-wrap.que-pop .reponse-cnt .tit:before {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 35px;
+  height: 31px;
+  background: url(../../images/common/ico_tit_bulb.png) no-repeat;
+}
+.pop-wrap.que-pop .reponse-cnt .table-wrap {
+  margin-top: 20px;
 }
 
 .container .inner {

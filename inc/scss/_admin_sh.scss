@@ -214,11 +214,6 @@
       }
     }
   }
-  .color-wrap {
-    @include content-center-center;
-    gap: 10px;
-    @include font(16px, 500);
-  }
   .report-top {
     width: 1240px;
     margin: 77px auto 30px;
@@ -307,25 +302,32 @@
         }
       }
       .table-wrap {
-        width: 500px;
-        .scroll-inner {
-          height: 420px;
+        &.type03 {
+          width: 500px;
+          .scroll-inner {
+            height: 420px;
+          }
         }
       }
     }
     .col-box {
       @include layout-justify-start;
       flex-direction: column;
-      gap: 15px;
+      gap: 20px;
     }
     .box {
       @include layout-center-center;
       box-shadow: 1px 2px 7px rgb(0 0 0 / 9%);
       border-radius: 17px;
       border: 1px solid #e8e8e8;
+      &.w300 { width: 300px; height: 200px; }
       &.w360 { width: 360px; height: 420px; padding: 40px; }
       &.w420 { width: 420px; height: 420px; }
       &.w700 { width: 700px; height: 420px; }
+      &.w920 { width: 920px; height: 420px;
+        .scroll-inner { height: 420px;  padding: 30px; }
+      }
+
       &.type02 {
         @include layout-justify-start;
         width: 100%;
@@ -336,6 +338,14 @@
           &:nth-child(1) { width: 20%; }
           &:nth-child(2) { width: 80%; }
         }
+        .table-wrap {
+          &.type03 {
+            margin-top: 0;
+            td {
+              white-space: normal;
+            }
+          }
+        }
       }
     }
     .chart-wrap {
@@ -345,7 +355,7 @@
       overflow: hidden;
       canvas {
         position: absolute;
-        top: -40px;
+        top: -50px;
       }
     }
     .tab-wrap {
@@ -398,6 +408,11 @@
           @include font(18px, 500);
           margin-right: 10px;
         }
+      }
+    }
+    .student-cnt {
+      & + .student-cnt {
+        margin-top: 50px;
       }
     }
     .student-name {
@@ -533,80 +548,66 @@
       }
     }
   }
-}
-
-
-.table-wrap {
-  &.type04 {
-    border-top: 1px solid #757575;
-    tr {
-      border-bottom: 1px solid #e8e8e8;
-      &.fc-blue {
-        th, td {
-          color: #108eff;
+  // 문제별 응답결과 팝업
+  &.que-pop {
+    .pop-inner {
+      width: 600px;
+    }
+    .scroll-inner {
+      height: 800px;
+      padding: 20px;
+    }
+    .que-tit {
+      @include font(18px, 500);
+    }
+    .que-img {
+      margin-top: 20px;
+    }
+    .choice-list {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      gap: 10px;
+      ol {
+        position: relative;
+        @include font(16px, 500);
+        z-index: 1;
+        em { 
+          margin-right: 7px;
+        }
+        &.answer {
+          &::before {
+            @include virtual-selector;
+            position: absolute;
+            top: -8px;
+            left: -1px;
+            width: 23px;
+            height: 22px;
+            background: url(../../images/common/ico_answer.png) no-repeat;
+            z-index: 2;
+          }
         }
       }
     }
-    th {
-      border-right: 1px solid #e8e8e8;
-      padding: 15px 0;
-      @include font(16px, 500);
-      text-align: center;
-    }
-    td {
-      padding: 15px;
-      &.percent {
-        text-align: center;
-        @include font(18px, 700);
-        color: #108eff;
-        background-color: #f8fcff;
-      }
-      em {
-        @include font(16px, 700);
-      }
-    }
-  }
-
-  &.type05 {
-    border-top: 1px solid #757575;
-    tr {
-      border-bottom: 1px solid #e8e8e8;
-      &.lowest {
-        td {
-          background-color: #fff6fa;
-          color: #ff569a;
+    .reponse-cnt {
+      margin-top: 40px;
+      .tit {
+        position: relative;
+        @include font(20px, 700);
+        padding-left: 45px;
+        &:before {
+          @include virtual-selector;
+          position: absolute;
+          top: -5px;
+          left: 0;
+          width: 35px;
+          height: 31px;
+          background: url(../../images/common/ico_tit_bulb.png) no-repeat;
         }
       }
-      &.active {
-        td,.btn-name {
-          @include font(16px, 700);
-          color: #108eff;
-        }
+      .table-wrap {
+        margin-top: 20px;
       }
-    }
-    th {
-      border-left: 1px solid #e8e8e8;
-      padding: 15px 0;
-      @include font(16px, 500);
-      text-align: center;
-      &:nth-child(1) {
-        border-left: 0;
-      }
-    }
-    td {
-      padding: 15px;
-      border-left: 1px solid #e8e8e8;
-      text-align: center;
-      &:nth-child(1) {
-        border-left: 0;
-      }
-      &.a-left {
-        text-align: left;
-        border-left: 1px solid #e8e8e8;
-      }
-    }
-    .btn-name {
-      margin: 0 auto;
     }
   }
 }
