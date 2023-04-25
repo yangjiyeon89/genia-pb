@@ -689,6 +689,36 @@
       }
     }
   }
+
+  //유사 쌍둥이 문항 관리
+  .que-list-tit {
+    font-weight: 500;
+  }
+  .que-area-type02 {
+    .chk-box {
+      width: 100%;
+    }
+    input[type=checkbox]:checked {
+      & + .que-item {
+        border: 1px solid #000;
+      }
+    }
+    .que-item {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      &::before {
+        display: none;
+      }
+    }
+    .que-tit {
+      padding-left: 0;
+    }
+  }
+  .que-sim-wrap {
+    width: 100%;
+  }
 }
 
 // 차시별콘텐츠 관리

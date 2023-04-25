@@ -692,6 +692,30 @@
   right: 18px;
   cursor: pointer;
 }
+.admin01 .que-list-tit {
+  font-weight: 500;
+}
+.admin01 .que-area-type02 .chk-box {
+  width: 100%;
+}
+.admin01 .que-area-type02 input[type=checkbox]:checked + .que-item {
+  border: 1px solid #000;
+}
+.admin01 .que-area-type02 .que-item {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+.admin01 .que-area-type02 .que-item::before {
+  display: none;
+}
+.admin01 .que-area-type02 .que-tit {
+  padding-left: 0;
+}
+.admin01 .que-sim-wrap {
+  width: 100%;
+}
 
 .admin01-02 .contents {
   margin-top: 10px;

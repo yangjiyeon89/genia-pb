@@ -16,8 +16,15 @@ $(function(){
       case 'admin01_02':
         _gnbMenuLink.eq(0).find('> a').addClass('active');
         _gnbMenuLink.eq(0).find(_gnbDepth02).addClass('on');
+        _gnbMenuLink.eq(0).find(_gnbDepth02).find(_gnbDepth02Item).eq(2).find('> a').addClass('active');
+        break;
+      // s: 20230425 추가
+      case 'admin01_03':
+        _gnbMenuLink.eq(0).find('> a').addClass('active');
+        _gnbMenuLink.eq(0).find(_gnbDepth02).addClass('on');
         _gnbMenuLink.eq(0).find(_gnbDepth02).find(_gnbDepth02Item).eq(1).find('> a').addClass('active');
         break;
+      // e: 20230425 추가
       case 'admin02_01':
         _gnbMenuLink.eq(1).find('> a').addClass('active');
         _gnbMenuLink.eq(1).find(_gnbDepth02).addClass('on');
