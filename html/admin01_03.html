@@ -227,13 +227,7 @@
               </div>
             </div>
             <div class="que-content">
-              <!-- 초기 화면 -->
-              <!-- <div class="init-view" style="display: none;">
-                <span class="txt">분류체계를 선택해주세요.</span>
-              </div> -->
-
-              <!-- 문항 화면 -->
-              <div class="justify-section">
+              <div class="justify-section type02">
                 <div class="que-list-wrap">
                   <div class="scroll-inner">
                     <div class="que-list-tit">문항 목록</div>
@@ -275,9 +269,125 @@
                   </div>
                 </div>
                 <div class="que-sim-wrap">
-                  <div class="que-tit-wrap">
-                    <span class="que-sim-tit">유사/쌍둥이 문항 관리</span>
-                    <button type="button" class="pop-btn">문항 검색</button>
+                  <div class="scroll-inner">
+                    <div class="sim-tit-wrap">
+                      <span class="que-sim-tit">유사/쌍둥이 문항 관리</span>
+                      <button type="button" class="btn-xs pop-btn que-sim-search" data-pop="search-pop">문항 검색</button>
+                    </div>
+                    <div class="tab-wrap sim-cnt-wrap">
+                      <ul class="tab-menu-type03">
+                        <li class="ui-tab-btn active">
+                          <a href="javascript:;">검색 결과</a>
+                        </li>
+                        <li class="ui-tab-btn">
+                          <a href="javascript:;">저장된 문항</a>
+                        </li>
+                      </ul>
+                      <div class="contents que-sim-cnt on">
+                        <!-- 초기 화면 -->
+                        <div class="init-view" style="display:none;">
+                          <span class="txt">검색 결과가 없습니다.<br>문항 검색을 진행해주세요.</span>
+                        </div>
+
+                        <!-- 검색 결과 화면 -->
+                        <div class="sim-search-wrap">
+                          <div class="sim-search-cnt">
+                            <div class="que-item sim-search-item">
+                              <div class="search-tit-wrap">
+                                <span class="sim-search-tit">문항 ID  000000</span>
+                                <div class="btn-wrap sim-search-btn">
+                                  <button type="button" class="btn-line pop-btn" data-pop="alert-pop01">유사</button>
+                                  <button type="button" class="btn-line pop-btn" data-pop="alert-pop02">쌍둥이</button>
+                                </div>
+                              </div>
+                              <div class="que-view">
+                                <img src="../images/sub/sample_que.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sim-search-cnt">
+                            <div class="que-item sim-search-item">
+                              <div class="search-tit-wrap">
+                                <span class="sim-search-tit">문항 ID  000000</span>
+                                <div class="btn-wrap sim-search-btn">
+                                  <button type="button" class="btn-line pop-btn" data-pop="alert-pop01">유사</button>
+                                  <button type="button" class="btn-line pop-btn" data-pop="alert-pop02">쌍둥이</button>
+                                </div>
+                              </div>
+                              <div class="que-view">
+                                <img src="../images/sub/sample_que.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sim-search-cnt">
+                            <div class="que-item sim-search-item">
+                              <div class="search-tit-wrap">
+                                <span class="sim-search-tit">문항 ID  000000</span>
+                                <div class="btn-wrap sim-search-btn">
+                                  <button type="button" class="btn-line pop-btn" data-pop="alert-pop01">유사</button>
+                                  <button type="button" class="btn-line pop-btn" data-pop="alert-pop02">쌍둥이</button>
+                                </div>
+                              </div>
+                              <div class="que-view">
+                                <img src="../images/sub/sample_que.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="contents que-sim-cnt">
+                        <!-- 초기 화면 -->
+                        <div class="init-view" style="display:none;">
+                          <span class="txt">저장된 문항이 없습니다.</span>
+                        </div>
+
+                        <!-- 검색 결과 화면 -->
+                        <div class="sim-search-wrap">
+                          <div class="sim-search-cnt">
+                            <div class="que-item sim-search-item">
+                              <div class="search-tit-wrap">
+                                <span class="sim-search-tit">문항 ID  000000</span>
+                                <div class="btn-wrap sim-search-btn">
+                                  <button type="button" class="btn-line pop-btn active" data-pop="alert-pop03">유사</button>
+                                  <button type="button" class="btn-line pop-btn" data-pop="alert-pop04">쌍둥이</button>
+                                </div>
+                              </div>
+                              <div class="que-view">
+                                <img src="../images/sub/sample_que.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sim-search-cnt">
+                            <div class="que-item sim-search-item">
+                              <div class="search-tit-wrap">
+                                <span class="sim-search-tit">문항 ID  000000</span>
+                                <div class="btn-wrap sim-search-btn">
+                                  <button type="button" class="btn-line pop-btn" data-pop="alert-pop03">유사</button>
+                                  <button type="button" class="btn-line pop-btn active" data-pop="alert-pop04">쌍둥이</button>
+                                </div>
+                              </div>
+                              <div class="que-view">
+                                <img src="../images/sub/sample_que.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sim-search-cnt">
+                            <div class="que-item sim-search-item">
+                              <div class="search-tit-wrap">
+                                <span class="sim-search-tit">문항 ID  000000</span>
+                                <div class="btn-wrap sim-search-btn">
+                                  <button type="button" class="btn-line pop-btn active" data-pop="alert-pop03">유사</button>
+                                  <button type="button" class="btn-line pop-btn" data-pop="alert-pop04">쌍둥이</button>
+                                </div>
+                              </div>
+                              <div class="que-view">
+                                <img src="../images/sub/sample_que.png" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -287,15 +397,528 @@
       </div>
     </div>
     <div class="dim"></div>
-    <!-- 등록 팝업 -->
-    <div class="pop-wrap alert-type" data-pop="alert-pop">
+    <!-- 유사 문항 팝업 -->
+    <!-- 등록 -->
+    <div class="pop-wrap alert-type" data-pop="alert-pop01">
       <div class="pop-inner">
         <div class="pop-content">
           <button type="button" class="pop-close"></button>
-          <span class="txt">등록이 완료되었습니다.</span>
+          <span class="txt">유사문항으로<br>등록하시겠습니까?</span>
         </div>
         <div class="pop-footer">
           <button type="button" class="btn-lg">확인</button>
+          <button type="button" class="btn-lg">취소</button>
+        </div>
+      </div>
+    </div>
+    <!-- 해제 -->
+    <div class="pop-wrap alert-type" data-pop="alert-pop03">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">유사문항 등록을<br>해제하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+          <button type="button" class="btn-lg">취소</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 쌍둥이 문항 팝업 -->
+    <!-- 등록 -->
+    <div class="pop-wrap alert-type" data-pop="alert-pop02">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">쌍둥이문항으로<br>등록하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+          <button type="button" class="btn-lg">취소</button>
+        </div>
+      </div>
+    </div>
+    <!-- 해제 -->
+    <div class="pop-wrap alert-type" data-pop="alert-pop04">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">쌍둥이문항 등록을<br>해제하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+          <button type="button" class="btn-lg">취소</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 문항 검색 추가 팝업 -->
+    <div class="pop-wrap full-type admin01" data-pop="search-pop">
+      <div class="pop-inner">
+        <div class="pop-header">
+          <span>문항 검색</span>
+          <button type="button" class="pop-close"></button>
+        </div>
+        <div class="pop-content">
+          <div class="inner">
+            <div class="test-add-step01 step-cnt">
+              <div class="justify-section">
+                <div class="class-list-wrap">
+                  <div class="tab-wrap">
+                    <ul class="tab-menu-type01">
+                      <li class="ui-tab-btn active">
+                        <a href="javascript:;">초등</a>
+                      </li>
+                      <li class="ui-tab-btn">
+                        <a href="javascript:;">중등</a>
+                      </li>
+                      <li class="ui-tab-btn">
+                        <a href="javascript:;">고등</a>
+                      </li>
+                    </ul>
+                    <div class="contents on">
+                      <div class="scroll-inner">
+                        <ul class="class-area depth1-area">
+                          <li class="class-list">
+                            <a href="javascript:;" class="class-item"><em class="arrow">▼</em>6학년</a>
+                              <ul class="class-area depth2-area">
+                                <li class="class-list">
+                                  <a href="javascript:;" class="class-item"><em class="arrow">▼</em>수학 (영역)</a>
+                                  <ul class="class-area depth3-area">
+                                    <li class="class-list">
+                                      <a href="javascript:;" class="class-item"><em class="arrow">▼</em>수학 (과목)</a>
+                                      <ul class="class-area depth4-area">
+                                        <li class="class-list">
+                                          <a href="javascript:;" class="class-item"><em class="arrow">▼</em>1. 분수의 나눗셈 (대단원)</a>
+                                          <ul class="class-area depth5-area">
+                                            <li class="class-list">
+                                              <a href="javascript:;" class="class-item"><em class="arrow">▼</em>1. 분수의 나눗셈 (중단원)</a>
+                                              <ul class="class-area depth6-area">
+                                                <li class="class-list">
+                                                  <a href="javascript:;" class="class-item"><em class="arrow">▼</em>1. 분수의 나눗셈 (소단원)</a>
+                                                  <ul class="class-area depth7-area last-area">
+                                                    <li class="class-list">
+                                                      <a href="javascript:;" class="class-item">- 토픽명1</a>
+                                                    </li>
+                                                    <li class="class-list">
+                                                      <a href="javascript:;" class="class-item">- 토픽명2</a>
+                                                    </li>
+                                                    <li class="class-list">
+                                                      <a href="javascript:;" class="class-item">- 토픽명3</a>
+                                                    </li>
+                                                    <li class="class-list">
+                                                      <a href="javascript:;" class="class-item">- 토픽명4</a>
+                                                    </li>
+                                                  </ul>
+                                                </li>
+                                              </ul>
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li class="class-list">
+                                          <a href="javascript:;" class="class-item"><em class="arrow">▼</em>2. 소수의 나눗셈 (대단원)</a>
+                                          <ul class="class-area depth5-area">
+                                            <li class="class-list">
+                                              <a href="javascript:;" class="class-item"><em class="arrow">▼</em>2. 소수의 나눗셈 (중단원)</a>
+                                              <ul class="class-area depth6-area">
+                                                <li class="class-list">
+                                                  <a href="javascript:;" class="class-item"><em class="arrow">▼</em>2. 소수의 나눗셈 (소단원)</a>
+                                                  <ul class="class-area last-area">
+                                                    <li class="class-list">
+                                                      <a href="javascript:;" class="class-item">- 토픽명1</a>
+                                                    </li>
+                                                    <li class="class-list">
+                                                      <a href="javascript:;" class="class-item">- 토픽명2</a>
+                                                    </li>
+                                                    <li class="class-list">
+                                                      <a href="javascript:;" class="class-item">- 토픽명3</a>
+                                                    </li>
+                                                    <li class="class-list">
+                                                      <a href="javascript:;" class="class-item">- 토픽명4</a>
+                                                    </li>
+                                                  </ul>
+                                                </li>
+                                              </ul>
+                                            </li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="contents">
+                      중등
+                    </div>
+                    <div class="contents">
+                      고등
+                    </div>
+                  </div>
+                </div>
+                <div class="que-content-wrap ui-radio-wrap">
+                  <div class="scroll-inner">
+                    <div class="top-wrap">
+                      <input type="radio" id="radio02_01" name="radio02" class="ui-radio-sel" data-tab="radio02_01" checked>
+                      <label for="radio02_01">미리보기</label>
+                      <input type="radio" id="radio02_02" name="radio02" class="ui-radio-sel" data-tab="radio02_02">
+                      <label for="radio02_02">문항목록</label>
+                    </div>
+                    <div class="que-content">
+                      <!-- 초기 화면 -->
+                      <div class="init-view" style="display: none;">
+                        <span class="txt">분류체계를 선택해주세요.</span>
+                      </div>
+        
+                      <!-- 미리보기 문항 화면 -->
+                      <div class="que-list-wrap ui-radio-cnt" data-tab="radio02_01">
+                        <ul class="que-area">
+                          <li class="que-list">
+                            <div class="chk-box">
+                              <input type="checkbox" id="chk01_01" checked>
+                              <label for="chk01_01"></label>
+                            </div>
+                            <div class="que-item">
+                              <span class="que-tit">문항 ID  000000</span>
+                              <div class="que-view">
+                                <img src="../images/sub/sample_que.png" alt="" style="width: 100%;height: 300px;">
+                              </div>
+                            </div>
+                          </li>
+                          <li class="que-list">
+                            <div class="chk-box">
+                              <input type="checkbox" id="chk01_02">
+                              <label for="chk01_02"></label>
+                            </div>
+                            <div class="que-item">
+                              <span class="que-tit">문항 ID  000000</span>
+                              <div class="que-view">
+                                <img src="../images/sub/sample_que.png" alt="" style="width: 100%;height: 300px;">
+                              </div>
+                            </div>
+                          </li>
+                          <li class="que-list">
+                            <div class="chk-box">
+                              <input type="checkbox" id="chk01_03">
+                              <label for="chk01_03"></label>
+                            </div>
+                            <div class="que-item">
+                              <span class="que-tit">문항 ID  000000</span>
+                              <div class="que-view">
+                                <img src="../images/sub/sample_que.png" alt="" style="width: 100%;height: 300px;">
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- 문항목록 문항 화면 -->
+                      <div class="table-wrap type02 ui-radio-cnt" data-tab="radio02_02" style="display: none;">
+                        <table>
+                          <colgroup>
+                            <col width="60px;">
+                            <col width="64px;">
+                            <col width="102px;">
+                            <col width="101px">
+                            <col width="95px;">
+                            <col width="*;">
+                            <col width="141px;">
+                            <col width="125px;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>선택</th>
+                              <th>번호</th>
+                              <th>문항ID</th>
+                              <th>지문ID</th>
+                              <th>문항형태</th>
+                              <th>내용영역</th>
+                              <th>교과역량</th>
+                              <th>
+                                난이도
+                                <button type="button" class="arrow ui-arr">▼</button>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_02">
+                                <label for="chk03_02"></label>
+                              </td>
+                              <td>30</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>자료와 가능성</td>
+                              <td>추론</td>
+                              <td>상</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_03">
+                                <label for="chk03_03"></label>
+                              </td>
+                              <td>29</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>수와 연산</td>
+                              <td>문제해결</td>
+                              <td>상</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_04">
+                                <label for="chk03_04"></label>
+                              </td>
+                              <td>28</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>수와 연산</td>
+                              <td>문제해결</td>
+                              <td>상</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_05">
+                                <label for="chk03_05"></label>
+                              </td>
+                              <td>27</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>측정</td>
+                              <td>창의융합</td>
+                              <td>상</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_06">
+                                <label for="chk03_06"></label>
+                              </td>
+                              <td>26</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>도형</td>
+                              <td>정보처리</td>
+                              <td>상</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_07">
+                                <label for="chk03_07"></label>
+                              </td>
+                              <td>25</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>규칙성</td>
+                              <td>의사소통</td>
+                              <td>상</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_08">
+                                <label for="chk03_08"></label>
+                              </td>
+                              <td>24</td>
+                              <td class="font-c">0000</td>
+                              <td class="font-c">0000</td>
+                              <td>5지 선택</td>
+                              <td>자료와 가능성</td>
+                              <td>추론</td>
+                              <td>중</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_09">
+                                <label for="chk03_09"></label>
+                              </td>
+                              <td>23</td>
+                              <td class="font-c">0000</td>
+                              <td class="font-c">0000</td>
+                              <td>5지 선택</td>
+                              <td>수와 연산</td>
+                              <td>문제해결</td>
+                              <td>중</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_10">
+                                <label for="chk03_10"></label>
+                              </td>
+                              <td>22</td>
+                              <td class="font-c">0000</td>
+                              <td class="font-c">0000</td>
+                              <td>5지 선택</td>
+                              <td>수와 연산</td>
+                              <td>문제해결</td>
+                              <td>중</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_11">
+                                <label for="chk03_11"></label>
+                              </td>
+                              <td>21</td>
+                              <td class="font-c">0000</td>
+                              <td class="font-c">0000</td>
+                              <td>5지 선택</td>
+                              <td>측정</td>
+                              <td>창의융합</td>
+                              <td>중</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_12">
+                                <label for="chk03_12"></label>
+                              </td>
+                              <td>20</td>
+                              <td class="font-c">0000</td>
+                              <td class="font-c">0000</td>
+                              <td>5지 선택</td>
+                              <td>도형</td>
+                              <td>정보처리</td>
+                              <td>중</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_13">
+                                <label for="chk03_13"></label>
+                              </td>
+                              <td>19</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>규칙성</td>
+                              <td>의사소통</td>
+                              <td>중</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_14">
+                                <label for="chk03_14"></label>
+                              </td>
+                              <td>18</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>자료와 가능성</td>
+                              <td>추론</td>
+                              <td>하</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_15">
+                                <label for="chk03_15"></label>
+                              </td>
+                              <td>17</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>수와 연산</td>
+                              <td>문제해결</td>
+                              <td>하</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_16">
+                                <label for="chk03_16"></label>
+                              </td>
+                              <td>16</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>수와 연산</td>
+                              <td>문제해결</td>
+                              <td>하</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_17">
+                                <label for="chk03_17"></label>
+                              </td>
+                              <td>15</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>측정</td>
+                              <td>창의융합</td>
+                              <td>하</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_18">
+                                <label for="chk03_18"></label>
+                              </td>
+                              <td>14</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>도형</td>
+                              <td>정보처리</td>
+                              <td>하</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_19">
+                                <label for="chk03_19"></label>
+                              </td>
+                              <td>13</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>자료와 가능성</td>
+                              <td>의사소통</td>
+                              <td>하</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_20">
+                                <label for="chk03_20"></label>
+                              </td>
+                              <td>12</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>수와 연산</td>
+                              <td>추론</td>
+                              <td>상</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input type="checkbox" id="chk03_21">
+                                <label for="chk03_21"></label>
+                              </td>
+                              <td>10</td>
+                              <td class="font-c">0000</td>
+                              <td>-</td>
+                              <td>5지 선택</td>
+                              <td>수와 연산</td>
+                              <td>문제해결</td>
+                              <td>상</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                     
+                      <div class="btn-wrap">
+                        <button type="button" class="btn-lg">선택완료</button>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
