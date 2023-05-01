@@ -3,6 +3,19 @@
 @import "_setting.scss";
 
 // common
+[class^='web-'] {
+  display: block !important;
+}
+[class^='web-flex-'] {
+  display: flex !important;
+}
+[class^='mo-'] {
+  display: none !important;
+}
+[class^='mo-flex-'] {
+  display: none !important;
+}
+
 .inner {
   width: 1240px;
   margin: auto;
@@ -26,6 +39,17 @@
   &::-webkit-scrollbar-button:start:decrement, &::-webkit-scrollbar-button:end:increment{
     display:block;
     height:1px;
+  }
+}
+.login-cnt, .error-cnt, .loading-cnt {
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.common-cnt {
+  .error-txt, .loading-txt {
+    @include font(22px, 500);
   }
 }
 
@@ -99,7 +123,7 @@
 }
 
 // login
-.admin-login {
+.admin-login, .common-cnt {
   .header {
     // height: 80px;
     border-bottom: 1px solid #dddddd;
@@ -113,11 +137,7 @@
     }
   }
 }
-.login-cnt {
-  position: absolute;
-  top: 50%;left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+.login-cnt {  
   .login-tit {
     margin-bottom: 55px;
     @include font(34px, 500);    
@@ -213,6 +233,43 @@
   }
 }
 
+
+// error
+.error-cnt {
+  .error-txt {
+    margin-top: 30px;    
+  }
+  .home-link {
+    margin: 50px auto 0;
+    height: 55px;
+    @include font(18px, 500);
+    border-radius: 8px
+  }
+}
+
+// loading
+.loading-cnt {
+  .load-line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 3px;
+    border-radius: 15px;
+    background-color: #108eff;
+  }
+  .line01 {
+    animation: loadingC 0.6s 0.1s linear infinite;
+  }
+  .line02 {
+    animation: loadingC 0.6s 0.2s linear infinite;
+  }
+  .line03 {
+    animation: loadingC 0.6s 0.3s linear infinite;
+  }
+  .loading-txt {
+    margin-top: 25px;
+  }
+}
 
 .admin01 {
   // 콘텐츠관리
@@ -885,5 +942,55 @@
   }
   .file-btn {
     width: 137px;
+  }
+}
+
+@media (max-width: 1240px) {
+  [class^='web-'] {
+    display: none !important;
+  }
+  [class^='web-flex-'] {
+    display: none !important;
+  }
+  [class^='mo-'] {
+    display: block !important;
+  }
+  [class^='mo-flex-'] {
+    display: flex !important;
+  }
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .error-cnt, .loading-cnt {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .common-cnt {
+    .loading-txt, .error-txt {
+      font-size: 18px;
+    }
+  }
+  .error-cnt {    
+    .home-link {
+      width: 100%;
+      height: 40px;
+      font-size: 15px;
+    }
+  }
+}
+
+@keyframes loadingC {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

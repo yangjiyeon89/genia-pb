@@ -35,6 +35,22 @@
 	* 100% 보다 더 크게 적용 하고 싶으면 return 부분을 수정하면됨.
 	* 참고사이트 http://sassbreak.com/viewport-relative-headings-with-sass/
 	*/
+[class^=web-] {
+  display: block !important;
+}
+
+[class^=web-flex-] {
+  display: flex !important;
+}
+
+[class^=mo-] {
+  display: none !important;
+}
+
+[class^=mo-flex-] {
+  display: none !important;
+}
+
 .inner {
   width: 1240px;
   margin: auto;
@@ -61,6 +77,19 @@
 .scroll-inner::-webkit-scrollbar-button:start:decrement, .scroll-inner::-webkit-scrollbar-button:end:increment {
   display: block;
   height: 1px;
+}
+
+.login-cnt, .error-cnt, .loading-cnt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.common-cnt .error-txt, .common-cnt .loading-txt {
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .header {
@@ -135,25 +164,18 @@
   color: #333;
 }
 
-.admin-login .header {
+.admin-login .header, .common-cnt .header {
   border-bottom: 1px solid #dddddd;
 }
-.admin-login .header::after {
+.admin-login .header::after, .common-cnt .header::after {
   display: none;
 }
-.admin-login .header .logo {
+.admin-login .header .logo, .common-cnt .header .logo {
   height: 80px;
   background-size: 161px 31px;
   background-position: center;
 }
 
-.login-cnt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 .login-cnt .login-tit {
   margin-bottom: 55px;
   font-size: 34px;
@@ -238,6 +260,38 @@
 .login-cnt .desc {
   color: #909090;
   font-size: 15px;
+}
+
+.error-cnt .error-txt {
+  margin-top: 30px;
+}
+.error-cnt .home-link {
+  margin: 50px auto 0;
+  height: 55px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.loading-cnt .load-line {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 3px;
+  border-radius: 15px;
+  background-color: #108eff;
+}
+.loading-cnt .line01 {
+  animation: loadingC 0.6s 0.1s linear infinite;
+}
+.loading-cnt .line02 {
+  animation: loadingC 0.6s 0.2s linear infinite;
+}
+.loading-cnt .line03 {
+  animation: loadingC 0.6s 0.3s linear infinite;
+}
+.loading-cnt .loading-txt {
+  margin-top: 25px;
 }
 
 .admin01 .justify-section {
@@ -869,6 +923,49 @@
   width: 137px;
 }
 
+@media (max-width: 1240px) {
+  [class^=web-] {
+    display: none !important;
+  }
+  [class^=web-flex-] {
+    display: none !important;
+  }
+  [class^=mo-] {
+    display: block !important;
+  }
+  [class^=mo-flex-] {
+    display: flex !important;
+  }
+  .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .error-cnt, .loading-cnt {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .common-cnt .loading-txt, .common-cnt .error-txt {
+    font-size: 18px;
+  }
+  .error-cnt .home-link {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+  }
+}
+@keyframes loadingC {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 /**
 	* Computes a CSS calc function that betweens a value from
 	* A to B over viewport-width A to viewport-width B.

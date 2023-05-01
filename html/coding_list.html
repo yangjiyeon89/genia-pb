@@ -13,6 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="../inc/js/common.js"></script>  
   <style>
+    h1 {margin: 40px 10px 20px; font-size: 28px;font-weight: 600;}
     table {border-left: 1px solid #ccc;border-top: 1px solid #ccc;}
     thead th {text-align: center;background-color: #f1f1f1;}
     th,td {border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;font-size: 18px;padding: 10px;color: #222;}
@@ -21,6 +22,39 @@
   </style>
 </head>
 <body>
+  <h1>공통</h1>
+  <table>
+    <colgroup>
+      <col width="250px">
+      <col width="250px">
+      <col width="250px">
+      <col width="250px">
+      <col width="*">
+    </colgroup>
+    <thead>
+      <tr>
+        <th colspan="4">메뉴</th>
+        <th rowspan="2">URL</th>
+      </tr>
+      <tr>
+        <th>1depth</th>
+        <th>2depth</th>
+        <th>3depth</th>
+        <th>4depth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th colspan="4">에러</th>
+        <td><a href="error.html" target="_blank">error.html</a></td>
+      </tr>
+      <tr>
+        <th colspan="4">로딩</th>
+        <td><a href="loading.html" target="_blank">loading.html</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <h1>관리자</h1>
   <table>
     <colgroup>
       <col width="250px">
