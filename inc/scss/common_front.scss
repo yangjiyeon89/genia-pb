@@ -17,8 +17,7 @@
 
 //guide
 .guide {
-	padding: 0 30px 60px;
-	background-color: #fafafa;
+	padding: 30px 50px;
 	> h1 {
 		margin: 60px 0px 15px;
     font-size: 22px;
@@ -83,6 +82,13 @@
 		font-weight: 700;
 	}
 }
+.web-cnt {
+	.inner {
+		width: 100%;
+    max-width: 1280px;
+    padding: 0 20px;
+	}
+}
 
 // header
 .header {
@@ -118,11 +124,6 @@
 	// front web gnb
 	.web-cnt {
 		border-bottom: 1px solid #ddd;
-		.inner {
-			width: 100%;
-			max-width: 1280px;
-			padding: 0 20px;
-		}
 		.top-nav {
 			width: 100%;
 			border-top: 1px solid #e4e4e4;
@@ -214,63 +215,105 @@
 
 // footer
 .footer {
-	.web-cnt {
-		width:100%;
-		.ft-top {
-			width: 100%;
-			background-color: #f5f5f5;
-			padding: 15px 0;
-			.inner {
-				@include layout-justify-center;
+	.inner {
+		width: 100%;
+    max-width: 1280px;
+    padding: 0 20px;
+	}
+	.ft-top {
+		width: 100%;
+		background-color: #f5f5f5;
+		padding: 15px 0;
+		.inner {
+			@include layout-justify-center;
+		}
+	}
+	.left-area, .right-area, .guide-link, .sns-link, .link-list {
+		@include layout-center;
+		flex-direction: row;
+	}
+	.left-area {
+		@include font(18px, 700);
+		color: #000;
+		span {
+			@include font(14px, 400);
+			margin-left: 10px;
+		}
+	}
+	.guide-link {
+		gap: 30px;
+		span {
+			position: relative;
+			&::before {
+				@include virtual-selector;
+				position: absolute;
+				top: 6px;
+				left: -13px;
+				width: 1px;
+				height: 12px;
+				background-color: #cacaca;
+			}
+			&.first {
+				&::before { display: none; }
 			}
 		}
-		.left-area, .right-area, .guide-link, .sns-link, .link-list {
+		a {
+			@include font(14px, 500);
+			color: #666;
+		}
+		em {
+			font-weight: 700;
+		}
+		> div {
 			@include layout-center;
 			flex-direction: row;
-		}
-		.left-area {
-			@include font(18px, 700);
-			color: #000;
-			span {
-				@include font(14px, 400);
-				margin-left: 10px;
-			}
-		}
-		.guide-link {
 			gap: 30px;
+		}
+	}
+	.sns-link {
+		margin-left: 30px;
+		gap: 8px;
+	}
+	.ft-cnt {
+		background-color: #fff;
+	}
+	.top-area {
+		border-bottom: 1px solid #e0e0e0;
+		padding: 12px 0;
+		.inner {
+			@include layout-justify-center;	
+		}
+	}
+	.bottom-area {
+		padding: 40px 0;
+		ul {
+			display: flex;
 			li {
+				@include layout-justify-start;
 				position: relative;
-				&::before {
-					@include virtual-selector;
-					position: absolute;
-					top: 6px;
-					left: -13px;
-					width: 1px;
-					height: 12px;
-					background-color: #cacaca;
+				padding: 0 2.5vw 20px;
+				border-left: 1px solid #e0e0e0;
+				img {
+					object-fit: contain;
 				}
 				&:nth-child(1) {
-					&::before { display: none; }
+					border-left: 0;
+					padding-left: 0;
 				}
 			}
-			a {
-				@include font(14px, 500);
-				color: #666;
-			}
-			em {
-				font-weight: 700;
+			p {
+				@include font(12px, 500);
+				color: #8a909e;
+				margin-left: 1.7vw;
 			}
 		}
-		.sns-link {
-			margin-left: 30px;
-			gap: 8px;
-		}
-		.ft-cnt {
-			background-color: #fff;
-		}
-		.top-area {
-			@include layout-justify-center;
-			border-bottom: 1px solid #e0e0e0;
+		.copy {
+			width: 100%;
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			@include font(11px, 500);
+			color: #666;
 		}
 	}
 }
@@ -279,6 +322,73 @@
 // toggle
 // form
 // select
+.select-wrap {
+	position: relative;
+	display: inline-block;
+	.select-btn {
+		position: relative;
+		@include layout-center;
+		width: 200px;
+		height: 36px;
+		margin-bottom: 0;
+		padding-left: 12px;
+		color: #666;
+		font-size: 14px;
+		border: 1px solid #e0e0e0;
+		box-sizing: border-box;
+		background-color: #fff;
+		border-radius: 6px;
+		z-index: 2;
+		&::after {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			@include virtual-selector;
+			width: 10px;
+			height: 6px;
+			margin-top: -3px;
+			background: url(../../images/common/select_arrow_type02.png) no-repeat;
+			background-size: contain;    
+		}
+		&.active {
+			&::after {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+	.select-list {
+		display: none;
+		overflow-y: overlay;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		margin-top: -5px;
+		background: #fff;
+		border: 1px solid #e0e0e0;
+		box-sizing: border-box;
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+		z-index: 1;
+		a {
+			display: block;
+			padding: 0px 12px 10px;
+			color: #666;
+			font-size: 14px;
+			box-sizing: border-box;
+		}
+		li {
+			&:nth-child(1) {
+				a {
+					padding-top: 12px;
+				}
+			}
+		}
+		em {
+			color: #418ac9;
+			font-weight: 700;
+		}
+	}
+}
 // table
 // popup
 .pop-wrap {
@@ -381,7 +491,11 @@
 
 	//header
 	.header {
+		position: fixed;
+		width: 100%;
+		top: 0;
 		.mo-cnt {
+			width: 100%;
 			.inner {
 				position: relative;
 				width: 100%;
@@ -432,6 +546,7 @@
 				text-align: center;
 			}
 			.btn-wrap {
+				display: flex;
 				flex-direction: column;
 				margin-top: 20px;
 				gap: 5px;
@@ -464,4 +579,97 @@
 			}
 		}
 	}	
+	.container {
+		margin-top: 50px;
+	}
+	.footer {
+		.ft-top {
+			background-color: #fff;
+			padding: 0;
+			.inner {
+				flex-direction: column;
+				padding: 0;
+			}
+		}
+		.left-area {
+			width: 100%;
+			background-color: #f5f5f5;
+			justify-content: center;
+			padding: 14px 0;
+			font-size: 14px;
+			span { font-size: 13px; }
+		}
+		.right-area {
+			.guide-link {
+				position: absolute;
+			}
+		}
+		.top-area {
+			@include layout-center;
+			.inner {
+				display: inline-block;
+				width: auto;
+			}
+		}
+		.guide-link {
+			display: block;
+			float: left;
+			margin: 15px 0;
+			span {
+				display: block;
+				&::before {
+					display: none;
+				}
+			}
+			a { font-size: 13px; }
+			> div {
+				display: inline-flex;
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 0;
+				margin-left: 20px;
+			}
+		}
+		.top-area {
+			padding: 0;
+			.inner {
+				padding: 0;
+			}
+		}
+		.box {
+			display: block;
+			clear: both;
+			width: auto;
+		}
+		.bottom-area {
+			padding: 20px 0 50px 0;
+			ul {
+				flex-direction: column;
+				gap: 15px;
+				li {
+					flex-direction: column;
+					border-left: 0;
+					padding: 0;
+					gap: 5px;
+				}
+				p {
+					margin-left: 0;
+				}
+				.copy {
+					bottom: -30px;
+					text-align: center;
+				}
+			}
+		}
+		.select-btn {
+			width: 160px;
+			font-size: 13px;
+			height: 34px;
+		}
+		.select-list {
+			a {
+				font-size: 13px;
+			}
+		}
+	}
 }
