@@ -86,6 +86,29 @@ $(function(){
 
   _navItem.on('mouseover', inMenu);
 
+  // mobile menu
+  let menuBtn = $('.btn-menu');
+  let _menudim = $('.dim');
+  let _menuhtml = $('html , body');
+  let _cnt = $('.mobile-menu');
+  
+  function menuFunc() {
+    let _this = $(this);
+    if (!_this.hasClass('active')) {
+      _this.addClass('active');
+      _cnt.css('right','0');
+      _menuhtml.css('overflow', 'hidden');
+      _menudim.fadeIn();
+    } else {
+      _this.removeClass('active');
+      _cnt.css('right','-50%');
+      _menuhtml.css('overflow', 'auto');
+      _menudim.fadeOut();
+    }
+  }
+
+  menuBtn.on('click', menuFunc);
+
 
   // tab
   let tabBtn = $('.ui-tab-btn');
