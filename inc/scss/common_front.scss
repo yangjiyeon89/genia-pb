@@ -19,19 +19,12 @@
 .guide {
 	padding: 30px 50px;
 	> h1 {
-		margin: 60px 0px 15px;
+		margin: 30px 0px 15px;
     font-size: 22px;
 	}
 	> h2 {
 		margin: 40px 0px 10px;
     font-size: 18px;
-	}
-	> button,
-	> input {
-		margin-bottom: 10px;
-	}
-	> .btn-wrap {
-		margin-bottom: 10px;
 	}
 	> .pop-wrap {
 		display: block;
@@ -316,11 +309,204 @@
 			color: #666;
 		}
 	}
+	.select-wrap {
+		.select-btn {
+			width: 200px;
+			height: 40px;
+			padding-left: 12px;
+			color: #666;
+			font-size: 14px;
+			border: 1px solid #e0e0e0;
+			border-radius: 6px;
+			&::after {
+				right: 10px;
+				width: 10px;
+				height: 6px;
+				margin-top: -3px;
+				background: url(../../images/common/select_arrow_type02.png) no-repeat;  
+			}
+		}
+		.select-list {
+			border: 1px solid #e0e0e0;
+			border-bottom-left-radius: 6px;
+			border-bottom-right-radius: 6px;
+			z-index: 1;
+			a {
+				padding: 0px 12px 10px;
+				color: #666;
+				font-size: 14px;
+			}
+			li {
+				&:nth-child(1) {
+					a {
+						padding-top: 12px;
+					}
+				}
+			}
+			em {
+				color: #418ac9;
+				font-weight: 700;
+			}
+		}
+	}
 }
 
 // button
+
 // toggle
+.toggle-btn {
+  position: relative;
+  overflow: hidden;
+  width: 48px;
+	height: 26px;
+  border-radius: 13px;
+  .checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+		margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+    &:checked + .knobs::before {
+      left: 26px;
+      background-color: #fff;
+    }
+		&:checked + .knobs + .layer {
+			background-color: #108eff;
+			border: 1px solid #108eff;
+		}
+  }
+  .knobs, .knobs::before, .layer {
+    transition: 0.3s ease all;	
+  }
+  .knobs {
+    z-index: 2;
+    &::before {
+      @include virtual-selector;
+      position: absolute;
+      top: 4px;
+			left: 4px;
+      width: 18px;
+			height: 18px;
+			background-color: #c2c2c2;
+      border-radius: 100%;
+      transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+    }
+  }
+  .knobs, .layer {
+    position: absolute;
+    top: 0;right: 0;bottom: 0;left: 0;
+  }
+  .layer {
+    width: 100%;
+		background-color: #fff;
+    z-index: 1;
+		border-radius: 12px;
+		border: 1px solid #c2c2c2;
+  }
+}
+
 // form
+input[type="text"], input[type="number"] {
+  width: 300px;
+  height: 40px;
+  padding: 0 18px;
+  border: 1px solid #b2b2b2;
+	border-radius: 9px;
+  box-sizing: border-box;
+	font-size: 15px;
+	outline-color: #108eff;
+	outline-width: thin;
+
+  &::placeholder {
+    color: #9e9e9e;
+  }
+}
+
+.search-box {
+	position: relative;
+	width: 300px;
+	input[type="text"] {
+		width: 100%;
+		padding: 0 38px 0 18px;
+	}
+	.btn-search {
+		position: absolute;
+    top: 50%;
+		transform: translateY(-50%);
+    right: 12px;
+    width: 17px;
+    height: 16px;
+    background: url(../../images/common/ico_search.png) center no-repeat;
+    background-size: contain;
+	}
+}
+
+input[type="radio"], input[type="checkbox"] {
+  @include inputnone;
+  & + label {
+    position: relative;
+    &::before {
+      @include virtual-selector;
+      position: absolute;
+      top: 50%;left: 0;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  & + label {
+    padding-left: 28px;
+    &::before {      
+      width: 18px;
+			height: 18px;
+      margin-top: -8px;
+      background: url(../../images/common/input_check_type02.png) no-repeat;
+      background-size: contain;
+    }
+  }
+  &:checked + label {
+    &::before {
+      background: url(../../images/common/input_check_on_type02.png) no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+
+//paging
+.paging-wrap {
+  @include layout-center-center;
+  .page {
+    @include content-center-center;
+    width: 30px;
+		height: 30px;
+    margin: 0 5px;
+    font-weight: 500;
+    &.active {
+      color: #108eff;
+      border: 1px solid #108eff;
+		}
+  }
+  .prev, .next {
+    width: 25px;
+		height: 25px;
+    margin: 0 10px;
+    background: url(../../images/common/ico_page_arr.png) no-repeat;
+  }
+  .next, .last {
+    transform: rotate(-180deg);
+  }
+  .first, .last {
+    width: 25px;
+		height: 25px;
+    background: url(../../images/common/ico_page_arr_first.png) no-repeat;
+  }
+}
+
+
 // select
 .select-wrap {
 	position: relative;
@@ -328,32 +514,33 @@
 	.select-btn {
 		position: relative;
 		@include layout-center;
-		width: 200px;
-		height: 36px;
+		min-width: 100px;
+		height: 40px;
 		margin-bottom: 0;
-		padding-left: 12px;
-		color: #666;
-		font-size: 14px;
-		border: 1px solid #e0e0e0;
+		padding: 0 48px 0 18px;
+		@include font(15px, 500);
+		border: 1px solid #b2b2b2;
 		box-sizing: border-box;
 		background-color: #fff;
-		border-radius: 6px;
-		z-index: 2;
+		border-radius: 9px;
+		z-index: 1;
 		&::after {
 			position: absolute;
-			right: 10px;
+			right: 18px;
 			top: 50%;
 			@include virtual-selector;
-			width: 10px;
-			height: 6px;
+			width: 13px;
+			height: 7px;
 			margin-top: -3px;
-			background: url(../../images/common/select_arrow_type02.png) no-repeat;
+			background: url(../../images/common/select_arrow_type03.png) no-repeat;
 			background-size: contain;    
 		}
 		&.active {
 			&::after {
 				transform: rotate(-180deg);
 			}
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
 		}
 	}
 	.select-list {
@@ -362,17 +549,17 @@
 		position: absolute;
 		top: 100%;
 		width: 100%;
-		margin-top: -5px;
+		margin-top: -1px;
 		background: #fff;
-		border: 1px solid #e0e0e0;
+		border: 1px solid #b2b2b2;
+		border-top: 1px solid #ededed;
 		box-sizing: border-box;
-		border-bottom-left-radius: 6px;
-		border-bottom-right-radius: 6px;
-		z-index: 1;
+		border-bottom-left-radius: 9px;
+		border-bottom-right-radius: 9px;
+		z-index: 2;
 		a {
 			display: block;
-			padding: 0px 12px 10px;
-			color: #666;
+			padding: 0px 18px 12px;
 			font-size: 14px;
 			box-sizing: border-box;
 		}
@@ -488,8 +675,20 @@
   [class^='mo-flex-'] {
     display: flex !important;
   }
+	//guide
+	.guide {
+		padding: 20px 20px;
+		> h1 {
+			margin: 15px 0;
+			font-size: 18px;
+		}
+		> h2 {
+			margin: 10px 0;
+			font-size: 16px;
+		}
+	}
 
-	//header
+	// header
 	.header {
 		position: fixed;
 		width: 100%;
@@ -579,9 +778,11 @@
 			}
 		}
 	}	
+	// container
 	.container {
 		margin-top: 50px;
 	}
+	// footer
 	.footer {
 		.ft-top {
 			background-color: #fff;
@@ -661,14 +862,58 @@
 				}
 			}
 		}
+		.select-wrap {
+			width: 180px;
+			.select-btn {
+				width: 180px;
+			}
+		}
+	}
+
+	// input
+	input[type="text"], input[type="number"] {
+		width: 100%;
+		font-size: 14px;
+	}
+	.search-box {
+		width: 100%;
+	}
+
+	// paging 
+	.paging-wrap {
+		.page {
+			font-size: 14px;
+			margin: 0;
+		}
+	}
+
+	// select
+	.select-wrap {
+		width: 100%;
 		.select-btn {
-			width: 160px;
-			font-size: 13px;
-			height: 34px;
+			width: 100%;
+			font-size: 14px;
 		}
 		.select-list {
-			a {
-				font-size: 13px;
+			font-size: 13px;
+		}
+	}
+	
+	// toggle 
+	.toggle-btn {
+		width: 38px;
+		height: 22px;
+		border-radius: 11px;
+		.checkbox {
+			&:checked + .knobs::before {
+				left: 20px;
+			}
+		}
+		.knobs {
+			z-index: 2;
+			&::before {
+				width: 14px;
+				height: 14px;
 			}
 		}
 	}
