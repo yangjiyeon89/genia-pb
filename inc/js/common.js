@@ -206,13 +206,8 @@ $(function () {
       });
     }
   }
-<<<<<<< HEAD
   selectBtn.on("click", selectUI);
-=======
-  
-  selectBtn.on('click', selectUI);
 
->>>>>>> yangz
 
   // paging
   let pageBtn = $(".page");
@@ -402,9 +397,6 @@ $(function () {
     handle: ".dragHandle",
   });
 
-<<<<<<< HEAD
-  $("#table-1").disableSelection();
-=======
   $( "#table-1" ).disableSelection();
 
 
@@ -430,5 +422,4 @@ $(function () {
   }
 
   lineBtn.on('click', btnClickFunc);
->>>>>>> yangz
 });
