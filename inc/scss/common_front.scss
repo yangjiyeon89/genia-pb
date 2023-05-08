@@ -618,7 +618,10 @@ input[type="text"], input[type="number"] {
 	}
 
 }
-
+.input-wrap {
+	@include layout-center;
+	gap: 10px;
+}
 .search-box {
 	position: relative;
 	width: 300px;
@@ -637,7 +640,6 @@ input[type="text"], input[type="number"] {
     background-size: contain;
 	}
 }
-
 input[type="radio"], input[type="checkbox"] {
   @include inputnone;
   & + label {
@@ -649,7 +651,6 @@ input[type="radio"], input[type="checkbox"] {
     }
   }
 }
-
 input[type="checkbox"] {
   & + label {
     padding-left: 28px;
@@ -699,7 +700,6 @@ input[type="checkbox"] {
     background: url(../../images/common/ico_page_arr_first.png) no-repeat;
   }
 }
-
 
 // select
 .select-wrap {
@@ -770,11 +770,113 @@ input[type="checkbox"] {
 		}
 	}
 }
-.input-wrap {
-	@include layout-center;
-	gap: 10px;
+
+
+// tab 
+.tab-wrap {
+	.contents {
+		display: none;
+		&.on {
+			display: block;
+		}
+	}
+	.content {
+		display: none;
+		&.on {
+			display: block;
+		}
+	}
 }
-// table
+[class^='tab-menu-'] {
+	@include content-center;
+	li {
+		a {
+			@include content-center-center;
+			@include font(16px, 500);
+			box-sizing: border-box;
+		}
+	}
+}
+.tab-menu-type01 {
+	width: 100%;
+	border-radius: 13px;
+	overflow: hidden;
+	border: 1px solid #d7d7d7;
+	li {
+		flex: 1;
+		a {
+			width: 100%;
+			height: 48px;
+			background-color: #fff;
+			border-left: 1px solid #d7d7d7; 
+			color: #909090;
+		}
+		&:nth-child(1) { 
+			a {
+				border-left: 0;
+			}
+		}
+		&.active {
+			a {
+				color: #fff;
+				border: 1px solid $color-main-blue;
+				background-color: $color-main-blue;
+			}
+		}
+	}
+}
+.tab-menu-wrap {
+	@include layout-center-center;
+	width: 100%;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+	background-color: #f8f8f8;
+}
+.tab-menu-type02 {
+	width: 100%;
+	li {
+		@include content-center-center;
+		flex: 1;
+		a {
+			width: auto;
+			height: 70px;
+			@include font(18px, 500);
+			color: #969696;
+		}
+		&.active {
+			a {
+				color: #000;
+				border-bottom: 2px solid #000;
+			}
+		}
+	}
+}
+.tab-menu-type03 {
+	height: 48px;
+	border-radius: 24px;
+	overflow: hidden;
+	border: 1px solid #d9d9d9;
+	background-color: #fff;
+	padding: 0 5px;
+	li {
+		a {
+			width: 90px;
+			height: 36px;
+			border-radius: 18px;
+			overflow: hidden;
+			background-color: #fff;
+			font-size: 15px;
+			color: #a7a7a7;
+		}
+		&.active {
+			a {
+				color: #fff;
+				background-color: $color-main-blue;
+			}
+		}
+	}
+}
+
 // popup
 .pop-wrap {
   display: none;  
@@ -797,11 +899,11 @@ input[type="checkbox"] {
   }
   .pop-close {
     position: absolute;
-    top: 25px;
+    top: 20px;
 		right: 20px;
-    width: 18px;
-		height: 19px;
-    background: url(../../images/common/ico_pop_close.png) no-repeat;
+    width: 16px;
+		height: 16px;
+    background: url(../../images/common/ico_pop_close_type02.png) no-repeat;
   }
   .pop-footer {
     display: flex;
@@ -810,13 +912,26 @@ input[type="checkbox"] {
     button {
 			flex: 1;
       height: 50px;
-			font-size: 15px;
+			font-size: 16px;
     }
   }
 
-	&.table-type {
+	&.que-type {
 		.pop-inner {
-			width: 500px;
+			width: 595px;
+		}
+		.pop-header {
+			background: #333;
+			padding: 10px 20px;
+			height: 45px;
+			span {
+				@include font(18px, 500);
+				color: #fff;
+			}
+		}
+		.pop-close {
+			top: 15px;
+			background: url(../../images/common/ico_pop_close_type03.png) no-repeat;
 		}
 		.pop-content {
 			padding: 20px;
@@ -825,7 +940,8 @@ input[type="checkbox"] {
 	
 	&.alert-type {
 		.pop-inner {
-			width: 410px;
+			width: 384px;
+			border-radius: 19px;
 		}
 		.pop-header {
 			background: #fff;
@@ -835,27 +951,38 @@ input[type="checkbox"] {
 		.pop-content {
 			@include layout-center-center;
 			text-align: center;
-			padding: 75px 0 45px 0;
+			padding: 60px 0 30px 0;
 			.txt {
 				@include font(18px, 400);
 			}
+		}
+		.pop-footer {
+			padding: 0 75px 45px 75px;
 		}
 	}
 
 	&.full-type {
 		overflow: auto;
 		position: fixed;
-		top: 0;left: 0;
-		width: 100%;height: 100%;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		transform: none;
-		background-color: #fff;
 		.pop-header {
-			padding: 18px 40px;
-			background-color: #f6f6f6;
+			height: 45px;
+			background-color: #333;
+			padding: 10px 20px;
+			span {
+				@include font(20px, 500);
+				color: #fff;
+			}
 		}
 		.pop-close {
-			top: 21px;
-			right: 40px;
+			top: 13px;
+			width: 20px;
+			height: 20px;
+			background: url(../../images/common/ico_pop_close_type04.png) no-repeat;
 		}
 	}
 }
@@ -1194,6 +1321,30 @@ input[type="checkbox"] {
 			&::before {
 				width: 14px;
 				height: 14px;
+			}
+		}
+	}
+	
+	// tab
+	.tab-menu-type01 {
+		border-radius: 10px;
+		li {
+			a {
+				font-size: 14px;
+				height: 36px;
+			}
+		}
+	}
+	.tab-menu-type03 {
+		height: 44px;
+		border-radius: 22px;
+		padding: 0 5px;
+		li {
+			a {
+				width: 80px;
+				height: 32px;
+				border-radius: 16px;
+				font-size: 14px;
 			}
 		}
 	}
