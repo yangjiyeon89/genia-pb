@@ -326,6 +326,7 @@ $(function () {
     let _this = $(this);
 
     _this.toggleClass("active");
+    _this.parents("li").toggleClass("active");
 
     if (_this.parents("*").hasClass("ui-acc-area")) {
       if (_this.hasClass("active")) {
