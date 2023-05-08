@@ -1,348 +1,400 @@
-$(function(){
+$(function () {
   //menu
-  function checkCurrentGnb () {
-    var _className = $('#wrap').attr('class'),
-      _afterStr = _className ? _className.split(" ") : '',
-      _gnbMenuLink = $('.nav-list');
-      _gnbDepth02 = $('.depth2-wrap');
-      _gnbDepth02Item = $('.depth2-list');
+  function checkCurrentGnb() {
+    var _className = $("#wrap").attr("class"),
+      _afterStr = _className ? _className.split(" ") : "",
+      _gnbMenuLink = $(".nav-list");
+    _gnbDepth02 = $(".depth2-wrap");
+    _gnbDepth02Item = $(".depth2-list");
 
     switch (_afterStr[0]) {
-      case 'admin01_01':
-        _gnbMenuLink.eq(0).find('> a').addClass('active');
-        _gnbMenuLink.eq(0).find(_gnbDepth02).addClass('on');
-        _gnbMenuLink.eq(0).find(_gnbDepth02).find(_gnbDepth02Item).eq(0).find('> a').addClass('active');
+      case "admin01_01":
+        _gnbMenuLink.eq(0).find("> a").addClass("active");
+        _gnbMenuLink.eq(0).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(0)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(0)
+          .find("> a")
+          .addClass("active");
         break;
-      case 'admin01_02':
-        _gnbMenuLink.eq(0).find('> a').addClass('active');
-        _gnbMenuLink.eq(0).find(_gnbDepth02).addClass('on');
-        _gnbMenuLink.eq(0).find(_gnbDepth02).find(_gnbDepth02Item).eq(2).find('> a').addClass('active');
+      case "admin01_02":
+        _gnbMenuLink.eq(0).find("> a").addClass("active");
+        _gnbMenuLink.eq(0).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(0)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(2)
+          .find("> a")
+          .addClass("active");
         break;
-      // s: 20230425 추가
-      case 'admin01_03':
-        _gnbMenuLink.eq(0).find('> a').addClass('active');
-        _gnbMenuLink.eq(0).find(_gnbDepth02).addClass('on');
-        _gnbMenuLink.eq(0).find(_gnbDepth02).find(_gnbDepth02Item).eq(1).find('> a').addClass('active');
+        // s: 20230425 추가
+      case "admin01_03":
+        _gnbMenuLink.eq(0).find("> a").addClass("active");
+        _gnbMenuLink.eq(0).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(0)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(1)
+          .find("> a")
+          .addClass("active");
         break;
-      // e: 20230425 추가
-      case 'admin02_01':
-        _gnbMenuLink.eq(1).find('> a').addClass('active');
-        _gnbMenuLink.eq(1).find(_gnbDepth02).addClass('on');
-        _gnbMenuLink.eq(1).find(_gnbDepth02).find(_gnbDepth02Item).eq(0).find('> a').addClass('active');
+        // e: 20230425 추가
+      case "admin02_01":
+        _gnbMenuLink.eq(1).find("> a").addClass("active");
+        _gnbMenuLink.eq(1).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(1)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(0)
+          .find("> a")
+          .addClass("active");
         break;
-      case 'admin02_02':
-        _gnbMenuLink.eq(1).find('> a').addClass('active');
-        _gnbMenuLink.eq(1).find(_gnbDepth02).addClass('on');
-        _gnbMenuLink.eq(1).find(_gnbDepth02).find(_gnbDepth02Item).eq(1).find('> a').addClass('active');
+      case "admin02_02":
+        _gnbMenuLink.eq(1).find("> a").addClass("active");
+        _gnbMenuLink.eq(1).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(1)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(1)
+          .find("> a")
+          .addClass("active");
         break;
-      case 'admin02_03':
-        _gnbMenuLink.eq(1).find('> a').addClass('active');
-        _gnbMenuLink.eq(1).find(_gnbDepth02).addClass('on');
-        _gnbMenuLink.eq(1).find(_gnbDepth02).find(_gnbDepth02Item).eq(2).find('> a').addClass('active');
+      case "admin02_03":
+        _gnbMenuLink.eq(1).find("> a").addClass("active");
+        _gnbMenuLink.eq(1).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(1)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(2)
+          .find("> a")
+          .addClass("active");
         break;
-      case 'admin03_01':
-      _gnbMenuLink.eq(2).find('> a').addClass('active');
-      _gnbMenuLink.eq(2).find(_gnbDepth02).addClass('on');
-      _gnbMenuLink.eq(2).find(_gnbDepth02).find(_gnbDepth02Item).eq(0).find('> a').addClass('active');
+      case "admin03_01":
+        _gnbMenuLink.eq(2).find("> a").addClass("active");
+        _gnbMenuLink.eq(2).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(2)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(0)
+          .find("> a")
+          .addClass("active");
         break;
-      case 'admin03_02':
-      _gnbMenuLink.eq(2).find('> a').addClass('active');
-      _gnbMenuLink.eq(2).find(_gnbDepth02).addClass('on');
-      _gnbMenuLink.eq(2).find(_gnbDepth02).find(_gnbDepth02Item).eq(1).find('> a').addClass('active');
+      case "admin03_02":
+        _gnbMenuLink.eq(2).find("> a").addClass("active");
+        _gnbMenuLink.eq(2).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(2)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(1)
+          .find("> a")
+          .addClass("active");
         break;
-      case 'admin03_03':
-      _gnbMenuLink.eq(2).find('> a').addClass('active');
-      _gnbMenuLink.eq(2).find(_gnbDepth02).addClass('on');
-      _gnbMenuLink.eq(2).find(_gnbDepth02).find(_gnbDepth02Item).eq(2).find('> a').addClass('active');
+      case "admin03_03":
+        _gnbMenuLink.eq(2).find("> a").addClass("active");
+        _gnbMenuLink.eq(2).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(2)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(2)
+          .find("> a")
+          .addClass("active");
         break;
     }
   }
-  $(document).ready(function(){
+  $(document).ready(function () {
     checkCurrentGnb();
-  })
+  });
 
   //header
-  let _navItem = $('.nav li');
-  let _dep1Item = $('.nav-item')
-  let _dep2List = $('.depth2-wrap');
+  let _navItem = $(".nav li");
+  let _dep1Item = $(".nav-item");
+  let _dep2List = $(".depth2-wrap");
 
-  function inMenu(){
-    let _this = $(this).find('> a');
+  function inMenu() {
+    let _this = $(this).find("> a");
 
-    if(!_this.hasClass('active')){
-      $('.depth2-item').removeClass('active');
-      _dep1Item.removeClass('active');
-      _this.addClass('active');
-      _dep2List.removeClass('on');
-      _this.next(_dep2List).addClass('on');
+    if (!_this.hasClass("active")) {
+      $(".depth2-item").removeClass("active");
+      _dep1Item.removeClass("active");
+      _this.addClass("active");
+      _dep2List.removeClass("on");
+      _this.next(_dep2List).addClass("on");
     }
 
-    _this.on('mouseout', function(){
-      _dep1Item.removeClass('active');
-      _dep2List.removeClass('on');
+    _this.on("mouseout", function () {
+      _dep1Item.removeClass("active");
+      _dep2List.removeClass("on");
       checkCurrentGnb();
-    })
+    });
   }
 
-  _navItem.on('mouseover', inMenu);
+  _navItem.on("mouseover", inMenu);
 
   // mobile menu
-  let menuBtn = $('.btn-menu');
-  let _menudim = $('.dim');
-  let _menuhtml = $('html , body');
-  let _cnt = $('.mobile-menu');
-  
+  let menuBtn = $(".btn-menu");
+  let _menudim = $(".dim");
+  let _menuhtml = $("html , body");
+  let _cnt = $(".mobile-menu");
+
   function menuFunc() {
     let _this = $(this);
-    if (!_this.hasClass('active')) {
-      _this.addClass('active');
-      _cnt.css('right','0');
-      _menuhtml.css('overflow', 'hidden');
+    if (!_this.hasClass("active")) {
+      _this.addClass("active");
+      _cnt.css("right", "0");
+      _menuhtml.css("overflow", "hidden");
       _menudim.fadeIn();
     } else {
-      _this.removeClass('active');
-      _cnt.css('right','-50%');
-      _menuhtml.css('overflow', 'auto');
+      _this.removeClass("active");
+      _cnt.css("right", "-50%");
+      _menuhtml.css("overflow", "auto");
       _menudim.fadeOut();
     }
   }
 
-  menuBtn.on('click', menuFunc);
-
+  menuBtn.on("click", menuFunc);
 
   // tab
-  let tabBtn = $('.ui-tab-btn');
+  let tabBtn = $(".ui-tab-btn");
 
   function tabUI() {
     let _this = $(this);
-    let _cnt = $(this).parents('.tab-wrap').find('.contents');
+    let _cnt = $(this).parents(".tab-wrap").find(".contents");
     let _idx = $(this).index();
-    
-    if(_this.parents('div').hasClass('contents')) {
-      if (!_this.hasClass('active')) {
-        _this.siblings().removeClass('active');
-        _this.addClass('active');
-        _this.parents('.contents').find('.content').removeClass('on');
-        _this.parents('.contents').find('.content').eq(_idx).addClass('on');
+
+    if (_this.parents("div").hasClass("contents")) {
+      if (!_this.hasClass("active")) {
+        _this.siblings().removeClass("active");
+        _this.addClass("active");
+        _this.parents(".contents").find(".content").removeClass("on");
+        _this.parents(".contents").find(".content").eq(_idx).addClass("on");
       }
     } else {
-      if (!_this.hasClass('active')) {
-        _this.siblings().removeClass('active');
-        _this.addClass('active');
-        _cnt.removeClass('on');
-        _cnt.eq(_idx).addClass('on');
+      if (!_this.hasClass("active")) {
+        _this.siblings().removeClass("active");
+        _this.addClass("active");
+        _cnt.removeClass("on");
+        _cnt.eq(_idx).addClass("on");
       }
     }
   }
 
-  tabBtn.on('click', tabUI);
-
+  tabBtn.on("click", tabUI);
 
   // select
-  let selectBtn = $('.select-btn');
+  let selectBtn = $(".select-btn");
 
   function selectUI() {
     let _this = $(this);
     let _cnt = $(this).next();
 
-    if (!_this.hasClass('active')) {
-      _this.addClass('active');
-      _cnt.stop().slideDown('fast');
+    if (!_this.hasClass("active")) {
+      _this.addClass("active");
+      _cnt.stop().slideDown("fast");
     } else {
-      _cnt.stop().slideUp('fast', function () {
-        _this.removeClass('active');
-      })
+      _cnt.stop().slideUp("fast", function () {
+        _this.removeClass("active");
+      });
     }
   }
-  selectBtn.on('click', selectUI);
-
+  selectBtn.on("click", selectUI);
 
   // paging
-  let pageBtn = $('.page');
+  let pageBtn = $(".page");
 
   function pageFunc() {
     let _this = $(this);
 
-    if (!_this.hasClass('active')) {
-      pageBtn.removeClass('active');
-      _this.addClass('active')
+    if (!_this.hasClass("active")) {
+      pageBtn.removeClass("active");
+      _this.addClass("active");
     }
   }
 
-  pageBtn.on('click', pageFunc);
-  
-  
+  pageBtn.on("click", pageFunc);
+
   // popup
-  let _dim = $('.dim');
-  let _html = $('html , body');
-  let popBtn = $('.pop-btn');
-  let closePop = $('.pop-close');
+  let _dim = $(".dim");
+  let _html = $("html , body");
+  let popBtn = $(".pop-btn");
+  let closePop = $(".pop-close");
 
   function popFunc() {
     let _this = $(this);
-    let popData = _this.data('pop');
+    let popData = _this.data("pop");
 
-    _html.css('overflow', 'hidden');
+    _html.css("overflow", "hidden");
     _dim.fadeIn();
 
     $(".pop-wrap[data-pop='" + popData + "']").show();
 
-    console.log($(".pop-wrap[data-pop='" + popData + "']"))
+    console.log($(".pop-wrap[data-pop='" + popData + "']"));
   }
 
   function popClose() {
     let _this = $(this);
-    $('.pop-wrap').hide();
-    _html.css('overflow', 'auto');
+    $(".pop-wrap").hide();
+    _html.css("overflow", "auto");
     _dim.fadeOut();
   }
 
-  popBtn.on('click', popFunc);
-  closePop.on('click', popClose);
-
+  popBtn.on("click", popFunc);
+  closePop.on("click", popClose);
 
   //left nav
-  let classArea = $('.class-area');
-  let classList = $('.class-list');
-  let classItem = $('.class-item');
+  let classArea = $(".class-area");
+  let classList = $(".class-list");
+  let classItem = $(".class-item");
 
-  function classNavFunc(){
+  function classNavFunc() {
     let _this = $(this);
-    if(!_this.hasClass('active')) {
-      _this.addClass('active');
-      _this.find('.arrow').text('▲');
+    if (!_this.hasClass("active")) {
+      _this.addClass("active");
+      _this.find(".arrow").text("▲");
       _this.next(classArea).show();
     } else {
-      _this.removeClass('active');
-      _this.find('.arrow').text('▼');
+      _this.removeClass("active");
+      _this.find(".arrow").text("▼");
       _this.next(classArea).hide();
       _this.next(classArea).find(classArea).hide();
-      _this.next(classArea).find(classItem).removeClass('active');
-      _this.next(classArea).find(classItem).find('.arrow').text('▼');
+      _this.next(classArea).find(classItem).removeClass("active");
+      _this.next(classArea).find(classItem).find(".arrow").text("▼");
     }
 
-    if(_this.parents(classArea).hasClass('last-area')) {
-      _this.parent(classList).siblings(classList).find(classItem).removeClass('active');
-      _this.addClass('active');
+    if (_this.parents(classArea).hasClass("last-area")) {
+      _this
+        .parent(classList)
+        .siblings(classList)
+        .find(classItem)
+        .removeClass("active");
+      _this.addClass("active");
     }
-
   }
 
-  classItem.on('click', classNavFunc);
-
+  classItem.on("click", classNavFunc);
 
   // checkbox on
-  let tblChk = $('.table-wrap.type02 input[type=checkbox]');
-  let toggleBtnChk = $('.toggle-btn input[type=checkbox]');
+  let tblChk = $(".table-wrap.type02 input[type=checkbox]");
+  let toggleBtnChk = $(".toggle-btn input[type=checkbox]");
 
   function tblchkFunc() {
     let _this = $(this);
-    _this.parents('tr').toggleClass('on');
+    _this.parents("tr").toggleClass("on");
   }
-  
-  tblChk.on('click', tblchkFunc);
-  toggleBtnChk.off('click', tblchkFunc);
+
+  tblChk.on("click", tblchkFunc);
+  toggleBtnChk.off("click", tblchkFunc);
 
   // all checkbox
-  let chkAll = $('.allCheck');
+  let chkAll = $(".allCheck");
 
   function checkFunc(e) {
     let _this = $(this);
 
-    if (_this.prop('checked')) {
-      _this.parents('table').find('tr td:first-child > input[type=checkbox]').prop('checked', true);
-      _this.parents('table').find('tr').addClass('on');
+    if (_this.prop("checked")) {
+      _this
+        .parents("table")
+        .find("tr td:first-child > input[type=checkbox]")
+        .prop("checked", true);
+      _this.parents("table").find("tr").addClass("on");
     } else {
-      _this.parents('table').find('tr td:first-child > input[type=checkbox]').prop('checked', false);
-      _this.parents('table').find('tr').removeClass('on');
+      _this
+        .parents("table")
+        .find("tr td:first-child > input[type=checkbox]")
+        .prop("checked", false);
+      _this.parents("table").find("tr").removeClass("on");
     }
   }
 
-  chkAll.on('click', checkFunc);
+  chkAll.on("click", checkFunc);
 
   // accordion
-  let accArea = $('.ui-acc-area');
-  let accBtn = $('.ui-acc-btn');
+  let accArea = $(".ui-acc-area");
+  let accBtn = $(".ui-acc-btn");
 
   function accFunc() {
     let _this = $(this);
-    
-    _this.toggleClass('active');
 
-    if(_this.parents('*').hasClass('ui-acc-area')) {
-      if (_this.hasClass('active')) {
-        _this.text('▲');
-        _this.parents(accArea).next('.ui-acc-cnt').stop().slideDown('fast');
+    _this.toggleClass("active");
+
+    if (_this.parents("*").hasClass("ui-acc-area")) {
+      if (_this.hasClass("active")) {
+        _this.text("▲");
+        _this.parents(accArea).next(".ui-acc-cnt").stop().slideDown("fast");
       } else {
-        _this.text('▼');
-        _this.parents(accArea).next('.ui-acc-cnt').stop().slideUp('fast');
+        _this.text("▼");
+        _this.parents(accArea).next(".ui-acc-cnt").stop().slideUp("fast");
       }
     } else {
-      if (_this.hasClass('active')) {
-        _this.find('.arrow').text('▲');
-        _this.next('.ui-acc-cnt').stop().slideDown('fast');
+      if (_this.hasClass("active")) {
+        _this.find(".arrow").text("▲");
+        _this.next(".ui-acc-cnt").stop().slideDown("fast");
       } else {
-        _this.find('.arrow').text('▼');
-        _this.next('.ui-acc-cnt').stop().slideUp('fast');
+        _this.find(".arrow").text("▼");
+        _this.next(".ui-acc-cnt").stop().slideUp("fast");
       }
     }
   }
 
-  accBtn.on('click', accFunc);
-
+  accBtn.on("click", accFunc);
 
   // filter arrow
-  let filterArr = $('.ui-arr');
+  let filterArr = $(".ui-arr");
 
-  filterArr.on('click' , function(){
+  filterArr.on("click", function () {
     let _this = $(this);
 
-    if(!_this.hasClass('on')) {
-      _this.addClass('on');
-      _this.text('▲');
+    if (!_this.hasClass("on")) {
+      _this.addClass("on");
+      _this.text("▲");
     } else {
-      _this.removeClass('on');
-      _this.text('▼');
+      _this.removeClass("on");
+      _this.text("▼");
     }
-  })
-
-  // input file
-  let fileTarget = $('.file-area .upload-hidden');
-
-  fileTarget.on('change', function(){
-    if(window.FileReader){
-        var filename = $(this)[0].files[0].name;
-    } else {
-        var filename = $(this).val().split('/').pop().split('\\').pop();
-    }
-
-    $(this).siblings('.upload-name').val(filename);
-    $(this).siblings('.upload-name').text(filename);
   });
 
+  // input file
+  let fileTarget = $(".file-area .upload-hidden");
+
+  fileTarget.on("change", function () {
+    if (window.FileReader) {
+      var filename = $(this)[0].files[0].name;
+    } else {
+      var filename = $(this).val().split("/").pop().split("\\").pop();
+    }
+
+    $(this).siblings(".upload-name").val(filename);
+    $(this).siblings(".upload-name").text(filename);
+  });
 
   // radio tab
-  let radioWrap = $('.ui-radio-wrap')
-  let radioSelect = $('.ui-radio-sel');
-  let radioSelectCnt = $('.ui-radio-cnt')
+  let radioWrap = $(".ui-radio-wrap");
+  let radioSelect = $(".ui-radio-sel");
+  let radioSelectCnt = $(".ui-radio-cnt");
 
-  function radioSelFunc(){
-    
+  function radioSelFunc() {
     let _this = $(this);
-    let radioData = _this.data('tab');
+    let radioData = _this.data("tab");
 
     _this.parents(radioWrap).find(radioSelectCnt).hide();
     $(".ui-radio-cnt[data-tab='" + radioData + "']").show();
-
   }
 
-  radioSelect.on('click' , radioSelFunc);
+  radioSelect.on("click", radioSelFunc);
 
   // table drag
-  $( "#table-1" ).sortable({
-    handle: '.dragHandle',
+  $("#table-1").sortable({
+    handle: ".dragHandle",
   });
 
-  $( "#table-1" ).disableSelection();
-
+  $("#table-1").disableSelection();
 });
