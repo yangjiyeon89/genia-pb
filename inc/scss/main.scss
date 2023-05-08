@@ -41,6 +41,9 @@ body {
     display: flex;
     color: #fff;
     width: 100%;
+    position: absolute;
+    left: 18%;
+    z-index: 11;
 
     button {
       position: absolute;
@@ -51,8 +54,6 @@ body {
       width: 8px;
       height: 16px;
       bottom: 30px;
-      left: 18%;
-      z-index: 11;
     }
 
     .prev {
@@ -61,14 +62,13 @@ body {
     }
 
     .next {
-      margin-left: 4.65vw;
-
+      left: 60px;
     }
 
     .swiper-pagination-fraction {
       font-size: 15px;
       bottom: 30px;
-      left: 19.6%;
+      left: 20px;
       width: 30px;
     }
   }
@@ -270,7 +270,6 @@ body {
           text-align: center;
           transition: .3s opacity;
           transform: translate3d(0, 0, 0);
-          z-index: 10;
         }
       }
     }
@@ -324,24 +323,14 @@ body {
       display: flex;
       color: #fff;
       width: 100%;
+      left: 50%;
+      transform: translateX(-30px);
+
 
       button {
         bottom: 30px;
-        left: 44%;
-        z-index: 11;
       }
 
-      .next {
-        margin-left: 11vw;
-      }
-
-      .swiper-pagination-fraction {
-        font-size: 15px;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 30px;
-      }
     }
   }
 

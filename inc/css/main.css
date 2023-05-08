@@ -55,6 +55,9 @@ body {
   display: flex;
   color: #fff;
   width: 100%;
+  position: absolute;
+  left: 18%;
+  z-index: 11;
 }
 .visual-swiper .pagination button {
   position: absolute;
@@ -65,19 +68,17 @@ body {
   width: 8px;
   height: 16px;
   bottom: 30px;
-  left: 18%;
-  z-index: 11;
 }
 .visual-swiper .pagination .prev {
   transform: rotate(-180deg);
 }
 .visual-swiper .pagination .next {
-  margin-left: 4.65vw;
+  left: 60px;
 }
 .visual-swiper .pagination .swiper-pagination-fraction {
   font-size: 15px;
   bottom: 30px;
-  left: 19.6%;
+  left: 20px;
   width: 30px;
 }
 
@@ -231,7 +232,6 @@ body {
   text-align: center;
   transition: 0.3s opacity;
   transform: translate3d(0, 0, 0);
-  z-index: 10;
 }
 .container .sec02-cnt .btn-more {
   position: absolute;
@@ -259,21 +259,11 @@ body {
     display: flex;
     color: #fff;
     width: 100%;
+    left: 50%;
+    transform: translateX(-30px);
   }
   .visual-swiper .pagination button {
     bottom: 30px;
-    left: 44%;
-    z-index: 11;
-  }
-  .visual-swiper .pagination .next {
-    margin-left: 11vw;
-  }
-  .visual-swiper .pagination .swiper-pagination-fraction {
-    font-size: 15px;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
   }
   .container .inner {
     padding: 60px 30px 0;
