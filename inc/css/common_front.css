@@ -477,6 +477,7 @@
   font-size: 15px;
   font-weight: 500;
   border-radius: 13px;
+  background-color: #fff;
 }
 .btn-state.type01 {
   background-color: #ff569a;
@@ -553,6 +554,7 @@
   height: 36px;
   border-radius: 8px;
   border: 1px solid #d7d7d7;
+  background-color: #fff;
   font-size: 14px;
   font-weight: 500;
   color: #909090;
@@ -671,6 +673,17 @@ input[type=text], input[type=number] {
 }
 input[type=text]::placeholder, input[type=number]::placeholder {
   color: #9e9e9e;
+}
+input[type=text].ip-type02, input[type=number].ip-type02 {
+  width: 100%;
+  height: 36px;
+  border: 1px solid #d1d1d1;
+  background-color: #fafafa;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+input[type=text].ip-type02::placeholder, input[type=number].ip-type02::placeholder {
+  color: #a4a4a4;
 }
 
 .search-box {
@@ -1229,6 +1242,9 @@ input[type=checkbox]:checked + label::before {
   input[type=text], input[type=number] {
     width: 100%;
     font-size: 14px;
+  }
+  input[type=text].ip-type02, input[type=number].ip-type02 {
+    height: 38px;
   }
   .search-box {
     width: 100%;
