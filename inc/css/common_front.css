@@ -34,6 +34,7 @@
 }
 
 .guide {
+  background-color: #fafafa;
   padding: 30px 50px;
 }
 .guide > h1 {
@@ -43,6 +44,9 @@
 .guide > h2 {
   margin: 40px 0px 10px;
   font-size: 18px;
+}
+.guide > button, .guide > input, .guide > div {
+  margin-bottom: 5px;
 }
 .guide > .pop-wrap {
   display: block;
@@ -401,6 +405,200 @@
   font-weight: 700;
 }
 
+[class^=btn-], [class^="a.btn-"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.btn-defalut {
+  width: 174px;
+  height: 55px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #108eff;
+  border-radius: 8px;
+}
+.btn-defalut.w154 {
+  width: 154px;
+  height: 40px;
+  font-size: 16px;
+}
+.btn-defalut.w280 {
+  width: 280px;
+  border-radius: 13px;
+}
+.btn-defalut.size-s {
+  width: 85px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.btn-defalut-line {
+  width: 174px;
+  height: 55px;
+  color: #108eff;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #fff;
+  border: 1px solid #108eff;
+  border-radius: 8px;
+}
+.btn-defalut-line.size-s {
+  width: 85px;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.btn-type02 {
+  width: 255px;
+  height: 55px;
+  border-radius: 13px;
+  color: #fff;
+  background-color: #ff569a;
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn-type02.size-sm {
+  width: 99px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.btn-state {
+  width: 99px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 13px;
+}
+.btn-state.type01 {
+  background-color: #ff569a;
+  color: #fff;
+}
+.btn-state.type02 {
+  border: 1px solid #ff569a;
+  color: #ff569a;
+  background-color: #fff;
+}
+.btn-state.type03 {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1;
+  border: 1px solid #a5a5a5;
+  color: #a5a5a5;
+  background-color: #fff;
+}
+.btn-state.type03 span {
+  font-size: 13px;
+}
+
+.btn-type03 {
+  height: 40px;
+  padding: 0 15px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #333;
+  border-radius: 9px;
+}
+.btn-type03 i {
+  margin-right: 10px;
+}
+
+.btn-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+.btn-icon:hover {
+  border: 1px solid #108eff;
+  background-color: #108eff;
+}
+.btn-icon:hover i.prview {
+  background-image: url(../../images/common/ico_preview_hover.png);
+}
+.btn-icon:hover i.edit {
+  background-image: url(../../images/common/ico_edit_hover.png);
+}
+.btn-icon:hover i.share {
+  background-image: url(../../images/common/ico_share_hover.png);
+}
+
+.btn-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ececec;
+  color: #787878;
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn-number.active {
+  background-color: #108eff;
+  color: #fff;
+}
+
+.btn-line {
+  min-width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #d7d7d7;
+  font-size: 14px;
+  font-weight: 500;
+  color: #909090;
+}
+.btn-line.active {
+  border: 1px solid #108eff;
+  color: #108eff;
+}
+
+.btn-wrap {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.btn-wrap.full button, .btn-wrap.full a {
+  flex: 1;
+}
+
+i {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+i.report {
+  width: 20px;
+  height: 20px;
+  background-image: url(../../images/common/ico_report_type02.png);
+}
+i.prview {
+  width: 17px;
+  height: 17px;
+  background-image: url(../../images/common/ico_preview.png);
+}
+i.edit {
+  width: 18px;
+  height: 18px;
+  background-image: url(../../images/common/ico_edit.png);
+}
+i.share {
+  width: 16px;
+  height: 16px;
+  background-image: url(../../images/common/ico_share.png);
+}
+
 .toggle-btn {
   position: relative;
   overflow: hidden;
@@ -631,6 +829,12 @@ input[type=checkbox]:checked + label::before {
 .select-wrap .select-list em {
   color: #418ac9;
   font-weight: 700;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .pop-wrap {
@@ -950,6 +1154,78 @@ input[type=checkbox]:checked + label::before {
     bottom: 7px;
     left: 180px;
   }
+  .btn-defalut {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .btn-defalut.w154 {
+    font-size: 15px;
+  }
+  .btn-defalut.size-s {
+    width: 85px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .btn-defalut-line {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .btn-type02 {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 9px;
+  }
+  .btn-state {
+    width: 55px;
+    height: 25px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+  .btn-state.type03 {
+    height: 35px;
+  }
+  .btn-state.type03 span {
+    font-size: 12px;
+  }
+  .btn-type03 {
+    width: 100%;
+    font-size: 14px;
+  }
+  .btn-type03 i {
+    margin-right: 7px;
+  }
+  .btn-icon {
+    width: 27px;
+    height: 27px;
+  }
+  .btn-number {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  i.report {
+    width: 16px;
+    height: 16px;
+  }
+  i.prview {
+    width: 14px;
+    height: 14px;
+  }
+  i.edit {
+    width: 14px;
+    height: 14px;
+  }
+  i.share {
+    width: 13px;
+    height: 13px;
+  }
   input[type=text], input[type=number] {
     width: 100%;
     font-size: 14px;
@@ -970,6 +1246,9 @@ input[type=checkbox]:checked + label::before {
   }
   .select-wrap .select-list {
     font-size: 13px;
+  }
+  .input-wrap {
+    flex-direction: column;
   }
   .toggle-btn {
     width: 38px;

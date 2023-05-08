@@ -17,6 +17,7 @@
 
 //guide
 .guide {
+	background-color: #fafafa;
 	padding: 30px 50px;
 	> h1 {
 		margin: 30px 0px 15px;
@@ -25,6 +26,9 @@
 	> h2 {
 		margin: 40px 0px 10px;
     font-size: 18px;
+	}
+	> button, > input, > div {
+		margin-bottom: 5px;
 	}
 	> .pop-wrap {
 		display: block;
@@ -111,7 +115,7 @@
     padding: 24px 30px 25px;
     @include font(18px, 500);
     &:hover, &.active {
-      color: #108eff;
+      color: $color-main-blue
     }
   }
 	// front web gnb
@@ -170,7 +174,7 @@
 					width: 6px;
 					height: 6px;
 					border-radius: 3px;
-					background-color: #108eff;
+					background-color: $color-main-blue;
 					top: 20px;
 					right: 20px;
 				}
@@ -191,9 +195,9 @@
 		width: 95px;
 		height: 36px;
 		border-radius: 18px;
-		border: 2px solid #108eff;
+		border: 2px solid $color-main-blue;
 		@include font(15px, 500);
-		color: #108eff;
+		color: $color-main-blue;
 	}
 	.user-wrap {
 		@include layout-center;
@@ -366,6 +370,168 @@
 }
 
 // button
+[class^='btn-'] , [class^='a.btn-'] {
+	@include layout-center-center;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.btn-defalut {
+	width: 174px;
+	height: 55px;
+	color: #fff;
+	@include font(18px, 500);
+	background-color: $color-main-blue;
+	border-radius: 8px;
+	&.w154 {
+		width: 154px;
+		height: 40px;
+		font-size: 16px;
+	}
+	&.w280 {
+		width: 280px;
+		border-radius: 13px;
+	}
+	&.size-s {
+		width: 85px;
+		height: 30px;
+		@include font(14px, 400);
+	}
+}
+.btn-defalut-line {
+	width: 174px;
+	height: 55px;
+	color: $color-main-blue;
+	@include font(18px, 500);
+	background-color: #fff;
+	border: 1px solid $color-main-blue;
+	border-radius: 8px;
+	&.size-s {
+		width: 85px;
+		height: 30px;
+		@include font(14px, 400);
+	}
+}
+.btn-type02 {
+	width: 255px;
+	height: 55px;
+	border-radius: 13px;
+	color: #fff;
+	background-color: $color-main-pink;
+	@include font(18px, 500);
+	&.size-sm {
+		width: 99px;
+		height: 35px;
+		@include font(15px, 500);
+	}
+}
+.btn-state {
+	width: 99px;
+	height: 35px;
+	@include font(15px, 500);
+	border-radius: 13px;
+	&.type01 {
+		background-color: $color-main-pink;
+		color: #fff;
+	}
+	&.type02 {
+		border: 1px solid $color-main-pink;
+		color: $color-main-pink;
+		background-color: #fff;
+	}
+	&.type03 {
+		@include content-center;
+		flex-direction: column;
+		line-height: 1;
+		border: 1px solid #a5a5a5;
+		color: #a5a5a5;
+		background-color: #fff;
+		span {
+			font-size: 13px;
+		}
+	}
+}
+.btn-type03 {
+	height: 40px;
+	padding: 0 15px;
+	color: #fff;
+	@include font(15px, 500);
+	background-color: #333;
+	border-radius: 9px;
+	i { margin-right: 10px; }
+}
+.btn-icon {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	border: 1px solid #d9d9d9;
+	background-color: #fff;
+	&:hover {
+		border: 1px solid $color-main-blue;
+		background-color: $color-main-blue;
+		i {
+			&.prview { background-image: url(../../images/common/ico_preview_hover.png); }
+			&.edit { background-image: url(../../images/common/ico_edit_hover.png); }
+			&.share { background-image: url(../../images/common/ico_share_hover.png); }
+		}
+	}
+}
+.btn-number {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #ececec;
+	color: #787878;
+	@include font(18px, 500);
+	&.active {
+		background-color: $color-main-blue;
+		color: #fff;
+	}
+}
+.btn-line {
+	min-width: 36px;
+	height: 36px;
+	border-radius: 8px;
+	border: 1px solid #d7d7d7;
+	@include font(14px, 500);
+	color: #909090;
+	&.active {
+		border: 1px solid $color-main-blue;
+		color: $color-main-blue;
+	}
+}
+.btn-wrap {
+	@include content-center-center;
+	gap: 10px;
+	&.full {
+		button, a {
+			flex: 1;
+		}
+	}
+}
+
+// icon
+i {
+	display: inline-block;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	&.report {
+		width: 20px; height: 20px;
+		background-image: url(../../images/common/ico_report_type02.png);
+	}
+	&.prview {
+		width: 17px; height: 17px;
+		background-image: url(../../images/common/ico_preview.png);
+	}
+	&.edit {
+		width: 18px; height: 18px;
+		background-image: url(../../images/common/ico_edit.png);
+	}
+	&.share {
+		width: 16px; height: 16px;
+		background-image: url(../../images/common/ico_share.png);
+	}
+}
 
 // toggle
 .toggle-btn {
@@ -388,8 +554,8 @@
       background-color: #fff;
     }
 		&:checked + .knobs + .layer {
-			background-color: #108eff;
-			border: 1px solid #108eff;
+			background-color: $color-main-blue;
+			border: 1px solid $color-main-blue;
 		}
   }
   .knobs, .knobs::before, .layer {
@@ -431,7 +597,7 @@ input[type="text"], input[type="number"] {
 	border-radius: 9px;
   box-sizing: border-box;
 	font-size: 15px;
-	outline-color: #108eff;
+	outline-color: $color-main-blue;
 	outline-width: thin;
 
   &::placeholder {
@@ -500,8 +666,8 @@ input[type="checkbox"] {
     margin: 0 5px;
     font-weight: 500;
     &.active {
-      color: #108eff;
-      border: 1px solid #108eff;
+      color: $color-main-blue;
+      border: 1px solid $color-main-blue;
 		}
   }
   .prev, .next {
@@ -589,6 +755,10 @@ input[type="checkbox"] {
 			font-weight: 700;
 		}
 	}
+}
+.input-wrap {
+	@include layout-center;
+	gap: 10px;
 }
 // table
 // popup
@@ -902,6 +1072,63 @@ input[type="checkbox"] {
 			bottom: 7px;left: 180px;
 		}
 	}
+	// button 
+	.btn-defalut {
+		width: 100%;
+		height: 40px;
+		@include font(15px, 500);
+		&.w154 {
+			font-size: 15px;
+		}
+		&.size-s {
+			width: 85px;
+			height: 30px;
+			@include font(14px, 400);
+		}
+	}
+	.btn-defalut-line {
+		width: 100%;
+		height: 40px;
+		@include font(15px, 500);
+	}
+	.btn-type02 {
+		width: 100%;
+		height: 50px;
+		@include font(18px, 700);
+		border-radius: 9px;
+	}
+	.btn-state {
+		width: 55px;
+		height: 25px;
+		font-size: 12px;
+		border-radius: 6px;
+		&.type03 {
+			height: 35px;
+			span { font-size: 12px; }
+		}
+	}
+	.btn-type03 {
+		width: 100%;
+		font-size: 14px;
+		i { margin-right: 7px; }
+	}
+	.btn-icon {
+		width: 27px;
+		height: 27px;
+	}
+	.btn-number {
+		width: 40px;
+		height: 40px;
+		font-size: 20px;
+	}
+	
+	// icon 
+	i {
+		&.report { width: 16px; height: 16px; }
+		&.prview { width: 14px; height: 14px; }
+		&.edit { width: 14px; height: 14px; }
+		&.share { width: 13px; height: 13px; }
+	}
 
 	// input
 	input[type="text"], input[type="number"] {
@@ -930,6 +1157,9 @@ input[type="checkbox"] {
 		.select-list {
 			font-size: 13px;
 		}
+	}
+	.input-wrap {
+		flex-direction: column;
 	}
 	
 	// toggle 

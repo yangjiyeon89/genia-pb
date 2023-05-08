@@ -14,7 +14,7 @@
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script src="../inc/js/common.js"></script>
 </head>
-<body style="background-color: #fafafa;">
+<body>
   <div class="header">
     <div class="web-cnt">
       <div class="top-nav">
@@ -109,6 +109,46 @@
   <div class="container">
     <div class="guide">
       <h1>Button</h1>
+
+      <button type="button" class="btn-defalut">저장</button>
+      <button type="button" class="btn-defalut-line">저장</button>
+      <button type="button" class="btn-defalut w154">클래스 개설하기</button>
+      <button type="button" class="btn-defalut w280">학습 완료</button>
+      <div class="btn-wrap">
+        <button type="button" class="btn-defalut-line size-s">취소</button>
+        <button type="button" class="btn-defalut size-s">완료</button>
+      </div>
+
+      <button type="button" class="btn-type02">채점하기</button>
+
+      <button type="button" class="btn-state type01">학습하기</button>
+      <button type="button" class="btn-state type02">다시풀기</button>
+      <button type="button" class="btn-state type03">학습완료<span>23.05.08</span></button>
+
+      <button type="button" class="btn-type03">OMR 닫기 1/5</button>
+      <button type="button" class="btn-type03"><i class="report"></i>종합리포트</button>
+      
+      <div class="btn-wrap">
+        <button type="button" class="btn-icon"><i class="prview"></i></button>
+        <button type="button" class="btn-icon"><i class="edit"></i></button>
+        <button type="button" class="btn-icon"><i class="share"></i></button>
+      </div>
+      <br>
+      <div class="btn-wrap">
+        <button type="button" class="btn-number">1</button>
+        <button type="button" class="btn-number active">2</button>
+        <button type="button" class="btn-number">3</button>
+        <button type="button" class="btn-number">4</button>
+        <button type="button" class="btn-number">5</button>
+      </div>
+      <br>
+      <div class="btn-wrap">
+        <button type="button" class="btn-line">3</button>
+        <button type="button" class="btn-line active">4</button>
+        <button type="button" class="btn-line">5</button>
+        <button type="button" class="btn-line">6</button>
+      </div>
+
       <h2>toggle button</h2>
       <div class="toggle-wrap">
         <div class="toggle-btn">
@@ -124,6 +164,7 @@
         <input type="text" class="ip-search" placeholder="검색어를 입력해주세요">
         <button type="button" class="btn-search"></button>
       </div>
+      <h2>input-wrap</h2>
       <div class="input-wrap">
         <div class="select-wrap">
           <button type="button" class="select-btn">선택</button>
@@ -136,7 +177,10 @@
             </li>
           </ul>
         </div>
-        <input type="text" placeholder="검색어를 입력해주세요">
+        <div class="search-box">
+          <input type="text" class="ip-search" placeholder="검색어를 입력해주세요">
+          <button type="button" class="btn-search"></button>
+        </div>
       </div>
       <h2>checkbox</h2>    
       <input type="checkbox" id="chk01_01" checked>
