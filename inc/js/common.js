@@ -206,7 +206,13 @@ $(function () {
       });
     }
   }
+<<<<<<< HEAD
   selectBtn.on("click", selectUI);
+=======
+  
+  selectBtn.on('click', selectUI);
+
+>>>>>>> yangz
 
   // paging
   let pageBtn = $(".page");
@@ -396,5 +402,33 @@ $(function () {
     handle: ".dragHandle",
   });
 
+<<<<<<< HEAD
   $("#table-1").disableSelection();
+=======
+  $( "#table-1" ).disableSelection();
+
+
+  // toggle button
+  let numberBtn = $('.btn-number');
+
+  function toggleBtnFunc() {
+    let _this = $(this);
+    _this.toggleClass('active');
+  }
+
+  numberBtn.on('click', toggleBtnFunc);
+
+  // click button
+  let lineBtn = $('.btn-line');
+
+  function btnClickFunc(){
+    let _this = $(this);
+    if(!_this.hasClass('active')) {
+      _this.parents('.btn-wrap').find('button').removeClass('active');
+      _this.addClass('active');
+    };
+  }
+
+  lineBtn.on('click', btnClickFunc);
+>>>>>>> yangz
 });

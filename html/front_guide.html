@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>지니아튜터 관리자 가이드</title>
+  <title>지니아튜터 사용자 가이드</title>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="../inc/css/font.css">
   <link rel="stylesheet" href="../inc/css/reset.css">
@@ -73,7 +73,7 @@
         <div class="logo-wrap">
           <a href="javascirpt:;" class="logo"></a>
         </div>
-        <span class="menu">초등</span>
+        <!-- <span class="menu">초등</span> -->
         <button type="button" class="btn-menu"></button>
       </div>
       <div class="gnb mobile-menu">
@@ -106,86 +106,319 @@
 
     </div>
   </div>
-  <div class="guide">
+  <div class="container">
+    <div class="guide">
+      <h1>Button</h1>
 
+      <button type="button" class="btn-defalut">저장</button>
+      <button type="button" class="btn-defalut-line">저장</button>
+      <button type="button" class="btn-defalut w154">클래스 개설하기</button>
+      <button type="button" class="btn-defalut w280">학습 완료</button>
+      <div class="btn-wrap">
+        <button type="button" class="btn-defalut-line size-s">취소</button>
+        <button type="button" class="btn-defalut size-s">완료</button>
+      </div>
+
+      <button type="button" class="btn-type02">채점하기</button>
+
+      <button type="button" class="btn-state type01">학습하기</button>
+      <button type="button" class="btn-state type02">다시풀기</button>
+      <button type="button" class="btn-state type03">학습완료<span>23.05.08</span></button>
+
+      <button type="button" class="btn-type03">OMR 닫기 1/5</button>
+      <button type="button" class="btn-type03"><i class="report"></i>종합리포트</button>
+      
+      <div class="btn-wrap">
+        <button type="button" class="btn-icon"><i class="prview"></i></button>
+        <button type="button" class="btn-icon"><i class="edit"></i></button>
+        <button type="button" class="btn-icon"><i class="share"></i></button>
+      </div>
+      <br>
+      <div class="btn-wrap">
+        <button type="button" class="btn-number">1</button>
+        <button type="button" class="btn-number active">2</button>
+        <button type="button" class="btn-number">3</button>
+        <button type="button" class="btn-number">4</button>
+        <button type="button" class="btn-number">5</button>
+      </div>
+      <br>
+      <div class="btn-wrap">
+        <button type="button" class="btn-line">3</button>
+        <button type="button" class="btn-line active">4</button>
+        <button type="button" class="btn-line">5</button>
+        <button type="button" class="btn-line">6</button>
+      </div>
+
+      <h2>toggle button</h2>
+      <div class="toggle-wrap">
+        <div class="toggle-btn">
+          <input type="checkbox" class="checkbox">
+          <div class="knobs"></div>
+          <div class="layer"></div>
+        </div>
+      </div>
+      <h1>Form</h1>
+      <h2>input</h2>
+      <input type="text" placeholder="검색어 입력">
+      <input type="text" class="ip-type02" placeholder="정답을 입력하세요.">
+      <div class="search-box">
+        <input type="text" class="ip-search" placeholder="검색어를 입력해주세요">
+        <button type="button" class="btn-search"></button>
+      </div>
+      <h2>input-wrap</h2>
+      <div class="input-wrap">
+        <div class="select-wrap">
+          <button type="button" class="select-btn">선택</button>
+          <ul class="select-list">
+            <li>
+              <a href="javascript:;">선택1</a>
+            </li>
+            <li>
+              <a href="javascript:;">선택2</a>
+            </li>
+          </ul>
+        </div>
+        <div class="search-box">
+          <input type="text" class="ip-search" placeholder="검색어를 입력해주세요">
+          <button type="button" class="btn-search"></button>
+        </div>
+      </div>
+      <h2>checkbox</h2>    
+      <input type="checkbox" id="chk01_01" checked>
+      <label for="chk01_01">김천재</label>
+      <input type="checkbox" id="chk01_02">
+      <label for="chk01_02"></label>
+      <h2>select</h2>
+      <div class="select-wrap">
+        <button type="button" class="select-btn">
+          <span>우리반T셀파 클래스명</span>
+        </button>
+        <ul class="select-list">
+          <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+          <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+          <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+          <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+        </ul>
+      </div>  
+      <div class="select-wrap">
+        <button type="button" class="select-btn">
+          <span>수학</span>
+        </button>
+        <ul class="select-list">
+          <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+          <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+          <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+          <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+        </ul>
+      </div>
+      <h2>Page navigation</h2>
+      <div class="paging-wrap">
+        <a href="javascript:;" class="first"></a>
+        <a href="javascript:;" class="prev"></a>
+        <a href="javascript:;" class="page active"><span>1</span></a>
+        <a href="javascript:;" class="page"><span>2</span></a>
+        <a href="javascript:;" class="page"><span>3</span></a>
+        <a href="javascript:;" class="page"><span>4</span></a>
+        <a href="javascript:;" class="page"><span>5</span></a>
+        <a href="javascript:;" class="next"></a>
+        <a href="javascript:;" class="last"></a>
+      </div>   
+      <h1>Tab</h1>
+      <h2>type 01</h2>
+      <div class="tab-wrap">
+        <ul class="tab-menu-type01">
+          <li class="ui-tab-btn active">
+            <a href="javascript:;">교과서</a>
+          </li>
+          <li class="ui-tab-btn">
+            <a href="javascript:;">성취기준</a>
+          </li>
+          <li class="ui-tab-btn">
+            <a href="javascript:;">교재</a>
+          </li>
+        </ul>
+        <div class="contents on">
+          교과서(1)
+        </div>
+        <div class="contents">
+          성취기준(2)
+        </div>
+        <div class="contents">
+          교재(3)
+        </div>
+      </div>
+      <h2>type 02</h2>
+      <div class="tab-wrap">
+        <div class="tab-menu-wrap">
+          <ul class="tab-menu-type02">
+            <li class="ui-tab-btn active">
+              <a href="javascript:;">학급 성취 분석</a>
+            </li>
+            <li class="ui-tab-btn">
+              <a href="javascript:;">학생 성취 분석</a>
+            </li>
+          </ul>  
+        </div>
+        <div class="contents on">
+          학급 성취 분석(1)
+        </div>
+        <div class="contents">
+          학생 성취 분석(2)
+        </div>
+      </div>
+      <h2>type 03</h2>
+      <div class="tab-wrap">
+        <ul class="tab-menu-type03">
+          <li class="ui-tab-btn active">
+            <a href="javascript:;">회원</a>
+          </li>
+          <li class="ui-tab-btn">
+            <a href="javascript:;">비회원</a>
+          </li>
+        </ul>
+        <div class="contents on">
+          회원(1)
+        </div>
+        <div class="contents">
+          비회원(2)
+        </div>
+      </div>
+
+      <h1>Table</h1> 
+      <h1>Popup</h1>
+      <h2>alert-type</h2>
+      <div class="pop-wrap alert-type">
+        <div class="pop-inner">
+          <div class="pop-content">
+            <button type="button" class="pop-close"></button>
+            <span class="txt">아이디/비밀번호를<br>다시 한 번 입력해주세요.</span>
+          </div>
+          <div class="pop-footer">
+            <button type="button" class="btn-defalut">확인</button>
+          </div>
+        </div>
+      </div>
+      <div class="pop-wrap alert-type">
+        <div class="pop-inner">
+          <div class="pop-content">
+            <button type="button" class="pop-close"></button>
+            <span class="txt">전체 학생의 성취 분석을<br>인쇄 하시겠습니까?</span>
+          </div>
+          <div class="pop-footer">
+            <button type="button" class="btn-defalut">예</button>
+            <button type="button" class="btn-defalut">아니오</button>
+          </div>
+        </div>
+      </div>
+      <h2>que-type</h2>
+      <div class="pop-wrap que-type">
+        <div class="pop-inner">
+          <div class="pop-header">
+            <span>Q1</span>
+            <button type="button" class="pop-close"></button>
+          </div>
+          <div class="pop-content">
+            내용
+          </div>
+        </div>
+      </div>
+      <h2>full-type</h2>
+      <div class="pop-wrap full-type">
+        <div class="pop-inner">
+          <div class="pop-header">
+            <span>시험지 미리보기</span>
+            <button type="button" class="pop-close"></button>
+          </div>
+          <div class="pop-content">내용</div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="footer">
-    <div class="web-cnt">
-      <div class="ft-top">
+    <div class="ft-top">
+      <div class="left-area">
         <div class="inner">
-          <div class="left-area">
-            고객센터 1577-7609<span>(평일 09:00~17:30)</span>
-          </div>
+          고객센터 1577-7609<span>(평일 09:00~17:30)</span>
+        </div>
+      </div>
+      <div class="right-area-wrap">
+        <div class="inner">
           <div class="right-area">
-            <ul class="guide-link">
-              <li><a href="javascript:;">이용안내</a></li>
-              <li><a href="javascript:;">자주 묻는 질문</a></li>
-              <li><a href="javascript:;">1:1 문의</a></li>
-            </ul>
+            <div class="guide-link">
+              <span class="first"><a href="javascript:;">이용안내</a></span>
+              <span><a href="javascript:;">자주 묻는 질문</a></span>
+              <span><a href="javascript:;">1:1 문의</a></span>
+            </div>
             <ul class="sns-link">
+              <li><a href="javascript:;"><img src="../images/common/ico_sns_type04.png" alt=""></a></li>
               <li><a href="javascript:;"><img src="../images/common/ico_sns_type01.png" alt=""></a></li>
               <li><a href="javascript:;"><img src="../images/common/ico_sns_type02.png" alt=""></a></li>
               <li><a href="javascript:;"><img src="../images/common/ico_sns_type03.png" alt=""></a></li>
             </ul>
           </div>
-        </div>
-      </div>
-      <div class="ft-cnt">
-        <div classs="inner">
           <div class="top-area">
-            <ul class="guide-link">
-              <li><a href="javascript:;">천재교육</a></li>
-              <li><a href="javascript:;">천재교과서</a></li>
-              <li><a href="javascript:;">이용약관</a></li>
-              <li><a href="javascript:;"><em>개인정보처리방침</em></a></li>
-              <li><a href="javascript:;">고객센터</a></li>
-            </ul>
-            <div class="select-wrap">
-              <button type="button" class="select-btn">
-                <span>패밀리 사이트</span>
-              </button>
-              <ul class="select-list">
-                <li class="select-item"><a href="javascript:;">천재교육</a></li>
-                <li class="select-item"><a href="javascript:;"><em>밀크티 초등</em></a></li>
-                <li class="select-item"><a href="javascript:;">밀크티 중학</a></li>
-                <li class="select-item"><a href="javascript:;">HME 전국 해법수학 학력평가</a></li>
-                <li class="select-item"><a href="javascript:;">천재교육 쇼핑몰</a></li>
-              </ul>
+            <div class="inner">
+              <div class="guide-link">
+                <div>
+                  <span class="first"><a href="javascript:;">천재교육</a></span>
+                  <span><a href="javascript:;">천재교과서</a></span>
+                  <span><a href="javascript:;">이용약관</a></span>
+                </div>
+                <div>
+                  <span><a href="javascript:;"><em>개인정보처리방침</em></a></span>
+                  <span><a href="javascript:;">고객센터</a></span>
+                </div>
+              </div>
+              <div class="select-wrap">
+                <button type="button" class="select-btn">
+                  <span>패밀리 사이트</span>
+                </button>
+                <ul class="select-list">
+                  <li class="select-item"><a href="javascript:;">천재교육</a></li>
+                  <li class="select-item"><a href="javascript:;"><em>밀크티 초등</em></a></li>
+                  <li class="select-item"><a href="javascript:;">밀크티 중학</a></li>
+                  <li class="select-item"><a href="javascript:;">HME 전국 해법수학 학력평가</a></li>
+                  <li class="select-item"><a href="javascript:;">천재교육 쇼핑몰</a></li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="bottom-area">
-            <ul>
-              <li>
-                <img src="../images/common/ft_logo_type01.png" alt="">
-                <span>
-                  대표 : 강희철<br>
-                  주소 : 서울시 금천구 가산로 9길 54<br>
-                  사업자 등록번호 : 119 - 81 - 19350<br>
-                  부가통신사업신고번호 : 016712
-                </span>
-              </li>
-              <li>
-                <img src="../images/common/ft_logo_type02.png" alt="">
-                <span>
-                  대표 : 박정과, 최돈용, 임형진<br>
-                  주소 : 서울특별시 금천구 가산디지털1로 16, 2011호(가산동)<br>
-                  사업자 등록번호 : 119 - 81 - 70643
-                </span>
-              </li>
-              <li>
-                <img src="../images/common/ft_logo_type03.png" alt="">
-                <span>
-                  인증범위 - 온라인 교육 및 학습지원 서비스 운영<br>
-                  인증기간 - 2023년 3월 25일 ~ 2026년 3월 24일
-                </span>
-                <p class="copy">COPYRIGHT© 2023 BY CHUNJAE CO.LTD ALL RIGHTS RESERVED.</p>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="ft-cnt">      
+      <div class="bottom-area">
+        <div class="inner">
+          <ul>
+            <li>
+              <img src="../images/common/ft_logo_type01.png" alt="">
+              <p>
+                대표 : 강희철<br class="web-only">
+                주소 : 서울시 금천구 가산로 9길 54<br>
+                사업자 등록번호 : 119 - 81 - 19350<br>
+                부가통신사업신고번호 : 016712
+              </p>
+            </li>
+            <li>
+              <img src="../images/common/ft_logo_type02.png" alt="">
+              <p>
+                대표 : 박정과, 최돈용, 임형진<br>
+                주소 : 서울특별시 금천구 가산디지털1로 16, 2011호(가산동)<br>
+                사업자 등록번호 : 119 - 81 - 70643
+              </p>
+            </li>
+            <li>
+              <img src="../images/common/ft_logo_type03.png" alt="">
+              <p>
+                인증범위 - 온라인 교육 및 학습지원 서비스 운영<br>
+                인증기간 - 2023년 3월 25일 ~ 2026년 3월 24일
+              </p>
+              <p class="copy">COPYRIGHT© 2023 BY CHUNJAE CO.LTD ALL RIGHTS RESERVED.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="dim"></div>
 </body>
