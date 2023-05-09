@@ -969,6 +969,27 @@ input[type="checkbox"] {
     }
   }
 
+	&.type02 {
+		border: 1px solid #dcdcdc;
+		background-color: #fff;
+		th {
+			@include font(18px, 700);
+			text-align: center;
+		}
+		tr {
+			border-top: 1px solid #dcdcdc;
+			&:nth-child(1) {
+				border-top: 0;
+			}
+		}
+		th, td {
+			padding: 30px 25px;
+		}
+		td {
+			border-left: 1px solid #dcdcdc;
+		}
+	}
+
 	.tbl-report {
 		span:nth-child(1) {
       width: 8%;
@@ -994,12 +1015,6 @@ input[type="checkbox"] {
 					text-align: left;
 				}
 			}
-		}
-	}
-	.tbl-anwser {
-
-		td {
-			padding: 0;
 		}
 	}
 }
@@ -1101,6 +1116,14 @@ input[type="checkbox"] {
 	&.green {
 		background-color: #edf7e4;
 		color: #58b200;
+	}
+	&.pink {
+		background-color: #ffeff5;
+		color: $color-main-pink;
+	}
+	&.purple {
+		background-color: #eee8ff;
+		color: #8159ff;
 	}
 }
 
@@ -1607,6 +1630,15 @@ input[type="checkbox"] {
 			}
 			.col {
 				position: relative;
+			}
+		}
+
+		&.type02 {
+			th {
+				@include font(16px, 600);
+			}
+			th, td {
+				padding: 8px;
 			}
 		}
 
