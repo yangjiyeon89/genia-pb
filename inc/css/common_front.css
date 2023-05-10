@@ -574,6 +574,12 @@
   flex: 1;
 }
 
+.btn-comment .arrow {
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 10px;
+}
+
 i {
   display: inline-block;
   background-position: center;
@@ -1170,7 +1176,7 @@ input[type=checkbox]:checked + label::before {
   flex-shrink: 0;
 }
 
-.badge-type01 {
+.badge-defalut {
   height: 25px;
   padding: 0 10px;
   background-color: #333;
@@ -1179,6 +1185,25 @@ input[type=checkbox]:checked + label::before {
   color: #fff;
   border-radius: 8px;
   margin-right: 9px;
+}
+
+.badge-type01 {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-right: 9px;
+  background-color: #333;
+  color: #fff;
+}
+.badge-type01.blue {
+  background-color: #e7f4ff;
+  color: #108eff;
+}
+.badge-type01.pink {
+  background-color: #ffeff5;
+  color: #ff569a;
 }
 
 .badge-type02 {
@@ -1204,6 +1229,26 @@ input[type=checkbox]:checked + label::before {
 .badge-type02.purple {
   background-color: #eee8ff;
   color: #8159ff;
+}
+
+.badge-type03 {
+  width: 65px;
+  height: 24px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 12px;
+  margin-right: 10px;
+  color: #333;
+  background-color: #dfdfdf;
+}
+.badge-type03.blue {
+  background-color: #108eff;
+  color: #fff;
+}
+.badge-type03.active {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
 }
 
 .pop-wrap {
@@ -1791,10 +1836,18 @@ input[type=checkbox]:checked + label::before {
   .que-class-cnt .btn-wrap {
     margin-top: 7px;
   }
-  .badge-type01 {
+  .badge-defalut {
     height: 21px;
     padding: 0 7px;
     font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-right: 7px;
+  }
+  .badge-type01 {
+    height: 28px;
+    padding: 0 7px;
+    font-size: 14px;
     font-weight: 500;
     border-radius: 6px;
     margin-right: 7px;

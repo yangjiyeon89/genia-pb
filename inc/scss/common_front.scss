@@ -510,6 +510,13 @@
 		}
 	}
 }
+.btn-comment {
+	.arrow {
+		display: inline-block;
+		margin-left: 2px;
+		font-size: 10px;
+	}
+}
 
 // icon
 i {
@@ -1094,7 +1101,7 @@ input[type="checkbox"] {
 	@include content-center-center;
 	flex-shrink: 0;
 }
-.badge-type01 {
+.badge-defalut {
 	height: 25px;
 	padding: 0 10px;
 	background-color: #333;
@@ -1102,6 +1109,23 @@ input[type="checkbox"] {
 	color: #fff;
 	border-radius: 8px;
 	margin-right: 9px;
+}
+.badge-type01 {
+	height: 28px;
+	padding: 0 10px;
+	@include font(15px, 500);
+	border-radius: 6px;
+	margin-right: 9px;
+	background-color: #333;
+	color: #fff;
+	&.blue {
+		background-color: #e7f4ff;
+		color: $color-main-blue;
+	}
+	&.pink {
+		background-color: #ffeff5;
+		color: $color-main-pink;
+	}
 }
 .badge-type02 {
 	height: 22px;
@@ -1124,6 +1148,24 @@ input[type="checkbox"] {
 	&.purple {
 		background-color: #eee8ff;
 		color: #8159ff;
+	}
+}
+.badge-type03 {
+	width: 65px;
+	height: 24px;
+	padding: 0 10px;
+	@include font(14px, 500);
+	border-radius: 12px;
+	margin-right: 10px;
+	color: #333;
+	background-color: #dfdfdf;
+	&.blue {
+		background-color: $color-main-blue;
+		color: #fff;
+	}
+	&.active {
+		background-color: #fff;
+		border: 1px solid #dfdfdf;
 	}
 }
 
@@ -1737,10 +1779,17 @@ input[type="checkbox"] {
 	}
 
 	// icon 
-	.badge-type01 {
+	.badge-defalut {
 		height: 21px;
 		padding: 0 7px;
 		@include font(13px, 500);
+		border-radius: 6px;
+		margin-right: 7px;
+	}
+	.badge-type01 {
+		height: 28px;
+		padding: 0 7px;
+		@include font(14px, 500);
 		border-radius: 6px;
 		margin-right: 7px;
 	}

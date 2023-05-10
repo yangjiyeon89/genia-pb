@@ -403,13 +403,23 @@ $(function () {
 
   // toggle button
   let numberBtn = $('.btn-number');
+  let commentBtn = $('.btn-comment');
+  let commentArrow = $('.btn-comment .arrow');
 
   function toggleBtnFunc() {
     let _this = $(this);
     _this.toggleClass('active');
+
+    if (!_this.hasClass("active")) {
+      commentArrow.text("▼");
+    } else {
+      commentArrow.text("▲");
+    }
+
   }
 
   numberBtn.on('click', toggleBtnFunc);
+  commentBtn.on('click', toggleBtnFunc);
 
   // click button
   let lineBtn = $('.btn-line');
