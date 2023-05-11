@@ -141,26 +141,42 @@ $(function () {
   _navItem.on("mouseover", inMenu);
 
   // mobile menu
-  let menuBtn = $(".header .btn-menu");
+  let menuBtn = $(".ui-menu-btn");
   let _menudim = $(".dim");
   let _menuhtml = $("html , body");
-  let _cnt = $(".mobile-menu");
+  let _menucnt = $(".ui-menu-cnt");
 
   function menuFunc() {
     let _this = $(this);
-    if (_this.parents('div').hasClass('header')){
+
+    if ( _this.parents().hasClass('header')){
       if (!_this.hasClass("active")) {
-        _this.addClass("active");
-        _cnt.css("right", "0");
-        _menuhtml.css("overflow", "hidden");
+        $(".header").find(_menucnt).css("right", "0");
         _menudim.fadeIn();
+        _menudim.css( "z-index", "3" );
       } else {
-        _this.removeClass("active");
-        _cnt.css("right", "-50%");
-        _menuhtml.css("overflow", "auto");
+        $(".header").find(_menucnt).css("right", "-50%");
         _menudim.fadeOut();
       }
     }
+    if ( _this.parents().hasClass('filter-menu-wrap')){
+      if (!_this.hasClass("active")) {
+        $(".filter-menu-wrap").find(_menucnt).css("right", "0");
+        _menudim.fadeIn()
+        _menudim.css( "z-index", "1" );
+      } else {
+        $(".filter-menu-wrap").find(_menucnt).css("right", "-80%");
+        _menudim.fadeOut();
+      }
+    }
+
+    if (!_this.hasClass("active")) {
+      _this.addClass("active");
+      _menuhtml.css("overflow", "hidden");
+    } else {
+      _this.removeClass("active");
+      _menuhtml.css("overflow", "auto");
+    } 
   }
 
   menuBtn.on("click", menuFunc);

@@ -74,9 +74,9 @@
           <a href="javascirpt:;" class="logo"></a>
         </div>
         <!-- <span class="menu">초등</span> -->
-        <button type="button" class="btn-menu"></button>
+        <button type="button" class="btn-menu ui-menu-btn"></button>
       </div>
-      <div class="gnb mobile-menu">
+      <div class="gnb mobile-menu ui-menu-cnt">
         <ul class="nav">
           <li class="nav-list">
             <a href="javascript:;" class="nav-item">초등</a>
@@ -105,7 +105,6 @@
           <a href="javascript:;" class="link-item">고객센터</a>
         </div>
       </div>
-
     </div>
   </div>
   <div class="container">
@@ -457,138 +456,144 @@
       <br>
       <button type="button" Class="badge-type03 btn-comment">해설<span class="arrow">▼</span></button>
       <span class="badge-type03 blue">정답</span>
-      <br> 
-      <br>
 
-      <h1>Contents menu</h1>
-      <div class="web-cnt">
-        <div class="contents-menu">
-          <div class="menu-inner">
-            <span class="menu-tit">학년</span>
-            <div class="menu-box">
-              <div class="btn-wrap">
-                <button type="button" class="btn-line">3</button>
-                <button type="button" class="btn-line active">4</button>
-                <button type="button" class="btn-line">5</button>
-                <button type="button" class="btn-line">6</button>
+      <h1>Filter menu</h1>
+      <div class="filter-menu-wrap">
+        <div class="web-cnt">
+          <div class="filter-menu">
+            <div class="menu-inner">
+              <span class="menu-tit">학년</span>
+              <div class="menu-box">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-line">3</button>
+                  <button type="button" class="btn-line active">4</button>
+                  <button type="button" class="btn-line">5</button>
+                  <button type="button" class="btn-line">6</button>
+                </div>
+              </div>
+              <span class="menu-tit">학기</span>
+              <div class="menu-box">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-line">1학기</button>
+                  <button type="button" class="btn-line active">2학기</button>
+                </div>
+              </div>
+              <span class="menu-tit">과목</span>
+              <div class="menu-box">
+                <div class="btn-wrap">
+                  <button type="button" class="btn-line">수학</button>
+                  <button type="button" class="btn-line active">사회</button>
+                </div>
+                <!-- 특정 과목 선택 시 교과서 목록 노출 -->
+                <div class="btn-wrap col-type">
+                  <button type="button" class="btn-line">수학(박만구)</button>
+                  <button type="button" class="btn-line active">수학(박만구)</button>
+                  <button type="button" class="btn-line">사회(박만구)</button>
+                  <button type="button" class="btn-line">수학(박만구)</button>
+                </div>
+                <!-- 교재 선택 시 교재명 셀렉트박스 노출 -->
+                <div class="select-wrap">
+                  <button type="button" class="select-btn">
+                    <span>우등생 수학 6-1(2023) 우등생 수학 6-1(2023) 우등생 수학 6-1(2023)</span>
+                  </button>
+                  <ul class="select-list">
+                    <li>
+                      <a href="javascript:;">선택1 우등생 수학 6-1 (2023)</a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">선택2 우등생 수학 6-1 (2023)</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <span class="menu-tit">학기</span>
-            <div class="menu-box">
-              <div class="btn-wrap">
-                <button type="button" class="btn-line">1학기</button>
-                <button type="button" class="btn-line active">2학기</button>
-              </div>
-            </div>
-            <span class="menu-tit">과목</span>
-            <div class="menu-box">
-              <div class="btn-wrap">
-                <button type="button" class="btn-line">수학</button>
-                <button type="button" class="btn-line active">사회</button>
-              </div>
-              <!-- 특정 과목 선택 시 교과서 목록 노출 -->
-              <div class="btn-wrap col-type">
-                <button type="button" class="btn-line">수학(박만구)</button>
-                <button type="button" class="btn-line active">수학(박만구)</button>
-                <button type="button" class="btn-line">사회(박만구)</button>
-                <button type="button" class="btn-line">수학(박만구)</button>
-              </div>
-              <!-- 교재 선택 시 교재명 셀렉트박스 노출 -->
-              <div class="select-wrap">
-                <button type="button" class="select-btn">
-                  <span>우등생 수학 6-1(2023) 우등생 수학 6-1(2023) 우등생 수학 6-1(2023)</span>
-                </button>
-                <ul class="select-list">
-                  <li>
-                    <a href="javascript:;">선택1 우등생 수학 6-1 (2023)</a>
-                  </li>
-                  <li>
-                    <a href="javascript:;">선택2 우등생 수학 6-1 (2023)</a>
-                  </li>
-                </ul>
+            <div class="menu-inner">
+              <span class="menu-tit">단원</span>
+              <div class="menu-box">
+                <ol class="unit-list">
+                  <li class="active">1. 분수의 나눗셈</li>
+                  <li>2. 소수의 나눗셈</li>
+                  <li>3. 공간과 입체</li>
+                  <li>4. 소수의 나눗셈</li>
+                  <li>3. 공간과 입체</li>
+                </ol>
               </div>
             </div>
           </div>
-          <div class="menu-inner">
-            <span class="menu-tit">단원</span>
-            <div class="menu-box">
-              <ol class="unit-list">
-                <li class="active">1. 분수의 나눗셈</li>
-                <li>2. 소수의 나눗셈</li>
-                <li>3. 공간과 입체</li>
-                <li>4. 소수의 나눗셈</li>
-                <li>3. 공간과 입체</li>
-              </ol>
+        </div>
+        <div class="mo-cnt">
+          <div class="unit-tit-wrap">
+            <div class="tit">
+              <button type="button" class="btn-arrow"></button>
+              <span class="txt"><em>수학</em>6-1  1.분수의 나눗셈</span>
+            </div>
+            <button type="button" class="btn-menu ui-menu-btn"></button>
+          </div>
+          <div class="filter-menu ui-menu-cnt">
+            <div class="scroll-inner">
+              <div class="menu-inner">
+                <span class="menu-tit">학년</span>
+                <div class="menu-box">
+                  <div class="btn-wrap">
+                    <button type="button" class="btn-line">3</button>
+                    <button type="button" class="btn-line active">4</button>
+                    <button type="button" class="btn-line">5</button>
+                    <button type="button" class="btn-line">6</button>
+                  </div>
+                </div>
+                <span class="menu-tit">학기</span>
+                <div class="menu-box">
+                  <div class="btn-wrap">
+                    <button type="button" class="btn-line">1학기</button>
+                    <button type="button" class="btn-line active">2학기</button>
+                  </div>
+                </div>
+                <span class="menu-tit">과목</span>
+                <div class="menu-box">
+                  <div class="btn-wrap">
+                    <button type="button" class="btn-line">수학</button>
+                    <button type="button" class="btn-line active">사회</button>
+                  </div>
+                  <!-- 특정 과목 선택 시 교과서 목록 노출 -->
+                  <div class="btn-wrap col-type">
+                    <button type="button" class="btn-line">수학(박만구)</button>
+                    <button type="button" class="btn-line active">수학(박만구)</button>
+                    <button type="button" class="btn-line">사회(박만구)</button>
+                    <button type="button" class="btn-line">수학(박만구)</button>
+                  </div>
+                  <!-- 교재 선택 시 교재명 셀렉트박스 노출 -->
+                  <div class="select-wrap">
+                    <button type="button" class="select-btn">
+                      <span>우등생 수학 6-1(2023) 우등생 수학 6-1(2023) 우등생 수학 6-1(2023)</span>
+                    </button>
+                    <ul class="select-list">
+                      <li>
+                        <a href="javascript:;">선택1 우등생 수학 6-1 (2023)</a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">선택2 우등생 수학 6-1 (2023)</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-inner">
+                <span class="menu-tit">단원</span>
+                <div class="menu-box">
+                  <ol class="unit-list">
+                    <li class="active">1. 분수의 나눗셈</li>
+                    <li>2. 소수의 나눗셈</li>
+                    <li>3. 공간과 입체</li>
+                    <li>4. 소수의 나눗셈</li>
+                    <li>3. 공간과 입체</li>
+                  </ol>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="unit-title-wrap">
-        <button type="button" class="btn-menu">버튼 ㅇㅇ</button>
-      </div>
-      <div class="mo-cnt">
-        <div class="contents-menu">
-          <div class="menu-inner">
-            <span class="menu-tit">학년</span>
-            <div class="menu-box">
-              <div class="btn-wrap">
-                <button type="button" class="btn-line">3</button>
-                <button type="button" class="btn-line active">4</button>
-                <button type="button" class="btn-line">5</button>
-                <button type="button" class="btn-line">6</button>
-              </div>
-            </div>
-            <span class="menu-tit">학기</span>
-            <div class="menu-box">
-              <div class="btn-wrap">
-                <button type="button" class="btn-line">1학기</button>
-                <button type="button" class="btn-line active">2학기</button>
-              </div>
-            </div>
-            <span class="menu-tit">과목</span>
-            <div class="menu-box">
-              <div class="btn-wrap">
-                <button type="button" class="btn-line">수학</button>
-                <button type="button" class="btn-line active">사회</button>
-              </div>
-              <!-- 특정 과목 선택 시 교과서 목록 노출 -->
-              <div class="btn-wrap col-type">
-                <button type="button" class="btn-line">수학(박만구)</button>
-                <button type="button" class="btn-line active">수학(박만구)</button>
-                <button type="button" class="btn-line">사회(박만구)</button>
-                <button type="button" class="btn-line">수학(박만구)</button>
-              </div>
-              <!-- 교재 선택 시 교재명 셀렉트박스 노출 -->
-              <div class="select-wrap">
-                <button type="button" class="select-btn">
-                  <span>우등생 수학 6-1(2023) 우등생 수학 6-1(2023) 우등생 수학 6-1(2023)</span>
-                </button>
-                <ul class="select-list">
-                  <li>
-                    <a href="javascript:;">선택1 우등생 수학 6-1 (2023)</a>
-                  </li>
-                  <li>
-                    <a href="javascript:;">선택2 우등생 수학 6-1 (2023)</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="menu-inner">
-            <span class="menu-tit">단원</span>
-            <div class="menu-box">
-              <ol class="unit-list">
-                <li class="active">1. 분수의 나눗셈</li>
-                <li>2. 소수의 나눗셈</li>
-                <li>3. 공간과 입체</li>
-                <li>4. 소수의 나눗셈</li>
-                <li>3. 공간과 입체</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+ 
       <h1>Popup</h1>
       <h2>alert-type</h2>
       <div class="pop-wrap alert-type">
