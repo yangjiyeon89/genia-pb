@@ -1139,6 +1139,7 @@ input[type="checkbox"] {
 [class^='badge-'] {
 	@include content-center-center;
 	flex-shrink: 0;
+	box-sizing: border-box;
 }
 .badge-defalut {
 	height: 25px;
@@ -1230,6 +1231,37 @@ input[type="checkbox"] {
 			background-color: $color-main-pink;
 		}
 	}
+}
+.badge-color {
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	&.color01 { background-color: #ff7c80; }
+	&.color02 { background-color: #ff9964; }
+	&.color03 { background-color: #ffb648; }
+	&.color04 { background-color: #ffd32b; }
+	&.color05 { background-color: #fff00f; }
+	&.color06 { background-color: #e4f400; }
+	&.color07 { background-color: #adde00; }
+	&.color08 { background-color: #76c800; }
+	&.color09 { background-color: #3fb200; }
+	&.color10 { background-color: #089b01; }
+}
+.badge-line-color {
+	width: 44px;
+	height: 44px;
+	border-radius: 22px;
+	@include font(14px, 500);
+	&.color01 { border: 6px solid #ff7c80; }
+	&.color02 { border: 6px solid #ff9964; }
+	&.color03 { border: 6px solid #ffb648; }
+	&.color04 { border: 6px solid #ffd32b; }
+	&.color05 { border: 6px solid #fff00f; }
+	&.color06 { border: 6px solid #e4f400; }
+	&.color07 { border: 6px solid #adde00; }
+	&.color08 { border: 6px solid #76c800; }
+	&.color09 { border: 6px solid #3fb200; }
+	&.color10 { border: 6px solid #089b01; }
 }
 
 // contents menu

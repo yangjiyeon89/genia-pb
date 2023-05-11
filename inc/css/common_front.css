@@ -1213,6 +1213,7 @@ input[type=checkbox]:checked + label::before {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .badge-defalut {
@@ -1307,6 +1308,80 @@ input[type=checkbox]:checked + label::before {
 }
 .badge-state.type03 .mark {
   background-color: #ff569a;
+}
+
+.badge-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+.badge-color.color01 {
+  background-color: #ff7c80;
+}
+.badge-color.color02 {
+  background-color: #ff9964;
+}
+.badge-color.color03 {
+  background-color: #ffb648;
+}
+.badge-color.color04 {
+  background-color: #ffd32b;
+}
+.badge-color.color05 {
+  background-color: #fff00f;
+}
+.badge-color.color06 {
+  background-color: #e4f400;
+}
+.badge-color.color07 {
+  background-color: #adde00;
+}
+.badge-color.color08 {
+  background-color: #76c800;
+}
+.badge-color.color09 {
+  background-color: #3fb200;
+}
+.badge-color.color10 {
+  background-color: #089b01;
+}
+
+.badge-line-color {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.badge-line-color.color01 {
+  border: 6px solid #ff7c80;
+}
+.badge-line-color.color02 {
+  border: 6px solid #ff9964;
+}
+.badge-line-color.color03 {
+  border: 6px solid #ffb648;
+}
+.badge-line-color.color04 {
+  border: 6px solid #ffd32b;
+}
+.badge-line-color.color05 {
+  border: 6px solid #fff00f;
+}
+.badge-line-color.color06 {
+  border: 6px solid #e4f400;
+}
+.badge-line-color.color07 {
+  border: 6px solid #adde00;
+}
+.badge-line-color.color08 {
+  border: 6px solid #76c800;
+}
+.badge-line-color.color09 {
+  border: 6px solid #3fb200;
+}
+.badge-line-color.color10 {
+  border: 6px solid #089b01;
 }
 
 .filter-menu {
