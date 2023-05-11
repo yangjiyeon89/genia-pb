@@ -459,6 +459,14 @@
 	border-radius: 9px;
 	i { margin-right: 10px; }
 }
+.btn-type04 {
+	width: 100%;
+	height: 40px;
+	color: #fff;
+	@include font(15px, 500);
+	background-image: linear-gradient(to right, #1f8bff , #8257ff);
+	border-radius: 8px;
+}
 .btn-icon {
 	width: 34px;
 	height: 34px;
@@ -778,6 +786,33 @@ input[type="checkbox"] {
 		em {
 			color: #418ac9;
 			font-weight: 700;
+		}
+	}
+	
+	&.type02 {
+		.select-btn {
+			border: 0;
+			background-color: transparent;
+			padding: 0 25px 0 0;
+			&::after {
+				right: 0;
+			}
+			span {
+				@include font(26px, 700);
+				letter-spacing: -1.3px;
+			}
+		}
+		.select-list {
+			border: 1px solid #d7d7d7;
+			border-radius: 9px;
+			margin-top: 8px;
+			text-align: center;
+			a {
+				display: block;
+				padding: 0px 18px 12px;
+				font-size: 20px;
+				box-sizing: border-box;
+			}
 		}
 	}
 }
@@ -1172,6 +1207,30 @@ input[type="checkbox"] {
 		border: 1px solid #dfdfdf;
 	}
 }
+.badge-state {
+	font-weight: 500;
+	.mark {
+		width: 20px;
+		height: 20px;
+		border-radius: 10px;
+		margin-right: 9px;
+	}
+	&.type01 {
+		.mark {
+			background-color: #b4b4b4;
+		}
+	}
+	&.type02 {
+		.mark {
+			background-color: $color-main-blue;
+		}
+	}
+	&.type03 {
+		.mark {
+			background-color: $color-main-pink;
+		}
+	}
+}
 
 // contents menu
 .filter-menu {
@@ -1195,16 +1254,17 @@ input[type="checkbox"] {
 				width: 100%;
 			}
 		}
-		.btn-wrap {
-			justify-content: space-between;
+	}
+	.btn-wrap {
+		width: 100%;
+		justify-content: space-between;
+		button {
+			flex-grow: 1;
+		}
+		&.col-type {
+			flex-direction: column;
 			button {
-				flex-grow: 1;
-			}
-			&.col-type {
-				flex-direction: column;
-				button {
-					width: 100%;
-				}
+				width: 100%;
 			}
 		}
 	}
@@ -1212,6 +1272,10 @@ input[type="checkbox"] {
 		border-top: 1px solid #d7d7d7;
 		padding: 30px 20px;
 		&:nth-child(1) { border-top: 0; }
+		
+		& + .btn-wrap {
+			padding: 0 20px 30px 20px;
+		}
 	}
 	.unit-list {
 		display: flex;
@@ -1240,13 +1304,6 @@ input[type="checkbox"] {
     position: relative;
     overflow: hidden;
     background-color: #fff;
-  }
-  .pop-header {
-		position: relative;
-    padding: 25px 20px;
-    @include font(19px, 500);
-    text-align: left;
-		background-color: #e9e9e9;
   }
   .pop-close {
     position: absolute;
@@ -1334,6 +1391,34 @@ input[type="checkbox"] {
 			width: 20px;
 			height: 20px;
 			background: url(../../images/common/ico_pop_close_type04.png) no-repeat;
+		}
+	}
+
+	&.bottom-type {
+		display: flex;
+		top: 0;
+		left: 0;
+		transform: none;
+		width: 100%;
+		height: 100%;
+		.pop-inner {
+			width: 100%;
+			align-self: flex-end;
+			background-color: #f9f9f9;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+		}
+		.pop-header {
+			font-weight: 700;
+			text-align: center;
+			padding: 35px 0 20px 0;
+		}
+		.pop-footer {
+			padding-top: 20px;
+			button {
+				height: 40px;
+				font-size: 15px;
+			}
 		}
 	}
 }
@@ -1655,6 +1740,29 @@ input[type="checkbox"] {
 		.select-list {
 			font-size: 13px;
 		}
+
+		&.type02 {
+			width: auto;
+			.select-btn {
+				height: 30px;
+				padding: 0 20px 0 0;
+				span {
+					@include font(17px, 600);
+				}
+				&::after {
+					width: 9px;
+					height: 5px;
+					margin-top: -2px;
+				}
+			}
+			.select-list {
+				margin-top: 2px;
+				a {
+					font-size: 14px;
+					padding: 0px 12px 10px;
+				}
+			}
+		}
 	}
 	.input-wrap {
 		flex-direction: column;
@@ -1858,11 +1966,32 @@ input[type="checkbox"] {
 		border-radius: 3px;
 		padding: 0 5px;
 	}
+	.badge-state {
+		.mark { display: none; }
+		width: 50px;
+		height: 24px;
+		border-radius: 6px;
+		font-size: 12px;
+		&.type01 {
+			border: 1px solid #c2c2c2;
+			background-color: #fff;
+		}
+		&.type02 {
+			border: 1px solid $color-main-pink;
+			background-color: #fff;
+			color: $color-main-pink;
+		}
+		&.type03 {
+			border: 1px solid $color-main-pink;
+			background-color: $color-main-pink;
+			color: #fff;
+		}
+	}
 
 	// contents menu
 	.filter-menu-wrap {
 		position: fixed;
-		top: 55px;
+		top: 0;
 		z-index: 2;
 	}
 	.unit-tit-wrap {
@@ -1871,10 +2000,13 @@ input[type="checkbox"] {
 		top: 50px;
 		left: 0;
 		width: 100%;
-		height: 55px;
+		height: 50px;
 		background-color: $color-main-blue;
 		z-index: 2;
 		padding: 0 20px;
+		&.has-menu {
+			top: 100px;
+		}
 		.tit {
 			@include layout-center;
 			gap: 10px;
@@ -1901,13 +2033,13 @@ input[type="checkbox"] {
 	}
 	.filter-menu {
 		position: fixed;
-		top: 105px;
+		top: 150px;
 		right: -80%;
 		width: 80%;
 		border: 0;
 		border-radius: 0;
 		.scroll-inner {
-			height: calc(100vh - 105px);
+			height: calc(100vh - 150px);
 		}
 	}
 
