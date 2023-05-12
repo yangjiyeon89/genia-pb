@@ -1542,6 +1542,7 @@ input[type=checkbox]:checked + label::before {
   width: 20px;
   height: 20px;
   background: url(../../images/common/ico_pop_close_type04.png) no-repeat;
+  background-size: contain;
 }
 .pop-wrap.bottom-type {
   display: flex;
@@ -2197,6 +2198,18 @@ input[type=checkbox]:checked + label::before {
   .pop-wrap.alert-type .pop-footer button {
     height: 40px;
     font-size: 15px;
+  }
+  .pop-wrap.full-type .pop-header {
+    height: 50px;
+    padding: 13px 20px;
+  }
+  .pop-wrap.full-type .pop-header span {
+    font-size: 17px;
+  }
+  .pop-wrap.full-type .pop-header .pop-close {
+    top: 15px;
+    width: 16px;
+    height: 16px;
   }
   .pop-wrap.que-type .pop-inner {
     width: 100%;

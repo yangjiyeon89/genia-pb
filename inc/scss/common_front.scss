@@ -1423,6 +1423,7 @@ input[type="checkbox"] {
 			width: 20px;
 			height: 20px;
 			background: url(../../images/common/ico_pop_close_type04.png) no-repeat;
+			background-size: contain;
 		}
 	}
 
@@ -2023,7 +2024,7 @@ input[type="checkbox"] {
 		width: 20px;
 		height: 20px;
 	}
-	
+
 	// contents menu
 	.filter-menu-wrap {
 		position: fixed;
@@ -2099,6 +2100,20 @@ input[type="checkbox"] {
 				button { 
 					height: 40px;
 					font-size: 15px; 
+				}
+			}
+		}
+		&.full-type {
+			.pop-header {
+				height: 50px;
+				padding: 13px 20px;
+				span {
+					font-size: 17px;
+				}
+				.pop-close {
+					top: 15px;
+					width: 16px;
+					height: 16px;
 				}
 			}
 		}
