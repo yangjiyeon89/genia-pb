@@ -2019,7 +2019,11 @@ input[type="checkbox"] {
 			color: #fff;
 		}
 	}
-
+	.badge-color {
+		width: 20px;
+		height: 20px;
+	}
+	
 	// contents menu
 	.filter-menu-wrap {
 		position: fixed;
