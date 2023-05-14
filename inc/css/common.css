@@ -138,8 +138,6 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   z-index: 1;
 }
@@ -304,12 +302,6 @@ input[type=text], input[type=number] {
 }
 input[type=text].full, input[type=number].full {
   width: 100%;
-}
-input[type=text]::-moz-placeholder, input[type=number]::-moz-placeholder {
-  color: #9e9e9e;
-}
-input[type=text]:-ms-input-placeholder, input[type=number]:-ms-input-placeholder {
-  color: #9e9e9e;
 }
 input[type=text]::placeholder, input[type=number]::placeholder {
   color: #9e9e9e;

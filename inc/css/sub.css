@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/**
+	* Computes a CSS calc function that betweens a value from
+	* A to B over viewport-width A to viewport-width B.
+	* Requires a media query to cap the value at B.
+	* vw 단위를 활용하여 미디어쿼리 분기의 중간 상태값을
+	* 계산해주는 SASS 함수.
+	* 간격이나 폰트사이즈에 적용하면 자연스러운
+	* 반응형 사이즈 처리가 가능 함.
+	* 참고사이트 http://dohoons.com/blog/1364
+	*/
+/**
+	* Read the article: http://sassbreak.com/viewport-relative-headings-with-sass
+	* px 를 vw 로 자동으로 바꿔 줌.
+	* max-breakpoint 를 설정하면 미디어쿼리 브레이크 포인트가 됨.
+	* 그래서 미디어쿼리 브레이크 포인트에 맞춰 px 가 vw 로 변환됨.
+	* 100% 보다 더 크게 적용 하고 싶으면 return 부분을 수정하면됨.
+	* 참고사이트 http://sassbreak.com/viewport-relative-headings-with-sass/
+	*/
+/**
+	* Computes a CSS calc function that betweens a value from
+	* A to B over viewport-width A to viewport-width B.
+	* Requires a media query to cap the value at B.
+	* vw 단위를 활용하여 미디어쿼리 분기의 중간 상태값을
+	* 계산해주는 SASS 함수.
+	* 간격이나 폰트사이즈에 적용하면 자연스러운
+	* 반응형 사이즈 처리가 가능 함.
+	* 참고사이트 http://dohoons.com/blog/1364
+	*/
+/**
+	* Read the article: http://sassbreak.com/viewport-relative-headings-with-sass
+	* px 를 vw 로 자동으로 바꿔 줌.
+	* max-breakpoint 를 설정하면 미디어쿼리 브레이크 포인트가 됨.
+	* 그래서 미디어쿼리 브레이크 포인트에 맞춰 px 가 vw 로 변환됨.
+	* 100% 보다 더 크게 적용 하고 싶으면 return 부분을 수정하면됨.
+	* 참고사이트 http://sassbreak.com/viewport-relative-headings-with-sass/
+	*/
+.inner {
+  width: 1240px;
+  margin: auto;
+}
+
+.scroll-inner {
+  overflow: auto;
+}
+.scroll-inner::-webkit-scrollbar {
+  width: 20px;
+  border: 1px solid #cbcbcb;
+}
+.scroll-inner::-webkit-scrollbar-thumb {
+  border: 1px solid #cbcbcb;
+  border-bottom: 0;
+  border-top: 0;
+  background-color: #ececec;
+}
+.scroll-inner::-webkit-scrollbar-button:start:decrement, .scroll-inner::-webkit-scrollbar-button:end:increment {
+  display: block;
+  height: 1px;
+}
+
+.front-login .container .inner {
+  height: 765px;
+}
+
+.login-cnt,
+.error-cnt,
+.loading-cnt {
+  margin: 0 auto;
+  text-align: center;
+  padding: 190px 0 210px;
+}
+
+.common-cnt .error-txt,
+.common-cnt .loading-txt {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.login-cnt .login-tit {
+  margin-bottom: 55px;
+  font-size: 34px;
+  font-weight: 500;
+}
+.login-cnt .form-wrap {
+  width: 384px;
+  padding-bottom: 30px;
+  margin: 0 auto 30px;
+}
+.login-cnt .id-input,
+.login-cnt .pw-input,
+.login-cnt .btn-login {
+  width: 100%;
+  height: 55px;
+  border-radius: 8px;
+}
+.login-cnt .id-wrap,
+.login-cnt .pw-wrap {
+  position: relative;
+}
+.login-cnt .pw-wrap {
+  margin-top: 10px;
+}
+.login-cnt .id-input,
+.login-cnt .pw-input {
+  padding: 20px 50px 20px 20px;
+  font-size: 16px;
+  border: 1px solid #d1d1d1;
+  outline: 0;
+  box-sizing: border-box;
+}
+.login-cnt .id-input:focus,
+.login-cnt .pw-input:focus {
+  border-color: #108eff;
+}
+.login-cnt .id-input::placeholder,
+.login-cnt .pw-input::placeholder {
+  color: #a4a4a4;
+}
+.login-cnt .id-input:focus + label {
+  background: url(../../images/common/ico_person_on.png) no-repeat;
+}
+.login-cnt .pw-input:focus + label {
+  background: url(../../images/common/ico_lock_on.png) no-repeat;
+}
+.login-cnt .id-label,
+.login-cnt .pw-label {
+  position: absolute;
+}
+.login-cnt .id-label {
+  top: 17px;
+  right: 21px;
+  width: 19px;
+  height: 22px;
+  background: url(../../images/common/ico_person.png) no-repeat;
+}
+.login-cnt .pw-label {
+  top: 15px;
+  right: 18px;
+  width: 22px;
+  height: 28px;
+  background: url(../../images/common/ico_lock.png) no-repeat;
+}
+.login-cnt .btn-login {
+  color: #fff;
+  font-size: 18px;
+  background-color: #108eff;
+}
+.login-cnt .chk-wrap {
+  margin: 24px 0 20px;
+  text-align: left;
+}
+.login-cnt .id-save + label {
+  padding-left: 34px;
+  font-weight: 500;
+}
+.login-cnt .id-save + label::before {
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  margin-top: -5px;
+  background: url(../../images/common/ico_check.png) no-repeat center;
+}
+.login-cnt .id-save:checked + label::before {
+  background: url(../../images/common/ico_check_on.png) no-repeat center;
+}
+.login-cnt .login-wrap a {
+  font-size: 16px;
+  color: #a4a4a4;
+}
+.login-cnt .login-wrap a::after {
+  content: "";
+  display: inline-block;
+  margin: -2px 15px;
+  width: 1px;
+  height: 16px;
+  background: #a4a4a4;
+}
+.login-cnt .login-wrap a:last-child::after {
+  display: none;
+}
+
+.content-wrap {
+  padding: 50px 0 80px;
+}
+.content-wrap .title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0 20px;
+}
+
+.table-list table {
+  width: 100%;
+  border-top: 2px solid #757575;
+  border-bottom: 1px solid #ddd;
+}
+.table-list table th,
+.table-list table td {
+  height: 60px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  color: #333;
+}
+.table-list table th {
+  font-size: 16px;
+  font-weight: 600;
+}
+.table-list table td {
+  color: #666;
+  font-weight: 400;
+  border-top: 1px solid #ddd;
+}
+.table-list table .tit {
+  padding: 0 20px;
+  font-size: 18px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -moz-binding: url(ellipsis.xml#ellipsis);
+  max-width: calc(100% - 20px);
+}
+
+.notice-cnt .paging-wrap {
+  margin-top: 35px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1390px) {
+  .container .inner {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .container .inner {
+    padding: 0px 30px;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  [class^=web-] {
+    display: none !important;
+  }
+  [class^=mo-] {
+    display: block !important;
+  }
+  [class^=mo-only-] {
+    display: block !important;
+  }
+  .container .inner {
+    padding: 0 30px;
+    width: 100%;
+    height: 100%;
+  }
+  .front-login .container .inner {
+    height: 590px;
+  }
+  .login-cnt,
+.error-cnt,
+.loading-cnt {
+    padding: 90px 0 160px;
+  }
+  .login-cnt .form-wrap {
+    width: 100%;
+    height: 50px;
+  }
+  .login-cnt .id-input,
+.login-cnt .pw-input,
+.login-cnt .btn-login {
+    height: 50px;
+  }
+}

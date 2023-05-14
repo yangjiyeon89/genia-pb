@@ -140,8 +140,6 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   z-index: 1;
 }
@@ -209,12 +207,6 @@
 }
 .login-cnt .id-input:focus, .login-cnt .pw-input:focus {
   border-color: #108eff;
-}
-.login-cnt .id-input::-moz-placeholder, .login-cnt .pw-input::-moz-placeholder {
-  color: #a4a4a4;
-}
-.login-cnt .id-input:-ms-input-placeholder, .login-cnt .pw-input:-ms-input-placeholder {
-  color: #a4a4a4;
 }
 .login-cnt .id-input::placeholder, .login-cnt .pw-input::placeholder {
   color: #a4a4a4;
@@ -355,10 +347,7 @@
   padding: 12px 22px;
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .admin01 .class-list-wrap .class-item .arrow {
   position: relative;

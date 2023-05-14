@@ -85,8 +85,7 @@ body {
 
   .title {
     span {
-      font-size: 26px;
-      font-weight: 800
+      @include font(26px, 800);
     }
   }
 
@@ -140,7 +139,7 @@ body {
 
       &:nth-child(even) {
         background: #fff;
-        border: 1px solid #168cff;
+        border: 1px solid $color-main-blue;
       }
 
       &:nth-child(1) {
@@ -188,10 +187,6 @@ body {
     margin-bottom: 100px;
 
     .notice-wrap {
-      // position: relative;
-
-      .title {}
-
       .notice-swiper {
         position: unset;
         margin-left: 12.5vw;
@@ -211,8 +206,7 @@ body {
                 color: #333;
                 margin-bottom: 20px;
                 display: block;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                @include text-overflow;
                 width: 410px;
                 overflow: hidden;
               }
@@ -221,6 +215,7 @@ body {
                 font-size: 16px;
                 height: 65px;
                 overflow: hidden;
+                text-overflow: ellipsis;
                 display: inline-block;
                 color: #7e7e7e;
               }
@@ -313,8 +308,6 @@ body {
       }
     }
   }
-
-
 }
 
 @media screen and (max-width: 1023px) {
