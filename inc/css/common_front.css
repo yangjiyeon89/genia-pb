@@ -892,6 +892,7 @@ input[type=checkbox]:checked + label::before {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: -1.3px;
+  line-height: 1;
 }
 .select-wrap.type02 .select-list {
   border: 1px solid #d7d7d7;
@@ -1507,6 +1508,43 @@ input[type=checkbox]:checked + label::before {
 .filter-menu .unit-list li.active {
   font-weight: 500;
   color: #108eff;
+}
+
+.unit-tit-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #757575;
+}
+.unit-tit-wrap .tit {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.unit-tit-wrap .txt {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+}
+.unit-tit-wrap .txt em {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.unit-tit-wrap .btn-arrow {
+  display: inline-block;
+  width: 12px;
+  height: 18px;
+  background: url(../../images/common/ico_arrow_left.png) no-repeat;
+}
+.unit-tit-wrap .btn-print {
+  display: inline-block;
+  width: 30px;
+  height: 28px;
+  background: url(../../images/common/ico_print.png) center no-repeat;
 }
 
 .pop-wrap {
@@ -2216,6 +2254,7 @@ input[type=checkbox]:checked + label::before {
     background-color: #108eff;
     z-index: 2;
     padding: 0 20px;
+    border-bottom: 0;
   }
   .unit-tit-wrap.has-menu {
     top: 100px;
