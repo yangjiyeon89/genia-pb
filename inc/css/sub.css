@@ -41,6 +41,30 @@
 .report-list-wrap .table-wrap {
   margin-top: 20px;
 }
+.report-list-wrap .tbl-report .col.none-data span {
+  width: 100%;
+  height: 520px;
+}
+.report-list-wrap .tbl-report .col span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+}
+.report-list-wrap .tbl-report .col span.tit {
+  justify-content: flex-start;
+  padding: 15px 20px;
+}
+.report-list-wrap .tbl-report .col span.column {
+  flex-direction: column;
+}
+.report-list-wrap .tbl-report .col span .font-b {
+  color: #108eff;
+  font-size: 14px;
+}
+.report-list-wrap .tbl-report .col .badge-color {
+  margin-right: 15px;
+}
 
 .report-list-top {
   position: relative;
@@ -63,29 +87,6 @@
   background: url(../../images/common/ico_sort.png) no-repeat;
 }
 
-.tbl-report .col.none-data span {
-  width: 100%;
-  height: 520px;
-}
-.tbl-report .col span {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.tbl-report .col span.tit {
-  justify-content: flex-start;
-}
-.tbl-report .col span.column {
-  flex-direction: column;
-}
-.tbl-report .col span .font-b {
-  color: #108eff;
-  font-size: 14px;
-}
-.tbl-report .col .badge-color {
-  margin-right: 15px;
-}
-
 .report-tool-tip {
   display: none;
   position: absolute;
@@ -106,6 +107,9 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .container.report .inner {
+    padding: 0 20px;
+  }
   .report-list-top {
     padding-top: 20px;
     flex-direction: column;
@@ -127,7 +131,7 @@
     width: 100% !important;
   }
   .table-wrap .tbl-report .col > span {
-    padding: 10px 6px;
+    padding: 10px 0;
   }
   .table-wrap .tbl-report .col .badge-color {
     margin-right: 10px;
