@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>지니아튜터 사용자 가이드</title>
+  <title>지니아튜터</title>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="../inc/css/font.css">
   <link rel="stylesheet" href="../inc/css/reset.css">
@@ -99,6 +99,7 @@
   <div class="container s_sub01_01">
     <div class="inner">
       <div class="class-tit-wrap">
+        <button type="button" class="btn-arrow"></button>
         <div class="select-wrap type02">
           <button type="button" class="select-btn">
             <span>6학년 1반 클래스</span>
@@ -134,15 +135,23 @@
                   <span class="menu-tit">과목</span>
                   <div class="menu-box">
                     <div class="btn-wrap">
-                      <button type="button" class="btn-line">수학</button>
-                      <button type="button" class="btn-line active">사회</button>
+                      <button type="button" class="btn-line active">수학</button>
+                      <button type="button" class="btn-line">사회</button>
+                      <button type="button" class="btn-line">과학</button>
                     </div>
-                    <!-- 특정 과목 선택 시 교과서 목록 노출 -->
-                    <div class="btn-wrap col-type">
-                      <button type="button" class="btn-line">수학(박만구)</button>
-                      <button type="button" class="btn-line active">수학(박만구)</button>
-                      <button type="button" class="btn-line">사회(박만구)</button>
-                      <button type="button" class="btn-line">수학(박만구)</button>
+                    <!-- 교재 선택 시 교재명 셀렉트박스 노출 -->
+                    <div class="select-wrap">
+                      <button type="button" class="select-btn">
+                        <span>우등생 수학 6-1(2023) 우등생 수학 6-1(2023) 우등생 수학 6-1(2023)</span>
+                      </button>
+                      <ul class="select-list">
+                        <li>
+                          <a href="javascript:;">선택1 우등생 수학 6-1 (2023)</a>
+                        </li>
+                        <li>
+                          <a href="javascript:;">선택2 우등생 수학 6-1 (2023)</a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -190,15 +199,9 @@
                     <span class="menu-tit">과목</span>
                     <div class="menu-box">
                       <div class="btn-wrap">
-                        <button type="button" class="btn-line">수학</button>
-                        <button type="button" class="btn-line active">사회</button>
-                      </div>
-                      <!-- 특정 과목 선택 시 교과서 목록 노출 -->
-                      <div class="btn-wrap col-type">
-                        <button type="button" class="btn-line">수학(박만구)</button>
-                        <button type="button" class="btn-line active">수학(박만구)</button>
-                        <button type="button" class="btn-line">사회(박만구)</button>
-                        <button type="button" class="btn-line">수학(박만구)</button>
+                        <button type="button" class="btn-line active">수학</button>
+                        <button type="button" class="btn-line">사회</button>
+                        <button type="button" class="btn-line">과학</button>
                       </div>
                       <!-- 교재 선택 시 교재명 셀렉트박스 노출 -->
                       <div class="select-wrap">
@@ -240,16 +243,22 @@
         <div class="right-cnt">
           <div class="tab-wrap">
             <ul class="tab-menu-type01">
-              <li class="ui-tab-btn active">
+              <li class="ui-tab-btn">
                 <a href="javascript:;">교과서</a>
               </li>
               <li class="ui-tab-btn">
                 <a href="javascript:;">성취기준</a>
               </li>
-              <li class="ui-tab-btn">
+              <li class="ui-tab-btn active">
                 <a href="javascript:;">교재</a>
               </li>
             </ul>
+            <div class="contents">
+              [s_sub01_01.html] 탭으로 구현
+            </div>
+            <div class="contents">
+              [s_sub01_02.html] 탭으로 구현
+            </div>
             <div class="contents on">
               <p class="unit-title">수학 6-1<em>1. 분수의 나눗셈</em></p>
               <ul class="que-class-area">
@@ -278,7 +287,7 @@
                         <button type="button" class="btn-state type02">다시풀기</button>
                       </div>
                       <div class="lock-dim">
-                        <i class="lock"></i><span>형성평가를 완료해주세요.</span>
+                        <i class="lock"></i><span>형성평가를 완료해 주세요.</span>
                       </div>
                     </li>
                     <li class="que-class-item lock-item">
@@ -290,7 +299,7 @@
                         <button type="button" class="btn-state type01">학습하기</button>
                       </div>
                       <div class="lock-dim">
-                        <i class="lock"></i><span>형성평가를 완료해주세요.</span>
+                        <i class="lock"></i><span>형성평가를 완료해 주세요.</span>
                       </div>
                     </li>
                     <li class="que-class-item">
@@ -320,7 +329,7 @@
                         <button type="button" class="btn-state type03">학습완료<span>23.05.08</span></button>
                       </div>
                       <div class="lock-dim">
-                        <i class="lock"></i><span>형성평가를 완료해주세요.</span>
+                        <i class="lock"></i><span>형성평가를 완료해 주세요.</span>
                       </div>
                     </li>
                     <li class="que-class-item">
@@ -377,7 +386,7 @@
                         <button type="button" class="btn-state type02">다시풀기</button>
                       </div>
                       <div class="lock-dim">
-                        <i class="lock"></i><span>형성평가를 완료해주세요.</span>
+                        <i class="lock"></i><span>형성평가를 완료해 주세요.</span>
                       </div>
                     </li>
                     <li class="que-class-item lock-item">
@@ -389,7 +398,7 @@
                         <button type="button" class="btn-state type01">학습하기</button>
                       </div>
                       <div class="lock-dim">
-                        <i class="lock"></i><span>형성평가를 완료해주세요.</span>
+                        <i class="lock"></i><span>형성평가를 완료해 주세요.</span>
                       </div>
                     </li>
                     <li class="que-class-item">
@@ -584,12 +593,6 @@
                   </ul>
                 </li>
               </ul>
-            </div>
-            <div class="contents">
-              [s_sub01_02.html] 탭으로 구현
-            </div>
-            <div class="contents">
-              [s_sub01_03.html] 탭으로 구현
             </div>
           </div>
         </div>
