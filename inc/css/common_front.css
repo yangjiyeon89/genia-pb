@@ -475,7 +475,7 @@
   height: 35px;
   font-size: 15px;
   font-weight: 500;
-  border-radius: 13px;
+  border-radius: 9px;
   background-color: #fff;
 }
 .btn-state.type01 {
@@ -1186,17 +1186,49 @@ input[type=checkbox]:checked + label::before {
 
 .que-class-cnt {
   border-top: 1px solid #d7d7d7;
-  padding: 24px 30px;
+  padding: 10px 0;
 }
 
 .que-class-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 3px;
+  padding: 5px 0 8px 0;
 }
-.que-class-item:nth-child(1) {
-  margin-top: 0;
+.que-class-item.lock-item {
+  position: relative;
+}
+.que-class-item.lock-item .lock-dim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.que-class-item.lock-item .lock-dim .lock {
+  display: inline-block;
+  width: 13px;
+  height: 17px;
+  background-image: url(../../images/common/ico_lock_type02.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.que-class-item.lock-item .lock-dim span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-left: 10px;
+}
+.que-class-item .class-item-tit {
+  padding-left: 30px;
+}
+.que-class-item .btn-wrap {
+  padding-right: 30px;
 }
 
 .class-item-tit, .que-class-tit {

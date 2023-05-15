@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import "_mixin.scss";
+@import "_setting.scss";
+
+[class^='web-'] {
+  display: block !important;
+}
+[class^='web-flex-'] {
+  display: flex !important;
+}
+[class^='mo-'] {
+  display: none !important;
+}
+[class^='mo-flex-'] {
+  display: none !important;
+}
+
+@media screen and (max-width: 1023px) {
+	[class^='web-'] {
+    display: none !important;
+  }
+  [class^='web-flex-'] {
+    display: none !important;
+  }
+  [class^='mo-'] {
+    display: block !important;
+  }
+  [class^='mo-flex-'] {
+    display: flex !important;
+  }
+}
