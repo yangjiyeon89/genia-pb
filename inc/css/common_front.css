@@ -1474,6 +1474,7 @@ input[type=checkbox]:checked + label::before {
 .filter-menu .btn-wrap {
   width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .filter-menu .btn-wrap button {
   flex-grow: 1;
