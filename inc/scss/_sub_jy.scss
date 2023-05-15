@@ -79,7 +79,38 @@
 
 // 리포트 상세
 .report-view-wrap {
+  margin-bottom: 100px;
   .table-wrap {
+    &.type01 {
+      th {
+        padding: 9px 10px;
+        &:last-child {
+          border-right: 0;
+        }
+      }
+      td {
+        height: 35px;
+        padding: 5px 10px;
+        &:nth-child(1) {
+          font-weight: 500;
+        }
+      }
+      .name {
+        text-align: left;
+      }
+      .answer {
+        td {
+          background-color: #f8fcff;
+        }
+      }
+      &.style01 {
+        margin-bottom: 20px;
+        th, td {
+          height: 50px;
+          padding: 14px 10px;
+        }
+      }
+    }
     &.type05{
       border-top: 1px solid #757575;
       tr {
@@ -151,7 +182,7 @@
     }
   }
   .report-top {
-    margin: 50px auto 2v0px;
+    margin: 50px auto 20px;
     .title-wrap {
       @include layout-justify-center;
       padding-bottom: 17px;
@@ -285,9 +316,14 @@
       }
     }
     .col-box {
+      width: 23%;
       @include layout-justify-start;
       flex-direction: column;
       gap: 20px;
+      .box {
+        width: 100%;
+        height: 170px;
+      }
     }
     .box {
       @include layout-center-center;
@@ -295,9 +331,8 @@
       border-radius: 17px;
       border: 1px solid #e8e8e8;
       &.w285 { width: 285px; height: 170px; }
-      &.w604 { width: 604px; height: 428px; }
-      &.w616 { width: 616px; height: 428px; }
-      &.w934 { width: 934px; height: 358px;}
+      &.w49 { width: 49%; height: 428px; }
+      &.w75 { width: 75%; height: 358px;}
       &.type02 {
         @include layout-justify-start;
         width: 100%;
@@ -316,7 +351,11 @@
           }
         }
       }
-      .scroll-inner { height:100%;  padding: 30px; }
+      .scroll-inner {
+        width: 100%;
+        height:100%;
+        padding: 30px;
+      }
     }
     .chart-wrap {
       position: relative;
@@ -326,93 +365,6 @@
       canvas {
         position: absolute;
         top: -50px;
-      }
-    }
-    .tab-wrap {
-      .contents {
-        width: 1240px;
-        margin: 60px auto 50px;
-      }
-    }
-    .unit-title {
-      @include content-center-center;
-      padding: 0 30px;
-      height: 40px;
-      @include font(17px, 700);
-      color: #fff;
-      background-image: linear-gradient(to right, #1f8bff , #8257ff);
-      border-radius: 20px;
-      margin-bottom: 30px;
-    }
-    .unit {
-      @include layout-justify-center;
-      width: 100%;
-      & + .unit {
-        margin-top: 30px;
-      }
-      .bar-wrap {
-        @include layout-justify-center;
-        gap: 25px;
-        &.lowest {
-          .bar {
-            .percent { background-color: #ff569a; }
-          }
-        }
-        .bar {
-          position: relative;
-          width: 550px;
-          height: 20px;
-          background-color: #e8e8e8;
-          border-radius: 10px;
-          overflow: hidden;
-          .percent {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 20px;
-            background-color: #acacac;
-            border-radius: 10px;
-          }
-        }
-        .num {
-          @include font(18px, 500);
-          margin-right: 10px;
-        }
-      }
-    }
-    .student-cnt {
-      & + .student-cnt {
-        margin-top: 50px;
-      }
-    }
-    .student-name {
-      @include font(24px, 700);
-    }
-    .keyword-wrap {
-      display: flex;
-      gap: 10px;
-      margin: 15px 0;
-      .keyword {
-        @include content-center-center;
-        padding: 0 15px;
-        height: 36px;
-        border-radius: 18px;
-        em {
-          @include font(16px, 700);
-          margin-right: 7px;
-        }
-        &.type01 {
-          border: 1px solid #1d8bff;
-          em {
-            color: #1d8bff;
-          }
-        }
-        &.type02 {
-          border: 1px solid #ff569a;
-          em {
-            color: #ff569a;
-          }
-        }
       }
     }
     .badge-color {
@@ -452,6 +404,10 @@
         }
       }
     }
+  }
+  .que-tit {
+    margin-bottom: 20px;
+    @include font(18px, 500);
   }
 }
 
