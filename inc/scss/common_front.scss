@@ -63,6 +63,17 @@
     display:block;
     height:1px;
   }
+	.type02 {
+		overflow: overlay;
+		&::-webkit-scrollbar-thumb {
+			border: 0;
+			background-color: #bebebe;
+		}
+		&::-webkit-scrollbar {
+			width: 5px;
+			border: 0;
+		}
+	}
 }
 .dim {
   display: none;
