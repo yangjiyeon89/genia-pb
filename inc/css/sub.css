@@ -105,6 +105,74 @@
   display: block;
 }
 
+@media screen and (max-width: 1023px) {
+  .report-list-top {
+    padding-top: 20px;
+    flex-direction: column;
+  }
+  .report-list-search {
+    width: 100%;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  .report-tbl-sort {
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+  }
+  .table-wrap .tbl-report .thead > span {
+    padding: 21px 0;
+  }
+  .table-wrap .tbl-report .col.none-data span {
+    width: 100% !important;
+  }
+  .table-wrap .tbl-report .col > span {
+    padding: 10px 6px;
+  }
+  .table-wrap .tbl-report .col .badge-color {
+    margin-right: 10px;
+  }
+  .table-wrap .tbl-report .col .font-b {
+    font-size: 12px;
+  }
+  .table-wrap .tbl-report .thead span, .table-wrap .tbl-report .tbody span {
+    box-sizing: border-box;
+  }
+  .table-wrap .tbl-report .thead span:nth-child(1), .table-wrap .tbl-report .tbody span:nth-child(1) {
+    width: 30%;
+  }
+  .table-wrap .tbl-report .thead span:nth-child(2), .table-wrap .tbl-report .tbody span:nth-child(2) {
+    width: 26%;
+  }
+  .table-wrap .tbl-report .thead span:nth-child(3), .table-wrap .tbl-report .tbody span:nth-child(3) {
+    width: 30%;
+  }
+  .table-wrap .tbl-report .thead span:nth-child(4), .table-wrap .tbl-report .tbody span:nth-child(4) {
+    width: 70%;
+  }
+  .table-wrap .tbl-report .thead span:nth-child(6), .table-wrap .tbl-report .tbody span:nth-child(6) {
+    width: 19%;
+  }
+  .table-wrap .tbl-report .view-link {
+    width: 24px;
+    height: 24px;
+  }
+  .table-wrap .tbl-report .view-link img {
+    width: 100%;
+  }
+  .tbl-report .scroll-inner {
+    overflow: overlay;
+    height: 770px;
+  }
+  .tbl-report .scroll-inner::-webkit-scrollbar-thumb {
+    border: 0;
+    background-color: #bebebe;
+  }
+  .tbl-report .scroll-inner::-webkit-scrollbar {
+    width: 5px;
+    border: 0;
+  }
+}
 /**
 	* Computes a CSS calc function that betweens a value from
 	* A to B over viewport-width A to viewport-width B.
