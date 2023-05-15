@@ -2283,6 +2283,9 @@ input[type=checkbox]:checked + label::before {
     height: 15px;
     background: url(../../images/common/ico_menu_dot.png) no-repeat;
   }
+  .unit-tit-wrap .btn-print {
+    display: none;
+  }
   .filter-menu {
     position: fixed;
     top: 150px;

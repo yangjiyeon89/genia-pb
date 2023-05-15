@@ -15,38 +15,18 @@
   display: none !important;
 }
 
-.user-wrap {
-  width: 100%;
-  text-align: right;
-  padding-top: 20px;
-  .info {
-    @include font(15px, 400);
-    em {
-      @include font(15px, 700);
-    }
-  }
-  .badge {
-    @include content-center-center;
-    width: 95px;
-    height: 40px;
-    border-radius: 8px;
-    background-color: #ebebeb;
-    @include font(15px, 500);
-    color: #9e9e9e;
-    margin-left: 15px;
-  }
-}
-
 .s_sub01_01 {
   .inner {
-    padding: 60px 0;
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 20px;
     box-sizing: border-box;
   }
   .class-tit-wrap {
     @include layout-center;
     flex-direction: row;
     position: relative;
-    padding-bottom: 20px;
+    padding: 50px 0 20px 0;
     border-bottom: 1px solid #757575;
     .select-wrap {
       padding-left: 20px;
@@ -61,7 +41,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding-top: 40px;
+    padding: 40px 0 60px 0;
     .right-cnt {
       width: calc(100% - 230px);
       padding-left: 40px;
@@ -97,12 +77,6 @@
   }
 
   .s_sub01_01 {
-    .inner {
-      width: 100%;
-      height: 100%;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
     .class-tit-wrap {
       @include layout-center-center;
       position: fixed;
@@ -114,6 +88,7 @@
       padding-bottom: 0;
       background-color: #f1f1f1;
       z-index: 3;
+      padding: 0;
       .btn-arrow { display: none; }
       .select-wrap {
         padding-left: 0;
