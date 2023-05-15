@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../inc/css/font.css">
   <link rel="stylesheet" href="../inc/css/reset.css">
   <link rel="stylesheet" href="../inc/css/common_front.css">
-  <link rel="stylesheet" href="../inc/css/style.css">
+  <link rel="stylesheet" href="../inc/css/sub.css">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
@@ -111,17 +111,24 @@
       </div>
     </div>
     <div class="container">
-      <div class="inner ">
+      <div class="inner">
         <div class="login-cnt">
           <p class="login-tit">로그인</p>
+          <div class="logo-wrap">
+            <a href="javascript:;" class="logo"></a> 
+          </div>
+          <div class="login-desc">
+            <span>학생은 우리반T셀파에서 로그인 후 이용해주세요.</span>
+          </div>
+
           <div class="form-wrap">
             <div class="id-pw-wrap">
               <div class="id-wrap">
-                <input type="text" placeholder="아이디" class="id-input" id="login-id">
+                <input type="text" placeholder="T셀파 아이디를 입력하세요." class="id-input" id="login-id">
                 <label for="login-id" class="id-label"></label>
               </div>
               <div class="pw-wrap">
-                <input type="password" placeholder="비밀번호" class="pw-input" id="login-pw">
+                <input type="password" placeholder="T셀파 비밀번호를 입력하세요." class="pw-input" id="login-pw">
                 <label for="login-pw" class="pw-label"></label>
               </div>
             </div>
@@ -129,7 +136,7 @@
               <input type="checkbox" name="" id="chk01_01" class="id-save">
               <label for="chk01_01">아이디 저장</label>
             </div>
-            <button type="button" class="btn-login">로그인</button>
+            <button type="button" class="btn-login pop-btn" data-pop="user-pop">로그인</button>
           </div>
           <div class="login-wrap">
             <a href="javascript:;">아이디 찾기</a>
@@ -226,6 +233,18 @@
       </div>
     </div>
     <div class="dim"></div>
+
+    <div class="pop-wrap alert-type" data-pop="user-pop">
+        <div class="pop-inner">
+          <div class="pop-content">
+            <button type="button" class="pop-close"></button>
+            <span class="txt">아이디/비밀번호를<br>다시 한 번 입력해주세요.</span>
+          </div>
+          <div class="pop-footer">
+            <button type="button" class="btn-defalut">확인</button>
+          </div>
+        </div>
+      </div>
   </div>
 </body>
 
