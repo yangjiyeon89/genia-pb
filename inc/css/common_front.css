@@ -1416,6 +1416,27 @@ input[type=checkbox]:checked + label::before {
   border: 6px solid #089b01;
 }
 
+.badge-report {
+  width: 100%;
+  max-width: 90px;
+  height: 32px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.badge-report.blue {
+  border: 1px solid #108eff;
+  color: #108eff;
+}
+.badge-report.pink {
+  border: 1px solid #ff569a;
+  color: #ff569a;
+}
+.badge-report.purple {
+  border: 1px solid #8356ff;
+  color: #8356ff;
+}
+
 .filter-menu {
   width: 230px;
   box-sizing: border-box;
@@ -2082,9 +2103,6 @@ input[type=checkbox]:checked + label::before {
     width: 11px;
     height: 6px;
   }
-  .class-item-tit {
-    margin-right: 0;
-  }
   .class-item-txt {
     display: block;
     font-size: 14px;
@@ -2097,12 +2115,20 @@ input[type=checkbox]:checked + label::before {
   .que-class-item {
     flex-direction: column;
     align-items: end;
+    padding: 0;
   }
   .que-class-cnt {
     padding: 10px 15px;
   }
   .que-class-cnt .btn-wrap {
     margin-top: 7px;
+  }
+  .que-class-cnt .class-item-tit {
+    margin-right: 0;
+    padding-left: 0;
+  }
+  .que-class-cnt .btn-wrap {
+    padding-right: 0;
   }
   .badge-defalut {
     height: 21px;
@@ -2152,6 +2178,14 @@ input[type=checkbox]:checked + label::before {
   .badge-color {
     width: 20px;
     height: 20px;
+  }
+  .badge-report {
+    width: 100%;
+    max-width: 60px;
+    height: 28px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 500;
   }
   .filter-menu-wrap {
     position: fixed;

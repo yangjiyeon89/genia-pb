@@ -1293,6 +1293,26 @@ input[type="checkbox"] {
 	&.color10 { border: 6px solid #089b01; }
 }
 
+.badge-report {
+	width: 100%;
+	max-width: 90px;
+	height: 32px;
+	border-radius: 5px;
+	@include font(15px, 500);
+	&.blue { 
+		border: 1px solid $color-main-blue; 
+		color: $color-main-blue; 
+	}
+	&.pink { 
+		border: 1px solid $color-main-pink; 
+		color: $color-main-pink;
+	}
+	&.purple { 
+		border: 1px solid #8356ff;
+		color: #8356ff;
+	}
+}
+
 // contents menu
 .filter-menu {
 	width: 230px;
@@ -1984,9 +2004,6 @@ input[type="checkbox"] {
 			height: 6px;
 		}
 	}
-	.class-item-tit {
-		margin-right: 0;
-	}
 	.class-item-txt {
 		display: block;
 		font-size: 14px;
@@ -1999,11 +2016,21 @@ input[type="checkbox"] {
 	.que-class-item {
 		flex-direction: column;
 		align-items: end;
+		padding: 0;
 	}
 	.que-class-cnt {
 		padding: 10px 15px;
 		.btn-wrap {
 			margin-top: 7px;
+		}
+	}
+	.que-class-cnt {
+		.class-item-tit {
+			margin-right: 0;
+			padding-left: 0;
+		}
+		.btn-wrap {
+			padding-right: 0;
 		}
 	}
 
@@ -2052,6 +2079,13 @@ input[type="checkbox"] {
 	.badge-color {
 		width: 20px;
 		height: 20px;
+	}
+	.badge-report {
+		width: 100%;
+		max-width: 60px;
+		height: 28px;
+		border-radius: 5px;
+		@include font(13px, 500);
 	}
 
 	// contents menu
