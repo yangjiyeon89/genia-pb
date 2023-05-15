@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common_front.css">
+  <link rel="stylesheet" href="../inc/css/sub.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="web-cnt">
+      <div class="top-nav">
+        <div class="inner">
+          <a href="javascript:;" target="_blank" class="link-nav">유치</a>
+          <a href="javascript:;" target="_blank" class="link-nav">초등</a>
+          <a href="javascript:;" target="_blank" class="link-nav">중학</a>
+          <a href="javascript:;" target="_blank" class="link-nav">고등</a>
+          <a href="javascript:;" target="_blank" class="link-nav">T셀파몰</a>
+          <a href="javascript:;" target="_blank" class="link-nav">연수원</a>
+          <a href="javascript:;" target="_blank" class="link-nav">클래스핑퐁</a>
+          <a href="javascript:;" target="_blank" class="link-nav">클래스링크</a>
+          <a href="javascript:;" target="_blank" class="link-nav">클래스아카이브</a>
+          <a href="javascript:;" class="link-nav active">지니아튜터</a>
+          <button type="button" class="btn-bookmark active">즐겨찾기 추가<i class="ic-star"></i></button>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="left-wrap">
+          <div class="logo-wrap">
+            <a href="javascirpt:;" class="logo"></a>
+          </div>
+          <div class="gnb">
+            <ul class="nav">
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">초등</a>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">중학</a>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">고교</a>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">리포트</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 로그인 전 -->
+        <div class="btn-wrap">
+          <button type="button" class="btn-login">로그인</button>
+          <button type="button" class="btn-join">회원가입</button>
+        </div>
+        <!-- 로그인 후 -->
+        <!--<div class="user-wrap">
+          <span class="user">김천재 선생님</span>
+          <div class="btn-wrap">
+            <button type="button" class="btn-login">로그아웃</button>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <div class="mo-cnt">
+      <div class="inner">
+        <div class="logo-wrap">
+          <a href="javascirpt:;" class="logo"></a>
+        </div>
+        <!-- <span class="menu">초등</span> -->
+        <button type="button" class="btn-menu ui-menu-btn"></button>
+      </div>
+      <div class="gnb mobile-menu ui-menu-cnt">
+        <ul class="nav">
+          <li class="nav-list">
+            <a href="javascript:;" class="nav-item">초등</a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:;" class="nav-item">중학</a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:;" class="nav-item">고교</a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:;" class="nav-item">리포트</a>
+          </li>
+        </ul>
+        <div class="menu-logo">
+          <img src="../images/common/menu_logo.png" alt="">
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-login">로그인</button>
+          <button type="button" class="btn-join">회원가입</button>
+           <!-- 로그인 후 -->
+           <!-- <button type="button" class="btn-login">로그아웃</button> -->
+        </div>
+        <div class="link-wrap">
+          <a href="javascript:;" class="link-item">공지사항</a>
+          <a href="javascript:;" class="link-item">고객센터</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="inner">
+      <div class="report-list-wrap">
+        <div class="tab-wrap">
+          <div class="report-list-top">
+            <ul class="tab-menu-type03">
+              <li class="ui-tab-btn active">
+                <a href="javascript:;">회원</a>
+              </li>
+              <li class="ui-tab-btn">
+                <a href="javascript:;">비회원</a>
+              </li>
+            </ul>
+            <div class="report-list-search">
+              <div class="select-wrap">
+                <button type="button" class="select-btn">
+                  <span>우리반T셀파 클래스명</span>
+                </button>
+                <ul class="select-list" style="display: none;">
+                  <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+                  <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+                  <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+                  <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+                </ul>
+              </div>
+              <div class="select-wrap">
+                <button type="button" class="select-btn">
+                  <span>수학</span>
+                </button>
+                <ul class="select-list">
+                  <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+                  <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+                  <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+                  <li class="select-item"><a href="javascript:;">우리반T셀파 클래스명</a></li>
+                </ul>
+              </div>
+              <button type="button" class="btn-type03 report-btn"><i class="report"></i>종합리포트</button>
+              <div class="report-tool-tip">
+                <span class="tool-tip-txt">4개 단원 이상 평가 시<br>종합 리포트가 제공됩니다. </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contents on">
+            <div class="table-wrap type01">
+              <div class="table tbl-report">
+                <div class="thead">
+                  <span>완료일 <button class="report-tbl-sort" type="button"></button></span>
+                  <span>평가</span>
+                  <span>단원 <button class="report-tbl-sort" type="button"></button></span>
+                  <span>리포트명</span>
+                  <span>성취도</span>
+                  <span>상세</span>
+                </div>
+                <div class="tbody">
+                  <!-- 데이터 없을때 -->
+                  <div class="col none-data">
+                    <span>클래스를 선택해 주세요.</span>
+                  </div>
+
+                  <!-- 데이터 있을때 -->
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>단원평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">단원 마무리</span>
+                    <span><i class="badge-color color08"></i>89%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>형성평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">7차시 분수와 소수의 관계를 이해하고 크기를 비교해 볼까요. 7차시 분수와 소수의 관계를 이해하고 크기를 비교해 볼까요. 7차시 분수와 소수의 관계를 이해하고 크기를 비교해 볼까요.</span>
+                    <span><i class="badge-color color08"></i>78%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>형성평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">6차시 분수의 크기를 비교해 볼까요</span>
+                    <span><i class="badge-color color08"></i>80%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>형성평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">5차시 통분을 알아볼까요 </span>
+                    <span><i class="badge-color color08"></i>81%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>형성평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">4차시 약분을 알아볼까요</span>
+                    <span><i class="badge-color color08"></i>88%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>형성평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">1차시 크기가 같은 분수를 알아볼까요 </span>
+                    <span><i class="badge-color color09"></i>94%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>진단평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">진단평가</span>
+                    <span><i class="badge-color color05"></i>57%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>형성평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">4차시 약분을 알아볼까요 </span>
+                    <span><i class="badge-color color08"></i>88%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>형성평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">1차시 크기가 같은 분수를 알아볼까요 </span>
+                    <span><i class="badge-color color04"></i>40%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                  <div class="col">
+                    <span>22.09.23</span>
+                    <span>진단평가</span>
+                    <span class="column"><em class="font-b">수학(박만구) 5-1</em>4.약분과 통분</span>
+                    <span class="tit">진단평가</span>
+                    <span><i class="badge-color color03"></i>30%</span>
+                    <span><a href="javascript:;" class="view-link"><img src="../images/common/ico_report.png" alt=""></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contents">
+            t_report_list01.html
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="ft-top">
+      <div class="left-area">
+        <div class="inner">
+          고객센터 1577-7609<span>(평일 09:00~17:30)</span>
+        </div>
+      </div>
+      <div class="right-area-wrap">
+        <div class="inner">
+          <div class="right-area">
+            <div class="guide-link">
+              <span class="first"><a href="javascript:;">이용안내</a></span>
+              <span><a href="javascript:;">자주 묻는 질문</a></span>
+              <span><a href="javascript:;">1:1 문의</a></span>
+            </div>
+            <ul class="sns-link">
+              <li><a href="javascript:;"><img src="../images/common/ico_sns_type04.png" alt=""></a></li>
+              <li><a href="javascript:;"><img src="../images/common/ico_sns_type01.png" alt=""></a></li>
+              <li><a href="javascript:;"><img src="../images/common/ico_sns_type02.png" alt=""></a></li>
+              <li><a href="javascript:;"><img src="../images/common/ico_sns_type03.png" alt=""></a></li>
+            </ul>
+          </div>
+          <div class="top-area">
+            <div class="inner">
+              <div class="guide-link">
+                <div>
+                  <span class="first"><a href="javascript:;">천재교육</a></span>
+                  <span><a href="javascript:;">천재교과서</a></span>
+                  <span><a href="javascript:;">이용약관</a></span>
+                </div>
+                <div>
+                  <span><a href="javascript:;"><em>개인정보처리방침</em></a></span>
+                  <span><a href="javascript:;">고객센터</a></span>
+                </div>
+              </div>
+              <div class="select-wrap">
+                <button type="button" class="select-btn">
+                  <span>패밀리 사이트</span>
+                </button>
+                <ul class="select-list">
+                  <li class="select-item"><a href="javascript:;">천재교육</a></li>
+                  <li class="select-item"><a href="javascript:;"><em>밀크티 초등</em></a></li>
+                  <li class="select-item"><a href="javascript:;">밀크티 중학</a></li>
+                  <li class="select-item"><a href="javascript:;">HME 전국 해법수학 학력평가</a></li>
+                  <li class="select-item"><a href="javascript:;">천재교육 쇼핑몰</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ft-cnt">      
+      <div class="bottom-area">
+        <div class="inner">
+          <ul>
+            <li>
+              <img src="../images/common/ft_logo_type01.png" alt="">
+              <p>
+                대표 : 강희철<br class="web-only">
+                주소 : 서울시 금천구 가산로 9길 54<br>
+                사업자 등록번호 : 119 - 81 - 19350<br>
+                부가통신사업신고번호 : 016712
+              </p>
+            </li>
+            <li>
+              <img src="../images/common/ft_logo_type02.png" alt="">
+              <p>
+                대표 : 박정과, 최돈용, 임형진<br>
+                주소 : 서울특별시 금천구 가산디지털1로 16, 2011호(가산동)<br>
+                사업자 등록번호 : 119 - 81 - 70643
+              </p>
+            </li>
+            <li>
+              <img src="../images/common/ft_logo_type03.png" alt="">
+              <p>
+                인증범위 - 온라인 교육 및 학습지원 서비스 운영<br>
+                인증기간 - 2023년 3월 25일 ~ 2026년 3월 24일
+              </p>
+              <p class="copy">COPYRIGHT© 2023 BY CHUNJAE CO.LTD ALL RIGHTS RESERVED.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dim"></div>
+</body>
+</html>
+  

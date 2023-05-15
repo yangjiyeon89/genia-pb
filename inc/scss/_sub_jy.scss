@@ -1,3 +1,74 @@
 @charset "UTF-8";
 @import "_mixin.scss";
 @import "_setting.scss";
+
+// 리포트 리스트
+.report-list-wrap {
+  margin: 50px 0 100px;
+  .table-wrap {
+    margin-top: 20px;
+  }
+}
+.report-list-top {
+  position: relative;
+  @include layout-justify-center;
+}
+.report-list-search {
+  display: flex;
+  gap: 10px;
+}
+.report-tbl-sort {
+  position: relative;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  margin-left: 3px;
+  background: url(../../images/common/ico_sort.png) no-repeat;
+}
+.tbl-report {
+  .col {
+    &.none-data {
+      span {
+        width: 100%;
+        height: 520px;
+      }
+    }
+    span {
+      @include content-center-center;
+      &.tit {
+        justify-content: flex-start;
+      }
+      &.column {
+        flex-direction: column;
+      }
+      .font-b {
+        color: #108eff;
+        font-size: 14px;
+      }
+    }
+    .badge-color {
+      margin-right: 15px;
+    }
+  }
+}
+.report-tool-tip {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 56px;
+  padding: 8px 37px;
+  text-align: center;
+  border: 1px solid #000;
+  background-color: #fff;
+  z-index: 1;
+  .tool-tip-txt {
+    font-size: 14px;
+  }
+}
+.report-btn {
+  &:hover {
+    & + .report-tool-tip {
+      display: block;
+    }
+  }
+}
