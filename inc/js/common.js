@@ -3,7 +3,8 @@ $(function () {
   function checkCurrentGnb() {
     var _className = $("#wrap").attr("class"),
       _afterStr = _className ? _className.split(" ") : "",
-      _gnbMenuLink = $(".nav-list");
+      _gnbMenuLink = $(".web-cnt .nav-list");
+      _gnbMenuLinkMo = $(".mo-cnt .nav-list");
     _gnbDepth02 = $(".depth2-wrap");
     _gnbDepth02Item = $(".depth2-list");
 
@@ -108,6 +109,12 @@ $(function () {
           .eq(2)
           .find("> a")
           .addClass("active");
+        break;
+
+      // 사용자 학생
+      case "s_sub01":
+        _gnbMenuLink.eq(0).find("> a").addClass("active");
+        _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
         break;
     }
   }

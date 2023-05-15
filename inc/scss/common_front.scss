@@ -2016,7 +2016,6 @@ input[type="checkbox"] {
 	.que-class-item {
 		flex-direction: column;
 		align-items: end;
-		padding: 0;
 	}
 	.que-class-cnt {
 		padding: 10px 15px;
@@ -2061,6 +2060,7 @@ input[type="checkbox"] {
 		height: 24px;
 		border-radius: 6px;
 		font-size: 12px;
+		line-height: 1;
 		&.type01 {
 			border: 1px solid #c2c2c2;
 			background-color: #fff;
