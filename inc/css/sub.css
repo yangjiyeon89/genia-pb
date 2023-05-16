@@ -339,6 +339,9 @@
   width: 100%;
   height: 170px;
 }
+.report-view-wrap .report-cnt .col-box.h183 .box {
+  height: 183px;
+}
 .report-view-wrap .report-cnt .box {
   display: flex;
   justify-content: center;
@@ -366,6 +369,9 @@
 .report-view-wrap .report-cnt .box.w75 {
   width: 75%;
   height: 358px;
+}
+.report-view-wrap .report-cnt .box.w75.h386 {
+  height: 386px;
 }
 .report-view-wrap .report-cnt .box.type02 {
   display: flex;
@@ -717,6 +723,9 @@
   .report-view-wrap .report-cnt .col-box .box {
     height: 140px;
   }
+  .report-view-wrap .report-cnt .col-box.h183 .box {
+    height: 140px;
+  }
   .report-view-wrap .report-cnt .box.w75 {
     width: 100%;
     height: auto;
@@ -726,6 +735,9 @@
   }
   .report-view-wrap .report-cnt .box.w75 .scroll-inner {
     padding: 0;
+  }
+  .report-view-wrap .report-cnt .box.w75.h386 {
+    height: auto;
   }
   .report-view-wrap .report-cnt .box.w49 {
     width: 100%;
@@ -850,10 +862,8 @@
     width: 100%;
   }
   .stu-view .tbl-report.type02 + .tbl-report {
-    border-top: 0;
-  }
-  .stu-view .tbl-report.type02 + .tbl-report .num .th {
-    display: none;
+    margin-top: 20px;
+    border-top: 1px solid #757575;
   }
   .stu-view .tbl-report.type02 + .tbl-report .th {
     display: inline-flex;
