@@ -901,14 +901,12 @@
   margin-left: 10px;
 }
 
-.full-pop-page .full-pop-wrap {
+.full-pop-page .full-pop-wrap .pop-wrap {
+  display: block;
   max-width: 895px;
   height: 830px;
   margin: 0 auto;
   box-sizing: border-box;
-}
-.full-pop-page .full-pop-wrap .pop-wrap {
-  display: block;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1390px) {

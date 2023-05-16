@@ -248,13 +248,12 @@
 //풀팝업 형태
 .full-pop-page {
 	.full-pop-wrap {
-		max-width: 895px;
-		height: 830px;
-		margin: 0 auto;
-		box-sizing: border-box;
-
 		.pop-wrap {
 			display: block;
+			max-width: 895px;
+			height: 830px;
+			margin: 0 auto;
+			box-sizing: border-box;
 		}
 	}
 }
@@ -403,7 +402,7 @@
 			.id-input {
 				&:focus {
 					&+label {
-						
+
 						background-size: 15px 17px;
 					}
 				}
@@ -431,8 +430,8 @@
 				background-size: contain;
 			}
 
-			
-			
+
+
 		}
 	}
 
