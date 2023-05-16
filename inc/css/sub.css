@@ -117,7 +117,7 @@
 }
 .report-view-wrap .table-wrap.type01 td {
   height: 35px;
-  padding: 5px 10px;
+  padding: 5px;
 }
 .report-view-wrap .table-wrap.type01 td:nth-child(1) {
   font-weight: 500;
@@ -127,9 +127,6 @@
 }
 .report-view-wrap .table-wrap.type01 .answer td {
   background-color: #f8fcff;
-}
-.report-view-wrap .table-wrap.type01.style01 {
-  margin-bottom: 20px;
 }
 .report-view-wrap .table-wrap.type01.style01 th, .report-view-wrap .table-wrap.type01.style01 td {
   height: 50px;
@@ -342,6 +339,9 @@
   width: 100%;
   height: 170px;
 }
+.report-view-wrap .report-cnt .col-box.h183 .box {
+  height: 183px;
+}
 .report-view-wrap .report-cnt .box {
   display: flex;
   justify-content: center;
@@ -369,6 +369,9 @@
 .report-view-wrap .report-cnt .box.w75 {
   width: 75%;
   height: 358px;
+}
+.report-view-wrap .report-cnt .box.w75.h386 {
+  height: 386px;
 }
 .report-view-wrap .report-cnt .box.type02 {
   display: flex;
@@ -528,14 +531,6 @@
 .stu-view .mt100 {
   margin-top: 100px;
 }
-.stu-view .report-cnt .chart-wrap {
-  overflow: inherit;
-  width: 190px;
-  height: 190px;
-}
-.stu-view .report-cnt .chart-wrap canvas {
-  top: 0;
-}
 .stu-view .box {
   position: relative;
 }
@@ -553,6 +548,52 @@
   color: #108eff;
   font-size: 18px;
   font-weight: 600;
+}
+.stu-view .tbl-report.type02 {
+  display: flex;
+  border-top: 1px solid #757575;
+}
+.stu-view .tbl-report.type02 .col-wrap {
+  display: flex;
+  width: 100%;
+}
+.stu-view .tbl-report.type02 .col {
+  flex-direction: column;
+}
+.stu-view .tbl-report.type02 .col .th, .stu-view .tbl-report.type02 .col .td {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 5px;
+  word-break: break-all;
+}
+.stu-view .tbl-report.type02 .col .th {
+  border-bottom: 1px solid #e8e8e8;
+}
+.stu-view .tbl-report.type02 .col .td {
+  height: 100%;
+}
+.stu-view .tbl-report.type02 .num {
+  flex: none;
+  width: 9%;
+}
+.stu-view .tbl-report.type02 .num .th, .stu-view .tbl-report.type02 .num .td {
+  font-weight: 500;
+}
+.stu-view .tbl-report.type02 .que {
+  width: 50%;
+}
+.stu-view .tbl-report.type02 .que .th, .stu-view .tbl-report.type02 .que .td {
+  border-left: 1px solid #e8e8e8;
+}
+.stu-view .tbl-report.type02 img {
+  max-width: 100%;
+}
+.stu-view .tbl-report.type02 + .tbl-report {
+  border-top: 0;
+}
+.stu-view .tbl-report.type02 + .tbl-report .th {
+  display: none;
 }
 
 @media screen and (max-width: 1023px) {
@@ -682,6 +723,9 @@
   .report-view-wrap .report-cnt .col-box .box {
     height: 140px;
   }
+  .report-view-wrap .report-cnt .col-box.h183 .box {
+    height: 140px;
+  }
   .report-view-wrap .report-cnt .box.w75 {
     width: 100%;
     height: auto;
@@ -691,6 +735,9 @@
   }
   .report-view-wrap .report-cnt .box.w75 .scroll-inner {
     padding: 0;
+  }
+  .report-view-wrap .report-cnt .box.w75.h386 {
+    height: auto;
   }
   .report-view-wrap .report-cnt .box.w49 {
     width: 100%;
@@ -707,11 +754,20 @@
   .report-view-wrap .report-cnt .box.w49 + .box {
     margin-top: 20px;
   }
+  .report-view-wrap .table-wrap.type01 th {
+    padding: 9px 5px;
+  }
+  .report-view-wrap .table-wrap.type01 .hide-mo {
+    display: none;
+  }
   .report-view-wrap .table-wrap.type01.style01 {
     margin-bottom: 10px;
   }
   .report-view-wrap .table-wrap.type01.style01 th, .report-view-wrap .table-wrap.type01.style01 td {
-    padding: 14px 5px;
+    padding: 14px 2px;
+  }
+  .report-view-wrap .table-wrap.type01.style01 th.a-left, .report-view-wrap .table-wrap.type01.style01 td.a-left {
+    padding-left: 10px;
   }
   .report-view-wrap .table-wrap.type05 {
     overflow: hidden;
@@ -744,8 +800,8 @@
   .stu-view .w990 table {
     width: 990px;
   }
-  .stu-view .w650 table {
-    width: 650px;
+  .stu-view .box.w650 .table-wrap {
+    margin-bottom: 0;
   }
   .stu-view .mt100 {
     margin-top: 25px;
@@ -790,14 +846,27 @@
   }
   .stu-view .report-cnt .box.w650 .scroll-inner {
     padding: 10px;
-  }
-  .stu-view .report-cnt .chart-wrap {
-    width: 130px;
-    height: 130px;
+    max-height: 339px;
   }
   .stu-view .sub-title {
     margin: 30px 0 20px;
     font-size: 16px;
+  }
+  .stu-view .tbl-report.type02 .col-wrap {
+    flex-direction: column;
+  }
+  .stu-view .tbl-report.type02 .num {
+    width: 60px;
+  }
+  .stu-view .tbl-report.type02 .que {
+    width: 100%;
+  }
+  .stu-view .tbl-report.type02 + .tbl-report {
+    margin-top: 20px;
+    border-top: 1px solid #757575;
+  }
+  .stu-view .tbl-report.type02 + .tbl-report .th {
+    display: inline-flex;
   }
   .report-pop .inner {
     padding-top: 116px;

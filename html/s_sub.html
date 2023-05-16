@@ -116,8 +116,7 @@
           <div class="report-top">
             <div class="unit-tit-wrap">
               <div class="tit">
-                <button type="button" class="btn-arrow"></button>
-                <span class="txt"><em>수학 5-1</em> 4. 약분과 통분 단원평가</span>
+                <span class="txt"><em>수학 5-1</em> 4. 약분과 통분 진단평가</span>
               </div>
               <div class="btn-wrap">
                 <button type="button" class="web-cnt btn-print"></button>
@@ -158,10 +157,6 @@
                 </div>
               </div>
               <div class="box w26">
-                <div class="text-box">
-                  <p>학급 평균</p>
-                  <em>65%</em>
-                </div>
                 <div class="chart-wrap">
                   <canvas id="achieveChart"></canvas>
                 </div>
@@ -324,39 +319,26 @@
                 </div>
               </div>
             </div>
-            <span class="title mt100">GeniA AI <p>AI 학습 분석<em>내가 잘하거나 어려워하는 학습 개념을 확인할 수 있습니다. </em></p> </span>
-            <div class="box h240">
-              <div class="scroll-innner">
-                <img src="../images/sub/sample_ai.png" alt="">
-              </div>
-            </div>
             <span class="title mt100">오답노트</span>
             <div class="box w650">
               <div class="table-wrap type01 style01">
                 <div class="scroll-inner type02">
-                  <table>
-                    <colgroup>
-                      <col width="9%">
-                      <col width="46%">
-                      <col width="*">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <td>번호</td>
-                        <td>문제</td>
-                        <td>해설</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="answer">2</td>
-                        <td>
-                          <img src="../images/sub/sample_que_03.png" alt="">
-                        </td>
-                        <td>439x2=878</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="tbl-report type02">
+                    <div class="col num">
+                      <div class="th">번호</div>
+                      <div class="td answer">1</div>
+                    </div>
+                    <div class="col-wrap">
+                      <div class="col que">
+                        <div class="th">문제</div>
+                        <div class="td"><img src="../images/sub/sample_que_03.png" alt=""></div>
+                      </div>
+                      <div class="col que">
+                        <div class="th">해설</div>
+                        <div class="td">439X2=878</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -463,13 +445,13 @@
       gradient.addColorStop(1, 'rgba(125, 94, 255, 1)');
       let value = 52;
       let data = {
-        labels: ['김천재 성취율'],
+        labels: ['학급성취율'],
         datasets: [
           {
             label: 'dataSet',
             data: [value, 100 - value],
             backgroundColor: [ gradient , '#f4f4f4']
-          },
+          }
         ]
       }
       new Chart(doughnutCanvas, {
@@ -477,8 +459,8 @@
         data: data,
         options:{
           responsive: true,
-          // rotation: -90,
-          // circumference: 180,
+          rotation: -90,
+          circumference: 180,
           cutout: '75%',
           plugins: {
             legend: {
@@ -502,24 +484,22 @@
             ctx.restore();
 
             var text = chart.config.data.datasets[0].data[0] + "%",
-              fontSize = 24;
+              fontSize = 26;
             ctx.font = "bold " + fontSize + "px noto Sans KR";
             ctx.fillStyle = "#108eff";
             textX = Math.round((width - ctx.measureText(text).width) / 2);
-            textY = height / 2;
+            textY = height / 1.7;
 
             ctx.fillText(text, textX, textY);
 
             var text2 = chart.config.data.labels[0],
-              fontSize2 = 17;
+              fontSize2 = 19;
             ctx.font = "bold " + fontSize2 + "px noto Sans KR";
             ctx.fillStyle = "#000";
             textX = Math.round((width - ctx.measureText(text2).width) / 2);
-            textY = height / 1.5;
+            textY = height / 1.4;
 
             ctx.fillText(text2, textX, textY);
-
-           
 
             ctx.save();
           }
@@ -530,6 +510,7 @@
     $(document).ready(function(){
       achieveChartRender();
     });
+
 
   });
 </script>
