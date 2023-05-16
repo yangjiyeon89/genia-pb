@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common_front.css">
+  <link rel="stylesheet" href="../inc/css/sub.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="web-cnt">
+      <div class="top-nav">
+        <div class="inner">
+          <a href="javascript:;" target="_blank" class="link-nav">유치</a>
+          <a href="javascript:;" target="_blank" class="link-nav">초등</a>
+          <a href="javascript:;" target="_blank" class="link-nav">중학</a>
+          <a href="javascript:;" target="_blank" class="link-nav">고등</a>
+          <a href="javascript:;" target="_blank" class="link-nav">T셀파몰</a>
+          <a href="javascript:;" target="_blank" class="link-nav">연수원</a>
+          <a href="javascript:;" target="_blank" class="link-nav">클래스핑퐁</a>
+          <a href="javascript:;" target="_blank" class="link-nav">클래스링크</a>
+          <a href="javascript:;" target="_blank" class="link-nav">클래스아카이브</a>
+          <a href="javascript:;" class="link-nav active">지니아튜터</a>
+          <button type="button" class="btn-bookmark active">즐겨찾기 추가<i class="ic-star"></i></button>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="left-wrap">
+          <div class="logo-wrap">
+            <a href="javascirpt:;" class="logo"></a>
+          </div>
+          <div class="gnb">
+            <ul class="nav">
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">초등</a>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">중학</a>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">고교</a>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">리포트</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 로그인 전 -->
+        <div class="btn-wrap">
+          <button type="button" class="btn-login">로그인</button>
+          <button type="button" class="btn-join">회원가입</button>
+        </div>
+        <!-- 로그인 후 -->
+        <!--<div class="user-wrap">
+          <span class="user">김천재 선생님</span>
+          <div class="btn-wrap">
+            <button type="button" class="btn-login">로그아웃</button>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <div class="mo-cnt">
+      <div class="inner">
+        <div class="logo-wrap">
+          <a href="javascirpt:;" class="logo"></a>
+        </div>
+        <span class="menu">리포트</span>
+        <button type="button" class="btn-menu ui-menu-btn"></button>
+      </div>
+      <div class="gnb mobile-menu ui-menu-cnt">
+        <ul class="nav">
+          <li class="nav-list">
+            <a href="javascript:;" class="nav-item">초등</a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:;" class="nav-item">중학</a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:;" class="nav-item">고교</a>
+          </li>
+          <li class="nav-list">
+            <a href="javascript:;" class="nav-item">리포트</a>
+          </li>
+        </ul>
+        <div class="menu-logo">
+          <img src="../images/common/menu_logo.png" alt="">
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-login">로그인</button>
+          <button type="button" class="btn-join">회원가입</button>
+           <!-- 로그인 후 -->
+           <!-- <button type="button" class="btn-login">로그아웃</button> -->
+        </div>
+        <div class="link-wrap">
+          <a href="javascript:;" class="link-item">공지사항</a>
+          <a href="javascript:;" class="link-item">고객센터</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container report fix-h">
+    <div class="inner">
+      <div class="report-view-wrap stu-view">
+        <div class="view-cnt-wrap">
+          <div class="report-top">
+            <div class="unit-tit-wrap">
+              <div class="tit">
+                <span class="txt"><em>수학 5-1</em> 4. 약분과 통분 진단평가</span>
+              </div>
+              <div class="btn-wrap">
+                <button type="button" class="web-cnt btn-print"></button>
+              </div>
+            </div>
+            <div class="web-cnt user-wrap">
+              <span class="info">천재초  ·  6학년 1반  ·  수학  ·  <em>김천재</em></span>
+              <span class="badge">학생용</span>
+            </div>
+          </div>
+          <div class="report-cnt">
+            <span class="title">종합</span>
+            <div class="justify-box">
+              <div class="box w46 bd-n">
+                <div class="scroll-inner type02">
+                  <div class="table-wrap type01">
+                    <table>
+                      <colgroup>
+                        <col width="20%;">
+                        <col width="*">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>단원</th>
+                          <td class="a-left">1. 곱셈</td>
+                        </tr>
+                        <tr>
+                          <th>맞은 개수</th>
+                          <td class="a-left">15 / 20 문제</td>
+                        </tr>
+                        <tr>
+                          <th>학습 일시</th>
+                          <td class="a-left">22.09.13  PM 14:30~14:40</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="box w26">
+                <div class="chart-wrap">
+                  <canvas id="achieveChart"></canvas>
+                </div>
+              </div>
+              <div class="box w26">
+                <div class="time-box">
+                  <p>8분</p>
+                  <em>학습시간</em>
+                </div>
+              </div>
+            </div>
+            <p class="sub-title">문제별 정보</p>
+            <div class="box bd-n w990">            
+              <div class="table-wrap type01 style01">
+                <div class="scroll-inner type02">
+                  <table>
+                    <colgroup>
+                      <col width="9%;">
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <td>문제</td>
+                        <td>Q1</td>
+                        <td>Q2</td>
+                        <td>Q3</td>
+                        <td>Q4</td>
+                        <td>Q5</td>
+                        <td>Q6</td>
+                        <td>Q7</td>
+                        <td>Q8</td>
+                        <td>Q9</td>
+                        <td>Q10</td>
+                        <td>Q11</td>
+                        <td>Q12</td>
+                        <td>Q13</td>
+                        <td>Q14</td>
+                        <td>Q15</td>
+                        <td>Q16</td>
+                        <td>Q17</td>
+                        <td>Q18</td>
+                        <td>Q19</td>
+                        <td>Q20</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>수준</td>
+                        <td>중</td>
+                        <td>하</td>
+                        <td>상</td>
+                        <td>상</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                        <td>중</td>
+                      </tr>
+                      <tr>
+                        <td>정답</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>응답</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <td>결과</td>
+                        <td>O</td>
+                        <td>X</td>
+                        <td>O</td>
+                        <td>O</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                        <td>X</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <span class="title mt100">오답노트</span>
+            <div class="box w650">
+              <div class="table-wrap type01 style01">
+                <div class="scroll-inner type02">
+                  <div class="tbl-report type02">
+                    <div class="col num">
+                      <div class="th">번호</div>
+                      <div class="td answer">1</div>
+                    </div>
+                    <div class="col-wrap">
+                      <div class="col que">
+                        <div class="th">문제</div>
+                        <div class="td"><img src="../images/sub/sample_que_03.png" alt=""></div>
+                      </div>
+                      <div class="col que">
+                        <div class="th">해설</div>
+                        <div class="td">439X2=878</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="ft-top">
+      <div class="left-area">
+        <div class="inner">
+          고객센터 1577-7609<span>(평일 09:00~17:30)</span>
+        </div>
+      </div>
+      <div class="right-area-wrap">
+        <div class="inner">
+          <div class="right-area">
+            <div class="guide-link">
+              <span class="first"><a href="javascript:;">이용안내</a></span>
+              <span><a href="javascript:;">자주 묻는 질문</a></span>
+              <span><a href="javascript:;">1:1 문의</a></span>
+            </div>
+            <ul class="sns-link">
+              <li><a href="javascript:;"><img src="../images/common/ico_sns_type04.png" alt=""></a></li>
+              <li><a href="javascript:;"><img src="../images/common/ico_sns_type01.png" alt=""></a></li>
+              <li><a href="javascript:;"><img src="../images/common/ico_sns_type02.png" alt=""></a></li>
+              <li><a href="javascript:;"><img src="../images/common/ico_sns_type03.png" alt=""></a></li>
+            </ul>
+          </div>
+          <div class="top-area">
+            <div class="inner">
+              <div class="guide-link">
+                <div>
+                  <span class="first"><a href="javascript:;">천재교육</a></span>
+                  <span><a href="javascript:;">천재교과서</a></span>
+                  <span><a href="javascript:;">이용약관</a></span>
+                </div>
+                <div>
+                  <span><a href="javascript:;"><em>개인정보처리방침</em></a></span>
+                  <span><a href="javascript:;">고객센터</a></span>
+                </div>
+              </div>
+              <div class="select-wrap">
+                <button type="button" class="select-btn">
+                  <span>패밀리 사이트</span>
+                </button>
+                <ul class="select-list">
+                  <li class="select-item"><a href="javascript:;">천재교육</a></li>
+                  <li class="select-item"><a href="javascript:;"><em>밀크티 초등</em></a></li>
+                  <li class="select-item"><a href="javascript:;">밀크티 중학</a></li>
+                  <li class="select-item"><a href="javascript:;">HME 전국 해법수학 학력평가</a></li>
+                  <li class="select-item"><a href="javascript:;">천재교육 쇼핑몰</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ft-cnt">      
+      <div class="bottom-area">
+        <div class="inner">
+          <ul>
+            <li>
+              <img src="../images/common/ft_logo_type01.png" alt="">
+              <p>
+                대표 : 강희철<br class="web-only">
+                주소 : 서울시 금천구 가산로 9길 54<br>
+                사업자 등록번호 : 119 - 81 - 19350<br>
+                부가통신사업신고번호 : 016712
+              </p>
+            </li>
+            <li>
+              <img src="../images/common/ft_logo_type02.png" alt="">
+              <p>
+                대표 : 박정과, 최돈용, 임형진<br>
+                주소 : 서울특별시 금천구 가산디지털1로 16, 2011호(가산동)<br>
+                사업자 등록번호 : 119 - 81 - 70643
+              </p>
+            </li>
+            <li>
+              <img src="../images/common/ft_logo_type03.png" alt="">
+              <p>
+                인증범위 - 온라인 교육 및 학습지원 서비스 운영<br>
+                인증기간 - 2023년 3월 25일 ~ 2026년 3월 24일
+              </p>
+              <p class="copy">COPYRIGHT© 2023 BY CHUNJAE CO.LTD ALL RIGHTS RESERVED.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dim"></div>
+</body>
+<script>
+  $(function () {    
+    // 학업성취율 차트
+    function achieveChartRender(){
+      let doughnutCanvas = document.getElementById("achieveChart").getContext('2d');
+      let gradient = doughnutCanvas.createLinearGradient(0, 0, 150, 0);
+      gradient.addColorStop(0, 'rgba(32, 139, 255, 1)');
+      gradient.addColorStop(1, 'rgba(125, 94, 255, 1)');
+      let value = 52;
+      let data = {
+        labels: ['학급성취율'],
+        datasets: [
+          {
+            label: 'dataSet',
+            data: [value, 100 - value],
+            backgroundColor: [ gradient , '#f4f4f4']
+          }
+        ]
+      }
+      new Chart(doughnutCanvas, {
+        type: 'doughnut',
+        data: data,
+        options:{
+          responsive: true,
+          rotation: -90,
+          circumference: 180,
+          cutout: '75%',
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+          },
+          hover: {
+            mode: null
+          },
+        },
+        plugins: [{
+          afterDraw: function(chart) {
+            let width = chart.width
+            let height = chart.height
+            let ctx = chart.ctx;
+            console.log(ctx);
+
+            ctx.restore();
+
+            var text = chart.config.data.datasets[0].data[0] + "%",
+              fontSize = 26;
+            ctx.font = "bold " + fontSize + "px noto Sans KR";
+            ctx.fillStyle = "#108eff";
+            textX = Math.round((width - ctx.measureText(text).width) / 2);
+            textY = height / 1.7;
+
+            ctx.fillText(text, textX, textY);
+
+            var text2 = chart.config.data.labels[0],
+              fontSize2 = 19;
+            ctx.font = "bold " + fontSize2 + "px noto Sans KR";
+            ctx.fillStyle = "#000";
+            textX = Math.round((width - ctx.measureText(text2).width) / 2);
+            textY = height / 1.4;
+
+            ctx.fillText(text2, textX, textY);
+
+            ctx.save();
+          }
+        }]
+      });
+    };
+
+    $(document).ready(function(){
+      achieveChartRender();
+    });
+
+
+  });
+</script>
+</html>
+  
