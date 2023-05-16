@@ -575,6 +575,14 @@
   background-color: #108eff;
   color: #fff;
 }
+.btn-number.correct {
+  background-color: #108eff;
+  color: #fff;
+}
+.btn-number.incorrect {
+  background-color: #ff0808;
+  color: #fff;
+}
 
 .btn-line {
   min-width: 36px;
@@ -1699,6 +1707,15 @@ input[type=checkbox]:checked + label::before {
 }
 .pop-wrap.que-type02 .scroll-inner {
   max-height: 420px;
+}
+.pop-wrap.que-type02 .table-wrap.type02 th {
+  position: relative;
+}
+.pop-wrap.que-type02 .table-wrap.type02 tr.correct th {
+  background: url(../../images/common/ico_correct.png) center no-repeat;
+}
+.pop-wrap.que-type02 .table-wrap.type02 tr.incorrect th {
+  background: url(../../images/common/ico_incorrect.png) center no-repeat;
 }
 
 @media screen and (max-width: 1023px) {
