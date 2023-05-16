@@ -4,7 +4,7 @@ $(function () {
     var _className = $("#wrap").attr("class"),
       _afterStr = _className ? _className.split(" ") : "",
       _gnbMenuLink = $(".web-cnt .nav-list");
-      _gnbMenuLinkMo = $(".mo-cnt .nav-list");
+    _gnbMenuLinkMo = $(".mo-cnt .nav-list");
     _gnbDepth02 = $(".depth2-wrap");
     _gnbDepth02Item = $(".depth2-list");
 
@@ -111,7 +111,7 @@ $(function () {
           .addClass("active");
         break;
 
-      // 사용자 학생
+        // 사용자 학생
       case "s_sub01":
         _gnbMenuLink.eq(0).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
@@ -156,21 +156,21 @@ $(function () {
   function menuFunc() {
     let _this = $(this);
 
-    if ( _this.parents().hasClass('header')){
+    if (_this.parents().hasClass("header")) {
       if (!_this.hasClass("active")) {
         $(".header").find(_menucnt).css("right", "0");
         _menudim.fadeIn();
-        _menudim.css( "z-index", "3" );
+        _menudim.css("z-index", "3");
       } else {
         $(".header").find(_menucnt).css("right", "-50%");
         _menudim.fadeOut();
       }
     }
-    if ( _this.parents().hasClass('filter-menu-wrap')){
+    if (_this.parents().hasClass("filter-menu-wrap")) {
       if (!_this.hasClass("active")) {
         $(".filter-menu-wrap").find(_menucnt).css("right", "0");
-        _menudim.fadeIn()
-        _menudim.css( "z-index", "1" );
+        _menudim.fadeIn();
+        _menudim.css("z-index", "1");
       } else {
         $(".filter-menu-wrap").find(_menucnt).css("right", "-80%");
         _menudim.fadeOut();
@@ -183,14 +183,10 @@ $(function () {
     } else {
       _this.removeClass("active");
       _menuhtml.css("overflow", "auto");
-    } 
+    }
   }
 
   menuBtn.on("click", menuFunc);
-
-
-
-
 
   // tab
   let tabBtn = $(".ui-tab-btn");
@@ -236,7 +232,6 @@ $(function () {
     }
   }
   selectBtn.on("click", selectUI);
-
 
   // paging
   let pageBtn = $(".page");
@@ -427,39 +422,63 @@ $(function () {
     handle: ".dragHandle",
   });
 
-  $( "#table-1" ).disableSelection();
-
+  $("#table-1").disableSelection();
 
   // toggle button
-  let numberBtn = $('.btn-number');
-  let commentBtn = $('.btn-comment');
-  let commentArrow = $('.btn-comment .arrow');
+  let numberBtn = $(".btn-number");
+  let commentBtn = $(".btn-comment");
+  let commentArrow = $(".btn-comment .arrow");
 
   function toggleBtnFunc() {
     let _this = $(this);
-    _this.toggleClass('active');
+    _this.toggleClass("active");
 
     if (!_this.hasClass("active")) {
       commentArrow.text("▼");
     } else {
       commentArrow.text("▲");
     }
-
   }
 
-  numberBtn.on('click', toggleBtnFunc);
-  commentBtn.on('click', toggleBtnFunc);
+  numberBtn.on("click", toggleBtnFunc);
+  commentBtn.on("click", toggleBtnFunc);
 
   // click button
-  let lineBtn = $('.btn-line');
+  let lineBtn = $(".btn-line");
 
-  function btnClickFunc(){
+  function btnClickFunc() {
     let _this = $(this);
-    if(!_this.hasClass('active')) {
-      _this.parents('.btn-wrap').find('button').removeClass('active');
-      _this.addClass('active');
-    };
+    if (!_this.hasClass("active")) {
+      _this.parents(".btn-wrap").find("button").removeClass("active");
+      _this.addClass("active");
+    }
   }
 
-  lineBtn.on('click', btnClickFunc);
+  lineBtn.on("click", btnClickFunc);
+
+  //share버튼 클릭시 open-select-list 열기
+
+  let shareBtn = $(".btn-share");
+
+  $(function () {
+    shareBtn.on("click", function () {
+      let _this = $(this);
+      let _position = _this.parents("a").position().left;
+
+      console.log(this);
+
+      if (!_this.hasClass("active")) {
+        shareBtn.removeClass("active");
+        _this.addClass("active");
+        // _this.parents('.test').find('.btn-share').removeClass('active');
+        // _this.addClass('active');
+      } else {
+        _this.removeClass("active");
+      }
+      console.log(_position);
+      if (_position > 500) {
+        _this.find(".open-select-list").css("left", "-190px");
+      }
+    });
+  });
 });

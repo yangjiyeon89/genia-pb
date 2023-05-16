@@ -900,42 +900,46 @@
 }
 
 .full-pop-page .full-pop-wrap.pop-share .pop-content {
-  padding: 60px 0 45px;
+  padding: 60px 40px 45px;
   text-align: center;
 }
-.full-pop-page .full-pop-wrap {
+
+.full-pop-wrap {
   display: block;
   max-width: 895px;
   margin: 0 auto;
 }
-.full-pop-page .full-pop-wrap .pop-wrap {
+.full-pop-wrap .pop-wrap {
   display: block;
   width: 100%;
-  height: 830px;
+  height: auto;
   box-sizing: border-box;
   position: inherit;
 }
-.full-pop-page .full-pop-wrap .pop-content .pop-tit p {
+.full-pop-wrap .pop-content .pop-tit p {
   font-size: 24px;
   font-weight: 700;
 }
-.full-pop-page .full-pop-wrap .pop-content .pop-tit span {
+.full-pop-wrap .pop-content .pop-tit span {
   font-size: 16px;
   font-weight: 500;
   margin: 20px 0 45px;
   display: block;
 }
-.full-pop-page .full-pop-wrap .pop-content .end-day-wrap {
+.full-pop-wrap .pop-content .pop-tit:not(:first-child) {
+  padding-top: 50px;
+}
+.full-pop-wrap .end-day-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.full-pop-page .full-pop-wrap .pop-content .end-day-wrap .txt {
+.full-pop-wrap .end-day-wrap .txt {
   font-size: 18px;
   font-weight: 600;
   margin-right: 20px;
 }
-.full-pop-page .full-pop-wrap .pop-content .end-day-wrap .txt::before {
+.full-pop-wrap .end-day-wrap .txt::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -943,26 +947,185 @@
   margin-right: 10px;
   background: url(../../images/common/ico_calendar02.png) no-repeat center;
 }
-.full-pop-page .full-pop-wrap .pop-content .date-wrap {
+.full-pop-wrap .date-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 0;
   gap: 10px;
 }
-.full-pop-page .full-pop-wrap .pop-content .class-wrap {
+.full-pop-wrap .class-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.25vw;
 }
-.full-pop-page .full-pop-wrap .pop-content .class-wrap .class-box {
+.full-pop-wrap .class-wrap .class-box {
   width: 260px;
   height: 190px;
   border-radius: 25px;
   background: #fff;
   border: 1px solid #e8e8e8;
   box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.09);
+  color: #333;
+  padding: 35px 30px 30px 25px;
+  text-align: left;
+}
+.full-pop-wrap .class-wrap .class-box:hover {
+  background: #108eff;
+}
+.full-pop-wrap .class-wrap .class-box:hover span {
+  border-color: #fff;
+  color: #fff;
+}
+.full-pop-wrap .class-wrap .class-box:hover .class-tit {
+  color: #fff;
+}
+.full-pop-wrap .class-wrap .class-box:hover em {
+  color: #fff;
+}
+.full-pop-wrap .class-wrap .class-box:hover em::before {
+  background: url(../../images/common/ico_person2_hover.png) no-repeat center;
+}
+.full-pop-wrap .class-wrap .class-box:hover .btn-share {
+  background: url(../../images/common/ico_share2_hover.png) no-repeat center;
+}
+.full-pop-wrap .class-wrap .class-box a {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.full-pop-wrap .class-wrap .class-box a div span {
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2px 10px;
+}
+.full-pop-wrap .class-wrap .class-box a div .class-tit {
+  padding: 15px 0 35px;
+  font-size: 28px;
+  font-weight: 800;
+  font-family: "GmarketSans";
+  color: #108eff;
+}
+.full-pop-wrap .class-wrap .class-box a div em {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.full-pop-wrap .class-wrap .class-box a div em::before {
+  content: "";
+  display: inline-block;
+  background: url(../../images/common/ico_person2.png) no-repeat center;
+  width: 17px;
+  height: 17px;
+  background-size: contain;
+  margin-right: 8px;
+}
+.full-pop-wrap .class-wrap .class-box .btn-share {
+  background: url(../../images/common/ico_share2.png) no-repeat center;
+  width: 19px;
+  height: 19px;
+  position: relative;
+  background-size: contain;
+}
+.full-pop-wrap .class-wrap .class-box .btn-share.active .open-select-list {
+  display: block;
+}
+.full-pop-wrap .class-wrap .class-box .open-select-list {
+  position: absolute;
+  width: 205px;
+  border: 1px solid #868686;
+  background: #fff;
+  z-index: 1;
+  top: 30px;
+  left: 15px;
+  display: none;
+  overflow: hidden;
+}
+.full-pop-wrap .class-wrap .class-box .open-select-list:hover {
+  color: #333;
+}
+.full-pop-wrap .class-wrap .class-box .open-select-list .list-tit {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: #e6e6e6;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.full-pop-wrap .class-wrap .class-box .open-select-list .list {
+  padding: 15px 25px;
+  text-align: left;
+}
+.full-pop-wrap .class-wrap .class-box .open-select-list .list li {
+  padding-bottom: 10px;
+}
+.full-pop-wrap .class-wrap .class-box .open-select-list .list li:first-child::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  display: inline-block;
+}
+.full-pop-wrap .class-wrap .class-box .open-select-list .btn-wrap {
+  display: flex;
+  padding-bottom: 15px;
+}
+.full-pop-wrap .share-wrap {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 125px;
+  border: 1px solid #ccc;
+  border-radius: 26px;
+  padding: 20px 0;
+  position: relative;
+}
+.full-pop-wrap .share-wrap li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.full-pop-wrap .share-wrap li::after {
+  content: "";
+  width: 1px;
+  height: 70px;
+  background: #ccc;
+  display: inline-block;
+  position: absolute;
+  right: 260px;
+  bottom: 20px;
+}
+.full-pop-wrap .share-wrap li:last-child::after {
+  width: 0;
+}
+.full-pop-wrap .share-wrap li .url-txt {
+  display: flex;
+  align-items: center;
+}
+.full-pop-wrap .share-wrap li .btn-copy {
+  width: 17px;
+  height: 21px;
+  background: url(../../images/common/ico_copy.png) no-repeat center;
+  display: inline-block;
+  margin-left: 10px;
+}
+.full-pop-wrap .share-wrap li .qr-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.full-pop-wrap .share-wrap li span {
+  padding: 4px 12px;
+  background: #ececec;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1390px) {
@@ -1007,6 +1170,9 @@
   }
   .t_sub01_01 .tab-menu-type01 {
     margin: 10px 0;
+  }
+  .full-pop-wrap .share-wrap li::after {
+    right: 25vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1071,5 +1237,170 @@
     width: 16px;
     height: 20px;
     background-size: contain;
+  }
+  .full-pop-page .full-pop-wrap.pop-share .pop-content {
+    padding: 35px 20px 95px;
+    text-align: center;
+  }
+  .full-pop-wrap .pop-content .pop-tit p {
+    font-size: 18px;
+  }
+  .full-pop-wrap .pop-content .pop-tit span {
+    font-size: 14px;
+    margin: 10px 0 30px;
+  }
+  .full-pop-wrap .pop-content .pop-tit:not(:first-child) {
+    padding-top: 30px;
+  }
+  .full-pop-wrap .end-day-wrap .txt {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .full-pop-wrap .end-day-wrap .txt::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url(../../images/common/ico_calendar02.png) no-repeat center;
+  }
+  .full-pop-wrap .class-wrap {
+    flex-direction: column;
+  }
+  .full-pop-wrap .class-wrap .class-box {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    padding: 20px 15px;
+  }
+  .full-pop-wrap .class-wrap .class-box:hover em {
+    color: #fff;
+  }
+  .full-pop-wrap .class-wrap .class-box:hover em::before {
+    background: url(../../images/common/ico_person2_hover.png) no-repeat center;
+    background-size: contain;
+  }
+  .full-pop-wrap .class-wrap .class-box:hover .btn-share {
+    background: url(../../images/common/ico_share2_hover.png) no-repeat center;
+    background-size: contain;
+  }
+  .full-pop-wrap .class-wrap .class-box a {
+    align-items: center;
+  }
+  .full-pop-wrap .class-wrap .class-box a div span {
+    font-size: 18px;
+    font-weight: 800;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    font-family: "GmarketSans";
+    color: #108eff;
+  }
+  .full-pop-wrap .class-wrap .class-box a div .class-tit {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 800;
+    display: inline;
+  }
+  .full-pop-wrap .class-wrap .class-box a div em {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .full-pop-wrap .class-wrap .class-box a div em::before {
+    width: 13px;
+    height: 13px;
+    background-size: contain;
+    margin-right: 8px;
+  }
+  .full-pop-wrap .class-wrap .class-box .btn-share {
+    width: 21px;
+    height: 21px;
+    position: relative;
+    background-size: contain;
+  }
+  .full-pop-wrap .class-wrap .class-box .btn-share.active .open-select-list {
+    display: block;
+  }
+  .full-pop-wrap .class-wrap .class-box .open-select-list {
+    position: absolute;
+    width: 205px;
+    border: 1px solid #868686;
+    background: #fff;
+    z-index: 1;
+    top: 30px;
+    left: 15px;
+    display: none;
+    overflow: hidden;
+  }
+  .full-pop-wrap .class-wrap .class-box .open-select-list:hover {
+    color: #333;
+  }
+  .full-pop-wrap .class-wrap .class-box .open-select-list .list-tit {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #e6e6e6;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .full-pop-wrap .class-wrap .class-box .open-select-list .list {
+    padding: 15px 25px;
+    text-align: left;
+  }
+  .full-pop-wrap .class-wrap .class-box .open-select-list .list li {
+    padding-bottom: 10px;
+  }
+  .full-pop-wrap .class-wrap .class-box .open-select-list .list li:first-child::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    display: inline-block;
+  }
+  .full-pop-wrap .class-wrap .class-box .open-select-list .btn-wrap {
+    display: flex;
+    padding-bottom: 15px;
+  }
+  .full-pop-wrap .share-wrap {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 125px;
+    border: 0;
+    padding: 20px 0;
+    position: relative;
+  }
+  .full-pop-wrap .share-wrap li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .full-pop-wrap .share-wrap li::after {
+    width: 0;
+  }
+  .full-pop-wrap .share-wrap li:last-child::after {
+    width: 0;
+  }
+  .full-pop-wrap .share-wrap li .url-txt {
+    display: none;
+  }
+  .full-pop-wrap .share-wrap li .btn-copy {
+    width: 17px;
+    height: 21px;
+    background: url(../../images/common/ico_copy.png) no-repeat center;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .full-pop-wrap .share-wrap li .qr-img {
+    display: none;
+  }
+  .full-pop-wrap .share-wrap li span {
+    padding: 4px 12px;
+    background: transparent;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 500;
   }
 }
