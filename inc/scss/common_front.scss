@@ -41,8 +41,10 @@
 
 // common
 .inner {
-  width: 1240px;
-  margin: auto;
+	width: 100%;
+	max-width: 1280px;
+	padding: 0 20px;
+	box-sizing: border-box;
 }
 .h100 {
 	position: relative;
