@@ -707,11 +707,6 @@
 	* 100% 보다 더 크게 적용 하고 싶으면 return 부분을 수정하면됨.
 	* 참고사이트 http://sassbreak.com/viewport-relative-headings-with-sass/
 	*/
-.inner {
-  width: 1240px;
-  margin: auto;
-}
-
 .login-cnt {
   margin: 0 auto;
   text-align: center;
@@ -900,13 +895,74 @@
   color: #108eff;
   margin-left: 10px;
 }
+.t_sub01_01 .dim {
+  z-index: 4;
+}
 
-.full-pop-page .full-pop-wrap .pop-wrap {
+.full-pop-page .full-pop-wrap.pop-share .pop-content {
+  padding: 60px 0 45px;
+  text-align: center;
+}
+.full-pop-page .full-pop-wrap {
   display: block;
   max-width: 895px;
-  height: 830px;
   margin: 0 auto;
+}
+.full-pop-page .full-pop-wrap .pop-wrap {
+  display: block;
+  width: 100%;
+  height: 830px;
   box-sizing: border-box;
+  position: inherit;
+}
+.full-pop-page .full-pop-wrap .pop-content .pop-tit p {
+  font-size: 24px;
+  font-weight: 700;
+}
+.full-pop-page .full-pop-wrap .pop-content .pop-tit span {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 20px 0 45px;
+  display: block;
+}
+.full-pop-page .full-pop-wrap .pop-content .end-day-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full-pop-page .full-pop-wrap .pop-content .end-day-wrap .txt {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+.full-pop-page .full-pop-wrap .pop-content .end-day-wrap .txt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: url(../../images/common/ico_calendar02.png) no-repeat center;
+}
+.full-pop-page .full-pop-wrap .pop-content .date-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 10px;
+}
+.full-pop-page .full-pop-wrap .pop-content .class-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25vw;
+}
+.full-pop-page .full-pop-wrap .pop-content .class-wrap .class-box {
+  width: 260px;
+  height: 190px;
+  border-radius: 25px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.09);
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1390px) {

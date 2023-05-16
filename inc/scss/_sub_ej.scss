@@ -2,15 +2,9 @@
 @import "_mixin.scss";
 @import "_setting.scss";
 
-// common
-.inner {
-	width: 1240px;
-	margin: auto;
-}
+
 
 //사용자 로그인
-
-
 .login-cnt {
 	margin: 0 auto;
 	text-align: center;
@@ -243,17 +237,78 @@
 			}
 		}
 	}
+	.dim {
+		z-index: 4;
+	}
 }
 
 //풀팝업 형태
 .full-pop-page {
+	.full-pop-wrap.pop-share {
+		.pop-content {
+			padding: 60px 0 45px;
+			text-align: center;
+		}
+	}
 	.full-pop-wrap {
+		display: block;
+		max-width: 895px;
+		margin: 0 auto;
+		
 		.pop-wrap {
 			display: block;
-			max-width: 895px;
+			width: 100%;
 			height: 830px;
-			margin: 0 auto;
 			box-sizing: border-box;
+			position: inherit;
+		}
+
+		.pop-content {
+			.pop-tit {
+				p {
+					@include font(24px, 700);
+				}
+				span {
+					@include font(16px, 500);
+					margin: 20px 0 45px;
+					display: block;
+				}
+			}
+			.end-day-wrap {
+				@include layout-center-center;
+				.txt {
+					@include font(18px, 600);
+					margin-right: 20px;
+					&::before {
+						content: '';
+						display: inline-block;
+						width: 20px;
+						height: 20px;
+						margin-right: 10px;
+						background: url(../../images/common/ico_calendar02.png) no-repeat center;
+
+					}
+				}
+			}
+			.date-wrap {
+				@include layout-center-center;
+				padding: 20px 0;
+				gap: 10px;
+			}
+
+			.class-wrap {
+				@include layout-center-center;
+				gap: 1.25vw;
+
+				.class-box {
+					width: 260px;
+					height: 190px;
+					border-radius: 25px;
+					background: #fff;
+					border: 1px solid #e8e8e8;
+					box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.09);
+				}
+			}
 		}
 	}
 }
