@@ -322,7 +322,9 @@
           height: 386px;
         }
       }
-      
+      &.h300 {
+        height: 300px;
+      }
       &.type02 {
         @include layout-justify-start;
         width: 100%;
@@ -516,6 +518,7 @@
       }
       .td {
         height: 100%;
+        min-height: 264px;
       }
     }
     .num {
@@ -738,9 +741,7 @@
           margin-bottom: 10px;
           th, td {
             padding: 14px 2px;
-            &.a-left {
-              padding-left: 10px;
-            }
+            
           }
         }
       }
@@ -765,6 +766,14 @@
           }
         }
       }
+      table {
+        td {
+          &.a-left {
+            padding-left: 10px;
+          }
+        }
+        
+      }
     }
     .que-tit {
       font-size: 15px;
@@ -784,6 +793,11 @@
     .w990 {
       table {
         width: 990px;
+      }
+    }
+    .w340 {
+      table {
+        width: 340px;
       }
     }
     .box {
@@ -812,7 +826,7 @@
     .table-wrap {
       &.type01 {
         th, td {
-          padding: 16px 8px;
+          padding: 16px 5px;
         }
       }
       .answer {
@@ -872,6 +886,11 @@
         border-top: 1px solid #757575;
         .th {
           display: inline-flex;
+        }
+      }
+      .col {
+        .td {
+          min-height: auto;
         }
       }
     }
