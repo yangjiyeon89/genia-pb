@@ -58,7 +58,10 @@
 // 평가 응시 화면
 .exam-wrap {
   width: 100%;
-  background-color: #fafcff;
+  background-color: #f8f8f8;
+  &.type01 {
+    background-color: #fafcff;
+  }
   .exam-top {
 		width: 100%;
     height: 70px;
@@ -98,9 +101,10 @@
     @include layout-center-center;
     width: 100%;
     max-width: 1280px;
-    padding: 0 20px;
+    padding: 30px 20px;
     margin: 0 auto;
     height: calc(100vh - 184px);
+    box-sizing: border-box;
   }
   .exam-tit-wrap {
     @include layout-center-center;
@@ -134,6 +138,97 @@
     .desc {
       @include font(30px, 500);
       margin-top: 100px;
+    }
+  }
+  .exam-que-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+  }
+  .time-wrap {
+    @include layout-center;
+    gap: 8px;
+    padding: 30px 30px 0 30px;
+    .clock {
+      width: 17px;
+      height: 17px;
+      background-image: url(../../images/common/ico_clock.png);
+    }
+    span {
+      font-weight: 500;
+    }
+  }
+  .exam-swiper-wrap {
+    width: 100%;
+    height: calc(100% - 50px);
+    box-sizing: border-box;
+  }
+  .question-swiper {
+    position: relative;
+    height: 100%;
+    .temp-box {
+      @include layout-center-center;
+      width: 100%;
+      height: calc(100% - 80px);
+      img {
+        width: 80%;
+        max-width: 480px;
+        object-fit: contain;
+      }
+    }
+    .exam-que-answer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      border-top: 1px solid #dcdcdc;
+      box-sizing: border-box;
+      .input-wrap {
+        width: 500px;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        input {
+          width: 100%;
+        }
+      }
+      .btn-wrap:nth-child(1) {
+        position: absolute;
+        top: 17px;
+        left: 50%;
+        transform: translate(-50%);
+        gap: 20px;
+      }
+      .btn-type02 {
+        position: absolute;
+        top: 12px;
+        right: 30px;
+        &.blue {
+          left: 30px;
+        }
+      }
+    }
+    .swiper-button-next, .swiper-button-prev {
+      top: 45%;
+      width: 17px;
+      height: 31px;
+      background: url(../../images/common/ico_swiper_arrow.png) no-repeat center;
+      background-size: contain;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: 30px;
+      transform: rotate(-180deg);
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      right: 30px;
+    }
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+      display: none;
     }
   }
 }
@@ -204,7 +299,6 @@
 
   // 평가 응시 화면
   .exam-wrap {
-    height: calc(100vh - 50px);
     .exam-top {
       height: 60px;
       .txt {
@@ -218,6 +312,10 @@
       .btn-close {
         display: none;
       }
+    }
+    .exam-cnt {
+      height: calc(100vh - 110px);
+      padding: 20px;
     }
     .exam-tit-wrap {
       .tit-wrap {
@@ -248,6 +346,54 @@
       .desc {
         font-size: 18px;
         margin-top: 60px;
+      }
+    }
+    .time-wrap {
+      padding: 15px 10px 0 10px;
+    }
+    .exam-swiper-wrap {
+      height: calc(100% - 35px);
+    }
+    .question-swiper {
+      .temp-box {
+        height: calc(100% - 131px);
+      }
+      .exam-que-answer {
+        @include layout-center-center;
+        flex-direction: column;
+        height: auto;
+        .input-wrap {
+          width: 100%;
+          position: initial;
+          transform: initial;
+          padding: 10px;
+          border-bottom: 1px solid #dcdcdc;
+        }
+        .btn-wrap:nth-child(1) { 
+          position: initial;
+          transform: initial;
+          width: 100%;
+          padding: 10px;
+          border-bottom: 1px solid #dcdcdc;
+        }
+        .btn-wrap:nth-child(2) {
+          width: 100%;
+          padding: 10px;
+        } 
+        .btn-type02 {
+          position: initial;
+          height: 50px;
+        }
+      }
+      .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        left: 10px;
+      }
+      .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        right: 10px;
+      }
+      .swiper-button-next, .swiper-button-prev {
+        width: 10px;
+        height: 20px;
       }
     }
   }

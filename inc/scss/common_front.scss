@@ -512,6 +512,14 @@
 		background-color: $color-main-blue;
 		color: #fff;
 	}
+	&.correct {
+		background-color: $color-main-blue;
+		color: #fff;
+	}
+	&.incorrect {
+		background-color: #ff0808;
+		color: #fff;
+	}
 }
 .btn-line {
 	min-width: 36px;
@@ -1576,6 +1584,25 @@ input[type="checkbox"] {
     .scroll-inner {
       max-height: 420px;
     }
+		.table-wrap {
+			&.type02 {
+				th {
+					position: relative;
+				}
+				tr {
+					&.correct {
+						th {
+							background: url(../../images/common/ico_correct.png) center no-repeat;
+						}
+					}
+					&.incorrect {
+						th {
+							background: url(../../images/common/ico_incorrect.png) center no-repeat;
+						}
+					}
+				}
+			}
+		}
   }
 }
 
