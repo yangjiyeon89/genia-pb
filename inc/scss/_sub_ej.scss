@@ -9,13 +9,7 @@
 }
 
 //사용자 로그인
-.front-login {
-	.container {
-		.inner {
-			height: 765px;
-		}
-	}
-}
+
 
 .login-cnt {
 	margin: 0 auto;
@@ -224,6 +218,7 @@
 	}
 }
 
+//로그인 전/후 목록
 .t_sub01_01 {
 	.class-cnt-wrap {
 		width: 100%;
@@ -246,6 +241,19 @@
 				color: $color-main-blue;
 				margin-left: 10px;
 			}
+		}
+	}
+}
+
+//풀팝업 형태
+.full-pop-page {
+	.full-pop-wrap {
+		.pop-wrap {
+			display: block;
+			max-width: 895px;
+			height: 830px;
+			margin: 0 auto;
+			box-sizing: border-box;
 		}
 	}
 }
@@ -293,12 +301,15 @@
 				padding: 0 30px;
 			}
 		}
+
 		.filter-menu {
 			top: 100px;
+
 			.scroll-inner {
 				height: calc(100vh - 100px);
 			}
 		}
+
 		.unit-tit-wrap.has-menu {
 			top: 50px;
 		}
@@ -306,6 +317,7 @@
 
 		.class-cnt-wrap {
 			padding: 60px 0 40px 0;
+
 			.unit-title {
 				display: none;
 			}
@@ -346,14 +358,13 @@
 				padding: 0 30px;
 				width: 100%;
 				height: 100%;
-				height: 590px;
 			}
 		}
 
 		.login-cnt,
 		.error-cnt,
 		.loading-cnt {
-			padding: 90px 0 160px;
+			padding: 100px 0 280px;
 		}
 
 		.login-cnt {
@@ -388,6 +399,24 @@
 				height: 50px;
 			}
 
+			.id-input {
+				&:focus {
+					&+label {
+
+						background-size: 15px 17px;
+					}
+				}
+			}
+
+			.pw-input {
+				&:focus {
+					&+label {
+						background-size: 16px 20px;
+					}
+				}
+			}
+
+
 			.id-label {
 				width: 17px;
 				height: 17px;
@@ -400,6 +429,9 @@
 				height: 20px;
 				background-size: contain;
 			}
+
+
+
 		}
 	}
 

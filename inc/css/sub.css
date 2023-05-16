@@ -736,10 +736,6 @@
   margin: auto;
 }
 
-.front-login .container .inner {
-  height: 765px;
-}
-
 .login-cnt {
   margin: 0 auto;
   text-align: center;
@@ -929,6 +925,14 @@
   margin-left: 10px;
 }
 
+.full-pop-page .full-pop-wrap .pop-wrap {
+  display: block;
+  max-width: 895px;
+  height: 830px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1390px) {
   .front-login .container .inner {
     width: 100%;
@@ -987,12 +991,11 @@
     padding: 0 30px;
     width: 100%;
     height: 100%;
-    height: 590px;
   }
   .front-login .login-cnt,
 .front-login .error-cnt,
 .front-login .loading-cnt {
-    padding: 90px 0 160px;
+    padding: 100px 0 280px;
   }
   .front-login .login-cnt .login-tit {
     display: none;
@@ -1019,6 +1022,12 @@
 .front-login .login-cnt .pw-input,
 .front-login .login-cnt .btn-login {
     height: 50px;
+  }
+  .front-login .login-cnt .id-input:focus + label {
+    background-size: 15px 17px;
+  }
+  .front-login .login-cnt .pw-input:focus + label {
+    background-size: 16px 20px;
   }
   .front-login .login-cnt .id-label {
     width: 17px;
