@@ -221,7 +221,7 @@
                     <tr>
                       <th rowspan="2" colspan="3">학번/이름</th>
                       <th rowspan="2" class="slash"><span>정답율</span>성취율</th>
-                      <td><button type="button" class="q-btn">Q1</button></td>
+                      <td><button type="button" class="q-btn" data-idx="0">Q1</button></td>
                       <td><button type="button" class="q-btn">Q2</button></td>
                       <td><button type="button" class="q-btn">Q3</button></td>
                       <td><button type="button" class="q-btn">Q4</button></td>
@@ -333,6 +333,7 @@
                       <td>1</td>
                       <td>
                         <button type="button" class="pop-btn" data-pop="">김천재</button>
+                        <!-- t_m_report_view01_pop.html 팝업 노출 -->
                       </td>
                       <td>
                         <span class="badge-color color06"></span>
@@ -594,102 +595,104 @@
                 </table>
               </div>
             </div>
-            <div class="title type02">
-              <p class="tit">응답 분포</p>
-            </div>
-            <div class="justify-box m-box">
-              <div class="box w49">
-                <div class="scroll-inner type02">
-                  <div class="table-wrap type01 style01">
-                    <table>
-                      <colgroup>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                      </colgroup>
-                      <thead>
-                        <tr>
-                          <th>답안</th>
-                          <th>1번</th>
-                          <th>2번</th>
-                          <th>3번</th>
-                          <th>4번</th>
-                          <th class="fc-blue">5번(정답)</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>응답빈도</td>
-                          <td>10%</td>
-                          <td>10%</td>
-                          <td>10%</td>
-                          <td>10%</td>
-                          <td class="fc-blue">35%</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="table-wrap type01">
-                    <table>
-                      <colgroup>
-                        <col width="18%;">
-                        <col width="15%">
-                        <col width="*">
-                      </colgroup>
-                      <thead>
-                        <tr>
-                          <th>답안</th>
-                          <th>학생 수<br>(총 20명)</th>
-                          <th>학생 명단</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>1번</td>
-                          <td>2명</td>
-                          <td class="name">명승우  하영미</td>
-                        </tr>
-                        <tr>
-                          <td>2번</td>
-                          <td>2명</td>
-                          <td class="name">아혁기  소은지  조수명</td>
-                        </tr>
-                        <tr>
-                          <td>3번</td>
-                          <td>2명</td>
-                          <td class="name">사피우  지수아  조수명</td>
-                        </tr>
-                        <tr>
-                          <td>4번</td>
-                          <td>2명</td>
-                          <td class="name">차형진  타소명  소은지  도영지  명승우</td>
-                        </tr>
-                        <tr class="answer">
-                          <td class="fc-blue">5번(정답)</td>
-                          <td class="fc-blue">7명</td>
-                          <td class="name">김천재  나상수  다지은  라미영  마보영  바석표 사지혁</td>
-                        </tr>
-                      </tbody>
-                    </table>
+            <div class="hide-cnt" data-idx="0">
+              <div class="title type02">
+                <p class="tit">응답 분포</p>
+              </div>
+              <div class="justify-box m-box">
+                <div class="box w49">
+                  <div class="scroll-inner type02">
+                    <div class="table-wrap type01 style01">
+                      <table>
+                        <colgroup>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>답안</th>
+                            <th>1번</th>
+                            <th>2번</th>
+                            <th>3번</th>
+                            <th>4번</th>
+                            <th class="fc-blue">5번(정답)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>응답빈도</td>
+                            <td>10%</td>
+                            <td>10%</td>
+                            <td>10%</td>
+                            <td>10%</td>
+                            <td class="fc-blue">35%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="table-wrap type01">
+                      <table>
+                        <colgroup>
+                          <col width="18%;">
+                          <col width="15%">
+                          <col width="*">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>답안</th>
+                            <th>학생 수<br>(총 20명)</th>
+                            <th>학생 명단</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1번</td>
+                            <td>2명</td>
+                            <td class="name">명승우  하영미</td>
+                          </tr>
+                          <tr>
+                            <td>2번</td>
+                            <td>2명</td>
+                            <td class="name">아혁기  소은지  조수명</td>
+                          </tr>
+                          <tr>
+                            <td>3번</td>
+                            <td>2명</td>
+                            <td class="name">사피우  지수아  조수명</td>
+                          </tr>
+                          <tr>
+                            <td>4번</td>
+                            <td>2명</td>
+                            <td class="name">차형진  타소명  소은지  도영지  명승우</td>
+                          </tr>
+                          <tr class="answer">
+                            <td class="fc-blue">5번(정답)</td>
+                            <td class="fc-blue">7명</td>
+                            <td class="name">김천재  나상수  다지은  라미영  마보영  바석표 사지혁</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="box w49">
-                <div class="scroll-inner type02">
-                  <p class="que-tit">1. 현아는 스웨덴 동전 크로나를 가지고 있습니다. 크로나가 우리나라 돈으로 135원이면 크로나는 우리나라 돈으로 얼마일까요?</p>
-                  <div class="que-img">
-                    <img src="../images/sub/sample_que_02.png" alt="Q1">
+                <div class="box w49">
+                  <div class="scroll-inner type02">
+                    <p class="que-tit">1. 현아는 스웨덴 동전 크로나를 가지고 있습니다. 크로나가 우리나라 돈으로 135원이면 크로나는 우리나라 돈으로 얼마일까요?</p>
+                    <div class="que-img">
+                      <img src="../images/sub/sample_que_02.png" alt="Q1">
+                    </div>
+                    <ul class="choice-list">
+                      <ol><em>①</em><span>113원</span></ol>
+                      <ol><em>②</em><span>135원</span></ol>
+                      <ol><em>③</em><span>237원</span></ol>
+                      <ol class="answer"><em>④</em><span>261원</span></ol>
+                      <ol><em>⑤</em><span>270원</span></ol>
+                    </ul>
                   </div>
-                  <ul class="choice-list">
-                    <ol><em>①</em><span>113원</span></ol>
-                    <ol><em>②</em><span>135원</span></ol>
-                    <ol><em>③</em><span>237원</span></ol>
-                    <ol class="answer"><em>④</em><span>261원</span></ol>
-                    <ol><em>⑤</em><span>270원</span></ol>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -931,7 +934,21 @@
     $(document).ready(function(){
       achieveChartRender();
       applicantChartRender();
-    })
+    });
+
+    // 정답률 클릭
+    // q-btn class 의 data-idx 값과 hide-cnt 의 data-idx 값 통일
+    let qBtn = $('.q-btn');
+    function hideCntFunc(){    
+
+      let _this = $(this);
+      let _idx = _this.data("idx");
+
+      $('.hide-cnt').hide();
+      $(".hide-cnt[data-idx='" + _idx + "']").show();
+    }
+
+    qBtn.on("click", hideCntFunc);
   });
 </script>
 </html>
