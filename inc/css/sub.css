@@ -528,14 +528,6 @@
 .stu-view .mt100 {
   margin-top: 100px;
 }
-.stu-view .report-cnt .chart-wrap {
-  overflow: inherit;
-  width: 190px;
-  height: 190px;
-}
-.stu-view .report-cnt .chart-wrap canvas {
-  top: 0;
-}
 .stu-view .box {
   position: relative;
 }
@@ -553,6 +545,46 @@
   color: #108eff;
   font-size: 18px;
   font-weight: 600;
+}
+.stu-view .tbl-report.type02 {
+  display: flex;
+  border-top: 1px solid #757575;
+}
+.stu-view .tbl-report.type02 .col-wrap {
+  display: flex;
+  width: 100%;
+}
+.stu-view .tbl-report.type02 .col {
+  flex-direction: column;
+}
+.stu-view .tbl-report.type02 .col .th, .stu-view .tbl-report.type02 .col .td {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 5px;
+  word-break: break-all;
+}
+.stu-view .tbl-report.type02 .col .th {
+  border-bottom: 1px solid #e8e8e8;
+}
+.stu-view .tbl-report.type02 .col .td {
+  height: 100%;
+}
+.stu-view .tbl-report.type02 .num {
+  flex: none;
+  width: 9%;
+}
+.stu-view .tbl-report.type02 .num .th, .stu-view .tbl-report.type02 .num .td {
+  font-weight: 500;
+}
+.stu-view .tbl-report.type02 .que {
+  width: 50%;
+}
+.stu-view .tbl-report.type02 .que .th, .stu-view .tbl-report.type02 .que .td {
+  border-left: 1px solid #e8e8e8;
+}
+.stu-view .tbl-report.type02 img {
+  max-width: 100%;
 }
 
 @media screen and (max-width: 1023px) {
@@ -744,8 +776,8 @@
   .stu-view .w990 table {
     width: 990px;
   }
-  .stu-view .w650 table {
-    width: 650px;
+  .stu-view .box.w650 .table-wrap {
+    margin-bottom: 0;
   }
   .stu-view .mt100 {
     margin-top: 25px;
@@ -790,14 +822,20 @@
   }
   .stu-view .report-cnt .box.w650 .scroll-inner {
     padding: 10px;
-  }
-  .stu-view .report-cnt .chart-wrap {
-    width: 130px;
-    height: 130px;
+    max-height: 339px;
   }
   .stu-view .sub-title {
     margin: 30px 0 20px;
     font-size: 16px;
+  }
+  .stu-view .tbl-report.type02 .col-wrap {
+    flex-direction: column;
+  }
+  .stu-view .tbl-report.type02 .num {
+    width: 60px;
+  }
+  .stu-view .tbl-report.type02 .que {
+    width: 100%;
   }
   .report-pop .inner {
     padding-top: 116px;

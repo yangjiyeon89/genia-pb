@@ -403,8 +403,7 @@
 }
 
 // 학생 진단평가 리포트
-.stu-view {
-  
+.stu-view {  
   .table-wrap {
     border-top: 0;
     background-color: transparent;
@@ -472,16 +471,6 @@
   .mt100 {
     margin-top: 100px;
   }
-  .report-cnt {
-    .chart-wrap {
-      overflow: inherit;
-      width: 190px;
-      height: 190px;
-      canvas {
-        top: 0;
-      }
-    }
-  }
   .box {
     position: relative;
     &.h240 {
@@ -496,6 +485,44 @@
         color: #108eff;
         @include font(18px, 600)
       }
+    }
+  }
+  .tbl-report.type02 {
+    display: flex;
+    border-top: 1px solid #757575;
+    .col-wrap {
+      display: flex;
+      width: 100%;
+    }
+    .col {
+      flex-direction: column;
+      .th, .td {
+        @include content-center-center;
+        padding: 14px 5px;
+        word-break: break-all;
+      }
+      .th {
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .td {
+        height: 100%;
+      }
+    }
+    .num {
+      flex: none;
+      width: 9%;
+      .th, .td {
+        font-weight: 500;
+      }
+    }
+    .que {
+      width: 50%;
+      .th, .td {
+        border-left: 1px solid #e8e8e8;
+      }
+    }
+    img {
+      max-width: 100%;
     }
   }
 }
@@ -725,11 +752,14 @@
         width: 990px;
       }
     }
-    .w650 {
-      table {
-        width: 650px;
+    .box {
+      &.w650 {
+        .table-wrap {
+          margin-bottom: 0;
+        }
       }
     }
+    
     .mt100 {
       margin-top: 25px;
     }
@@ -784,16 +814,25 @@
         &.w650 {
           .scroll-inner {
             padding: 10px ;
+            max-height: 339px;
           }
         }
-      }
-      .chart-wrap {
-        width: 130px;height: 130px;
       }
     }
     .sub-title {
       margin: 30px 0 20px;
       font-size: 16px;
+    }
+    .tbl-report.type02 {
+      .col-wrap {
+        flex-direction: column;
+      }
+      .num {
+        width: 60px;
+      }
+      .que {
+        width: 100%;
+      }
     }
   }
   .report-pop {
