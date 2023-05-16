@@ -308,8 +308,11 @@
       border-radius: 17px;
       border: 1px solid #e8e8e8;
       &.w285 { width: 285px; height: 170px; }
+      &.w26 {width: 26%;height: 239px;}
+      &.w46 {width: 46%;height: 239px;}
       &.w49 { width: 49%; height: 428px; }
       &.w75 { width: 75%; height: 358px;}
+      
       &.type02 {
         @include layout-justify-start;
         width: 100%;
@@ -385,6 +388,17 @@
   .que-tit {
     margin-bottom: 20px;
     @include font(18px, 500);
+  }
+  .q-btn {
+    &:hover {
+      color: #108eff;
+    }
+  }
+  .hide-cnt {
+    display: none;
+    &.on {
+      display: block;
+    }
   }
 }
 
@@ -561,6 +575,7 @@
             margin-top: 20px;
           }
         }
+        
       }
     }
     .table-wrap {
