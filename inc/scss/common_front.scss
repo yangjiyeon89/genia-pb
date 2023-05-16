@@ -426,7 +426,7 @@
 	}
 }
 .btn-type02 {
-	width: 255px;
+	width: 150px;
 	height: 55px;
 	border-radius: 13px;
 	color: #fff;
@@ -436,6 +436,9 @@
 		width: 99px;
 		height: 35px;
 		@include font(15px, 500);
+	}
+	&.blue {
+		background-color: $color-main-blue;
 	}
 }
 .btn-state {
@@ -499,12 +502,12 @@
 	}
 }
 .btn-number {
-	width: 30px;
-	height: 30px;
+	width: 45px;
+	height: 45px;
 	border-radius: 50%;
 	background-color: #ececec;
 	color: #787878;
-	@include font(18px, 500);
+	@include font(20px, 500);
 	&.active {
 		background-color: $color-main-blue;
 		color: #fff;
@@ -1552,6 +1555,28 @@ input[type="checkbox"] {
 			}
 		}
 	}
+
+	&.que-type02 {
+    .pop-header {
+      background-color: #fff;
+      padding: 0;
+      height: 40px;
+      .pop-close {
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        width: 16px;
+        height: 16px;
+        background: url(../../images/common/ico_pop_close_type02.png) no-repeat;
+      }
+    }
+    .pop-content {
+      padding: 0;
+    }
+    .scroll-inner {
+      max-height: 420px;
+    }
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -2236,6 +2261,18 @@ input[type="checkbox"] {
 		&.que-type {
 			.pop-inner {
 				width: 100%;
+			}
+		}
+		&.que-type02 {
+			.table-wrap {
+				&.type02 {
+
+					th, td {
+						padding: 20px;
+						box-sizing: border-box;
+						white-space: nowrap;
+					}
+				}
 			}
 		}
 	}
