@@ -2,7 +2,14 @@
 @import "_mixin.scss";
 @import "_setting.scss";
 
-
+// common
+.container.report {
+  > .inner {
+    max-width: 1280px;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
 
 // 리포트 리스트
 .report-list-wrap {
@@ -183,26 +190,7 @@
   }
   .report-top {
     margin: 50px auto 20px;
-    .title-wrap {
-      @include layout-justify-center;
-      padding-bottom: 17px;
-      border-bottom: 1px solid #757575;
-      .title {
-        position: relative;
-        @include font(26px, 700);
-      }
-      .prev-btn {
-        display: inline-block;
-        width: 12px;
-        height: 18px;
-        margin-right: 10px;
-        background: url(../../images/common/ico_arrow_left.png) center no-repeat;
-      }
-      .btn-wrap {
-        @include content-center-center;
-        gap: 20px;
-      }
-    }
+    
     .user-wrap {
       width: 100%;
       text-align: right;
@@ -280,9 +268,6 @@
           .scroll-inner {
             height: 420px;
           }
-        }
-        .percent {
-          border-left: 0;
         }
       }
       &.sec02 {
@@ -413,10 +398,10 @@
 
 
 @media screen and (max-width: 1023px) {
-  // 리포트
-  .container.report {
+
+  .container.report.fix-h {
     .inner {
-      padding: 0 20px;
+      padding-top: 70px;
     }
   }
 
@@ -503,6 +488,62 @@
     top: inherit;
     bottom: -70px;
     left: 0;
+  }
+
+  // 리포트 상세
+  .report-view-wrap {
+    .report-top {
+      margin: 0;
+    }
+    .report-cnt {
+      .title {
+        margin-bottom: 20px;
+        font-size: 18px;
+        &::before {
+          top: 5px;
+        }
+      }
+      .justify-box {
+        flex-direction: column;
+        &.sec02 {
+          margin: 30px 0 20px;
+          align-items: flex-start;
+          .report-title {
+            font-size: 16px;
+            em {
+              display: block;
+              margin-left: 0;
+              margin-top: 5px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .col-box {
+        width: 100%;
+        gap: 10px;
+        .box {
+          height: 140px;
+        }
+      }
+      .box {
+        &.w75 {
+          width: 100%;
+          height: auto;
+          border: 0;
+          box-shadow: none;
+          border-radius: 0;
+          .scroll-inner {
+            padding: 0;
+          }
+        }
+      }
+    }
+    .table-wrap {
+      &.type01.style01 {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 
