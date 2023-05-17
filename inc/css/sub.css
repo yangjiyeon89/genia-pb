@@ -411,6 +411,13 @@
   position: absolute;
   top: -50px;
 }
+.report-view-wrap .report-cnt .chart-wrap.type02 {
+  width: 190px;
+  height: 190px;
+}
+.report-view-wrap .report-cnt .chart-wrap.type02 canvas {
+  top: 0;
+}
 .report-view-wrap .report-cnt .badge-color {
   display: block;
   margin: 0 auto 3px;
@@ -516,12 +523,13 @@
   font-weight: 600;
 }
 .stu-view .title p {
-  margin-top: 5px;
+  margin-top: 40px;
   font-size: 22px;
   font-weight: 500;
+  text-indent: -25px;
 }
 .stu-view .title em {
-  margin-left: 10px;
+  margin-left: 30px;
   color: #9e9e9e;
   font-size: 18px;
   font-weight: 400;
@@ -537,8 +545,14 @@
 .stu-view .box {
   position: relative;
 }
-.stu-view .box.h240 {
-  height: 240px;
+.stu-view .box.h480 {
+  height: 480px;
+}
+.stu-view .box.h480 img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
 }
 .stu-view .box .text-box {
   position: absolute;
@@ -758,6 +772,10 @@
   .report-view-wrap .report-cnt .box.w49 + .box {
     margin-top: 20px;
   }
+  .report-view-wrap .report-cnt .chart-wrap.type02 {
+    width: 150px;
+    height: 150px;
+  }
   .report-view-wrap .table-wrap.type01 th {
     padding: 9px 5px;
   }
@@ -790,7 +808,7 @@
     width: 20px;
   }
   .report-view-wrap .table-wrap table td.a-left {
-    padding-left: 10px;
+    padding-left: 10px !important;
   }
   .report-view-wrap .que-tit {
     font-size: 15px;
@@ -810,10 +828,14 @@
   .stu-view .box.w650 .table-wrap {
     margin-bottom: 0;
   }
+  .stu-view .box.h480 {
+    height: 240px;
+  }
   .stu-view .mt100 {
     margin-top: 25px;
   }
   .stu-view .title p {
+    margin-top: 10px;
     font-size: 16px;
     text-indent: -25px;
   }
