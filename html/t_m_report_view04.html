@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common_front.css">
+  <link rel="stylesheet" href="../inc/css/sub.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div id="wrap" class="t_report">
+    <div class="header">
+      <div class="web-cnt">
+        <div class="top-nav">
+          <div class="inner">
+            <a href="javascript:;" target="_blank" class="link-nav">유치</a>
+            <a href="javascript:;" target="_blank" class="link-nav">초등</a>
+            <a href="javascript:;" target="_blank" class="link-nav">중학</a>
+            <a href="javascript:;" target="_blank" class="link-nav">고등</a>
+            <a href="javascript:;" target="_blank" class="link-nav">T셀파몰</a>
+            <a href="javascript:;" target="_blank" class="link-nav">연수원</a>
+            <a href="javascript:;" target="_blank" class="link-nav">클래스핑퐁</a>
+            <a href="javascript:;" target="_blank" class="link-nav">클래스링크</a>
+            <a href="javascript:;" target="_blank" class="link-nav">클래스아카이브</a>
+            <a href="javascript:;" class="link-nav active">지니아튜터</a>
+            <button type="button" class="btn-bookmark active">즐겨찾기 추가<i class="ic-star"></i></button>
+          </div>
+        </div>
+        <div class="inner">
+          <div class="left-wrap">
+            <div class="logo-wrap">
+              <a href="javascirpt:;" class="logo"></a>
+            </div>
+            <div class="gnb">
+              <ul class="nav">
+                <li class="nav-list">
+                  <a href="javascript:;" class="nav-item">초등</a>
+                </li>
+                <li class="nav-list">
+                  <a href="javascript:;" class="nav-item">중학</a>
+                </li>
+                <li class="nav-list">
+                  <a href="javascript:;" class="nav-item">고교</a>
+                </li>
+                <li class="nav-list">
+                  <a href="javascript:;" class="nav-item">리포트</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 로그인 전 -->
+          <div class="btn-wrap">
+            <button type="button" class="btn-login">로그인</button>
+            <button type="button" class="btn-join">회원가입</button>
+          </div>
+          <!-- 로그인 후 -->
+          <!--<div class="user-wrap">
+            <span class="user">김천재 선생님</span>
+            <div class="btn-wrap">
+              <button type="button" class="btn-login">로그아웃</button>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <div class="mo-cnt">
+        <div class="inner">
+          <div class="logo-wrap">
+            <a href="javascirpt:;" class="logo"></a>
+          </div>
+          <span class="menu">리포트</span>
+          <button type="button" class="btn-menu ui-menu-btn"></button>
+        </div>
+        <div class="gnb mobile-menu ui-menu-cnt">
+          <ul class="nav">
+            <li class="nav-list">
+              <a href="javascript:;" class="nav-item">초등</a>
+            </li>
+            <li class="nav-list">
+              <a href="javascript:;" class="nav-item">중학</a>
+            </li>
+            <li class="nav-list">
+              <a href="javascript:;" class="nav-item">고교</a>
+            </li>
+            <li class="nav-list">
+              <a href="javascript:;" class="nav-item">리포트</a>
+            </li>
+          </ul>
+          <div class="menu-logo">
+            <img src="../images/common/menu_logo.png" alt="">
+          </div>
+          <div class="btn-wrap">
+            <button type="button" class="btn-login">로그인</button>
+            <button type="button" class="btn-join">회원가입</button>
+             <!-- 로그인 후 -->
+             <!-- <button type="button" class="btn-login">로그아웃</button> -->
+          </div>
+          <div class="link-wrap">
+            <a href="javascript:;" class="link-item">공지사항</a>
+            <a href="javascript:;" class="link-item">고객센터</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container report fix-h">
+      <div class="inner">
+        <div class="report-top">
+          <div class="title-wrap">
+            <span class="title">5학년 1반 1학기 종합 리포트</span>
+            <div class="btn-wrap">
+              <button type="button" class="btn-download"></button>
+              <button type="button" class="btn-print"></button>
+            </div>
+          </div>
+          <div class="user-wrap">
+            <span class="info">천재초  ·  5학년 1반  ·  수학  ·  <em>이지니</em> 선생님</span>
+            <span class="badge">교사용</span>
+          </div>
+        </div>
+        <div class="report-cnt">
+          <span class="title">학급 성취 분석</span>
+          <div class="justify-box">
+            <div>
+              <span class="report-title">학급성취율</span>
+              <div class="box w360">
+                <canvas id="classChart"></canvas>
+              </div>
+            </div>
+            <div>
+              <span class="report-title">내용 영역별 성취율</span>
+              <div class="box w420">
+                <canvas id="contentChart" style="width: 350px; height: 350px;"></canvas>
+              </div>                
+            </div>
+            <div>
+              <span class="report-title">교과 역량별 성취율</span>
+              <div class="box w420">
+                <canvas id="subjectChart" style="width: 350px; height: 350px;"></canvas>
+              </div>
+            </div>
+          </div>
+          <span class="report-title">단원별 성취율</span>
+          <div class="justify-box">
+            <div class="table-wrap type03">
+              <div class="scroll-inner">
+                <table>
+                  <colgroup>
+                    <col width="10%">
+                    <col width="*">
+                    <col width="15%">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>단원</th>
+                      <th>단원명</th>
+                      <th>성취율</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>자연수의 혼합계산</td>
+                      <td>80%</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>자연수의 혼합계산</td>
+                      <td>65%</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>자연수의 혼합계산</td>
+                      <td>76%</td>
+                    </tr>
+                    <tr class="lowest">
+                      <td>4</td>
+                      <td>자연수의 혼합계산</td>
+                      <td>40%</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>자연수의 혼합계산</td>
+                      <td>92%</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>자연수의 혼합계산</td>
+                      <td>70%</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>자연수의 혼합계산</td>
+                      <td>51%</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>자연수의 혼합계산</td>
+                      <td>100%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div>
+              <div class="box w700">
+                <canvas id="unitChart" style="width: 600px; height: 350px;"></canvas>
+              </div>
+            </div>
+          </div>
+          <span class="report-title">성취기준별 분석</span>
+          <div class="justify-box col-type">
+            <div class="box">
+              <p class="unit-title">1단원</p>
+              <div class="scroll-inner">
+                <div class="unit">
+                  <span class="txt">6수01-07 분모가 다른 분수의 크기를 비교 할 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 70%;"></span>
+                    </div>
+                    <span class="num">70%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-06 분수를 약분, 통분 할 수 있다.</span>
+                  <div class="bar-wrap lowest">
+                    <div class="bar">
+                      <span class="percent" style="width: 44%;"></span>
+                    </div>
+                    <span class="num">44%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-05 분수의 성질을 이용하여 크기가 같은 분수를 만들 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 88%;"></span>
+                    </div>
+                    <span class="num">88%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-07 분모가 다른 분수의 크기를 비교 할 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 70%;"></span>
+                    </div>
+                    <span class="num">70%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-06 분수를 약분, 통분 할 수 있다.</span>
+                  <div class="bar-wrap lowest">
+                    <div class="bar">
+                      <span class="percent" style="width: 44%;"></span>
+                    </div>
+                    <span class="num">44%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-05 분수의 성질을 이용하여 크기가 같은 분수를 만들 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 88%;"></span>
+                    </div>
+                    <span class="num">88%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-07 분모가 다른 분수의 크기를 비교 할 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 70%;"></span>
+                    </div>
+                    <span class="num">70%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-06 분수를 약분, 통분 할 수 있다.</span>
+                  <div class="bar-wrap lowest">
+                    <div class="bar">
+                      <span class="percent" style="width: 44%;"></span>
+                    </div>
+                    <span class="num">44%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-05 분수의 성질을 이용하여 크기가 같은 분수를 만들 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 88%;"></span>
+                    </div>
+                    <span class="num">88%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <p class="unit-title">2단원</p>
+              <div class="scroll-inner">
+                <div class="unit">
+                  <span class="txt">6수01-07 분모가 다른 분수의 크기를 비교 할 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 96%;"></span>
+                    </div>
+                    <span class="num">96%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-06 분수를 약분, 통분 할 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 50%;"></span>
+                    </div>
+                    <span class="num">50%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-05 분수의 성질을 이용하여 크기가 같은 분수를 만들 수 있다.</span>
+                  <div class="bar-wrap lowest">
+                    <div class="bar">
+                      <span class="percent" style="width: 30%;"></span>
+                    </div>
+                    <span class="num">30%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <p class="unit-title">3단원</p>
+              <div class="scroll-inner">
+                <div class="unit">
+                  <span class="txt">6수01-07 분모가 다른 분수의 크기를 비교 할 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 70%;"></span>
+                    </div>
+                    <span class="num">70%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-06 분수를 약분, 통분 할 수 있다.</span>
+                  <div class="bar-wrap lowest">
+                    <div class="bar">
+                      <span class="percent" style="width: 44%;"></span>
+                    </div>
+                    <span class="num">44%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-05 분수의 성질을 이용하여 크기가 같은 분수를 만들 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 88%;"></span>
+                    </div>
+                    <span class="num">88%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <p class="unit-title">4단원</p>
+              <div class="scroll-inner">
+                <div class="unit">
+                  <span class="txt">6수01-07 분모가 다른 분수의 크기를 비교 할 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 70%;"></span>
+                    </div>
+                    <span class="num">70%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-06 분수를 약분, 통분 할 수 있다.</span>
+                  <div class="bar-wrap lowest">
+                    <div class="bar">
+                      <span class="percent" style="width: 44%;"></span>
+                    </div>
+                    <span class="num">44%</span>
+                  </div>
+                </div>
+                <div class="unit">
+                  <span class="txt">6수01-05 분수의 성질을 이용하여 크기가 같은 분수를 만들 수 있다.</span>
+                  <div class="bar-wrap">
+                    <div class="bar">
+                      <span class="percent" style="width: 88%;"></span>
+                    </div>
+                    <span class="num">88%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="ft-top">
+        <div class="left-area">
+          <div class="inner">
+            고객센터 1577-7609<span>(평일 09:00~17:30)</span>
+          </div>
+        </div>
+        <div class="right-area-wrap">
+          <div class="inner">
+            <div class="right-area">
+              <div class="guide-link">
+                <span class="first"><a href="javascript:;">이용안내</a></span>
+                <span><a href="javascript:;">자주 묻는 질문</a></span>
+                <span><a href="javascript:;">1:1 문의</a></span>
+              </div>
+              <ul class="sns-link">
+                <li><a href="javascript:;"><img src="../images/common/ico_sns_type04.png" alt=""></a></li>
+                <li><a href="javascript:;"><img src="../images/common/ico_sns_type01.png" alt=""></a></li>
+                <li><a href="javascript:;"><img src="../images/common/ico_sns_type02.png" alt=""></a></li>
+                <li><a href="javascript:;"><img src="../images/common/ico_sns_type03.png" alt=""></a></li>
+              </ul>
+            </div>
+            <div class="top-area">
+              <div class="inner">
+                <div class="guide-link">
+                  <div>
+                    <span class="first"><a href="javascript:;">천재교육</a></span>
+                    <span><a href="javascript:;">천재교과서</a></span>
+                    <span><a href="javascript:;">이용약관</a></span>
+                  </div>
+                  <div>
+                    <span><a href="javascript:;"><em>개인정보처리방침</em></a></span>
+                    <span><a href="javascript:;">고객센터</a></span>
+                  </div>
+                </div>
+                <div class="select-wrap">
+                  <button type="button" class="select-btn">
+                    <span>패밀리 사이트</span>
+                  </button>
+                  <ul class="select-list">
+                    <li class="select-item"><a href="javascript:;">천재교육</a></li>
+                    <li class="select-item"><a href="javascript:;"><em>밀크티 초등</em></a></li>
+                    <li class="select-item"><a href="javascript:;">밀크티 중학</a></li>
+                    <li class="select-item"><a href="javascript:;">HME 전국 해법수학 학력평가</a></li>
+                    <li class="select-item"><a href="javascript:;">천재교육 쇼핑몰</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ft-cnt">      
+        <div class="bottom-area">
+          <div class="inner">
+            <ul>
+              <li>
+                <img src="../images/common/ft_logo_type01.png" alt="">
+                <p>
+                  대표 : 강희철<br class="web-only">
+                  주소 : 서울시 금천구 가산로 9길 54<br>
+                  사업자 등록번호 : 119 - 81 - 19350<br>
+                  부가통신사업신고번호 : 016712
+                </p>
+              </li>
+              <li>
+                <img src="../images/common/ft_logo_type02.png" alt="">
+                <p>
+                  대표 : 박정과, 최돈용, 임형진<br>
+                  주소 : 서울특별시 금천구 가산디지털1로 16, 2011호(가산동)<br>
+                  사업자 등록번호 : 119 - 81 - 70643
+                </p>
+              </li>
+              <li>
+                <img src="../images/common/ft_logo_type03.png" alt="">
+                <p>
+                  인증범위 - 온라인 교육 및 학습지원 서비스 운영<br>
+                  인증기간 - 2023년 3월 25일 ~ 2026년 3월 24일
+                </p>
+                <p class="copy">COPYRIGHT© 2023 BY CHUNJAE CO.LTD ALL RIGHTS RESERVED.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dim"></div>
+  </div>
+</body>
+<script>
+  $(function () {
+    // 학급성취율 차트
+    function classChartRender(){
+      let doughnutCanvas = document.getElementById("classChart").getContext('2d');
+      let gradient = doughnutCanvas.createLinearGradient(0, 0, 150, 0);
+      gradient.addColorStop(0, 'rgba(32, 139, 255, 1)');
+      gradient.addColorStop(1, 'rgba(125, 94, 255, 1)');
+      let value = 75;
+      let data = {
+        labels: ['학급성취율'],
+        datasets: [
+          {
+            label: 'dataSet',
+            data: [value, 100 - value],
+            backgroundColor: [ gradient , '#f4f4f4']
+          }
+        ]
+      }
+      new Chart(doughnutCanvas, {
+        type: 'doughnut',
+        data: data,
+        options:{
+          responsive: true,
+          cutout: '80%',
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+          },
+          hover: {
+            mode: null
+          },
+        },
+        plugins: [{
+          afterDraw: function(chart) {
+            let width = chart.width
+            let height = chart.height
+            let ctx = chart.ctx;
+            console.log(ctx);
+
+            ctx.restore();
+
+            var text = chart.config.data.datasets[0].data[0] + "%",
+              fontSize = 38;
+            ctx.font = "bold " + fontSize + "px noto Sans KR";
+            ctx.fillStyle = "#108eff";
+            textX = Math.round((width - ctx.measureText(text).width) / 2);
+            textY = height / 1.6;
+
+            ctx.fillText(text, textX, textY);
+
+            var text2 = chart.config.data.labels[0],
+              fontSize2 = 24;
+            ctx.font = "bold " + fontSize2 + "px noto Sans KR";
+            ctx.fillStyle = "#000";
+            textX = Math.round((width - ctx.measureText(text2).width) / 2);
+            textY = height / 2.2;
+
+            ctx.fillText(text2, textX, textY);
+
+            ctx.save();
+          }
+        }]
+      });
+    };
+
+    // 내용 영역별 성취율 차트
+    function contentChartRender(){
+      let radarCanvas = document.getElementById("contentChart").getContext('2d');
+      let gradient = radarCanvas.createLinearGradient(50, 0, 300, 0);
+      gradient.addColorStop(0, 'rgba(30, 139, 255, 1)');
+      gradient.addColorStop(1, 'rgba(131, 86, 255, 1)');
+      let data = {
+          labels: ['수와 연산', '도형', '측정', '자료와 가능성', '규칙성'],
+          datasets: [{
+            label: '내용 영역별 성취율',
+            data: [80, 90, 80, 75, 65],
+            backgroundColor: 'rgba(130, 88, 255, 0.1)',
+            borderColor: gradient,
+            borderWidth: 3
+          }]
+      };
+      new Chart(radarCanvas, {
+        type: 'radar',
+        data: data,
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          pointRadius : 0,
+          scales: {
+            r: {
+              min: 0,
+              max: 100,
+              stepSize: 20,
+              pointLabels: {
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                },                
+              },
+              ticks: {
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                }
+              },
+            },
+            
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false
+            }
+          }
+        }
+      });
+    };
+
+    // 교과 역량별 성취율 차트
+    function subjectChartRender(){
+      let radarCanvas = document.getElementById("subjectChart").getContext('2d');
+      let gradient = radarCanvas.createLinearGradient(50, 0, 300, 0);
+      gradient.addColorStop(0, 'rgba(30, 139, 255, 1)');
+      gradient.addColorStop(1, 'rgba(131, 86, 255, 1)');
+      let data = {
+          labels: ['추론', '창의융합', '문제해결', '정보처리', '의사소통'],
+          datasets: [{
+            label: '교과 영역별 성취율',
+            data: [70, 90, 50, 75, 45],
+            backgroundColor: 'rgba(130, 88, 255, 0.1)',
+            borderColor: gradient,
+            borderWidth: 3
+          }]
+      };
+      new Chart(radarCanvas, {
+        type: 'radar',
+        data: data,
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          pointRadius : 0,
+          scales: {
+            r: {
+              min: 0,
+              max: 100,
+              stepSize: 20,
+              pointLabels: {
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                },                
+              },
+              ticks: {
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                }
+              },
+            },
+            
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false
+            }
+          }
+        }
+      });
+    };
+
+    // 단원별 성취율 차트
+    function unitChartRender(){
+      let barCanvas = document.getElementById("unitChart").getContext('2d'); 
+      let data = {
+          labels: ['1단원', '2단원', '3단원', '4단원', '5단원', '6단원', '7단원', '8단원'],
+          datasets: [{
+            label: '성취율',
+            data: [80, 65, 76, 40, 92, 70, 51, 100],
+            backgroundColor: (ctx) => {
+              // 가장 낮은 데이터 인덱스 찾기
+              let minIndex = 0;
+              for (let i = 1; i < ctx.dataset.data.length; i++) {
+                  if (ctx.dataset.data[i] < ctx.dataset.data[minIndex]) {
+                      minIndex = i;
+                  }
+              }
+              if (ctx.dataIndex === minIndex) {
+                  return 'rgba(255, 86, 154, 1)';
+              } else {
+                  return 'rgba(16, 142, 255, 1)';
+              }
+            },
+            borderColor: 'transparent',
+            borderWidth: 3
+          }]
+      };
+      new Chart(barCanvas, {
+        type: 'bar',
+        data: data,
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          pointRadius : 0,
+          barThickness: 24,
+          borderRadius: 12,
+          scales: {
+            x: {
+                stacked: true
+            },
+            y: {
+              min: 0,
+              max: 100,
+              ticks: {
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                }
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: true
+            },
+          }
+        }
+      });
+    };
+
+    $(document).ready(function(){
+      classChartRender();
+      contentChartRender();
+      subjectChartRender();
+      unitChartRender();
+    })
+  });
+</script>
+</html>

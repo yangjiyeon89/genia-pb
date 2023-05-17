@@ -116,6 +116,12 @@ $(function () {
         _gnbMenuLink.eq(0).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
       break;
+
+      // 리포트 교사
+      case "t_report":
+        _gnbMenuLink.eq(3).find("> a").addClass("active");
+        _gnbMenuLinkMo.eq(3).find("> a").addClass("active");
+      break;
     }
   }
   $(document).ready(function () {

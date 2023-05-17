@@ -17,266 +17,268 @@
   <script src="../inc/js/common.js"></script>
 </head>
 <body>
-  <div class="dim"></div>
-  <div class="pop-wrap full-type report-pop" style="display:block;">
-    <div class="pop-inner">
-      <div class="pop-header">
-        <span>리포트</span>
-        <button type="button" class="pop-close"></button>
-      </div>
-      <div class="pop-content ">
-        <div class="inner">
-          <div class="report-view-wrap stu-view">
-            <div class="view-cnt-wrap">
-              <div class="report-top">
-                <div class="unit-tit-wrap">
-                  <div class="tit">
-                    <span class="txt"><em>수학 5-1</em> 4. 약분과 통분 단원평가 결과확인</span>
+  <div id="wrap">
+    <div class="dim"></div>
+    <div class="pop-wrap full-type report-pop" style="display:block;">
+      <div class="pop-inner">
+        <div class="pop-header">
+          <span>리포트</span>
+          <button type="button" class="pop-close"></button>
+        </div>
+        <div class="pop-content ">
+          <div class="inner">
+            <div class="report-view-wrap stu-view">
+              <div class="view-cnt-wrap">
+                <div class="report-top">
+                  <div class="unit-tit-wrap">
+                    <div class="tit">
+                      <span class="txt"><em>수학 5-1</em> 4. 약분과 통분 단원평가 결과확인</span>
+                    </div>
+                    <div class="btn-wrap">
+                      <button type="button" class="web-cnt btn-print"></button>
+                    </div>
                   </div>
-                  <div class="btn-wrap">
-                    <button type="button" class="web-cnt btn-print"></button>
+                  <div class="web-cnt user-wrap">
+                    <span class="info">천재초  ·  6학년 1반  ·  수학  ·  <em>김천재</em></span>
+                    <span class="badge">학생용</span>
                   </div>
                 </div>
-                <div class="web-cnt user-wrap">
-                  <span class="info">천재초  ·  6학년 1반  ·  수학  ·  <em>김천재</em></span>
-                  <span class="badge">학생용</span>
-                </div>
-              </div>
-              <div class="report-cnt">
-                <span class="title">종합</span>
-                <div class="justify-box">
-                  <div class="box w46 bd-n">
-                    <div class="scroll-inner type02">
-                      <div class="table-wrap type01">
+                <div class="report-cnt">
+                  <span class="title">종합</span>
+                  <div class="justify-box">
+                    <div class="box w46 bd-n">
+                      <div class="scroll-inner type02">
+                        <div class="table-wrap type01">
+                          <table>
+                            <colgroup>
+                              <col width="20%;">
+                              <col width="*">
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <th>단원</th>
+                                <td class="a-left">4. 약분과 통분</td>
+                              </tr>
+                              <tr>
+                                <th>맞은 개수</th>
+                                <td class="a-left">15 /20 문제</td>
+                              </tr>
+                              <tr>
+                                <th>학습 일시</th>
+                                <td class="a-left">22.09.13  PM 14:30~14:40</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="box w26">
+                      <div class="text-box">
+                        <p>학급 평균</p>
+                        <em>65%</em>
+                      </div>
+                      <div class="chart-wrap type02">
+                        <canvas id="achieveChart"></canvas>
+                      </div>
+                    </div>
+                    <div class="box w26">
+                      <div class="time-box">
+                        <p>8분</p>
+                        <em>학습시간</em>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="sub-title">문제별 정보</p>
+                  <div class="box bd-n w990">            
+                    <div class="table-wrap type01 style01">
+                      <div class="scroll-inner type02">
                         <table>
                           <colgroup>
-                            <col width="20%;">
-                            <col width="*">
+                            <col width="9%;">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
                           </colgroup>
+                          <thead>
+                            <tr>
+                              <td>문제</td>
+                              <td>Q1</td>
+                              <td>Q2</td>
+                              <td>Q3</td>
+                              <td>Q4</td>
+                              <td>Q5</td>
+                              <td>Q6</td>
+                              <td>Q7</td>
+                              <td>Q8</td>
+                              <td>Q9</td>
+                              <td>Q10</td>
+                              <td>Q11</td>
+                              <td>Q12</td>
+                              <td>Q13</td>
+                              <td>Q14</td>
+                              <td>Q15</td>
+                              <td>Q16</td>
+                              <td>Q17</td>
+                              <td>Q18</td>
+                              <td>Q19</td>
+                              <td>Q20</td>
+                            </tr>
+                          </thead>
                           <tbody>
                             <tr>
-                              <th>단원</th>
-                              <td class="a-left">4. 약분과 통분</td>
+                              <td>수준</td>
+                              <td>중</td>
+                              <td>하</td>
+                              <td>상</td>
+                              <td>상</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
+                              <td>중</td>
                             </tr>
                             <tr>
-                              <th>맞은 개수</th>
-                              <td class="a-left">15 /20 문제</td>
+                              <td>정답</td>
+                              <td>5</td>
+                              <td>4</td>
+                              <td>3</td>
+                              <td>3</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
+                              <td>4</td>
                             </tr>
                             <tr>
-                              <th>학습 일시</th>
-                              <td class="a-left">22.09.13  PM 14:30~14:40</td>
+                              <td>응답</td>
+                              <td>5</td>
+                              <td>3</td>
+                              <td>3</td>
+                              <td>3</td>
+                              <td>3</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                              <td>2</td>
+                            </tr>
+                            <tr>
+                              <td>결과</td>
+                              <td>O</td>
+                              <td>X</td>
+                              <td>O</td>
+                              <td>O</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
+                              <td>X</td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
                     </div>
                   </div>
-                  <div class="box w26">
-                    <div class="text-box">
-                      <p>학급 평균</p>
-                      <em>65%</em>
-                    </div>
-                    <div class="chart-wrap type02">
-                      <canvas id="achieveChart"></canvas>
+                  <span class="title mt100">GeniA AI <p>AI 학습 분석<em>내가 잘하거나 어려워하는 학습 개념을 확인할 수 있습니다. </em></p> </span>
+                  <div class="box h480">
+                    <div class="scroll-inner">
+                      <img src="../images/sub/sample_ai.png" alt="">
                     </div>
                   </div>
-                  <div class="box w26">
-                    <div class="time-box">
-                      <p>8분</p>
-                      <em>학습시간</em>
-                    </div>
-                  </div>
-                </div>
-                <p class="sub-title">문제별 정보</p>
-                <div class="box bd-n w990">            
-                  <div class="table-wrap type01 style01">
-                    <div class="scroll-inner type02">
-                      <table>
-                        <colgroup>
-                          <col width="9%;">
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                          <col>
-                        </colgroup>
-                        <thead>
-                          <tr>
-                            <td>문제</td>
-                            <td>Q1</td>
-                            <td>Q2</td>
-                            <td>Q3</td>
-                            <td>Q4</td>
-                            <td>Q5</td>
-                            <td>Q6</td>
-                            <td>Q7</td>
-                            <td>Q8</td>
-                            <td>Q9</td>
-                            <td>Q10</td>
-                            <td>Q11</td>
-                            <td>Q12</td>
-                            <td>Q13</td>
-                            <td>Q14</td>
-                            <td>Q15</td>
-                            <td>Q16</td>
-                            <td>Q17</td>
-                            <td>Q18</td>
-                            <td>Q19</td>
-                            <td>Q20</td>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>수준</td>
-                            <td>중</td>
-                            <td>하</td>
-                            <td>상</td>
-                            <td>상</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                            <td>중</td>
-                          </tr>
-                          <tr>
-                            <td>정답</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                          </tr>
-                          <tr>
-                            <td>응답</td>
-                            <td>5</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                          </tr>
-                          <tr>
-                            <td>결과</td>
-                            <td>O</td>
-                            <td>X</td>
-                            <td>O</td>
-                            <td>O</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                <span class="title mt100">GeniA AI <p>AI 학습 분석<em>내가 잘하거나 어려워하는 학습 개념을 확인할 수 있습니다. </em></p> </span>
-                <div class="box h480">
-                  <div class="scroll-inner">
-                    <img src="../images/sub/sample_ai.png" alt="">
-                  </div>
-                </div>
-                <span class="title mt100">오답노트</span>
-                <div class="box w650">
-                  <div class="table-wrap type01 style01">
-                    <div class="scroll-inner type02">
-                      <div class="tbl-report type02">
-                        <div class="col num">
-                          <div class="th">번호</div>
-                          <div class="td answer">1</div>
-                        </div>
-                        <div class="col-wrap">
-                          <div class="col que">
-                            <div class="th">문제</div>
-                            <div class="td"><img src="../images/sub/sample_que_03.png" alt=""></div>
+                  <span class="title mt100">오답노트</span>
+                  <div class="box w650">
+                    <div class="table-wrap type01 style01">
+                      <div class="scroll-inner type02">
+                        <div class="tbl-report type02">
+                          <div class="col num">
+                            <div class="th">번호</div>
+                            <div class="td answer">1</div>
                           </div>
-                          <div class="col que">
-                            <div class="th">해설</div>
-                            <div class="td">439X2=878</div>
+                          <div class="col-wrap">
+                            <div class="col que">
+                              <div class="th">문제</div>
+                              <div class="td"><img src="../images/sub/sample_que_03.png" alt=""></div>
+                            </div>
+                            <div class="col que">
+                              <div class="th">해설</div>
+                              <div class="td">439X2=878</div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="tbl-report type02">
-                        <div class="col num">
-                          <div class="th">번호</div>
-                          <div class="td answer">2</div>
-                        </div>
-                        <div class="col-wrap">
-                          <div class="col que">
-                            <div class="th">문제</div>
-                            <div class="td"><img src="../images/sub/sample_que_03.png" alt=""></div>
+                        <div class="tbl-report type02">
+                          <div class="col num">
+                            <div class="th">번호</div>
+                            <div class="td answer">2</div>
                           </div>
-                          <div class="col que">
-                            <div class="th">해설</div>
-                            <div class="td">439X2=878</div>
+                          <div class="col-wrap">
+                            <div class="col que">
+                              <div class="th">문제</div>
+                              <div class="td"><img src="../images/sub/sample_que_03.png" alt=""></div>
+                            </div>
+                            <div class="col que">
+                              <div class="th">해설</div>
+                              <div class="td">439X2=878</div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -287,7 +289,6 @@
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   </div>
