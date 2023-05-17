@@ -55,7 +55,7 @@
   }
 }
 
-// 평가 응시 화면
+// 평가 응시 화면 (회원)
 .exam-wrap {
   width: 100%;
   background-color: #f8f8f8;
@@ -220,7 +220,7 @@
       }
     }
     .swiper-button-next, .swiper-button-prev {
-      top: 45%;
+      top: 40%;
       width: 17px;
       height: 31px;
       background: url(../../images/common/ico_swiper_arrow.png) no-repeat center;
@@ -265,6 +265,7 @@
           left: 50%;
           transform: translate(-50%, -50%);
           background: url(../../images/common/ico_incorrect.png) center no-repeat;
+          background-size: contain;
         }
       }
     }
@@ -280,6 +281,7 @@
           left: 50%;
           transform: translate(-50%, -50%);
           background: url(../../images/common/ico_correct.png) center no-repeat;
+          background-size: contain;
         }
       }
     }
@@ -326,6 +328,45 @@
     }
   }
 }
+
+// 평가 응시 화면 팝업 (비회원)
+.pop-exam {
+  z-index: 1;
+  .exam-wrap {
+    @include layout-center-center;
+    flex-direction: column;
+    height: calc( 100vh - 45px);
+    &.type01 {
+      .unit-title {
+        @include layout-center;
+        flex-direction: column;
+        @include font(50px, 700);
+        em {
+          @include font(60px, 700);
+        }
+      }
+      .start-box {
+        width: 620px;
+        margin: 36px 0;
+      }
+      .table-wrap {
+        margin-bottom: 10px;
+      }
+      .desc {
+        text-align: right;
+        color: #a4a4a4;
+      }
+      .btn-wrap {
+        flex-direction: column;
+        .btn-type02 {
+          width: 255px;
+        }
+      }
+    }
+  }
+}
+
+
 
 @media screen and (max-width: 1023px) {
 	[class^='web-'] {
@@ -503,7 +544,7 @@
   .que-omr-cnt {
     .center-box {
       > div {
-        padding: 15px 10px;
+        padding: 0;
       }
     }
     .que-answer {
@@ -512,6 +553,58 @@
     .que-cmt {
       padding: 15px 10px;
       font-size: 15px;
+    }
+    .que-omr {
+      .que-num {
+        padding: 20px;
+      }
+      .que-answer {
+        padding: 20px 10px 20px 0;
+      }
+      &.incorrect {
+        .que-num {
+          &::before { width: 36px; }
+        }
+      }
+      &.correct {
+        .que-num {
+          &::before { width: 48px; }
+        }
+      }
+    }
+  }
+
+  // 평가 응시 화면 팝업 (비회원)
+  .pop-exam {
+    .exam-wrap {
+      width: 100%;
+      height: calc( 100vh - 50px);
+      &.type01 {
+        padding: 0 20px;
+        box-sizing: border-box;
+        .unit-title {
+          @include font(18px, 500);
+          em {
+            @include font(18px, 500);
+          }
+        }
+        .start-box {
+          width: 100%;
+          margin: 30px 0;
+        }
+        .table-wrap {
+          margin-bottom: 10px;
+        }
+        .desc {
+          font-size: 14px;
+        }
+        .btn-wrap {
+          width: 100%;
+          .btn-type02 {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

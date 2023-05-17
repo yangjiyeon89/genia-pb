@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common_front.css">
+  <link rel="stylesheet" href="../inc/css/sub.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div id="wrap" class="s_sub01">
+    <div class="header">
+      <div class="web-cnt">
+        <div class="top-nav">
+          <div class="inner">
+            <a href="javascript:;" target="_blank" class="link-nav">유치</a>
+            <a href="javascript:;" target="_blank" class="link-nav">초등</a>
+            <a href="javascript:;" target="_blank" class="link-nav">중학</a>
+            <a href="javascript:;" target="_blank" class="link-nav">고등</a>
+            <a href="javascript:;" target="_blank" class="link-nav">T셀파몰</a>
+            <a href="javascript:;" target="_blank" class="link-nav">연수원</a>
+            <a href="javascript:;" target="_blank" class="link-nav">클래스핑퐁</a>
+            <a href="javascript:;" target="_blank" class="link-nav">클래스링크</a>
+            <a href="javascript:;" target="_blank" class="link-nav">클래스아카이브</a>
+            <a href="javascript:;" class="link-nav active">지니아튜터</a>
+            <button type="button" class="btn-bookmark active">즐겨찾기 추가<i class="ic-star"></i></button>
+          </div>
+        </div>
+        <div class="inner">
+          <div class="left-wrap">
+            <div class="logo-wrap">
+              <a href="javascirpt:;" class="logo"></a>
+            </div>
+            <div class="gnb">
+              <ul class="nav">
+                <li class="nav-list">
+                  <a href="javascript:;" class="nav-item">과제</a>
+                </li>
+                <li class="nav-list">
+                  <a href="javascript:;" class="nav-item">리포트</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 로그인 전 -->
+          <div class="btn-wrap">
+            <button type="button" class="btn-login">로그인</button>
+            <button type="button" class="btn-join">회원가입</button>
+          </div>
+          <!-- 로그인 후 -->
+          <!--<div class="user-wrap">
+            <span class="user">김천재 선생님</span>
+            <div class="btn-wrap">
+              <button type="button" class="btn-login">로그아웃</button>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <div class="mo-cnt">
+        <div class="inner">
+          <div class="logo-wrap">
+            <a href="javascirpt:;" class="logo"></a>
+          </div>
+          <span class="menu">과제</span>
+          <button type="button" class="btn-menu ui-menu-btn"></button>
+        </div>
+        <div class="gnb mobile-menu ui-menu-cnt">
+          <ul class="nav">
+            <li class="nav-list">
+              <a href="javascript:;" class="nav-item">과제</a>
+            </li>
+            <li class="nav-list">
+              <a href="javascript:;" class="nav-item">리포트</a>
+            </li>
+          </ul>
+          <div class="menu-logo">
+            <img src="../images/common/menu_logo.png" alt="">
+          </div>
+          <div class="btn-wrap">
+            <button type="button" class="btn-login">로그인</button>
+            <button type="button" class="btn-join">회원가입</button>
+             <!-- 로그인 후 -->
+             <!-- <button type="button" class="btn-login">로그아웃</button> -->
+          </div>
+          <div class="link-wrap">
+            <a href="javascript:;" class="link-item">공지사항</a>
+            <a href="javascript:;" class="link-item">고객센터</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container s_sub01_02">
+      <div class="exam-wrap type01">
+        <div class="exam-top">
+          <div class="inner">
+            <div class="tit">
+              <button type="button" class="btn-arrow pop-btn" data-pop="pop-que-close"></button>
+              <span class="txt"><em>수학 6-1</em> 1.분수의 나눗셈 학습자료</span>
+            </div>
+            <button type="button" class="btn-close pop-btn" data-pop="pop-que-close"></button>
+          </div>
+        </div>
+        <div class="exam-cnt">
+          
+        </div>
+      </div>
+    <div class="dim"></div>
+    <!-- S: 학습 종료 알럿 팝업 -->
+    <div class="pop-wrap alert-type" data-pop="pop-que-close">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">학습을 종료하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-defalut">확인</button>
+          <button type="button" class="btn-defalut">취소</button>
+        </div>
+      </div>
+    </div>
+    <!-- E: 학습 종료 알럿 팝업 -->
+  </div>
+</body>
+<script>
+  $(function(){
+     const queSwiper = new Swiper(".-swiper", {
+       navigation: {
+         nextEl: ".-swiper .swiper-button-next",
+         prevEl: ".-swiper .swiper-button-prev",
+       },
+     });
+   });
+ </script>
+</html>
+  

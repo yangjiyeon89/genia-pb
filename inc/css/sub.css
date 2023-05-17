@@ -1168,7 +1168,7 @@
   left: 30px;
 }
 .exam-wrap .question-swiper .swiper-button-next, .exam-wrap .question-swiper .swiper-button-prev {
-  top: 45%;
+  top: 40%;
   width: 17px;
   height: 31px;
   background: url(../../images/common/ico_swiper_arrow.png) no-repeat center;
@@ -1209,6 +1209,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: url(../../images/common/ico_incorrect.png) center no-repeat;
+  background-size: contain;
 }
 .que-omr-cnt .que-omr.correct .que-num {
   position: relative;
@@ -1224,6 +1225,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: url(../../images/common/ico_correct.png) center no-repeat;
+  background-size: contain;
 }
 .que-omr-cnt .center-box {
   display: flex;
@@ -1267,6 +1269,45 @@
   overflow: initial;
   white-space: initial;
   text-overflow: initial;
+}
+
+.pop-exam {
+  z-index: 1;
+}
+.pop-exam .exam-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 45px);
+}
+.pop-exam .exam-wrap.type01 .unit-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 50px;
+  font-weight: 700;
+}
+.pop-exam .exam-wrap.type01 .unit-title em {
+  font-size: 60px;
+  font-weight: 700;
+}
+.pop-exam .exam-wrap.type01 .start-box {
+  width: 620px;
+  margin: 36px 0;
+}
+.pop-exam .exam-wrap.type01 .table-wrap {
+  margin-bottom: 10px;
+}
+.pop-exam .exam-wrap.type01 .desc {
+  text-align: right;
+  color: #a4a4a4;
+}
+.pop-exam .exam-wrap.type01 .btn-wrap {
+  flex-direction: column;
+}
+.pop-exam .exam-wrap.type01 .btn-wrap .btn-type02 {
+  width: 255px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -1429,7 +1470,7 @@
     width: 320px;
   }
   .que-omr-cnt .center-box > div {
-    padding: 15px 10px;
+    padding: 0;
   }
   .que-omr-cnt .que-answer {
     border-left: 0;
@@ -1437,6 +1478,50 @@
   .que-omr-cnt .que-cmt {
     padding: 15px 10px;
     font-size: 15px;
+  }
+  .que-omr-cnt .que-omr .que-num {
+    padding: 20px;
+  }
+  .que-omr-cnt .que-omr .que-answer {
+    padding: 20px 10px 20px 0;
+  }
+  .que-omr-cnt .que-omr.incorrect .que-num::before {
+    width: 36px;
+  }
+  .que-omr-cnt .que-omr.correct .que-num::before {
+    width: 48px;
+  }
+  .pop-exam .exam-wrap {
+    width: 100%;
+    height: calc(100vh - 50px);
+  }
+  .pop-exam .exam-wrap.type01 {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .pop-exam .exam-wrap.type01 .unit-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .pop-exam .exam-wrap.type01 .unit-title em {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .pop-exam .exam-wrap.type01 .start-box {
+    width: 100%;
+    margin: 30px 0;
+  }
+  .pop-exam .exam-wrap.type01 .table-wrap {
+    margin-bottom: 10px;
+  }
+  .pop-exam .exam-wrap.type01 .desc {
+    font-size: 14px;
+  }
+  .pop-exam .exam-wrap.type01 .btn-wrap {
+    width: 100%;
+  }
+  .pop-exam .exam-wrap.type01 .btn-wrap .btn-type02 {
+    width: 100%;
   }
 }
 /**

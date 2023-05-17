@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common_front.css">
+  <link rel="stylesheet" href="../inc/css/sub.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div class="dim"></div>
+  <div class="pop-wrap full-type pop-exam" style="display:block;">
+    <div class="pop-inner">
+      <div class="pop-header">
+        <span>과제하기</span>
+        <button type="button" class="pop-close"></button>
+      </div>
+      <div class="pop-content">
+        <div class="exam-wrap">
+          <div class="exam-cnt">
+            <div class="exam-que-wrap">
+              <div class="time-wrap">
+                <i class="clock"></i>
+                <span>풀이 소요시간 00 : 31</span>
+              </div>
+              <div class="exam-swiper-wrap">
+                <div class="swiper question-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="temp-box">
+                        <img src="../images/sub/sample_que_04.png" alt="">
+                      </div>
+                      <div class="exam-que-answer">
+                        <div class="btn-wrap">
+                          <button type="button" class="btn-number" disabled>1</button>
+                          <button type="button" class="btn-number correct" disabled>2</button>
+                          <button type="button" class="btn-number" disabled>3</button>
+                          <button type="button" class="btn-number incorrect" disabled>4</button>
+                          <button type="button" class="btn-number" disabled>5</button>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="btn-type02 blue pop-btn" data-pop="pop-que-answer">답안</button>
+                          <a href="javascript:;" class="btn-type02">결과</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="temp-box">
+                        <img src="../images/sub/sample_que_03.png" alt="">
+                      </div>
+                      <div class="exam-que-answer">
+                        <div class="input-wrap">
+                          <input type="text" class="ip-type02" value="17" readonly>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="btn-type02 blue pop-btn" data-pop="pop-que-answer">답안</button>
+                          <a href="javascript:;" class="btn-type02">결과</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="temp-box">
+                        <img src="../images/sub/sample_que_04.png" alt="">
+                      </div>
+                      <div class="exam-que-answer">
+                        <div class="btn-wrap">
+                          <button type="button" class="btn-number" disabled>1</button>
+                          <button type="button" class="btn-number" disabled>2</button>
+                          <button type="button" class="btn-number correct" disabled>3</button>
+                          <button type="button" class="btn-number" disabled>4</button>
+                          <button type="button" class="btn-number" disabled>5</button>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="btn-type02 blue pop-btn" data-pop="pop-que-answer">답안</button>
+                          <a href="javascript:;" class="btn-type02">결과</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S: 답안지 OMR 채점 완료 팝업 -->
+  <div class="pop-wrap que-type02" data-pop="pop-que-answer">
+    <div class="pop-inner">
+      <div class="pop-header">
+        <button type="button" class="pop-close"></button>
+      </div>
+      <div class="pop-content">
+        <div class="scroll-inner">
+          <div class="que-omr-cnt">
+            <div class="que-omr incorrect">
+              <div class="center-box">
+                <div class="que-num">1번</div>
+                <div class="que-answer">
+                  <div class="btn-wrap">
+                    <button type="button" class="btn-number" disabled>1</button>
+                    <button type="button" class="btn-number correct" disabled>2</button>
+                    <button type="button" class="btn-number" disabled>3</button>
+                    <button type="button" class="btn-number incorrect" disabled>4</button>
+                    <button type="button" class="btn-number" disabled>5</button>
+                  </div>
+                </div>
+              </div>
+              <div class="que-cmt">
+                <div class="start-box">
+                  <button type="button" Class="badge-type03 btn-comment">해설<span class="arrow">▼</span></button>
+                  <div class="cmt-area"> 
+                    해설 영역 입니다. 기본 1줄 노출, 해설 버튼을 누르면 전체 노출입니다. 해설 영역 입니다. 기본 1줄 노출, 해설 버튼을 누르면 전체 노출입니다. 해설 영역 입니다. 
+                  </div>
+                </div>
+                <div class="start-box">
+                  <span class="badge-type03 blue">정답</span>
+                  <div class="answer-area">
+                    ①
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="que-omr correct">
+              <div class="center-box">
+                <div class="que-num">2번</div>
+                <div class="que-answer">
+                  <input type="text" class="ip-type02" value="17" readonly>
+                </div>
+              </div>
+              <div class="que-cmt">
+                <div class="start-box">
+                  <button type="button" Class="badge-type03 btn-comment">해설<span class="arrow">▼</span></button>
+                  <div class="cmt-area"> 
+                    해설 영역 입니다. 기본 1줄 노출, 해설 버튼을 누르면 전체 노출입니다. 해설 영역 입니다. 기본 1줄 노출, 해설 버튼을 누르면 전체 노출입니다. 해설 영역 입니다. 
+                  </div>
+                </div>
+                <div class="start-box">
+                  <span class="badge-type03 blue">정답</span>
+                  <div class="answer-area">
+                    ①
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="que-omr correct">
+              <div class="center-box">
+                <div class="que-num">3번</div>
+                <div class="que-answer">
+                  <div class="btn-wrap">
+                    <button type="button" class="btn-number" disabled>1</button>
+                    <button type="button" class="btn-number correct" disabled>2</button>
+                    <button type="button" class="btn-number" disabled>3</button>
+                    <button type="button" class="btn-number" disabled>4</button>
+                    <button type="button" class="btn-number" disabled>5</button>
+                  </div>
+                </div>
+              </div>
+              <div class="que-cmt">
+                <div class="start-box">
+                  <button type="button" Class="badge-type03 btn-comment">해설<span class="arrow">▼</span></button>
+                  <div class="cmt-area"> 
+                    해설 영역 입니다. 기본 1줄 노출, 해설 버튼을 누르면 전체 노출입니다. 해설 영역 입니다. 기본 1줄 노출, 해설 버튼을 누르면 전체 노출입니다. 해설 영역 입니다. 
+                  </div>
+                </div>
+                <div class="start-box">
+                  <span class="badge-type03 blue">정답</span>
+                  <div class="answer-area">
+                    ①
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- E: 답안지 OMR 채점 완료 팝업 -->
+</body>
+<script>
+  $(function(){
+     const queSwiper = new Swiper(".question-swiper", {
+       navigation: {
+         nextEl: ".question-swiper .swiper-button-next",
+         prevEl: ".question-swiper .swiper-button-prev",
+       },
+     });
+   });
+ </script>
+</html>
+  
