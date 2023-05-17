@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>지니아튜터</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="../inc/css/font.css">
+	<link rel="stylesheet" href="../inc/css/reset.css">
+	<link rel="stylesheet" href="../inc/css/common_front.css">
+	<link rel="stylesheet" href="../inc/css/sub.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	<script src="../inc/js/common.js"></script>
+</head>
+
+<body>
+	<div class="dim"></div>
+	<div class="pop-wrap full-type share-pop" style="display: block;">
+		<div class="pop-inner">
+			<div class="pop-header">
+				<span>공유하기</span>
+				<button type="button" class="pop-close"></button>
+			</div>
+			<div class="pop-content">
+				<div class="inner">
+					<div class="share-view-wrap">
+						<div class="view-cnt-wrap">
+							<div class="pop-tit">
+								<p>클래스 배포</p>
+								<span>과제를 공유할 클래스를 선택해주세요.</span>
+							</div>
+
+							<div class="end-day-wrap">
+								<span class="txt">
+									마감일 설정
+								</span>
+								<div class="toggle-wrap">
+									<div class="toggle-btn">
+										<input type="checkbox" class="checkbox" checked>
+										<div class="knobs"></div>
+										<div class="layer"></div>
+									</div>
+								</div>
+							</div>
+							<div class="date-wrap">
+								<div class="select-wrap">
+									<button type="button" class="select-btn">
+										<span>2023년</span>
+									</button>
+									<ul class="select-list" style="display: none;">
+										<li class="select-item"><a href="javascript:;">2023년</a></li>
+										<li class="select-item"><a href="javascript:;">2022년</a></li>
+										<li class="select-item"><a href="javascript:;">2021년</a></li>
+										<li class="select-item"><a href="javascript:;">2020년</a></li>
+									</ul>
+								</div>
+								<div class="select-wrap">
+									<button type="button" class="select-btn">
+										<span>3월</span>
+									</button>
+									<ul class="select-list" style="display: none;">
+										<li class="select-item"><a href="javascript:;">3월</a></li>
+										<li class="select-item"><a href="javascript:;">4월</a></li>
+									</ul>
+								</div>
+								<div class="select-wrap">
+									<button type="button" class="select-btn">
+										<span>30일</span>
+									</button>
+									<ul class="select-list" style="display: none;">
+										<li class="select-item"><a href="javascript:;">30일</a></li>
+										<li class="select-item"><a href="javascript:;">31일</a></li>
+									</ul>
+								</div>
+							</div>
+							<ul class="class-wrap">
+								<li class="class-box">
+									<a href="javascript:;">
+										<div>
+											<span>천재초등학교</span>
+											<p class="class-tit">6학년 1반</p>
+											<em>구성원 00명</em>
+										</div>
+										<div class="btn-share">
+											<div class="open-select-list">
+												<div class="list-tit">
+													과제 공유 대상 선택
+												</div>
+												<ul class="list">
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">전체선택</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">김천재</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">이천재</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">박천재</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">유천재</label>
+													</li>
+												</ul>
+												<div class="btn-wrap">
+													<button type="button" class="btn-defalut-line size-s">취소</button>
+													<button type="button" class="btn-defalut size-s pop-btn" data-pop="complete-pop">완료</button>
+												</div>
+											</div>
+										</div>
+										<div class="mobile-btn-share pop-btn" data-pop="choice-pop"></div>
+									</a>
+								</li>
+								<li class="class-box">
+									<a href="javascript:;">
+										<div>
+											<span>천재초등학교</span>
+											<p class="class-tit">6학년 2반</p>
+											<em>구성원 00명</em>
+										</div>
+										<div class="btn-share">
+											<div class="open-select-list">
+												<div class="list-tit">
+													과제 공유 대상 선택
+												</div>
+												<ul class="list">
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">전체선택</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">김천재</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">이천재</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">박천재</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">유천재</label>
+													</li>
+												</ul>
+												<div class="btn-wrap">
+													<button type="button" class="btn-defalut-line size-s">취소</button>
+													<button type="button" class="btn-defalut size-s pop-btn" data-pop="complete-pop">완료</button>
+												</div>
+											</div>
+										</div>
+										<div class="mobile-btn-share pop-btn" data-pop="choice-pop"></div>
+									</a>
+								</li>
+								<li class="class-box">
+									<a href="javascript:;">
+										<div>
+											<span>천재초등학교</span>
+											<p class="class-tit">6학년 3반</p>
+											<em>구성원 00명</em>
+										</div>
+										<div class="btn-share">
+											<div class="open-select-list ">
+												<div class="list-tit">
+													과제 공유 대상 선택
+												</div>
+												<ul class="list">
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">전체선택</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">김천재</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">이천재</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">박천재</label>
+													</li>
+													<li>
+														<input type="checkbox" id="chk01_01" checked="">
+														<label for="chk01_01">유천재</label>
+													</li>
+												</ul>
+												<div class="btn-wrap">
+													<button type="button" class="btn-defalut-line size-s">취소</button>
+													<button type="button" class="btn-defalut size-s pop-btn" data-pop="complete-pop">완료</button>
+												</div>
+											</div>
+										</div>
+										<div class="mobile-btn-share pop-btn" data-pop="choice-pop"></div>
+									</a>
+								</li>
+							</ul>
+							<div class="pop-tit">
+								<p>개설한 클래스가 없는 경우</p>
+								<span>과제 URL 또는 QR코드를 학생들에게 전달해주세요.</span>
+							</div>
+							<ul class="share-wrap">
+								<li>
+									<div class="url-wrap">
+										<div class="url-txt">
+											https://class.tsherpa.co.kr/index.html?classNo=312
+
+										</div>
+										<div class="btn-copy pop-btn" data-pop="copy-pop"></div>
+									</div>
+									<span>URL 복사</span>
+								</li>
+								<li>
+									<div class="qr-img">
+										<img src="../images/common/ico_qrcode.png" alt="qrcode">
+									</div>
+									<div class="btn-down-img pop-btn" data-pop="qr-pop"></div>
+									<span>QR 코드</sp>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- 복사하기 팝업 -->
+	<div class="pop-wrap alert-type" data-pop="copy-pop">
+		<div class="pop-inner">
+			<div class="pop-content">
+				<button type="button" class="pop-close"></button>
+				<span class="txt">URL이 복사되었습니다.<br>
+					붙여넣기를 통해<br>
+					학생들에게 전달해주세요.
+				</span>
+			</div>
+			<div class="pop-footer">
+				<button type="button" class="btn-defalut">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 공유 완료 팝업 -->
+	<div class="pop-wrap alert-type" data-pop="complete-pop">
+		<div class="pop-inner">
+			<div class="pop-content">
+				<button type="button" class="pop-close"></button>
+				<span class="txt">과제 공유가 완료되었습니다.</span>
+			</div>
+			<div class="pop-footer">
+				<button type="button" class="btn-defalut">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- qr코드 팝업 -->
+	<div class="pop-wrap alert-type image-type" data-pop="qr-pop">
+		<div class="pop-inner">
+			<div class="pop-content">
+				<button type="button" class="pop-close"></button>
+				<span class="txt">
+					<img src="../images/common/pop_qrcode.png" alt="qrcode">
+				</span>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 과제 공유 대상 선택 팝업 -->
+	<div class="pop-wrap bottom-type" data-pop="choice-pop" style="display: none;">
+		<div class="pop-inner">
+			<div class="pop-header">
+				<span>과제 공유 대상 선택</span>
+				<button type="button" class="pop-close"></button>
+			</div>
+			<div class="pop-content">
+				<div class="open-select-list">
+					<ul class="list">
+						<li class="all-chk">
+							<input type="checkbox" id="chk01_01">
+							<label for="chk01_01">전체선택</label>
+						</li>
+						<li>
+							<input type="checkbox" id="check01_02" checked="">
+							<label for="check01_02">김천재</label>
+						</li>
+						<li>
+							<input type="checkbox" id="chk01_03">
+							<label for="chk01_03">이천재</label>
+						</li>
+						<li>
+							<input type="checkbox" id="chk01_04">
+							<label for="chk01_04">박천재</label>
+						</li>
+						<li>
+							<input type="checkbox" id="chk01_05">
+							<label for="chk01_05">유천재</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop-footer">
+				<button type="button" class="btn-defalut pop-btn" data-pop="complete-pop">공유하기</button>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,12 @@
   <link rel="stylesheet" href="../inc/css/common_front.css">
   <link rel="stylesheet" href="../inc/css/sub.css">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
   <script src="../inc/js/common.js"></script>
 </head>
+
 <body>
   <div id="wrap">
     <div class="dim"></div>
@@ -292,11 +294,23 @@
       </div>
     </div>
   </div>
+  <!-- 공유 완료 팝업 -->
+  <div class="pop-wrap alert-type" data-pop="complete-pop">
+    <div class="pop-inner">
+      <div class="pop-content">
+        <button type="button" class="pop-close"></button>
+        <span class="txt">과제 공유가 완료되었습니다.</span>
+      </div>
+      <div class="pop-footer">
+        <button type="button" class="btn-defalut">확인</button>
+      </div>
+    </div>
+  </div>
 </body>
 <script>
-  $(function () {    
+  $(function () {
     // 학업성취율 차트
-    function achieveChartRender(){
+    function achieveChartRender() {
       let doughnutCanvas = document.getElementById("achieveChart").getContext('2d');
       let gradient = doughnutCanvas.createLinearGradient(0, 0, 150, 0);
       gradient.addColorStop(0, 'rgba(32, 139, 255, 1)');
@@ -304,18 +318,16 @@
       let value = 70;
       let data = {
         labels: ['김천재 성취율'],
-        datasets: [
-          {
-            label: 'dataSet',
-            data: [value, 100 - value],
-            backgroundColor: [ gradient , '#f4f4f4']
-          },
-        ]
+        datasets: [{
+          label: 'dataSet',
+          data: [value, 100 - value],
+          backgroundColor: [gradient, '#f4f4f4']
+        }, ]
       }
       new Chart(doughnutCanvas, {
         type: 'doughnut',
         data: data,
-        options:{
+        options: {
           responsive: true,
           // rotation: -90,
           // circumference: 180,
@@ -333,7 +345,7 @@
           },
         },
         plugins: [{
-          afterDraw: function(chart) {
+          afterDraw: function (chart) {
             let width = chart.width
             let height = chart.height
             let ctx = chart.ctx;
@@ -359,7 +371,7 @@
 
             ctx.fillText(text2, textX, textY);
 
-           
+
 
             ctx.save();
           }
@@ -367,11 +379,11 @@
       });
     };
 
-    $(document).ready(function(){
+    $(document).ready(function () {
       achieveChartRender();
     });
 
   });
 </script>
+
 </html>
-  

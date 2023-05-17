@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>지니아튜터</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="../inc/css/font.css">
+	<link rel="stylesheet" href="../inc/css/reset.css">
+	<link rel="stylesheet" href="../inc/css/common_front.css">
+	<link rel="stylesheet" href="../inc/css/sub.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	<script src="../inc/js/common.js"></script>
+</head>
+
+<body>
+	<div class="dim"></div>
+	<div class="pop-wrap full-type share-pop" style="display: block;">
+		<div class="pop-inner">
+			<div class="pop-header">
+				<span>공유하기</span>
+				<button type="button" class="pop-close"></button>
+			</div>
+			<div class="pop-content">
+				<div class="inner">
+					<div class="share-view-wrap">
+						<div class="view-cnt-wrap">
+							<div class="pop-tit">
+								<p>클래스 배포</p>
+								<span>과제를 공유할 클래스를 선택해주세요.</span>
+							</div>
+
+							<div class="open-wrap">
+								<span class="txt">
+									개설한 클래스가 없습니다. <br>
+									클래스 개설은 ‘우리반T셀파‘ 에서 가능합니다.
+								</span>
+								<button type="button" class="btn-defalut w154"><a href="javascript:;">클래스 개설하기</a></button>
+
+							</div>
+
+							<div class="pop-tit">
+								<p>개설한 클래스가 없는 경우</p>
+								<span>과제 URL 또는 QR코드를 학생들에게 전달해주세요.</span>
+							</div>
+							<ul class="share-wrap">
+								<li>
+									<div class="url-wrap">
+										<div class="url-txt">
+											https://class.tsherpa.co.kr/index.html?classNo=312
+
+										</div>
+										<div class="btn-copy pop-btn" data-pop="copy-pop"></div>
+									</div>
+									<span>URL 복사</span>
+								</li>
+								<li>
+									<div class="qr-img">
+										<img src="../images/common/ico_qrcode.png" alt="qrcode">
+									</div>
+									<div class="btn-down-img pop-btn" data-pop="qr-pop"></div>
+									<span>QR 코드</sp>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- 복사하기 팝업 -->
+	<div class="pop-wrap alert-type" data-pop="copy-pop">
+		<div class="pop-inner">
+			<div class="pop-content">
+				<button type="button" class="pop-close"></button>
+				<span class="txt">URL이 복사되었습니다.<br>
+					붙여넣기를 통해<br>
+					학생들에게 전달해주세요.
+				</span>
+			</div>
+			<div class="pop-footer">
+				<button type="button" class="btn-defalut">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 공유 완료 팝업 -->
+	<div class="pop-wrap alert-type" data-pop="complete-pop">
+		<div class="pop-inner">
+			<div class="pop-content">
+				<button type="button" class="pop-close"></button>
+				<span class="txt">과제 공유가 완료되었습니다.</span>
+			</div>
+			<div class="pop-footer">
+				<button type="button" class="btn-defalut">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- qr코드 팝업 -->
+	<div class="pop-wrap alert-type image-type" data-pop="qr-pop">
+		<div class="pop-inner">
+			<div class="pop-content">
+				<button type="button" class="pop-close"></button>
+				<span class="txt">
+					<img src="../images/common/pop_qrcode.png" alt="qrcode">
+				</span>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
