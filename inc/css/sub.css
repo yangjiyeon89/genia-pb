@@ -1899,8 +1899,7 @@
   text-align: center;
 }
 .share-view-wrap .class-wrap .class-box .open-select-list .list {
-  height: 210px;
-  overflow-y: auto;
+  max-height: 210px;
   padding: 15px 25px;
   text-align: left;
 }
@@ -2007,8 +2006,7 @@
 }
 .pop-wrap.bottom-type .pop-content .open-select-list {
   width: 100%;
-  height: 218px;
-  overflow-y: auto;
+  max-height: 218px;
   padding: 10px 20px;
   border-radius: 10px;
   box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.09);
