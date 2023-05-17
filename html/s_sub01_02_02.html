@@ -104,10 +104,16 @@
         <div class="exam-top">
           <div class="inner">
             <div class="tit">
-              <button type="button" class="btn-arrow pop-btn" data-pop="pop-que-close"></button>
-              <span class="txt"><em>수학 6-1</em> 1.분수의 나눗셈 형성평가</span>
+              <span class="txt"><em>수학 6-1</em> 1.분수의 나눗셈 진단평가</span>
+              <!--
+                <span class="txt"><em>수학 6-1</em> 1.분수의 나눗셈 단원평가</span>
+                <span class="txt"><em>수학 6-1</em> 1.분수의 나눗셈 형성평가</span>
+                <span class="txt">AI 오답 학습</span>
+                <span class="txt">AI 유사 학습</span>
+                <span class="txt"><em>1단원</em> 마무리 평가</span>
+              -->
             </div>
-            <button type="button" class="btn-close"></button>
+            <button type="button" class="btn-close pop-btn" data-pop="pop-que-close"></button>
           </div>
         </div>
         <div class="exam-cnt">
@@ -219,51 +225,43 @@
         </div>
         <div class="pop-content">
           <div class="scroll-inner">
-            <div class="table-wrap type02">
-              <table>
-                <colgroup>
-                  <col width="20%;">
-                  <col width="*">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th>1번</th>
-                    <td>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn-number">1</button>
-                        <button type="button" class="btn-number active">2</button>
-                        <button type="button" class="btn-number">3</button>
-                        <button type="button" class="btn-number">4</button>
-                        <button type="button" class="btn-number">5</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>2번</th>
-                    <td><input type="text" class="ip-type02" placeholder="정답을 입력하세요"></td>
-                  </tr>
-                  <tr>
-                    <th>3번</th>
-                    <td>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn-number">1</button>
-                        <button type="button" class="btn-number active">2</button>
-                        <button type="button" class="btn-number">3</button>
-                        <button type="button" class="btn-number">4</button>
-                        <button type="button" class="btn-number">5</button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>4번</th>
-                    <td><input type="text" class="ip-type02" placeholder="정답을 입력하세요"></td>
-                  </tr>
-                  <tr>
-                    <th>5번</th>
-                    <td><input type="text" class="ip-type02" placeholder="정답을 입력하세요"></td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="que-omr-cnt">
+              <div class="que-omr">
+                <div class="center-box">
+                  <div class="que-num">1번</div>
+                  <div class="que-answer">
+                    <div class="btn-wrap">
+                      <button type="button" class="btn-number" disabled>1</button>
+                      <button type="button" class="btn-number active" disabled>2</button>
+                      <button type="button" class="btn-number" disabled>3</button>
+                      <button type="button" class="btn-number" disabled>4</button>
+                      <button type="button" class="btn-number" disabled>5</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="que-omr">
+                <div class="center-box">
+                  <div class="que-num">2번</div>
+                  <div class="que-answer">
+                    <input type="text" class="ip-type02" value="17" readonly>
+                  </div>
+                </div>
+              </div>
+              <div class="que-omr">
+                <div class="center-box">
+                  <div class="que-num">3번</div>
+                  <div class="que-answer">
+                    <div class="btn-wrap">
+                      <button type="button" class="btn-number" disabled>1</button>
+                      <button type="button" class="btn-number active" disabled>2</button>
+                      <button type="button" class="btn-number" disabled>3</button>
+                      <button type="button" class="btn-number" disabled>4</button>
+                      <button type="button" class="btn-number" disabled>5</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -274,7 +272,7 @@
 </body>
 <script>
  $(function(){
-    const queSwiper = new Swiper('.question-swiper', {
+    const queSwiper = new Swiper(".question-swiper", {
       navigation: {
         nextEl: ".question-swiper .swiper-button-next",
         prevEl: ".question-swiper .swiper-button-prev",

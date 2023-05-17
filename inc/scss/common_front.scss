@@ -1581,28 +1581,6 @@ input[type="checkbox"] {
     .pop-content {
       padding: 0;
     }
-    .scroll-inner {
-      max-height: 420px;
-    }
-		.table-wrap {
-			&.type02 {
-				th {
-					position: relative;
-				}
-				tr {
-					&.correct {
-						th {
-							background: url(../../images/common/ico_correct.png) center no-repeat;
-						}
-					}
-					&.incorrect {
-						th {
-							background: url(../../images/common/ico_incorrect.png) center no-repeat;
-						}
-					}
-				}
-			}
-		}
   }
 }
 
