@@ -117,6 +117,12 @@
       width: 115px;
       height: 128px;
       background-image: url(../../images/common/ico_exam.png);
+      &.type02 {
+        background-image: url(../../images/common/ico_exam_type02.png);
+      }
+      &.type03 {
+        background-image: url(../../images/common/ico_exam_type03.png);
+      }
     }
     .unit-tit {
       @include font(60px, 700);
@@ -229,6 +235,94 @@
     }
     .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
       display: none;
+    }
+  }
+}
+
+// 평가 답안지 팝업 영역
+.pop-wrap {
+  &.que-type02 {
+    .pop-content {
+      width: 420px;
+    }
+    .scroll-inner {
+      max-height: 420px;
+    }
+  }
+}
+.que-omr-cnt {
+  .que-omr {
+    border-top: 1px solid #dcdcdc;
+    &.incorrect {
+      .que-num {
+        position: relative;
+        &::before {
+          @include virtual-selector;
+          position: absolute;
+          width: 45px;
+          height: 49px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: url(../../images/common/ico_incorrect.png) center no-repeat;
+        }
+      }
+    }
+    &.correct {
+      .que-num {
+        position: relative;
+        &::before {
+          @include virtual-selector;
+          position: absolute;
+          width: 62px;
+          height: 58px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: url(../../images/common/ico_correct.png) center no-repeat;
+        }
+      }
+    }
+  }
+  .center-box {
+    @include layout-center;
+    > div {
+      padding: 30px;
+    }
+  }
+  .start-box {
+    display: flex;
+    align-items: flex-start;
+    &:nth-child(1) {
+      margin-bottom: 20px;
+    }
+  }
+  .que-num {
+    @include font(18px, 700);
+    white-space: nowrap;
+  }
+  .que-answer {
+    width: 100%;
+    border-left: 1px solid #dcdcdc;
+    .ip-type02 {
+      width: 100%;
+    }
+  }
+  .que-cmt {
+    border-top: 1px solid #dcdcdc;
+    padding: 20px 30px;
+  }
+  .cmt-area {
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+		text-overflow: ellipsis;
+    &.active {
+      height: initial;
+      overflow: initial;
+      white-space: initial;
+      text-overflow: initial;
     }
   }
 }
@@ -395,6 +489,29 @@
         width: 10px;
         height: 20px;
       }
+    }
+  }
+
+  // 평가 답안지 팝업 영역
+  .pop-wrap {
+    &.que-type02 {
+      .pop-content {
+        width: 320px;
+      }
+    }
+  }
+  .que-omr-cnt {
+    .center-box {
+      > div {
+        padding: 15px 10px;
+      }
+    }
+    .que-answer {
+      border-left: 0;
+    }
+    .que-cmt {
+      padding: 15px 10px;
+      font-size: 15px;
     }
   }
 }

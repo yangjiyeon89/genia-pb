@@ -111,11 +111,11 @@ $(function () {
           .addClass("active");
         break;
 
-        // 사용자 학생
+      // 사용자 학생
       case "s_sub01":
         _gnbMenuLink.eq(0).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
-        break;
+      break;
     }
   }
   $(document).ready(function () {
@@ -427,17 +427,20 @@ $(function () {
   // toggle button
   let numberBtn = $(".btn-number");
   let commentBtn = $(".btn-comment");
-  let commentArrow = $(".btn-comment .arrow");
 
   function toggleBtnFunc() {
     let _this = $(this);
     _this.toggleClass("active");
 
-    if (!_this.hasClass("active")) {
-      commentArrow.text("▼");
+    // comment button
+    if (_this.hasClass("active")) {
+      _this.find('.arrow').text("▲");
+      _this.siblings(".cmt-area").addClass("active");
     } else {
-      commentArrow.text("▲");
+      _this.find('.arrow').text("▼");
+      _this.siblings(".cmt-area").removeClass("active");
     }
+
   }
 
   numberBtn.on("click", toggleBtnFunc);
