@@ -2479,7 +2479,12 @@
   padding: 20px 20px 50px;
 }
 
-.pop-wrap.exam-prev-pop .exam-wrap {
+.pop-wrap .test-wrap {
+  width: 100%;
+  background: #f8f8f8;
+}
+
+.pop-wrap.exam-prev-pop .test-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2560,7 +2565,7 @@
   display: none;
 }
 
-.pop-wrap.exam-edit-pop .exam-wrap {
+.pop-wrap.exam-edit-pop .test-wrap {
   display: flex;
   justify-content: center;
   align-items: center;

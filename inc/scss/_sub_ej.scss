@@ -609,11 +609,17 @@
 	}
 }
 
+.pop-wrap {
+	.test-wrap {
+		width: 100%;
+		background: #f8f8f8;
+	}
+}
 
 //미리보기 팝업
 .pop-wrap {
 	&.exam-prev-pop {
-		.exam-wrap {
+		.test-wrap {
 			@include layout-center-center;
 			flex-direction: column;
 			height: calc(100vh - 45px);
@@ -703,7 +709,7 @@
 
 .pop-wrap {
 	&.exam-edit-pop {
-		.exam-wrap {
+		.test-wrap {
 			@include layout-center-center;
 			flex-direction: column;
 			height: calc(100vh - 45px);
