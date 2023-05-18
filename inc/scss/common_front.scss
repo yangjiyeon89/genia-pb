@@ -85,7 +85,7 @@
   top: 0;left: 0;
   width: 100%;height: 100vh;
   background-color: rgba(0,0,0,0.5);
-  z-index: 3;
+  z-index: 5;
 }
 .bold {
 	font-weight: 700;
@@ -1614,13 +1614,15 @@ input[type="checkbox"] {
 			font-size: 16px;
 		}
 	}
-
+	.dim {
+		z-index: 3;
+	}
 	// header
 	.header {
 		position: fixed;
 		width: 100%;
 		top: 0;
-		z-index: 4;
+		z-index: 11;
 		.mo-cnt {
 			width: 100%;
 			.inner {
