@@ -314,12 +314,22 @@
 .report-view-wrap .report-cnt .justify-box .box-wrap .box {
   height: 404px;
 }
-.report-view-wrap .report-cnt .justify-box .box-wrap .chart-wrap {
+.report-view-wrap .report-cnt .justify-box .box-wrap .chart-wrap.w258 {
   width: 258px;
   height: 258px;
 }
+.report-view-wrap .report-cnt .justify-box .box-wrap .chart-wrap.w330 {
+  width: 330px;
+  height: 330px;
+}
+.report-view-wrap .report-cnt .justify-box .box-wrap .chart-wrap.w350 {
+  width: 350px;
+  height: 350px;
+}
 .report-view-wrap .report-cnt .justify-box .box-wrap .chart-wrap canvas {
   top: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 .report-view-wrap .report-cnt .justify-box .box-wrap.w28 {
   width: 28%;
@@ -446,6 +456,36 @@
 }
 .report-view-wrap .report-cnt.type02 .report-title {
   margin: 50px 0 30px;
+}
+.report-view-wrap .report-cnt.type02 .justify-box.col-type .box {
+  padding: 20px;
+  padding-bottom: 0;
+}
+.report-view-wrap .report-cnt.type02 .justify-box.col-type .box + .box {
+  margin-top: 20px;
+}
+.report-view-wrap .report-cnt.type02 .unit-title {
+  margin-bottom: 20px;
+}
+.report-view-wrap .report-cnt.type02 .box > .tit {
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.report-view-wrap .report-cnt.type02 .box.h411 .scroll-inner {
+  height: auto;
+}
+.report-view-wrap .report-cnt.type02 .unit {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.report-view-wrap .report-cnt.type02 .unit .tit {
+  flex: none;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 600;
 }
 .report-view-wrap .btn-print {
   display: inline-block;
@@ -765,6 +805,30 @@
     border-radius: 10px;
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.09);
   }
+  .report-view-wrap .report-cnt .justify-box .box-wrap .box {
+    height: 249px;
+  }
+  .report-view-wrap .report-cnt .justify-box .box-wrap.w28 {
+    width: 100%;
+  }
+  .report-view-wrap .report-cnt .justify-box .box-wrap.w34 {
+    width: 100%;
+  }
+  .report-view-wrap .report-cnt .justify-box .box-wrap .chart-wrap.w258 {
+    width: 200px;
+    height: 200px;
+  }
+  .report-view-wrap .report-cnt .justify-box .box-wrap .chart-wrap.w330 {
+    width: 240px;
+    height: 240px;
+  }
+  .report-view-wrap .report-cnt .justify-box .box-wrap .chart-wrap.w350 {
+    width: 260px;
+    height: 260px;
+  }
+  .report-view-wrap .report-cnt .justify-box .box-wrap + .box-wrap {
+    margin-top: 30px;
+  }
   .report-view-wrap .report-cnt .col-box {
     width: 100%;
     gap: 10px;
@@ -806,6 +870,52 @@
   .report-view-wrap .report-cnt .chart-wrap.type02 {
     width: 150px;
     height: 150px;
+  }
+  .report-view-wrap .report-cnt.type02 .title {
+    margin-bottom: 20px;
+  }
+  .report-view-wrap .report-cnt.type02 .report-title {
+    margin: 30px 0 20px;
+    font-size: 16px;
+  }
+  .report-view-wrap .report-cnt.type02 .box.h411 {
+    height: 350px;
+  }
+  .report-view-wrap .report-cnt.type02 .box.h411 .scroll-inner {
+    padding: 10px 10px 20px 10px;
+  }
+  .report-view-wrap .report-cnt.type02 .box > .tit {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .report-view-wrap .report-cnt.type02 .justify-box.col-type .box {
+    padding: 10px;
+  }
+  .report-view-wrap .report-cnt.type02 .justify-box.col-type .box + .box {
+    margin-top: 10px;
+  }
+  .report-view-wrap .report-cnt.type02 .col-type {
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.09);
+    border: 1px solid #e8e8e8;
+    border-radius: 17px;
+  }
+  .report-view-wrap .report-cnt.type02 .col-type .scroll-inner {
+    height: 500px;
+  }
+  .report-view-wrap .report-cnt.type02 .col-type .box {
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+  }
+  .report-view-wrap .report-cnt.type02 .unit-title {
+    margin-bottom: 10px;
+  }
+  .report-view-wrap .report-cnt.type02 .unit .tit {
+    margin: 0 10px;
+    font-size: 13px;
+  }
+  .report-view-wrap .report-cnt.type02 .unit .txt {
+    font-size: 13px;
   }
   .report-view-wrap .table-wrap.type01 th {
     padding: 9px 5px;
@@ -849,6 +959,10 @@
   }
   .report-view-wrap .choice-list ol {
     font-size: 15px;
+  }
+  .report-view-wrap .box-title {
+    margin-bottom: 20px;
+    font-size: 16px;
   }
   .stu-view .w990 table {
     width: 990px;

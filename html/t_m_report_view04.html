@@ -136,7 +136,7 @@
                 <div class="box-wrap w28">
                   <span class="box-title">학급성취율</span>
                   <div class="box">
-                    <div class="chart-wrap">
+                    <div class="chart-wrap w258">
                       <canvas id="classChart"></canvas>
                     </div>
                   </div>
@@ -144,19 +144,26 @@
                 <div class="box-wrap w34">
                   <span class="box-title">내용 영역별 성취율</span>
                   <div class="box">
-                    <canvas id="contentChart" style="width: 350px; height: 350px;"></canvas>
+                    <div class="chart-wrap w350">
+                      <canvas id="contentChart"></canvas>
+                    </div>
+                    
                   </div>                
                 </div>
                 <div class="box-wrap w34">
                   <span class="box-title">교과 역량별 성취율</span>
                   <div class="box">
-                    <canvas id="subjectChart" style="width: 350px; height: 350px;"></canvas>
+                    <div class="chart-wrap w330">
+                      <canvas id="subjectChart"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
               <span class="report-title">단원별 성취율</span>                
               <div class="box h411">
-                <canvas id="unitChart" style="width: 1150px; height: 290px;"></canvas>
+                <div class="scroll-inner type02">
+                  <canvas id="unitChart" style="width: 1150px; height: 290px;"></canvas>
+                </div>
               </div>
               <span class="report-title">성취기준별 분석</span>
               <div class="justify-box col-type">
