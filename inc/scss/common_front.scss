@@ -1526,6 +1526,11 @@ input[type="checkbox"] {
 				@include font(20px, 500);
 				color: #fff;
 			}
+			em {
+				display: inline-block;
+				font-weight: 700;
+				margin-right: 5px;
+			}
 		}
 		.pop-close {
 			top: 13px;
