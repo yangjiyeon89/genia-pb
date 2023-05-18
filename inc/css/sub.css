@@ -1623,6 +1623,47 @@
   width: 255px;
 }
 
+.s_sub02 .report-view-wrap .report-cnt .report-title {
+  font-size: 22px;
+}
+.s_sub02 .report-view-wrap .report-cnt .justify-box .box-wrap .w280 {
+  width: 280px;
+  height: 300px;
+}
+.s_sub02 .report-view-wrap .report-cnt .box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.s_sub02 .report-view-wrap .title.mt50 {
+  margin-top: 50px;
+}
+.s_sub02 .report-view-wrap .label-wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+.s_sub02 .report-view-wrap .label-wrap span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.s_sub02 .report-view-wrap .label-wrap span + span {
+  margin-left: 20px;
+}
+.s_sub02 .report-view-wrap .label-wrap .label-color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f0ecff;
+}
+.s_sub02 .report-view-wrap .label-wrap .label-color.type02 {
+  background-image: linear-gradient(to right, #1f8bff, #8257ff);
+}
+
 @media screen and (max-width: 1023px) {
   [class^=web-] {
     display: none !important;
@@ -1835,6 +1876,38 @@
   }
   .pop-exam .exam-wrap.type01 .btn-wrap .btn-type02 {
     width: 100%;
+  }
+  .s_sub02 .report-view-wrap .report-cnt {
+    padding-top: 70px;
+  }
+  .s_sub02 .report-view-wrap .report-cnt .report-title {
+    font-size: 16px;
+  }
+  .s_sub02 .report-view-wrap .report-cnt .justify-box .box-wrap .chart-wrap.w280 {
+    width: 240px;
+    height: 180px;
+  }
+  .s_sub02 .report-view-wrap .report-cnt .box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .s_sub02 .report-view-wrap .title.mt50 {
+    margin-top: 30px;
+  }
+  .s_sub02 .report-view-wrap .label-wrap {
+    display: none;
+  }
+  .s_sub02 .report-view-wrap .label-wrap.bar-type {
+    display: block;
+    bottom: 10px;
+  }
+  .s_sub02 .report-view-wrap .label-wrap.bar-type span {
+    font-size: 14px;
+  }
+  .s_sub02 .report-view-wrap .label-wrap.bar-type .label-color {
+    margin-top: 2px;
   }
 }
 /**
