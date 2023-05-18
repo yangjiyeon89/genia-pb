@@ -117,6 +117,11 @@ $(function () {
         _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
       break;
 
+      case "s_sub02":
+        _gnbMenuLink.eq(1).find("> a").addClass("active");
+        _gnbMenuLinkMo.eq(1).find("> a").addClass("active");
+      break;
+
       // 리포트 교사
       case "t_report":
         _gnbMenuLink.eq(3).find("> a").addClass("active");
@@ -454,16 +459,19 @@ $(function () {
 
   // click button
   let lineBtn = $(".btn-line");
+  let unitBtn = $(".unit-list li")
 
   function btnClickFunc() {
     let _this = $(this);
     if (!_this.hasClass("active")) {
       _this.parents(".btn-wrap").find("button").removeClass("active");
+      _this.parents(".unit-list").find("li").removeClass("active");
       _this.addClass("active");
     }
   }
 
   lineBtn.on("click", btnClickFunc);
+  unitBtn.on("click", btnClickFunc);
 
   //share버튼 클릭시 open-select-list 열기
 
