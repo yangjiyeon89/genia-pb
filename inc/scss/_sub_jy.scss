@@ -107,6 +107,7 @@
         th, td {
           height: 50px;
           padding: 14px 10px;
+          box-sizing: border-box;
         }
       }
     }
@@ -377,6 +378,32 @@
         height:100%;
         padding: 30px;
       }
+      &.stu-report {
+        @include layout-justify-start;
+        width: 100%;
+        .scroll-inner {
+          height: 750px;
+          padding: 30px;
+          box-sizing: border-box;
+          &:nth-child(1) { width: 20%;border-right: 1px solid #e8e8e8; }
+          &:nth-child(2) { width: 80%; }
+        }
+        .student-cnt {
+          .scroll-inner {
+            overflow: inherit;
+            width: inherit;
+            height: inherit;
+            padding: 0;
+          }
+        }
+        .table-wrap {
+          &.type03 {
+            td {
+              white-space: normal;
+            }
+          }
+        }
+      }
     }
     .chart-wrap {
       position: relative;
@@ -496,9 +523,13 @@
     margin-bottom: 30px;
     @include font(22px, 500)
   }
+  .box {
+    &.type02 {
+      
+    }
+  }
 }
 
-// 학생 진단평가 리포트
 .stu-view {  
   .table-wrap {
     border-top: 0;
@@ -632,6 +663,95 @@
       border-top: 0;
       .th {
         display: none;
+      }
+    }
+  }
+}
+
+.stu-report {
+  .btn-name {
+    display: inline-flex;
+    position: relative;
+    top: -3px;
+  }
+  .table-wrap {
+    tr {
+      &.active {
+        td, button {
+          color: #108eff;
+          font-weight: 600;
+        }
+      }
+    }
+    &.type01 {
+      td {
+        &.a-left {
+          padding: 14px 20px;
+          font-weight: 400;
+          border-left: 1px solid #e8e8e8;
+        }
+      }
+    }
+  }
+  .student-cnt {
+    .title-wrap {
+      margin-bottom: 20px;
+      @include layout-justify-center;
+    }
+    .student-name {
+      color: #108eff;
+      @include font(24px, 600);
+    }
+    .keyword-wrap {
+      em {
+        @include font(17px, 500);
+      }
+      .keyword {
+        margin-left: 6px;
+        padding: 2px 11px 3px;
+        font-size: 15px;
+        border: 1px solid #333333;
+        border-radius: 14px;
+      }
+    }
+  }
+  .stu-tbl-report {
+    display: flex;
+    .thead, .tbody {
+      flex-direction: column;
+      span {
+        width: 100%;
+        height: 50px;
+        padding: 14px 10px;
+        text-align: center;
+        box-sizing: border-box;
+        border-bottom: 1px solid #e8e8e8;
+        &.active {
+          color: #108eff;
+          font-weight: 600;
+          button {
+            color: #108eff;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .thead {
+      width: 60px;
+      flex: none;
+      border: 0;
+      & > span {
+        border-left: 0;
+        border-right: 1px solid #e8e8e8;
+      }
+    }
+    .tbody {
+      display: flex;
+      width: 100%;
+      span {
+        &:nth-child(1) {
+          font-weight: 500;
+        }
       }
     }
   }
@@ -842,6 +962,29 @@
           }
           & + .box {
             margin-top: 20px;
+          }
+        }
+        &.stu-report {
+          flex-direction: column;
+          .scroll-inner {
+            padding: 0;
+            height: auto;
+            padding-bottom: 10px;
+            &:nth-child(1) {
+              width: 100%;
+              border-right: 0;
+            }
+            &:nth-child(2) {
+              width: 100%;
+            }
+          }
+          .student-cnt {
+            .scroll-inner {
+              overflow: overlay;
+              width: 100%;
+              height: auto;
+              padding: 0;
+            }
           }
         }
       }
@@ -1089,6 +1232,56 @@
       position: fixed;
       left: 0;right: 0;
       z-index: 2;
+    }
+  }
+
+  .stu-report {
+    padding: 10px;
+    .stu-tbl-report {
+      flex-direction: column;
+      .thead, .tbody {
+        flex-direction: row;
+        width: 100%;
+        span {
+          @include content-center-center;
+          flex: 1;
+          padding: 5px;
+          font-size: 13px;
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+      .tbody {
+        span {
+          border-right: 1px solid #e8e8e8;
+        }
+      }
+    }
+    .table-wrap {
+      min-width: 800px;
+      &.style01 {
+        min-width: 500px;
+        height: 586px;
+      }
+    }
+    .student-cnt {
+      .title-wrap {
+        margin: 25px 0 15px;
+        flex-direction: column;
+      }
+      .student-name {
+        margin-bottom: 10px;
+        font-size: 17px;
+      }
+      .keyword-wrap {
+        em {
+          font-size: 15px;
+        }
+        .keyword {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

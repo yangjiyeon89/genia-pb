@@ -131,6 +131,7 @@
 .report-view-wrap .table-wrap.type01.style01 th, .report-view-wrap .table-wrap.type01.style01 td {
   height: 50px;
   padding: 14px 10px;
+  box-sizing: border-box;
 }
 .report-view-wrap .table-wrap.type05 {
   border-top: 1px solid #757575;
@@ -430,6 +431,33 @@
   height: 100%;
   padding: 30px;
 }
+.report-view-wrap .report-cnt .box.stu-report {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.report-view-wrap .report-cnt .box.stu-report .scroll-inner {
+  height: 750px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.report-view-wrap .report-cnt .box.stu-report .scroll-inner:nth-child(1) {
+  width: 20%;
+  border-right: 1px solid #e8e8e8;
+}
+.report-view-wrap .report-cnt .box.stu-report .scroll-inner:nth-child(2) {
+  width: 80%;
+}
+.report-view-wrap .report-cnt .box.stu-report .student-cnt .scroll-inner {
+  overflow: inherit;
+  width: inherit;
+  height: inherit;
+  padding: 0;
+}
+.report-view-wrap .report-cnt .box.stu-report .table-wrap.type03 td {
+  white-space: normal;
+}
 .report-view-wrap .report-cnt .chart-wrap {
   position: relative;
   width: 230px;
@@ -540,7 +568,6 @@
   font-size: 22px;
   font-weight: 500;
 }
-
 .stu-view .table-wrap {
   border-top: 0;
   background-color: transparent;
@@ -683,6 +710,81 @@
 }
 .stu-view .tbl-report.type02 + .tbl-report .th {
   display: none;
+}
+
+.stu-report .btn-name {
+  display: inline-flex;
+  position: relative;
+  top: -3px;
+}
+.stu-report .table-wrap tr.active td, .stu-report .table-wrap tr.active button {
+  color: #108eff;
+  font-weight: 600;
+}
+.stu-report .table-wrap.type01 td.a-left {
+  padding: 14px 20px;
+  font-weight: 400;
+  border-left: 1px solid #e8e8e8;
+}
+.stu-report .student-cnt .title-wrap {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stu-report .student-cnt .student-name {
+  color: #108eff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.stu-report .student-cnt .keyword-wrap em {
+  font-size: 17px;
+  font-weight: 500;
+}
+.stu-report .student-cnt .keyword-wrap .keyword {
+  margin-left: 6px;
+  padding: 2px 11px 3px;
+  font-size: 15px;
+  border: 1px solid #333333;
+  border-radius: 14px;
+}
+.stu-report .stu-tbl-report {
+  display: flex;
+}
+.stu-report .stu-tbl-report .thead, .stu-report .stu-tbl-report .tbody {
+  flex-direction: column;
+}
+.stu-report .stu-tbl-report .thead span, .stu-report .stu-tbl-report .tbody span {
+  width: 100%;
+  height: 50px;
+  padding: 14px 10px;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e8e8e8;
+}
+.stu-report .stu-tbl-report .thead span.active, .stu-report .stu-tbl-report .tbody span.active {
+  color: #108eff;
+  font-weight: 600;
+}
+.stu-report .stu-tbl-report .thead span.active button, .stu-report .stu-tbl-report .tbody span.active button {
+  color: #108eff;
+  font-weight: 600;
+}
+.stu-report .stu-tbl-report .thead {
+  width: 60px;
+  flex: none;
+  border: 0;
+}
+.stu-report .stu-tbl-report .thead > span {
+  border-left: 0;
+  border-right: 1px solid #e8e8e8;
+}
+.stu-report .stu-tbl-report .tbody {
+  display: flex;
+  width: 100%;
+}
+.stu-report .stu-tbl-report .tbody span:nth-child(1) {
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1023px) {
@@ -866,6 +968,27 @@
   }
   .report-view-wrap .report-cnt .box.w49 + .box {
     margin-top: 20px;
+  }
+  .report-view-wrap .report-cnt .box.stu-report {
+    flex-direction: column;
+  }
+  .report-view-wrap .report-cnt .box.stu-report .scroll-inner {
+    padding: 0;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .report-view-wrap .report-cnt .box.stu-report .scroll-inner:nth-child(1) {
+    width: 100%;
+    border-right: 0;
+  }
+  .report-view-wrap .report-cnt .box.stu-report .scroll-inner:nth-child(2) {
+    width: 100%;
+  }
+  .report-view-wrap .report-cnt .box.stu-report .student-cnt .scroll-inner {
+    overflow: overlay;
+    width: 100%;
+    height: auto;
+    padding: 0;
   }
   .report-view-wrap .report-cnt .chart-wrap.type02 {
     width: 150px;
@@ -1053,6 +1176,51 @@
     left: 0;
     right: 0;
     z-index: 2;
+  }
+  .stu-report {
+    padding: 10px;
+  }
+  .stu-report .stu-tbl-report {
+    flex-direction: column;
+  }
+  .stu-report .stu-tbl-report .thead, .stu-report .stu-tbl-report .tbody {
+    flex-direction: row;
+    width: 100%;
+  }
+  .stu-report .stu-tbl-report .thead span, .stu-report .stu-tbl-report .tbody span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 5px;
+    font-size: 13px;
+  }
+  .stu-report .stu-tbl-report .thead span:last-child, .stu-report .stu-tbl-report .tbody span:last-child {
+    border-right: 0;
+  }
+  .stu-report .stu-tbl-report .tbody span {
+    border-right: 1px solid #e8e8e8;
+  }
+  .stu-report .table-wrap {
+    min-width: 800px;
+  }
+  .stu-report .table-wrap.style01 {
+    min-width: 500px;
+    height: 586px;
+  }
+  .stu-report .student-cnt .title-wrap {
+    margin: 25px 0 15px;
+    flex-direction: column;
+  }
+  .stu-report .student-cnt .student-name {
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+  .stu-report .student-cnt .keyword-wrap em {
+    font-size: 15px;
+  }
+  .stu-report .student-cnt .keyword-wrap .keyword {
+    font-size: 14px;
   }
 }
 /**
