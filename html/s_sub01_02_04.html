@@ -104,14 +104,34 @@
         <div class="exam-top">
           <div class="inner">
             <div class="tit">
-              <button type="button" class="btn-arrow pop-btn" data-pop="pop-que-close"></button>
               <span class="txt"><em>수학 6-1</em> 1.분수의 나눗셈 학습자료</span>
             </div>
             <button type="button" class="btn-close pop-btn" data-pop="pop-que-close"></button>
           </div>
         </div>
         <div class="exam-cnt">
-          
+          <div class="archive-wrap">
+            <p class="title">학습자료명</p>
+            <div class="archive-swiper-wrap">
+              <div class="swiper archive-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="temp-box"></div><!-- 컨텐츠 임시영역 -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="temp-box"></div><!-- 컨텐츠 임시영역 -->
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="temp-box"></div><!-- 컨텐츠 임시영역 -->
+                  </div>
+                </div>
+                <div class="swiper-button-prev">이전</div>
+                <div class="swiper-button-next">다음</div>
+                <!--마지막 슬라이드인 경우 과제목록 버튼 노출 -->
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     <div class="dim"></div>
@@ -133,10 +153,10 @@
 </body>
 <script>
   $(function(){
-     const queSwiper = new Swiper(".-swiper", {
+     const queSwiper = new Swiper(".archive-swiper", {
        navigation: {
-         nextEl: ".-swiper .swiper-button-next",
-         prevEl: ".-swiper .swiper-button-prev",
+         nextEl: ".archive-swiper .swiper-button-next",
+         prevEl: ".archive-swiper .swiper-button-prev",
        },
      });
    });

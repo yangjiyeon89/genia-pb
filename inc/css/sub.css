@@ -1497,6 +1497,60 @@
 .exam-wrap .question-swiper .swiper-button-prev:after, .exam-wrap .question-swiper .swiper-rtl .swiper-button-next:after, .exam-wrap .question-swiper .swiper-button-next:after, .exam-wrap .question-swiper .swiper-rtl .swiper-button-prev:after {
   display: none;
 }
+.exam-wrap .archive-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.exam-wrap .archive-wrap .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.exam-wrap .archive-swiper {
+  max-width: 100%;
+  height: 550px;
+  border-radius: 26px;
+  overflow: hidden;
+}
+.exam-wrap .archive-swiper .temp-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.exam-wrap .archive-swiper .temp-box::before {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  background: url(../../images/common/ico_video_play.png) center no-repeat;
+  background-size: contain;
+}
+.exam-wrap .swiper-button-next, .exam-wrap .swiper-button-prev {
+  top: 50%;
+  width: 150px;
+  height: 55px;
+  border-radius: 13px;
+}
+.exam-wrap .swiper-button-prev, .exam-wrap .swiper-rtl .swiper-button-next {
+  background-color: #108eff;
+  color: #fff;
+  left: 0;
+}
+.exam-wrap .swiper-button-next, .exam-wrap .swiper-rtl .swiper-button-prev {
+  border: 1px solid #108eff;
+  color: #108eff;
+  right: 0;
+}
+.exam-wrap .swiper-button-prev:after, .exam-wrap .swiper-rtl .swiper-button-next:after, .exam-wrap .swiper-button-next:after, .exam-wrap .swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
 
 .pop-wrap.que-type02 .pop-content {
   width: 420px;
