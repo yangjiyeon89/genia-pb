@@ -613,28 +613,24 @@
 //미리보기 팝업
 .pop-wrap {
 	&.exam-prev-pop {
-		.inner {
+		.exam-wrap {
 			@include layout-center-center;
 			flex-direction: column;
 			height: calc(100vh - 45px);
-			background: #f8f8f8;
 		}
 	}
 }
 
 .exam-view-wrap {
-	//border: 1px solid #333;
 	@include layout-center-center;
 	width: 100%;
-	max-width: 1280px;
+	max-width: 1120px;
 	padding: 30px 20px;
 	margin: 0 auto;
 	height: calc(100vh - 184px);
 	box-sizing: border-box;
 
 	.view-cnt-wrap {
-		// padding: 30px 25px;
-		// height: calc(100vh - 270px);
 		position: relative;
 		width: 100%;
 		height: 100%;
@@ -703,6 +699,190 @@
 		}
 	}
 }
+
+
+.pop-wrap {
+	&.exam-edit-pop {
+		.exam-wrap {
+			@include layout-center-center;
+			flex-direction: column;
+			height: calc(100vh - 45px);
+			background: #fff;
+		}
+	}
+}
+
+.exam-edit-wrap {
+	@include layout-center-center;
+	width: 100%;
+	max-width: 1120px;
+	padding: 20px 30px;
+	margin: 0 auto;
+	height: 100%;
+	box-sizing: border-box;
+
+	.view-cnt-wrap {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+
+		.class-tit {
+			margin-bottom: 20px;
+
+			span {
+				@include font(18px, 600);
+
+				&::after {
+					content: '';
+					display: inline-block;
+					width: 1px;
+					height: 15px;
+					margin: 0 15px;
+					background: #979797;
+				}
+
+				&:last-child::after {
+					width: 0;
+				}
+			}
+		}
+
+		.que-list-wrap {
+			width: 100%;
+			@include layout-justify-center;
+
+			.que-list {
+
+				&.type01 {
+					background: #fff;
+				}
+
+				&.type02 {
+					background: #f8f8f8;
+				}
+
+				width: 520px;
+				height: 680px;
+				padding: 20px;
+				border: 1px solid #e8e8e8;
+				box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.09);
+				border-radius: 17px;
+
+				.top-txt {
+					@include font(20px, 600);
+					margin-bottom: 15px;
+				}
+
+				.que-box-wrap {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+
+					.que-box {
+						width: 480px;
+						height: 290px;
+						border: 1px solid #b2b2b2;
+						background: #fff;
+
+						.top-area {
+							@include layout-justify-center;
+							width: 100%;
+							height: 45px;
+							background: #333;
+							color: #fff;
+							padding: 15px 20px;
+
+							.que-num {
+								@include font(18px, 500);
+							}
+
+							.btn-wrap {
+								gap: 15px;
+							}
+						}
+
+						.bottom-area {
+							width: 100%;
+							height: calc(100% - 45px);
+							padding: 0 20px;
+							position: relative;
+
+							.temp-box {
+								@include layout-center-center;
+								width: 100%;
+								height: 100%;
+
+								img {
+									width: 80%;
+									max-width: 450px;
+									object-fit: contain;
+								}
+							}
+							.btn-rotate {
+								&:focus-within {
+									background: #000;
+								}
+							}
+
+							.btn-icon-type03 {
+								width: 33px;
+								height: 33px;
+								border-radius: 5px;
+								border: 1px solid #bbb;
+								background: #fff;
+								position: absolute;
+								bottom: 20px;
+								right: 20px;
+								i {
+									&.rotate {
+										background: url(../../images/common/ico_rotate_off.png) no-repeat center;
+										width: 18px;
+										height: 18px;
+									}
+								}
+							}
+						}
+					}
+
+					.btn-icon-type02 {
+						i {
+							&.delete {
+								background: url(../../images/common/ico_del_type03.png) no-repeat center;
+								width: 20px;
+								height: 21px;
+							}
+
+							&.add {
+								background: url(../../images/common/ico_add_type02.png) no-repeat center;
+								width: 17px;
+								height: 17px;
+
+							}
+
+							&.rotate {
+								background: url(../../images/common/ico_rotate_type02.png) no-repeat center;
+								width: 18px;
+								height: 19px;
+							}
+						}
+					}
+				}
+
+			}
+		}
+
+		.btn-wrap {
+			&.type01 {
+				margin: 30px auto 35px;
+				display: flex;
+			}
+		}
+	}
+}
+
+
 
 
 
@@ -801,11 +981,13 @@
 			.exam-swiper-wrap {
 				.que-num {
 					padding: 15px 10px 0;
+
 					span {
 						@include font(18px, 600);
 						line-height: 20px;
 					}
 				}
+
 				.temp-box {
 					height: calc(100% - 40px);
 				}

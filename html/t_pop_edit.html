@@ -28,10 +28,127 @@
 				<button type="button" class="pop-close"></button>
 			</div>
 			<div class="pop-content">
-				<div class="inner">
-					<div class="exam-eidt-wrap">
+				<div class="exam-wrap">
+					<div class="exam-edit-wrap">
 						<div class="view-cnt-wrap">
-							<p class="class-tit"></p>
+							<div class="class-tit">
+								<span>수학 6-2</span>
+								<span>1. 분수의 나눗셈</span>
+								<span>[2차시] <em>분수의 나눗셈에 대해 알아보기</em></span>
+							</div>
+							<div class="que-list-wrap">
+								<div class="que-list type01 scroll-inner">
+									<div class="top-txt">문제 목록</div>
+									<div class="que-box-wrap">
+										<div class="edit-swiper-wrap">
+											<div class="swiper edit-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide que-box">
+														<div class="top-area">
+															<div class="que_num">1</div>
+															<button class="btn-icon-type02">
+																<i class="delete"></i>
+															</button>
+														</div>
+														<div class="bottom-area">
+															<div class="temp-box">
+																<img src="../images/sub/sample_que_04.png" alt="">
+															</div>
+															<button class="btn-icon-type03 btn-rotate">
+																<i class="rotate"></i>
+															</button>
+														</div>
+													</div>
+													<div class="swiper-slide que-box">
+														<div class="top-area">
+															<div class="que_num">1</div>
+															<button class="btn-icon-type02">
+																<i class="delete"></i>
+															</button>
+														</div>
+														<div class="bottom-area">
+															<div class="temp-box">
+																<img src="../images/sub/sample_que_04.png" alt="">
+															</div>
+															<button class="btn-icon-type03">
+																<i class="rotate"></i>
+															</button>
+														</div>
+													</div>
+													<div class="swiper-slide que-box">
+														<div class="top-area">
+															<div class="que_num">1</div>
+															<button class="btn-icon-type02">
+																<i class="delete"></i>
+															</button>
+														</div>
+														<div class="bottom-area">
+															<div class="temp-box">
+																<img src="../images/sub/sample_que_04.png" alt="">
+															</div>
+															<button class="btn-icon-type03">
+																<i class="rotate"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-button-next"></div>
+												<div class="swiper-button-prev"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="que-list type02 scroll-inner">
+									<div class="top-txt">유사 문제</div>
+									<div class="que-box-wrap">
+										<div class="que-box">
+											<div class="top-area">
+												<div class="que_num">1</div>
+												<div class="btn-wrap">
+													<button class="btn-icon-type02"><i class="add"></i></button>
+													<button class="btn-icon-type02"><i class="rotate"></i></button>
+												</div>
+											</div>
+											<div class="bottom-area">
+												<div class="temp-box">
+													<img src="../images/sub/sample_que_04.png" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="que-box">
+											<div class="top-area">
+												<div class="que_num">1</div>
+												<div class="btn-wrap">
+													<button class="btn-icon-type02"><i class="add"></i></button>
+													<button class="btn-icon-type02"><i class="rotate"></i></button>
+												</div>
+											</div>
+											<div class="bottom-area">
+												<div class="temp-box">
+													<img src="../images/sub/sample_que_04.png" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="que-box">
+											<div class="top-area">
+												<div class="que_num">1</div>
+												<div class="btn-wrap">
+													<button class="btn-icon-type02"><i class="add"></i></button>
+													<button class="btn-icon-type02"><i class="rotate"></i></button>
+												</div>
+											</div>
+											<div class="bottom-area">
+												<div class="temp-box">
+													<img src="../images/sub/sample_que_04.png" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="btn-wrap type01">
+								<button type="button" class="btn-defalut">저장</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -45,13 +162,34 @@
 
 <script>
 	$(function () {
-		const queSwiper = new Swiper('.question-swiper', {
+		const queSwiper = new Swiper('.edit-swiper', {
 			navigation: {
-				nextEl: ".question-swiper .swiper-button-next",
-				prevEl: ".question-swiper .swiper-button-prev",
+				nextEl: ".edit-swiper .swiper-button-next",
+				prevEl: ".edit-swiper .swiper-button-prev",
 			},
 		});
 	});
+
+	// btn-rotate 요소를 선택합니다.
+	//var rotateBtn = document.querySelector('.btn-rotate');
+
+	// btn-rotate를 클릭했을 때의 이벤트 핸들러를 정의합니다.
+	//rotateBtn.addEventListener('click', function () {
+		// top-area의 background 속성을 변경합니다.
+		//var topArea = this.closest('.que-box').querySelector('.top-area');
+		//topArea.style.background = '#108eff';
+
+		// que-box의 border 속성을 변경합니다.
+		//var queBox = this.closest('.que-box');
+		//queBox.style.border = '1px solid #108eff';
+
+		// btn-rotate 안에 있는 rotate 클래스의 background 속성을 변경합니다.
+		//var rotate = this.querySelector('.rotate');
+		//rotate.style.background = 'url(../../images/common/ico_rotate_on.png)';
+
+		// focus를 이용하여 버튼에 초점을 줍니다.
+		//this.focus();
+	//});
 </script>
 
 </html>
