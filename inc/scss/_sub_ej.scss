@@ -547,10 +547,11 @@
 
 }
 
-
+//하단 팝업
 .pop-wrap {
 	&.bottom-type {
 		z-index: 3;
+
 		.pop-content {
 			padding: 0 20px;
 
@@ -604,6 +605,101 @@
 
 		.pop-footer {
 			padding: 20px 20px 50px;
+		}
+	}
+}
+
+
+//미리보기 팝업
+.pop-wrap {
+	&.exam-prev-pop {
+		.inner {
+			@include layout-center-center;
+			flex-direction: column;
+			height: calc(100vh - 45px);
+			background: #f8f8f8;
+		}
+	}
+}
+
+.exam-view-wrap {
+	//border: 1px solid #333;
+	@include layout-center-center;
+	width: 100%;
+	max-width: 1280px;
+	padding: 30px 20px;
+	margin: 0 auto;
+	height: calc(100vh - 184px);
+	box-sizing: border-box;
+
+	.view-cnt-wrap {
+		// padding: 30px 25px;
+		// height: calc(100vh - 270px);
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		border: 1px solid #333;
+		background: #fff;
+
+		.exam-swiper-wrap {
+			.que-num {
+				width: 100%;
+				padding: 30px 25px 0;
+
+				span {
+					@include font(24px, 600);
+					line-height: 24px;
+					padding-bottom: 5px;
+					border-bottom: 1px solid #333;
+					color: #333;
+				}
+			}
+
+			.temp-box {
+				@include layout-center-center;
+				width: 100%;
+				height: calc(100% - 55px);
+
+				img {
+					width: 80%;
+					max-width: 480px;
+					object-fit: contain;
+				}
+			}
+
+			height: 100%;
+
+			.question-swiper {
+				height: 100%;
+
+				.swiper-button-next,
+				.swiper-button-prev {
+					top: 50%;
+					width: 17px;
+					height: 31px;
+					background: url(../../images/common/ico_swiper_arrow.png) no-repeat center;
+					background-size: contain;
+				}
+
+				.swiper-button-prev,
+				.swiper-rtl .swiper-button-next {
+					left: 30px;
+					transform: rotate(-180deg);
+				}
+
+				.swiper-button-next,
+				.swiper-rtl .swiper-button-prev {
+					right: 30px;
+				}
+
+				.swiper-button-prev:after,
+				.swiper-rtl .swiper-button-next:after,
+				.swiper-button-next:after,
+				.swiper-rtl .swiper-button-prev:after {
+					display: none;
+				}
+			}
 		}
 	}
 }
@@ -694,6 +790,43 @@
 			li {
 				&::after {
 					right: 25vw;
+				}
+			}
+		}
+	}
+
+	.exam-view-wrap {
+		.view-cnt-wrap {
+
+			.exam-swiper-wrap {
+				.que-num {
+					padding: 15px 10px 0;
+					span {
+						@include font(18px, 600);
+						line-height: 20px;
+					}
+				}
+				.temp-box {
+					height: calc(100% - 40px);
+				}
+
+				.question-swiper {
+
+					.swiper-button-prev,
+					.swiper-rtl .swiper-button-next {
+						left: 10px;
+					}
+
+					.swiper-button-next,
+					.swiper-rtl .swiper-button-prev {
+						right: 10px;
+					}
+
+					.swiper-button-next,
+					.swiper-button-prev {
+						width: 10px;
+						height: 20px;
+					}
 				}
 			}
 		}
