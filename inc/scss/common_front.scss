@@ -467,6 +467,10 @@
 			font-size: 13px;
 		}
 	}
+	&.type04 {
+		background-color: #ffa630;
+		color: #fff;
+	}
 }
 .btn-type03 {
 	height: 40px;
@@ -1244,6 +1248,10 @@ input[type="checkbox"] {
 	&.purple {
 		background-color: #eee8ff;
 		color: #8159ff;
+	}
+	&.orange {
+		background-color: #fff0dc;
+		color: #ffa630;
 	}
 }
 .badge-type03 {

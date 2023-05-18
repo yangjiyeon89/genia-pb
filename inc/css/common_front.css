@@ -517,6 +517,10 @@
 .btn-state.type03 span {
   font-size: 13px;
 }
+.btn-state.type04 {
+  background-color: #ffa630;
+  color: #fff;
+}
 
 .btn-type03 {
   height: 40px;
@@ -1328,6 +1332,10 @@ input[type=checkbox]:checked + label::before {
 .badge-type02.purple {
   background-color: #eee8ff;
   color: #8159ff;
+}
+.badge-type02.orange {
+  background-color: #fff0dc;
+  color: #ffa630;
 }
 
 .badge-type03 {
