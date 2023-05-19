@@ -10,6 +10,13 @@
     margin-top: 20px;
   }
   .tbl-report {
+    .thead {
+      & > span {
+        &:nth-child(1) {
+          padding: 15px 5px;
+        }
+      }
+    }
     .col {
       &.none-data {
         span {
@@ -34,6 +41,22 @@
       }
       .badge-color {
         margin-right: 15px;
+      }
+    }
+    &.type02 {
+      span {
+        &:nth-child(4) {
+          width: 49%;
+        }
+        &:nth-child(5) {
+          width: 7%;
+        }
+        &:nth-child(6) {
+          width: 8%;
+        }
+        &:nth-child(7) {
+          width: 8%;
+        }
       }
     }
   }
@@ -528,6 +551,11 @@
       
     }
   }
+  .nick {
+    position: relative;
+    top: 2px;
+    margin-left: 10px;
+  }
 }
 
 .stu-view {  
@@ -767,6 +795,38 @@
   }
 
   // 리포트 리스트
+  .report-list-wrap {
+    .tbl-report {
+      &.type02 {
+        .thead, .tbody {
+          span {
+            &:nth-child(5) {
+              width: 13%;
+            }
+            &:nth-child(6) {
+              width: 20%;
+            }
+            &:nth-child(7) {
+              width: 11%;
+            }
+          }
+        }
+        .tbody {
+          span {
+            &:nth-child(3) {
+              order: 6;
+            }
+            &:nth-child(4) {
+              order: 7;
+            }
+            &:nth-child(7) {
+              order: 5;
+            }
+          }
+        }
+      }
+    }
+  }
   .report-list-top {
     padding-top: 20px;
     flex-direction: column;

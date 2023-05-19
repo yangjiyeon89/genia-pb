@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common_front.css">
+  <link rel="stylesheet" href="../inc/css/sub.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="dim"></div>
+    <div class="pop-wrap full-type report-pop" style="display:block;">
+      <div class="pop-inner">
+        <div class="pop-header">
+          <span>리포트</span>
+          <button type="button" class="pop-close"></button>
+        </div>
+        <div class="pop-content s_sub02">
+          <div class="inner">
+            <div class="report-view-wrap stu-view">
+              <div class="view-cnt-wrap">
+                <div class="report-top">
+                  <div class="unit-tit-wrap">
+                    <div class="tit">
+                      <span class="txt">종합리포트</span>
+                    </div>
+                    <div class="btn-wrap">
+                      <button type="button" class="web-cnt btn-print"></button>
+                    </div>
+                  </div>
+                  <div class="web-cnt user-wrap">
+                    <span class="info">천재초  ·  6학년 1반  ·  수학  ·  <em>김천재</em></span>
+                    <span class="badge">학생용</span>
+                  </div>
+                </div>
+                <div class="report-cnt type02">
+                  <span class="title">종합</span>
+                  <div class="justify-box">
+                    <div class="box-wrap w28">
+                      <span class="box-title">성취도</span>
+                      <div class="box">
+                        <div class="chart-wrap w280">
+                          <canvas id="achieveStuChart"></canvas> 
+                        </div>
+                        <div class="label-wrap bar-type">
+                          <span><span class="label-color"></span>학급</span>
+                          <span><span class="label-color type02"></span>김천재</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="box-wrap w34">
+                      <span class="box-title">내용 영역</span>
+                      <div class="box">
+                        <div class="chart-wrap w350">
+                          <canvas id="contentChart"></canvas>
+                        </div>
+                        <div class="label-wrap">
+                          <span><span class="label-color"></span>학급</span>
+                          <span><span class="label-color type02"></span>김천재</span>
+                        </div>
+                      </div>                
+                    </div>
+                    <div class="box-wrap w34">
+                      <span class="box-title">교과 역량</span>
+                      <div class="box">
+                        <div class="chart-wrap w330">
+                          <canvas id="subjectChart"></canvas>
+                        </div>
+                        <div class="label-wrap">
+                          <span><span class="label-color"></span>학급</span>
+                          <span><span class="label-color type02"></span>김천재</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="report-title">단원별 성취율</span>                
+                  <div class="box h411">
+                    <div class="scroll-inner type02">
+                      <canvas id="unitChart" style="width: 1150px; height: 290px;"></canvas>
+                    </div>
+                  </div>
+                  <span class="title mt50">GeniA AI <p>AI 학습 분석<em>내가 잘하거나 어려워하는 학습 개념을 확인할 수 있습니다. </em></p> </span>
+                  <div class="box h480">
+                    <div class="scroll-inner">
+                      <img src="../images/sub/sample_ai.png" alt="">
+                    </div>
+                  </div>
+                  <span class="title mt50">성취기준별 분석</span>
+                  <div class="justify-box col-type">
+                    <div class="scroll-inner">
+                      <div class="box">
+                        <p class="unit-title">
+                          <span class="badge-type01">1단원</span>
+                          <span class="badge-type01 blue">성취율 80%</span>
+                          <p class="tit">약수와 배수약수와 배수약수와 배수약수와 배수약수와 배수약수와 배수약수와 배수약수와 배수</p>
+                        </p>
+                        <div class="unit">
+                          <span class="badge-line-color color10">100</span>
+                          <span class="tit">6수01-01</span>
+                          <span class="txt">덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산에서 계산하는 순서를 알고, 혼합 계산을 할 수 있다. 덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산에서 계산하는 순서를 알고, 
+                            혼합 계산을 할 수 있다. </span>
+                        </div>
+                        <div class="unit">
+                          <span class="badge-line-color color09">90</span>
+                          <span class="tit">6수01-02</span>
+                          <span class="txt">약수, 공약수, 최대공약수의 의미를 알고 구할 수 있다.</span>
+                        </div>
+                        <div class="unit">
+                          <span class="badge-line-color color08">80</span>
+                          <span class="tit">6수01-03</span>
+                          <span class="txt">배수, 공배수, 최소공배수의 의미를 알고 구할 수 있다. </span>
+                        </div>
+                        <div class="unit">
+                          <span class="badge-line-color color07">70</span>
+                          <span class="tit">6수01-01</span>
+                          <span class="txt">덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산에서 계산하는 순서를 알고, 혼합 계산을 할 수 있다. 덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산에서 계산하는 순서를 알고, 
+                            혼합 계산을 할 수 있다.</span>
+                        </div>
+                        <div class="unit">
+                          <span class="badge-line-color color06">60</span>
+                          <span class="tit">6수01-02</span>
+                          <span class="txt">약수, 공약수, 최대공약수의 의미를 알고 구할 수 있다.</span>
+                        </div>
+                        <div class="unit">
+                          <span class="badge-line-color color05">50</span>
+                          <span class="tit">6수01-03</span>
+                          <span class="txt">배수, 공배수, 최소공배수의 의미를 알고 구할 수 있다. </span>
+                        </div>
+                      </div>
+                      <div class="box">
+                        <p class="unit-title">
+                          <span class="badge-type01">3단원</span>
+                          <span class="badge-type01 blue">성취율 80%</span>
+                          <p class="tit">자연수의 혼합계산</p>
+                        </p>
+                        <div class="unit">
+                          <span class="badge-line-color color03">30</span>
+                          <span class="tit">6수01-08</span>
+                          <span class="txt">덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산에서 계산하는 순서를 알고, 혼합 계산을 할 수 있다. 덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산에서 계산하는 순서를 알고, 
+                            혼합 계산을 할 수 있다.</span>
+                        </div>
+                        <div class="unit">
+                          <span class="badge-line-color color02">20</span>
+                          <span class="tit">6수01-09</span>
+                          <span class="txt">약수, 공약수, 최대공약수의 의미를 알고 구할 수 있다.</span>
+                        </div>
+                        <div class="unit">
+                          <span class="badge-line-color color01">10</span>
+                          <span class="tit">6수01-10</span>
+                          <span class="txt">배수, 공배수, 최소공배수의 의미를 알고 구할 수 있다.</span>
+                        </div>
+                      </div>
+                      <div class="box">
+                        <p class="unit-title">
+                          <span class="badge-type01">11단원</span>
+                          <span class="badge-type01 pink">성취율 60%</span>
+                          <p class="tit">약분과 통분</p>
+                        </p>
+                        <div class="unit">
+                          <span class="badge-line-color color03">30</span>
+                          <span class="tit">6수01-08</span>
+                          <span class="txt">덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산에서 계산하는 순서를 알고, 혼합 계산을 할 수 있다. 덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산에서 계산하는 순서를 알고, 
+                            혼합 계산을 할 수 있다.</span>
+                        </div>
+                        <div class="unit">
+                          <span class="badge-line-color color06">60</span>
+                          <span class="tit">6수01-09</span>
+                          <span class="txt">약수, 공약수, 최대공약수의 의미를 알고 구할 수 있다.</span>
+                        </div>
+                        <div class="unit">
+                          <span class="badge-line-color color05">05</span>
+                          <span class="tit">6수01-10</span>
+                          <span class="txt">배수, 공배수, 최소공배수의 의미를 알고 구할 수 있다.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  Chart.register(ChartDataLabels);
+  $(function () {
+    // 성취도 차트
+    function achieveStuChartRender(){
+      let barCanvas = document.getElementById("achieveStuChart").getContext('2d'); 
+      let gradient = barCanvas.createLinearGradient( 0, 0, 0, 230);
+      gradient.addColorStop(0, 'rgba(30, 139, 255, 1)');
+      gradient.addColorStop(1, 'rgba(131, 86, 255, 1)');
+      let data = {
+          labels: ['학급', '김천재'],
+          datasets: [{
+            data: [65, 80],
+            borderColor: 'transparent',
+            borderWidth: 3,
+            backgroundColor: ['#f0ecff', gradient],
+          }]
+      };
+      new Chart(barCanvas, {
+        type: 'bar',
+        data: data,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          pointRadius : 0,
+          barThickness: 24,
+          borderRadius: 12,
+          scales: {
+            x: {
+              stacked: true,
+              ticks: false,
+            },
+            y: {
+              min: 0,
+              max: 100,
+              ticks: {
+                stepSize: 20,
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                },
+                callback:function(value){
+                  return value + '%';
+                }
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: true
+            },
+            datalabels: {
+              anchor :'end',
+              align:'top',
+              offset: '0',
+              color: '#333',
+              display: function(context) {
+                var dataset = context.dataset;
+                var count = dataset.data.length;
+                var value = dataset.data[context.dataIndex];
+                return value;// > count * 1.5;
+              },
+              font: {
+                weight: 'bold',
+                size: '14'
+              },
+              formatter: function(value, context) {
+                var dataset = context.dataset;
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+                currentValue = dataset.data[context.dataIndex];
+                return Math.round(value) + '%';
+              }
+            }
+          }
+        }
+      });
+    };
+
+    // 내용 영역별 성취율 차트
+    function contentChartRender(){
+      let radarCanvas = document.getElementById("contentChart").getContext('2d');
+      let gradient = radarCanvas.createLinearGradient(50, 0, 300, 0);
+      gradient.addColorStop(0, 'rgba(30, 139, 255, 1)');
+      gradient.addColorStop(1, 'rgba(131, 86, 255, 1)');
+      let data = {
+          labels: ['수와 연산', '도형', '측정', '규칙성', ['자료와', '가능성']],
+          datasets: [{
+            label: '내용 영역별 성취율',
+            data: [80, 90, 80, 75, 65],
+            backgroundColor: 'rgba(130, 88, 255, 0.1)',
+            borderColor: gradient,
+            borderWidth: 3
+          }]
+      };
+      new Chart(radarCanvas, {
+        type: 'radar',
+        data: data,
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          pointRadius : 0,
+          scales: {
+            r: {
+              min: 0,
+              max: 100,
+              stepSize: 20,
+              pointLabels: {
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                },                
+              },
+              ticks: {
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                }
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false
+            },
+            datalabels: {
+              display: false,
+            }
+          }
+        }
+      });
+    };
+
+    // 교과 역량별 성취율 차트
+    function subjectChartRender(){
+      let radarCanvas = document.getElementById("subjectChart").getContext('2d');
+      let gradient = radarCanvas.createLinearGradient(50, 0, 300, 0);
+      gradient.addColorStop(0, 'rgba(30, 139, 255, 1)');
+      gradient.addColorStop(1, 'rgba(131, 86, 255, 1)');
+      let data = {
+          labels: ['추론', ['문제','해결'], ['의사','소통'], ['정보','처리'], ['창의','융합']],
+          datasets: [{
+            label: '교과 영역별 성취율',
+            data: [70, 90, 50, 75, 45],
+            backgroundColor: 'rgba(130, 88, 255, 0.1)',
+            borderColor: gradient,
+            borderWidth: 3
+          }]
+      };
+      new Chart(radarCanvas, {
+        type: 'radar',
+        data: data,
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          pointRadius : 0,
+          scales: {
+            r: {
+              min: 0,
+              max: 100,
+              stepSize: 20,
+              pointLabels: {
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                },                
+              },
+              ticks: {
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                }
+              },
+            },
+            
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false
+            },
+            datalabels: {
+              display: false,
+            }
+          }
+        }
+      });
+    };
+
+    // 단원별 성취율 차트
+    function unitChartRender(){
+      let barCanvas = document.getElementById("unitChart").getContext('2d'); 
+      let data = {
+          labels: ['1단원', '2단원', '3단원', '4단원', '5단원', '6단원', '7단원', '8단원', '9단원', '10단원', '11단원', '12단원', '13단원', '14단원', '15단원', '16단원', '17단원'],
+          datasets: [{
+            label: '성취율',
+            data: [80, 78, 76, 60, 94, 70, 71, 80, 78, 76, 60, 94, 70, 71, 94, 70, 71],
+            backgroundColor: (ctx) => {
+              // 가장 낮은 데이터 인덱스 찾기
+              let minIndex = 0;
+              for (let i = 1; i < ctx.dataset.data.length; i++) {
+                  if (ctx.dataset.data[i] < ctx.dataset.data[minIndex]) {
+                      minIndex = i;
+                  }
+              }
+              if (ctx.dataIndex === minIndex) {
+                  return 'rgba(255, 86, 154, 1)';
+              } else {
+                  return 'rgba(16, 142, 255, 1)';
+              }
+            },
+            borderColor: 'transparent',
+            borderWidth: 3,
+          }]
+      };
+      new Chart(barCanvas, {
+        type: 'bar',
+        data: data,
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          pointRadius : 0,
+          barThickness: 24,
+          borderRadius: 12,
+          scales: {
+            x: {
+                stacked: true
+            },
+            y: {
+              min: 0,
+              max: 100,
+              ticks: {
+                stepSize : 20,
+                font: {
+                  size: 14,
+                  weight: 'bold'
+                },
+                callback:function(value){
+                  return value + '%';
+                }
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            tooltip: {
+              enabled: false,
+            },
+            datalabels: {
+              anchor :'end',
+              align:'top',
+              offset: '0',
+              color: '#108eff',
+              display: function(context) {
+                var dataset = context.dataset;
+                var count = dataset.data.length;
+                var value = dataset.data[context.dataIndex];
+                return value;// > count * 1.5;
+              },
+              font: {
+                weight: 'bold',
+                size: '14'
+              },
+              formatter: function(value, context) {
+                var dataset = context.dataset;
+                var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                  return previousValue + currentValue;
+                });
+                currentValue = dataset.data[context.dataIndex];
+                return Math.round(value) + '%';
+              }
+            }
+          }
+        }
+      });
+      
+    };
+
+    $(document).ready(function(){
+      achieveStuChartRender();
+      contentChartRender();
+      subjectChartRender();
+      unitChartRender();
+    })
+
+  });
+</script>
+
+</html>
