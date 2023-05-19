@@ -2681,9 +2681,6 @@
   max-width: 450px;
   object-fit: contain;
 }
-.exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list .que-box-wrap .que-box .bottom-area .btn-rotate:focus-within {
-  background: #000;
-}
 .exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list .que-box-wrap .que-box .bottom-area .btn-icon-type03 {
   width: 33px;
   height: 33px;
@@ -2698,6 +2695,24 @@
   background: url(../../images/common/ico_rotate_off.png) no-repeat center;
   width: 18px;
   height: 18px;
+}
+.exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list .que-box-wrap .que-box .bottom-area .btn-rotate:focus {
+  border: 1px solid #108eff;
+}
+.exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list .que-box-wrap .que-box .bottom-area .btn-rotate:focus + .que-box {
+  border: 1px solid #108eff;
+}
+.exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list .que-box-wrap .que-box .bottom-area .btn-rotate:focus + .que-box .top-area {
+  background: #108eff;
+}
+.exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list .que-box-wrap .que-box .bottom-area .btn-rotate.active {
+  border: 1px solid #108eff;
+}
+.exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list .que-box-wrap .que-box .bottom-area .btn-rotate.active + .que-box {
+  border: 1px solid #108eff;
+}
+.exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list .que-box-wrap .que-box .bottom-area .btn-rotate.active + .que-box .top-area {
+  background: #108eff;
 }
 .exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list .que-box-wrap .btn-icon-type02 i.delete {
   background: url(../../images/common/ico_del_type03.png) no-repeat center;

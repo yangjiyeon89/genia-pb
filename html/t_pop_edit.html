@@ -170,26 +170,11 @@
 		});
 	});
 
-	// btn-rotate 요소를 선택합니다.
-	//var rotateBtn = document.querySelector('.btn-rotate');
+	const btnRotate = document.querySelector('.btn-icon-type03.btn-rotate');
 
-	// btn-rotate를 클릭했을 때의 이벤트 핸들러를 정의합니다.
-	//rotateBtn.addEventListener('click', function () {
-		// top-area의 background 속성을 변경합니다.
-		//var topArea = this.closest('.que-box').querySelector('.top-area');
-		//topArea.style.background = '#108eff';
-
-		// que-box의 border 속성을 변경합니다.
-		//var queBox = this.closest('.que-box');
-		//queBox.style.border = '1px solid #108eff';
-
-		// btn-rotate 안에 있는 rotate 클래스의 background 속성을 변경합니다.
-		//var rotate = this.querySelector('.rotate');
-		//rotate.style.background = 'url(../../images/common/ico_rotate_on.png)';
-
-		// focus를 이용하여 버튼에 초점을 줍니다.
-		//this.focus();
-	//});
+	btnRotate.addEventListener('click', () => {
+		btnRotate.focus();
+	});
 </script>
 
 </html>

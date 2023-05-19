@@ -826,11 +826,6 @@
 									object-fit: contain;
 								}
 							}
-							.btn-rotate {
-								&:focus-within {
-									background: #000;
-								}
-							}
 
 							.btn-icon-type03 {
 								width: 33px;
@@ -841,11 +836,38 @@
 								position: absolute;
 								bottom: 20px;
 								right: 20px;
+
 								i {
 									&.rotate {
 										background: url(../../images/common/ico_rotate_off.png) no-repeat center;
 										width: 18px;
 										height: 18px;
+									}
+								}
+							}
+
+							.btn-rotate {
+								&:focus {
+									border: 1px solid #108eff;
+
+									&+.que-box {
+										border: 1px solid #108eff;
+
+										.top-area {
+											background: #108eff;
+										}
+									}
+								}
+
+								&.active {
+									border: 1px solid #108eff;
+
+									+.que-box {
+										border: 1px solid #108eff;
+
+										.top-area {
+											background: #108eff;
+										}
 									}
 								}
 							}
