@@ -808,6 +808,83 @@
   font-weight: 500;
 }
 
+.notice-cnt .notice-list .title, .notice-cnt .notice-view .title {
+  font-size: 26px;
+}
+
+.notice-list .table-top {
+  margin: 30px 0 20px;
+  align-items: flex-end;
+}
+.notice-list .total em {
+  font-weight: 600;
+}
+.notice-list .table-list table {
+  table-layout: fixed;
+  border-top: 1px solid #757575;
+}
+.notice-list .table-list th:last-child, .notice-list .table-list td:last-child {
+  border-right: 0;
+}
+
+.notice-view .table-wrap {
+  margin-top: 30px;
+}
+.notice-view .table-wrap thead th {
+  padding: 26px 20px;
+}
+.notice-view .table-wrap th:last-child {
+  border-right: 0;
+}
+.notice-view .table-wrap .cnt {
+  padding: 30px 20px;
+}
+.notice-view .table-wrap .cnt .scroll-inner {
+  display: flex;
+  align-items: center;
+  height: 400px;
+  padding-right: 5px;
+  text-align: left;
+}
+.notice-view .table-wrap .file th, .notice-view .table-wrap .file td {
+  padding: 19px 20px;
+}
+.notice-view .table-wrap .file th {
+  border-right: 0;
+}
+.notice-view .table-wrap .file td {
+  text-align: left;
+  border-left: 0;
+}
+.notice-view .table-wrap .file td img {
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+}
+.notice-view .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice-view .title-wrap .title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.notice-view .title-wrap .date {
+  font-size: 16px;
+  font-weight: 400;
+}
+.notice-view .btn-wrap {
+  display: block;
+  text-align: center;
+  margin-top: 35px;
+}
+.notice-view .btn-wrap .btn-defalut {
+  width: 134px;
+  height: 48px;
+  margin: auto;
+}
+
 @media screen and (max-width: 1023px) {
   .container.report.fix-h .inner {
     padding-top: 70px;
@@ -1024,7 +1101,7 @@
     width: 100%;
   }
   .report-view-wrap .report-cnt .box.stu-report .student-cnt .scroll-inner {
-    overflow: overlay;
+    overflow: auto;
     width: 100%;
     height: auto;
     padding: 0;
@@ -1260,6 +1337,85 @@
   }
   .stu-report .student-cnt .keyword-wrap .keyword {
     font-size: 14px;
+  }
+  .notice-cnt .notice-list, .notice-cnt .notice-view {
+    padding: 20px 0;
+  }
+  .notice-cnt .notice-list .title, .notice-cnt .notice-view .title {
+    font-size: 18px;
+  }
+  .notice-cnt .notice-list .paging-wrap, .notice-cnt .notice-view .paging-wrap {
+    margin-top: 15px;
+  }
+  .notice-list .table-top {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin: 20px 0 10px;
+  }
+  .notice-list .right-wrap {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .notice-list .total {
+    font-size: 15px;
+  }
+  .notice-list .table-list {
+    overflow: overlay;
+    height: 450px;
+    padding-right: 10px;
+  }
+  .notice-list .table-list table th, .notice-list .table-list table td {
+    height: 50px;
+  }
+  .notice-list .table-list table th:nth-child(1), .notice-list .table-list table td:nth-child(1) {
+    width: 14%;
+  }
+  .notice-list .table-list table th:last-child, .notice-list .table-list table td:last-child {
+    width: 27%;
+  }
+  .notice-list .table-list table th {
+    font-size: 14px;
+  }
+  .notice-list .table-list table td {
+    padding: 0 5px;
+    font-size: 13px;
+  }
+  .notice-view .table-wrap {
+    margin-top: 20px;
+  }
+  .notice-view .table-wrap thead th {
+    padding: 16px 10px;
+  }
+  .notice-view .table-wrap .cnt {
+    padding: 16px 10px;
+  }
+  .notice-view .table-wrap .cnt .scroll-inner {
+    height: 180px;
+    padding-right: 0;
+  }
+  .notice-view .table-wrap .file th, .notice-view .table-wrap .file td {
+    padding: 16px 10px;
+  }
+  .notice-view .table-wrap .file th {
+    width: 22%;
+  }
+  .notice-view .title-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .notice-view .title-wrap .title {
+    font-size: 16px;
+  }
+  .notice-view .title-wrap .date {
+    margin-top: 4px;
+    font-size: 13px;
+  }
+  .notice-view .btn-wrap {
+    margin-top: 20px;
+  }
+  .notice-view .btn-wrap .btn-defalut {
+    width: 100%;
+    height: 40px;
   }
 }
 /**
@@ -1786,6 +1942,23 @@
 }
 .s_sub02 .report-view-wrap .label-wrap .label-color.type02 {
   background-image: linear-gradient(to right, #1f8bff, #8257ff);
+}
+
+.stu-view .table-wrap .wrong {
+  position: relative;
+}
+.stu-view .table-wrap .wrong::before {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 45px;
+  height: 49px;
+  background: url(../../images/common/ico_incorrect.png) no-repeat;
+  z-index: 1;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 1023px) {

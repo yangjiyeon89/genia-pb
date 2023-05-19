@@ -1518,6 +1518,7 @@ input[type=checkbox]:checked + label::before {
 }
 .filter-menu .menu-inner + .btn-wrap {
   padding: 0 20px 30px 20px;
+  flex-wrap: nowrap;
 }
 .filter-menu .unit-list {
   display: flex;
