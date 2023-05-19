@@ -583,6 +583,12 @@
   font-size: 22px;
   font-weight: 500;
 }
+.report-view-wrap .nick {
+  position: relative;
+  top: 2px;
+  margin-left: 10px;
+}
+
 .stu-view .table-wrap {
   border-top: 0;
   background-color: transparent;
