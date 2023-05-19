@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>지니아튜터</title>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="../inc/css/font.css">
   <link rel="stylesheet" href="../inc/css/reset.css">
   <link rel="stylesheet" href="../inc/css/common_front.css">
@@ -13,6 +14,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="../inc/js/common.js"></script>
 </head>
 <body>
@@ -26,11 +28,65 @@
         </div>
         <div class="pop-content">
           <div class="exam-wrap">
+            <div class="exam-cnt">
+              <div class="archive-wrap">
+                <div class="swiper archive-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <p class="title">학습자료명 임시 영역(1) 학습자료명 임시 영역(1) 학습자료명 임시 영역(1)</p>
+                      <!-- 컨텐츠 임시영역 -->
+                      <div class="temp-box"></div>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="title">학습자료명 이미지 (2)</p>
+                      <!-- 자료 이미지 -->
+                      <div class="img-box">
+                        <img src="../images/sub/sample_que_04.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="title">학습자료명 이미지 (3)</p>
+                      <!-- 자료 이미지 -->
+                      <div class="img-box">
+                        <img src="../images/sub/sample_img_01.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="title">학습자료명 유튜브 (4)</p>
+                      <!-- 자료 유튜브 -->
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/mkggXE5e2yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="swiper-slide">
+                      <p class="title">학습자료명 동영상 (5)</p>
+                      <!-- 자료 동영상 -->
+                      <div class="video-box">
+                        <video controls><source src="../images/sub/sample_video_01.mp4" type="video/mp4"></video>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev">이전</div>
+                  <div class="swiper-button-next">다음</div>
+                  <!--마지막 슬라이드인 경우 과제목록 버튼 노출 -->
+                  <!-- <div class="swiper-button-next">과제목록</div> -->
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </body>
+<script>
+  $(function(){
+     const queSwiper = new Swiper(".archive-swiper", {
+       navigation: {
+         nextEl: ".archive-swiper .swiper-button-next",
+         prevEl: ".archive-swiper .swiper-button-prev",
+       },
+       allowTouchMove: false,
+     });
+   });
+ </script>
 </html>
   

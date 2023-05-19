@@ -1498,20 +1498,43 @@
   display: none;
 }
 .exam-wrap .archive-wrap {
-  position: relative;
   width: 100%;
   height: 100%;
 }
 .exam-wrap .archive-wrap .title {
+  width: 100%;
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .exam-wrap .archive-swiper {
+  height: 100%;
+}
+.exam-wrap .archive-swiper .swiper-wrapper {
+  height: 100%;
+  box-sizing: border-box;
+}
+.exam-wrap .archive-swiper .swiper-wrapper .swiper-slide {
+  height: calc(100% - 121px);
+}
+.exam-wrap .archive-swiper .swiper-wrapper .img-box, .exam-wrap .archive-swiper .swiper-wrapper .video-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.exam-wrap .archive-swiper .swiper-wrapper .img-box img, .exam-wrap .archive-swiper .swiper-wrapper .img-box video, .exam-wrap .archive-swiper .swiper-wrapper .video-box img, .exam-wrap .archive-swiper .swiper-wrapper .video-box video {
   max-width: 100%;
-  height: 550px;
-  border-radius: 26px;
-  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.exam-wrap .archive-swiper .swiper-wrapper iframe {
+  width: 100%;
+  height: 100%;
 }
 .exam-wrap .archive-swiper .temp-box {
   position: relative;
@@ -1532,23 +1555,25 @@
   background: url(../../images/common/ico_video_play.png) center no-repeat;
   background-size: contain;
 }
-.exam-wrap .swiper-button-next, .exam-wrap .swiper-button-prev {
-  top: 50%;
+.exam-wrap .archive-swiper .swiper-button-next, .exam-wrap .archive-swiper .swiper-button-prev {
+  top: calc(100% - 33px);
   width: 150px;
   height: 55px;
   border-radius: 13px;
+  font-size: 18px;
+  font-weight: 600;
 }
-.exam-wrap .swiper-button-prev, .exam-wrap .swiper-rtl .swiper-button-next {
+.exam-wrap .archive-swiper .swiper-button-prev, .exam-wrap .archive-swiper .swiper-rtl .swiper-button-next {
   background-color: #108eff;
   color: #fff;
   left: 0;
 }
-.exam-wrap .swiper-button-next, .exam-wrap .swiper-rtl .swiper-button-prev {
+.exam-wrap .archive-swiper .swiper-button-next, .exam-wrap .archive-swiper .swiper-rtl .swiper-button-prev {
   border: 1px solid #108eff;
   color: #108eff;
   right: 0;
 }
-.exam-wrap .swiper-button-prev:after, .exam-wrap .swiper-rtl .swiper-button-next:after, .exam-wrap .swiper-button-next:after, .exam-wrap .swiper-rtl .swiper-button-prev:after {
+.exam-wrap .archive-swiper .swiper-button-prev:after, .exam-wrap .archive-swiper .swiper-rtl .swiper-button-next:after, .exam-wrap .archive-swiper .swiper-button-next:after, .exam-wrap .archive-swiper .swiper-rtl .swiper-button-prev:after {
   display: none;
 }
 
@@ -1647,6 +1672,9 @@
   align-items: center;
   flex-direction: column;
   height: calc(100vh - 45px);
+}
+.pop-exam .exam-wrap .exam-cnt {
+  height: 100%;
 }
 .pop-exam .exam-wrap.type01 .unit-title {
   display: flex;
@@ -1873,6 +1901,17 @@
   .exam-wrap .question-swiper .swiper-button-next, .exam-wrap .question-swiper .swiper-button-prev {
     width: 10px;
     height: 20px;
+  }
+  .exam-wrap .archive-wrap .title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .exam-wrap .archive-swiper .swiper-button-next, .exam-wrap .archive-swiper .swiper-button-prev {
+    width: calc(50% - 5px);
+    height: 46px;
+    border-radius: 9;
+    font-size: 16px;
   }
   .pop-wrap.que-type02 .pop-content {
     width: 320px;
