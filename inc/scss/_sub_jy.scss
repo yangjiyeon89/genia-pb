@@ -786,7 +786,7 @@
 }
 // 공지사항
 .notice-cnt {
-  .notice-list {
+  .notice-list, .notice-view {
     .title {
       font-size: 26px;
     }
@@ -811,6 +811,65 @@
       &:last-child {
         border-right: 0;
       }
+    }
+  }
+}
+.notice-view {
+  .table-wrap {
+    margin-top: 30px;
+    thead {
+      th {
+        padding: 26px 20px;
+      }
+    }
+    th {      
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    .cnt {
+      padding: 30px 20px;
+      .scroll-inner {
+        @include layout-center;        
+        height: 400px;
+        padding-right: 5px;
+        text-align: left;        
+      }
+    }
+    .file {
+      th, td {
+        padding: 19px 20px;
+      }
+      th {
+        border-right: 0;
+      }
+      td {
+        text-align: left;
+        border-left: 0;
+        img {
+          position: relative;
+          top: -2px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .title-wrap {
+    @include layout-justify-center;
+    .title {
+      @include font(20px, 500);
+    }
+    .date {
+      @include font(16px, 400);
+    }
+  }
+  .btn-wrap {
+    display: block;
+    text-align: center;
+    margin-top: 35px;
+    .btn-defalut {
+      width: 134px;height: 48px;
+      margin: auto;
     }
   }
 }
@@ -1376,7 +1435,7 @@
 
   // 공지사항
   .notice-cnt {    
-    .notice-list {
+    .notice-list, .notice-view {
       padding: 20px 0;
       .title {
         font-size: 18px;
@@ -1423,6 +1482,49 @@
       }
     }
     
+  }
+  .notice-view {
+    .table-wrap {
+      margin-top: 20px;
+      thead {
+        th {
+          padding: 16px 10px;
+        }
+      }
+      .cnt {
+        padding: 16px 10px;
+        .scroll-inner {
+          height: 180px;
+          padding-right: 0;
+        }
+      }
+      .file {
+        th, td {
+          padding: 16px 10px;
+        }
+        th {
+          width: 22%;
+        }
+      }
+    }
+    .title-wrap {
+      flex-direction: column;
+      align-items: flex-start;
+      .title {
+        font-size: 16px;
+      }
+      .date {
+        margin-top: 4px;
+        font-size: 13px;
+      }
+    }
+    .btn-wrap {
+      margin-top: 20px;
+      .btn-defalut {
+        width: 100%;
+        height: 40px;
+      }
+    }
   }
 }
 

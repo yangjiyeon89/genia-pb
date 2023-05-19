@@ -808,7 +808,7 @@
   font-weight: 500;
 }
 
-.notice-cnt .notice-list .title {
+.notice-cnt .notice-list .title, .notice-cnt .notice-view .title {
   font-size: 26px;
 }
 
@@ -825,6 +825,64 @@
 }
 .notice-list .table-list th:last-child, .notice-list .table-list td:last-child {
   border-right: 0;
+}
+
+.notice-view .table-wrap {
+  margin-top: 30px;
+}
+.notice-view .table-wrap thead th {
+  padding: 26px 20px;
+}
+.notice-view .table-wrap th:last-child {
+  border-right: 0;
+}
+.notice-view .table-wrap .cnt {
+  padding: 30px 20px;
+}
+.notice-view .table-wrap .cnt .scroll-inner {
+  display: flex;
+  align-items: center;
+  height: 400px;
+  padding-right: 5px;
+  text-align: left;
+}
+.notice-view .table-wrap .file th, .notice-view .table-wrap .file td {
+  padding: 19px 20px;
+}
+.notice-view .table-wrap .file th {
+  border-right: 0;
+}
+.notice-view .table-wrap .file td {
+  text-align: left;
+  border-left: 0;
+}
+.notice-view .table-wrap .file td img {
+  position: relative;
+  top: -2px;
+  margin-right: 5px;
+}
+.notice-view .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notice-view .title-wrap .title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.notice-view .title-wrap .date {
+  font-size: 16px;
+  font-weight: 400;
+}
+.notice-view .btn-wrap {
+  display: block;
+  text-align: center;
+  margin-top: 35px;
+}
+.notice-view .btn-wrap .btn-defalut {
+  width: 134px;
+  height: 48px;
+  margin: auto;
 }
 
 @media screen and (max-width: 1023px) {
@@ -1280,13 +1338,13 @@
   .stu-report .student-cnt .keyword-wrap .keyword {
     font-size: 14px;
   }
-  .notice-cnt .notice-list {
+  .notice-cnt .notice-list, .notice-cnt .notice-view {
     padding: 20px 0;
   }
-  .notice-cnt .notice-list .title {
+  .notice-cnt .notice-list .title, .notice-cnt .notice-view .title {
     font-size: 18px;
   }
-  .notice-cnt .notice-list .paging-wrap {
+  .notice-cnt .notice-list .paging-wrap, .notice-cnt .notice-view .paging-wrap {
     margin-top: 15px;
   }
   .notice-list .table-top {
@@ -1321,6 +1379,43 @@
   .notice-list .table-list table td {
     padding: 0 5px;
     font-size: 13px;
+  }
+  .notice-view .table-wrap {
+    margin-top: 20px;
+  }
+  .notice-view .table-wrap thead th {
+    padding: 16px 10px;
+  }
+  .notice-view .table-wrap .cnt {
+    padding: 16px 10px;
+  }
+  .notice-view .table-wrap .cnt .scroll-inner {
+    height: 180px;
+    padding-right: 0;
+  }
+  .notice-view .table-wrap .file th, .notice-view .table-wrap .file td {
+    padding: 16px 10px;
+  }
+  .notice-view .table-wrap .file th {
+    width: 22%;
+  }
+  .notice-view .title-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .notice-view .title-wrap .title {
+    font-size: 16px;
+  }
+  .notice-view .title-wrap .date {
+    margin-top: 4px;
+    font-size: 13px;
+  }
+  .notice-view .btn-wrap {
+    margin-top: 20px;
+  }
+  .notice-view .btn-wrap .btn-defalut {
+    width: 100%;
+    height: 40px;
   }
 }
 /**
