@@ -784,6 +784,36 @@
     }
   }
 }
+// 공지사항
+.notice-cnt {
+  .notice-list {
+    .title {
+      font-size: 26px;
+    }
+  }
+}
+.notice-list {
+  .table-top {
+    margin: 30px 0 20px;
+    align-items: flex-end;
+  }
+  .total {
+    em {
+      font-weight: 600;
+    }
+  }
+  .table-list {
+    table {
+      table-layout: fixed;
+      border-top: 1px solid #757575;
+    }
+    th, td {
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
 
 
 @media screen and (max-width: 1023px) {
@@ -1040,7 +1070,7 @@
           }
           .student-cnt {
             .scroll-inner {
-              overflow: overlay;
+              overflow: auto;
               width: 100%;
               height: auto;
               padding: 0;
@@ -1294,7 +1324,6 @@
       z-index: 2;
     }
   }
-
   .stu-report {
     padding: 10px;
     .stu-tbl-report {
@@ -1343,6 +1372,57 @@
         }
       }
     }
+  }
+
+  // 공지사항
+  .notice-cnt {    
+    .notice-list {
+      padding: 20px 0;
+      .title {
+        font-size: 18px;
+      }
+      .paging-wrap {
+        margin-top: 15px;
+      }
+    }
+  }
+  .notice-list {
+    .table-top {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      margin: 20px 0 10px;
+    }
+    .right-wrap {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .total {
+      font-size: 15px;
+    }
+    .table-list {
+      overflow: overlay;
+      height: 450px;
+      padding-right: 10px;
+      table {
+        th, td {
+          height: 50px;
+          &:nth-child(1) {
+            width: 14%;
+          }
+          &:last-child {
+            width: 27%;
+          }
+        }
+        th {
+          font-size: 14px;
+        }
+        td {
+          padding: 0 5px;
+          font-size: 13px;
+        }
+      }
+    }
+    
   }
 }
 

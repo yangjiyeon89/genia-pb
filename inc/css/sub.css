@@ -808,6 +808,25 @@
   font-weight: 500;
 }
 
+.notice-cnt .notice-list .title {
+  font-size: 26px;
+}
+
+.notice-list .table-top {
+  margin: 30px 0 20px;
+  align-items: flex-end;
+}
+.notice-list .total em {
+  font-weight: 600;
+}
+.notice-list .table-list table {
+  table-layout: fixed;
+  border-top: 1px solid #757575;
+}
+.notice-list .table-list th:last-child, .notice-list .table-list td:last-child {
+  border-right: 0;
+}
+
 @media screen and (max-width: 1023px) {
   .container.report.fix-h .inner {
     padding-top: 70px;
@@ -1024,7 +1043,7 @@
     width: 100%;
   }
   .report-view-wrap .report-cnt .box.stu-report .student-cnt .scroll-inner {
-    overflow: overlay;
+    overflow: auto;
     width: 100%;
     height: auto;
     padding: 0;
@@ -1260,6 +1279,48 @@
   }
   .stu-report .student-cnt .keyword-wrap .keyword {
     font-size: 14px;
+  }
+  .notice-cnt .notice-list {
+    padding: 20px 0;
+  }
+  .notice-cnt .notice-list .title {
+    font-size: 18px;
+  }
+  .notice-cnt .notice-list .paging-wrap {
+    margin-top: 15px;
+  }
+  .notice-list .table-top {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin: 20px 0 10px;
+  }
+  .notice-list .right-wrap {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .notice-list .total {
+    font-size: 15px;
+  }
+  .notice-list .table-list {
+    overflow: overlay;
+    height: 450px;
+    padding-right: 10px;
+  }
+  .notice-list .table-list table th, .notice-list .table-list table td {
+    height: 50px;
+  }
+  .notice-list .table-list table th:nth-child(1), .notice-list .table-list table td:nth-child(1) {
+    width: 14%;
+  }
+  .notice-list .table-list table th:last-child, .notice-list .table-list table td:last-child {
+    width: 27%;
+  }
+  .notice-list .table-list table th {
+    font-size: 14px;
+  }
+  .notice-list .table-list table td {
+    padding: 0 5px;
+    font-size: 13px;
   }
 }
 /**
