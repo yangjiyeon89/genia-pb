@@ -1859,8 +1859,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 60px;
-  height: 58px;
+  width: 45px;
+  height: 49px;
   background: url(../../images/common/ico_incorrect.png) no-repeat;
   z-index: 1;
   transform: translate(-50%, -50%);
