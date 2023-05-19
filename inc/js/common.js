@@ -31,7 +31,7 @@ $(function () {
           .find("> a")
           .addClass("active");
         break;
-        // s: 20230425 추가
+      // s: 20230425 추가
       case "admin01_03":
         _gnbMenuLink.eq(0).find("> a").addClass("active");
         _gnbMenuLink.eq(0).find(_gnbDepth02).addClass("on");
@@ -43,7 +43,7 @@ $(function () {
           .find("> a")
           .addClass("active");
         break;
-        // e: 20230425 추가
+      // e: 20230425 추가
       case "admin02_01":
         _gnbMenuLink.eq(1).find("> a").addClass("active");
         _gnbMenuLink.eq(1).find(_gnbDepth02).addClass("on");
@@ -115,18 +115,24 @@ $(function () {
       case "s_sub01":
         _gnbMenuLink.eq(0).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
-      break;
+        break;
 
       case "s_sub02":
         _gnbMenuLink.eq(1).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(1).find("> a").addClass("active");
-      break;
+        break;
+
+      // 초등 교사
+      case "t_sub01":
+        _gnbMenuLink.eq(0).find("> a").addClass("active");
+        _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
+        break;
 
       // 리포트 교사
       case "t_report":
         _gnbMenuLink.eq(3).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(3).find("> a").addClass("active");
-      break;
+        break;
     }
   }
   $(document).ready(function () {
