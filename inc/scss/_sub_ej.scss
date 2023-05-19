@@ -245,6 +245,11 @@
 
 //공유하기 팝업
 .pop-wrap {
+	.test-wrap {
+		width: 100%;
+		background: #f8f8f8;
+	}
+
 	&.share-pop {
 		z-index: 1;
 
@@ -252,6 +257,24 @@
 			max-width: 895px;
 			margin: 0 auto;
 			padding: 0 35px;
+		}
+	}
+
+	&.exam-prev-pop {
+		.test-wrap {
+			@include layout-center-center;
+			flex-direction: column;
+			height: calc(100vh - 45px);
+		}
+	}
+
+	&.exam-edit-pop {
+		z-index: 1;
+		.test-wrap {
+			@include layout-center-center;
+			flex-direction: column;
+			height: calc(100vh - 45px);
+			background: #fff;
 		}
 	}
 }
@@ -609,24 +632,7 @@
 	}
 }
 
-.pop-wrap {
-	.test-wrap {
-		width: 100%;
-		background: #f8f8f8;
-	}
-}
-
 //미리보기 팝업
-.pop-wrap {
-	&.exam-prev-pop {
-		.test-wrap {
-			@include layout-center-center;
-			flex-direction: column;
-			height: calc(100vh - 45px);
-		}
-	}
-}
-
 .exam-view-wrap {
 	@include layout-center-center;
 	width: 100%;
@@ -706,18 +712,7 @@
 	}
 }
 
-
-.pop-wrap {
-	&.exam-edit-pop {
-		.test-wrap {
-			@include layout-center-center;
-			flex-direction: column;
-			height: calc(100vh - 45px);
-			background: #fff;
-		}
-	}
-}
-
+//형성평가 편집하기 팝업
 .exam-edit-wrap {
 	@include layout-center-center;
 	width: 100%;
@@ -787,7 +782,7 @@
 					gap: 20px;
 
 					.que-box {
-						width: 480px;
+						width: 100%;
 						height: 290px;
 						border: 1px solid #b2b2b2;
 						background: #fff;
@@ -845,33 +840,27 @@
 									}
 								}
 							}
+						}
 
-							.btn-rotate {
-								&:focus {
-									border: 1px solid #108eff;
+						&.active {
+							border: 1px solid $color-main-blue;
 
-									&+.que-box {
-										border: 1px solid #108eff;
+							.top-area {
+								background: $color-main-blue;
+							}
 
-										.top-area {
-											background: #108eff;
-										}
-									}
-								}
+							.btn-icon-type03 {
+								border: 1px solid $color-main-blue;
 
-								&.active {
-									border: 1px solid #108eff;
-
-									+.que-box {
-										border: 1px solid #108eff;
-
-										.top-area {
-											background: #108eff;
-										}
+								i {
+									&.rotate {
+										background: url(../../images/common/ico_rotate_on.png) no-repeat center;
 									}
 								}
 							}
 						}
+
+
 					}
 
 					.btn-icon-type02 {
@@ -934,6 +923,8 @@
 		}
 
 	}
+
+
 
 }
 
@@ -1041,6 +1032,98 @@
 			}
 		}
 	}
+
+
+	.pop-wrap {
+		&.exam-edit-pop {
+			.test-wrap {
+				height: 100%;
+			}
+		}
+	}
+
+	.exam-edit-wrap {
+		padding: 20px;
+
+		.view-cnt-wrap {
+			.class-tit {
+				text-align: center;
+				margin-bottom: 0;
+
+				span {
+					&::after {
+						display: none;
+					}
+				}
+			}
+
+			.que-list-wrap {
+				flex-direction: column;
+
+				.que-list {
+					width: 100%;
+					height: 100%;
+					padding: 20px 0;
+					border: 0;
+					box-shadow: none;
+
+					&.type01,
+					&.type02 {
+						background: transparent;
+					}
+
+					&.type02 {
+						margin-top: 20px;
+					}
+
+					.que-box-wrap {
+						.que-box {
+
+							.bottom-area {
+								.temp-box {
+									img {
+										max-width: 350px;
+									}
+								}
+							}
+						}
+
+						.edit-swiper {
+							height: 100%;
+
+							.swiper-button-next,
+							.swiper-button-prev {
+								top: 60%;
+								width: 10px;
+								height: 20px;
+								background: url(../../images/common/ico_swiper_arrow.png) no-repeat center;
+								background-size: contain;
+							}
+
+							.swiper-button-prev,
+							.swiper-rtl .swiper-button-next {
+								left: 10px;
+								transform: rotate(-180deg);
+							}
+
+							.swiper-button-next,
+							.swiper-rtl .swiper-button-prev {
+								right: 10px;
+							}
+
+							.swiper-button-prev:after,
+							.swiper-rtl .swiper-button-next:after,
+							.swiper-button-next:after,
+							.swiper-rtl .swiper-button-prev:after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 }
 
 
@@ -1140,6 +1223,9 @@
 		}
 	}
 
+
+
+	//공유하기 팝업
 	.pop-wrap {
 		&.share-pop {
 			.pop-content {
@@ -1150,7 +1236,6 @@
 			}
 		}
 	}
-
 
 	.share-view-wrap {
 		padding: 0;
@@ -1384,6 +1469,84 @@
 			.txt {
 				image {
 					object-fit: contain;
+				}
+			}
+		}
+	}
+
+
+	//형성평가 편집하기 팝업
+	.exam-edit-wrap {
+		padding: 20px;
+
+		.view-cnt-wrap {
+			.class-tit {
+				span {
+					font-size: 17px;
+					line-height: 20px;
+				}
+			}
+
+			.que-list-wrap {
+				flex-direction: column;
+
+				.que-list {
+					.que-box-wrap {
+						.que-box {
+							height: 180px;
+
+							.top-area {
+								height: 33px;
+							}
+
+							.bottom-area {
+								height: calc(100% - 30px);
+
+								.temp-box {
+									img {
+										max-width: 230px;
+									}
+								}
+
+								.btn-icon-type03 {
+									width: 25px;
+									height: 25px;
+									bottom: 10px;
+									right: 10px;
+
+									i {
+										&.rotate {
+											width: 13px;
+											height: 15px;
+											background-size: contain;
+										}
+									}
+								}
+							}
+						}
+
+						.btn-icon-type02 {
+							i {
+								&.delete {
+									width: 17px;
+									height: 18px;
+									background-size: contain;
+								}
+
+								&.add {
+									width: 14px;
+									height: 14px;
+									background-size: contain;
+								}
+
+								&.rotate {
+									width: 13px;
+									height: 15px;
+									background-size: contain;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
