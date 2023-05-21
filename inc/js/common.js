@@ -128,6 +128,18 @@ $(function () {
         _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
         break;
 
+      // 중학 교사
+      case "t_sub02":
+        _gnbMenuLink.eq(1).find("> a").addClass("active");
+        _gnbMenuLinkMo.eq(1).find("> a").addClass("active");
+        break;
+
+      // 고교 교사
+      case "t_sub03":
+        _gnbMenuLink.eq(2).find("> a").addClass("active");
+        _gnbMenuLinkMo.eq(2).find("> a").addClass("active");
+        break;
+
       // 리포트 교사
       case "t_report":
         _gnbMenuLink.eq(3).find("> a").addClass("active");
