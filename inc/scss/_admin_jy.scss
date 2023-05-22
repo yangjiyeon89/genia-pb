@@ -460,7 +460,10 @@
   }
   .que-info-wrap {
     width: 100%;
-    padding: 20px;
+    height: 100%;
+    .scroll-inner {
+      padding: 18px 20px;
+    }
     .que-table-tit {
       display: block;
       margin-bottom: 10px;

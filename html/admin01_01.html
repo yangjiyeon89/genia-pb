@@ -64,6 +64,11 @@
                     <li class="depth2-list">
                       <a href="javascript:;" class="depth2-item">기초 데이터 등록</a>
                     </li>
+                    <!--S: 230523 추가-->
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">시험지 관리</a>
+                    </li>
+                    <!--E: 230523 추가-->
                     <li class="depth2-list">
                       <a href="javascript:;" class="depth2-item">운영 통계</a>
                     </li>
@@ -286,124 +291,210 @@
                   </div>
                 </div>
                 <div class="que-info-wrap">
-                  <div class="que-table">
-                    <span class="que-table-tit">문항 속성</span>
-                    <div class="table-wrap type01">
-                      <table>
-                        <colgroup>
-                          <col width="120px">
-                          <col width="*">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th>문제상태</th>
-                            <td>등록</td>
-                          </tr>
-                          <tr>
-                            <th rowspan="2">문제형태 지정</th>
-                            <td>5가지선택</td>
-                          </tr>
-                          <tr>
-                            <td>-</td>
-                          </tr>
-                          <tr>
-                            <th>난이도</th>
-                            <td>최하</td>
-                          </tr>
-                          <tr>
-                            <th>공유여부</th>
-                            <td>공유 </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                  <!--S: 230523 scroll-inner 추가-->
+                  <div class="scroll-inner">
+                    <div class="que-table">
+                      <span class="que-table-tit">문항 속성</span>
+                      <div class="table-wrap type01">
+                        <table>
+                          <colgroup>
+                            <col width="120px">
+                            <col width="*">
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th>문제상태</th>
+                              <td>등록</td>
+                            </tr>
+                            <tr>
+                              <th rowspan="2">문제형태 지정</th>
+                              <td>5가지선택</td>
+                            </tr>
+                            <tr>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <th>난이도</th>
+                              <td>최하</td>
+                            </tr>
+                            <tr>
+                              <th>공유여부</th>
+                              <td>공유 </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="que-table">
+                      <span class="que-table-tit">분석 속성</span>
+                      <div class="table-wrap type01">
+                        <!--S: 230523 수정-->
+                        <table>
+                          <colgroup>
+                            <col width="120px">
+                            <col width="*">
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th>분석속성</th>
+                              <td>2015개정 교육과정</td>
+                            </tr>
+                            <tr>
+                              <th>교육과정</th>
+                              <td>2015개정 교육과정</td>
+                            </tr>
+                            <tr>
+                              <th>내용영역</th>
+                              <td>자료와 가능성</td>
+                            </tr>
+                            <tr>
+                              <th>교과역량</th>
+                              <td>추론</td>
+                            </tr>
+                            <tr>
+                              <th>성취코드</th>
+                              <td>6수01-10</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--E: 230523 수정-->
+                      </div>
+                    </div>
+                    <div class="que-table">
+                      <span class="que-table-tit">속성 추가</span>
+                      <div class="table-wrap type01">
+                        <!--S: 230523 수정-->
+                        <table>
+                          <colgroup>
+                            <col width="120px">
+                            <col width="*">
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <th>학습개념</th>
+                              <td>
+                                <input type="text" class="full" placeholder="학습 개념 입력">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>내용영역</th>
+                              <td>
+                                <div class="select-wrap full">
+                                  <button type="button" class="select-btn">자료와 가능성</button>
+                                  <ul class="select-list">
+                                    <li>
+                                      <a href="javascript:;">자료와 가능성</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>교과서 1</th>
+                              <td>
+                                <div class="select-wrap full">
+                                  <button type="button" class="select-btn">수학 (한대희)</button>
+                                  <ul class="select-list">
+                                    <li>
+                                      <a href="javascript:;">수학1-1 (한대희)</a>
+                                    </li>
+                                    <li>
+                                      <a href="javascript:;">수학2-2 (한대희)</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>대단원</th>
+                              <td>
+                                <div class="select-wrap full">
+                                  <button type="button" class="select-btn">수학 (한대희) 대단원명</button>
+                                  <ul class="select-list">
+                                    <li>
+                                      <a href="javascript:;">수학 (한대희) 대단원명2</a>
+                                    </li>
+                                    <li>
+                                      <a href="javascript:;">수학 (한대희) 대단원명3</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>중단원</th>
+                              <td>
+                                <div class="select-wrap full">
+                                  <button type="button" class="select-btn">수학 (한대희) 중단원명</button>
+                                  <ul class="select-list">
+                                    <li>
+                                      <a href="javascript:;">수학 (한대희) 중단원명2</a>
+                                    </li>
+                                    <li>
+                                      <a href="javascript:;">수학 (한대희) 중단원명3</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>대단원</th>
+                              <td>
+                                <div class="select-wrap full">
+                                  <button type="button" class="select-btn">수학 (한대희) 소단원명</button>
+                                  <ul class="select-list">
+                                    <li>
+                                      <a href="javascript:;">수학 (한대희) 소단원명2</a>
+                                    </li>
+                                    <li>
+                                      <a href="javascript:;">수학 (한대희) 소단원명3</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>대단원</th>
+                              <td>
+                                <div class="select-wrap full">
+                                  <button type="button" class="select-btn">수학 (한대희) 차시명</button>
+                                  <ul class="select-list">
+                                    <li>
+                                      <a href="javascript:;">수학 (한대희) 차시명2</a>
+                                    </li>
+                                    <li>
+                                      <a href="javascript:;">수학 (한대희) 차시명3</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>교과서 2</th>
+                              <td>
+                                <div class="select-wrap full">
+                                  <button type="button" class="select-btn">교과서 선택</button>
+                                  <ul class="select-list">
+                                    <li>
+                                      <a href="javascript:;">교과서2</a>
+                                    </li>
+                                    <li>
+                                      <a href="javascript:;">교과서3</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--E: 230523 수정-->
+                      </div>
+                    </div>
+                    <div class="btn-wrap full">
+                      <button type="button" class="btn-lg pop-btn" data-pop="alert-pop">등록하기</button>
                     </div>
                   </div>
-                  <div class="que-table">
-                    <span class="que-table-tit">분석 속성</span>
-                    <div class="table-wrap type01">
-                      <table>
-                        <colgroup>
-                          <col width="120px">
-                          <col width="*">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th>분석속성</th>
-                            <td>2015개정 교육과정</td>
-                          </tr>
-                          <tr>
-                            <th>교육과정</th>
-                            <td>5가지선택</td>
-                          </tr>
-                          <tr>
-                            <th>내용영역</th>
-                            <td>전체</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="que-table">
-                    <span class="que-table-tit">속성 추가</span>
-                    <div class="table-wrap type01">
-                      <table>
-                        <colgroup>
-                          <col width="120px">
-                          <col width="*">
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th>내용영역</th>
-                            <td>
-                              <div class="select-wrap full">
-                                <button type="button" class="select-btn">자료와 가능성</button>
-                                <ul class="select-list">
-                                  <li>
-                                    <a href="javascript:;">자료와 가능성</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>성취기준</th>
-                            <td>
-                              <div class="select-wrap full">
-                                <button type="button" class="select-btn">사건이 일어날 가능성을사건이 일어날 가능성을</button>
-                                <ul class="select-list">
-                                  <li>
-                                    <a href="javascript:;">사건이 일어날 가능성을사건이 일어날 가능성을</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>교과역량</th>
-                            <td>
-                              <div class="select-wrap full">
-                                <button type="button" class="select-btn">추론</button>
-                                <ul class="select-list">
-                                  <li>
-                                    <a href="javascript:;">추론</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>학습개념</th>
-                            <td>
-                              <input type="text" class="full" placeholder="학습 개념 입력">
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="btn-wrap full">
-                    <button type="button" class="btn-lg pop-btn" data-pop="alert-pop">등록하기</button>
-                  </div>
+                  <!--E: 230523 scroll-inner 추가-->
                 </div>
               </div>
             </div>

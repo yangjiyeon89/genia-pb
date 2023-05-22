@@ -193,6 +193,24 @@
         transform: translateY(-50%);
       }
     }
+    &.type02 {
+      .checkbox {
+        &:checked + .knobs::after {
+          content: '사용';
+        }
+      }
+      .knobs {
+        &::after {
+          content: '미사용';
+          display: block;
+          clear: both;
+          position: absolute;
+          left: 50px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
   }
   .view-main-tit {
     margin-top: 30px;

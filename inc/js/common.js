@@ -3,7 +3,7 @@ $(function () {
   function checkCurrentGnb() {
     var _className = $("#wrap").attr("class"),
       _afterStr = _className ? _className.split(" ") : "",
-      _gnbMenuLink = $(".web-cnt .nav-list");
+      _gnbMenuLink = $(".nav-list");
     _gnbMenuLinkMo = $(".mo-cnt .nav-list");
     _gnbDepth02 = $(".depth2-wrap");
     _gnbDepth02Item = $(".depth2-list");
@@ -107,6 +107,17 @@ $(function () {
           .find(_gnbDepth02)
           .find(_gnbDepth02Item)
           .eq(2)
+          .find("> a")
+          .addClass("active");
+        break;
+      case "admin03_04":
+        _gnbMenuLink.eq(2).find("> a").addClass("active");
+        _gnbMenuLink.eq(2).find(_gnbDepth02).addClass("on");
+        _gnbMenuLink
+          .eq(2)
+          .find(_gnbDepth02)
+          .find(_gnbDepth02Item)
+          .eq(3)
           .find("> a")
           .addClass("active");
         break;
