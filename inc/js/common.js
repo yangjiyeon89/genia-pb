@@ -31,7 +31,7 @@ $(function () {
           .find("> a")
           .addClass("active");
         break;
-      // s: 20230425 추가
+        // s: 20230425 추가
       case "admin01_03":
         _gnbMenuLink.eq(0).find("> a").addClass("active");
         _gnbMenuLink.eq(0).find(_gnbDepth02).addClass("on");
@@ -43,7 +43,7 @@ $(function () {
           .find("> a")
           .addClass("active");
         break;
-      // e: 20230425 추가
+        // e: 20230425 추가
       case "admin02_01":
         _gnbMenuLink.eq(1).find("> a").addClass("active");
         _gnbMenuLink.eq(1).find(_gnbDepth02).addClass("on");
@@ -111,7 +111,7 @@ $(function () {
           .addClass("active");
         break;
 
-      // 사용자 학생
+        // 사용자 학생
       case "s_sub01":
         _gnbMenuLink.eq(0).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
@@ -122,25 +122,25 @@ $(function () {
         _gnbMenuLinkMo.eq(1).find("> a").addClass("active");
         break;
 
-      // 초등 교사
+        // 초등 교사
       case "t_sub01":
         _gnbMenuLink.eq(0).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(0).find("> a").addClass("active");
         break;
 
-      // 중학 교사
+        // 중학 교사
       case "t_sub02":
         _gnbMenuLink.eq(1).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(1).find("> a").addClass("active");
         break;
 
-      // 고교 교사
+        // 고교 교사
       case "t_sub03":
         _gnbMenuLink.eq(2).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(2).find("> a").addClass("active");
         break;
 
-      // 리포트 교사
+        // 리포트 교사
       case "t_report":
         _gnbMenuLink.eq(3).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(3).find("> a").addClass("active");
@@ -477,19 +477,28 @@ $(function () {
 
   // click button
   let lineBtn = $(".btn-line");
-  let unitBtn = $(".unit-list li")
+  let unitBtn = $(".unit-list li");
+  let rotateBtn = $(".que-box .btn-icon-type03");
 
   function btnClickFunc() {
     let _this = $(this);
+
     if (!_this.hasClass("active")) {
       _this.parents(".btn-wrap").find("button").removeClass("active");
       _this.parents(".unit-list").find("li").removeClass("active");
       _this.addClass("active");
     }
+    
+    let queBox = _this.closest(".que-box");
+    if (!queBox.hasClass("active")) {
+      $(".que-box").removeClass("active");
+      queBox.addClass("active");
+    }
   }
 
   lineBtn.on("click", btnClickFunc);
   unitBtn.on("click", btnClickFunc);
+  rotateBtn.on("click", btnClickFunc);
 
   //share버튼 클릭시 open-select-list 열기
 
