@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지니아튜터 관리자</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../inc/css/font.css">
+  <link rel="stylesheet" href="../inc/css/reset.css">
+  <link rel="stylesheet" href="../inc/css/common.css">
+  <link rel="stylesheet" href="../inc/css/admin.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="../inc/js/common.js"></script>
+</head>
+<body>
+  <div id="wrap" class="admin03_02">
+    <div class="header">
+      <div class="inner">
+        <div class="left-wrap">
+          <div class="logo-wrap">
+            <a href="javascirpt:;" class="logo"></a>
+          </div>
+          <div class="gnb">
+            <ul class="nav">
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">콘텐츠 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">문항 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">유사/쌍둥이 문항 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">차시별 콘텐츠 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">기초 데이터 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">교과서 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">성취기준 관리</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">시중고재 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-list">
+                <a href="javascript:;" class="nav-item">서비스 관리</a>
+                <div class="depth2-wrap">
+                  <ul class="depth2">
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">기초 데이터 등록</a>
+                    </li>
+                    <!--S: 230523 추가-->
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">시험지 관리</a>
+                    </li>
+                    <!--E: 230523 추가-->
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">운영 통계</a>
+                    </li>
+                    <li class="depth2-list">
+                      <a href="javascript:;" class="depth2-item">사이트 관리</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-xs bg-gray">로그아웃</button>
+        </div>
+      </div>
+    </div>
+    <div class="container admin03-01">
+      <div class="inner">
+        <div class="table-wrap type01">
+          <table>
+            <colgroup>
+              <col width="130px">
+              <col width="*">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>검색</th>
+                <td>
+                  <input type="text" placeholder="검색어 입력">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btn-wrap md-default">
+          <button type="button" class="btn-md">초기화</button>
+          <button type="button" class="btn-md bg-blue">검색</button>
+        </div>
+        <div class="table-wrap type02">
+          <div class="table-top">
+            <div class="left-cnt">
+              <span>총 00개</span>
+            </div>
+            <div class="btn-wrap">
+              <a href="javascript:;" class="btn-md">등록</a>
+              <button type="button" class="btn-md pop-btn" data-pop="delete-pop">삭제</button>
+            </div>
+          </div>
+          <table>
+            <colgroup>
+              <col width="60px;">
+              <col width="90px;">
+              <col width="*">
+              <col width="300px">
+              <col width="120px;">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>
+                  <input type="checkbox" id="chk01_00" class="allCheck">
+                  <label for="chk01_00"></label>
+                </th>
+                <th>번호</th>
+                <th>시험지 구분</th>
+                <th>문항 개수 설정</th>
+                <th>사용여부</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_01">
+                  <label for="chk01_01"></label>
+                </td>
+                <td>1</td>
+                <td>진단평가</td>
+                <td>10</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_02">
+                  <label for="chk01_02"></label>
+                </td>
+                <td>2</td>
+                <td>진단평가</td>
+                <td>10</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_03">
+                  <label for="chk01_03"></label>
+                </td>
+                <td>3</td>
+                <td>단원평가</td>
+                <td>10</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_04">
+                  <label for="chk01_04"></label>
+                </td>
+                <td>4</td>
+                <td>형성평가</td>
+                <td>10</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_05">
+                  <label for="chk01_05"></label>
+                </td>
+                <td>5</td>
+                <td>진단평가</td>
+                <td>20</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_06">
+                  <label for="chk01_06"></label>
+                </td>
+                <td>6</td>
+                <td>진단평가</td>
+                <td>10</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_07">
+                  <label for="chk01_07"></label>
+                </td>
+                <td>7</td>
+                <td>진단평가</td>
+                <td>10</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_08">
+                  <label for="chk01_08"></label>
+                </td>
+                <td>8</td>
+                <td>단원평가</td>
+                <td>10</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_09">
+                  <label for="chk01_09"></label>
+                </td>
+                <td>9</td>
+                <td>형성평가</td>
+                <td>10</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" id="chk01_10">
+                  <label for="chk01_10"></label>
+                </td>
+                <td>10</td>
+                <td>진단평가</td>
+                <td>20</td>
+                <td>
+                  <div class="toggle-wrap">
+                    <div class="toggle-btn type02">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs"></div>
+                      <div class="layer"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>-</td>
+                <td><input type="text" class="full" placeholder="시험지 구분값 입력"></td>
+                <td><input type="text" class="full" placeholder="문항 개수 입력"></td>
+                <td>
+                  <div class="btn-wrap">
+                    <button type="button" class="btn-md">저장</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="paging-wrap">
+          <a href="javascript:;" class="first"></a>
+          <a href="javascript:;" class="prev"></a>
+          <a href="javascript:;" class="page active"><span>1</span></a>
+          <a href="javascript:;" class="page"><span>2</span></a>
+          <a href="javascript:;" class="page"><span>3</span></a>
+          <a href="javascript:;" class="page"><span>4</span></a>
+          <a href="javascript:;" class="page"><span>5</span></a>
+          <a href="javascript:;" class="next"></a>
+          <a href="javascript:;" class="last"></a>
+        </div>
+      </div>
+    </div>
+    <div class="dim"></div>
+    <!--S: 삭제 팝업-->
+    <div class="pop-wrap alert-type" data-pop="delete-pop">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">선택한 항목을<br>삭제하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+          <button type="button" class="btn-lg">취소</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 삭제 팝업-->
+
+    <!--S: 삭제 완료 팝업-->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">삭제가 완료되었습니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 삭제 완료 팝업-->
+
+    <!--S: 시험지 구분값 알럿 팝업-->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">시험지 구분값을 입력해주세요.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 시험지 구분값 알럿 팝업-->
+
+    <!--S: 문항 개수 알럿 팝업-->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">문항 개수를 입력해주세요.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 문항 개수 알럿 팝업-->
+  </div>
+</body>
+<script>
+  $(function(){
+
+    //datepicker
+    var dateFormat = "yy.mm.dd",
+      from = $("#from")
+      .datepicker({
+        defaultDate: "+1w",
+        changeMonth: false,
+        numberOfMonths: 1,
+        dateFormat: "yy.mm.dd",
+        showOn: "button",
+        buttonImage: "../images/common/ico_calendar.png",
+        buttonImageOnly: true,
+        buttonText: "Select date",
+        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"]
+      })
+      .on("change", function () {
+        to.datepicker("option", "minDate", getDate(this));
+      }),
+      to = $("#to").datepicker({
+        defaultDate: "+1w",
+        changeMonth: false,
+        numberOfMonths: 1,
+        dateFormat: "yy.mm.dd",
+        showOn: "button",
+        buttonImage: "../images/common/ico_calendar.png",
+        buttonImageOnly: true,
+        buttonText: "Select date",
+        monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+        dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"]
+
+      })
+      .on("change", function () {
+        from.datepicker("option", "maxDate", getDate(this));
+      });
+
+    function getDate(element) {
+      var date;
+      try {
+        date = $.datepicker.parseDate(dateFormat, element.value);
+      } catch (error) {
+        date = null;
+      }
+
+      return date;
+    }
+    $(".ui-datepicker-trigger").removeAttr("title");
+
+  });
+</script>
+</html>

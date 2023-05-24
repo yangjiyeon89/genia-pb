@@ -463,7 +463,10 @@
 }
 .admin01 .que-info-wrap {
   width: 100%;
-  padding: 20px;
+  height: 100%;
+}
+.admin01 .que-info-wrap .scroll-inner {
+  padding: 18px 20px;
 }
 .admin01 .que-info-wrap .que-table-tit {
   display: block;
@@ -1167,6 +1170,18 @@
 }
 .admin03-01 .toggle-btn .knobs::after {
   content: "비노출";
+  display: block;
+  clear: both;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.admin03-01 .toggle-btn.type02 .checkbox:checked + .knobs::after {
+  content: "사용";
+}
+.admin03-01 .toggle-btn.type02 .knobs::after {
+  content: "미사용";
   display: block;
   clear: both;
   position: absolute;
