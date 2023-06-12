@@ -1472,11 +1472,16 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 40px 0 60px 0;
+}
+.s_sub01_01 .class-cnt-wrap .ic-new {
+  width: 12px;
+  height: 12px;
+  background-image: url(../../images/common/ico_new.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .s_sub01_01 .class-cnt-wrap .right-cnt {
   width: calc(100% - 230px);
-  padding-left: 40px;
   box-sizing: border-box;
 }
 .s_sub01_01 .class-cnt-wrap .unit-title {
@@ -2009,9 +2014,6 @@
   }
   .s_sub01_01 .acc-arrow {
     order: 3;
-  }
-  .s_sub01_01 .class-cnt-wrap {
-    padding: 100px 0 40px 0;
   }
   .s_sub01_01 .class-cnt-wrap .right-cnt {
     width: 100%;

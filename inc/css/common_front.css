@@ -1242,6 +1242,13 @@ input[type=checkbox]:checked + label::before {
   color: #108eff;
   font-weight: 500;
 }
+.que-class-list.disabled {
+  background-color: #f5f5f5;
+  border: 0;
+}
+.que-class-list.disabled .que-class-tit {
+  color: #a1a1a1;
+}
 
 .que-class-btn {
   display: flex;
@@ -1868,6 +1875,14 @@ input[type=checkbox]:checked + label::before {
   font-size: 20px;
   font-weight: 700;
 }
+.class-top .link-btn {
+  width: 12px;
+  height: 18px;
+  background-image: url(../../images/common/ico_arrow_left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
 .class-top .setting-btn {
   width: 21px;
   height: 21px;
@@ -2379,11 +2394,11 @@ input[type=checkbox]:checked + label::before {
     flex-direction: column;
     align-items: end;
   }
-  .que-class-cnt {
-    padding: 10px 15px;
-  }
   .que-class-cnt .btn-wrap {
     margin-top: 7px;
+  }
+  .que-class-item {
+    padding: 5px 15px 8px 15px;
   }
   .que-class-cnt .class-item-tit {
     margin-right: 0;
@@ -2623,6 +2638,9 @@ input[type=checkbox]:checked + label::before {
     transform: translateY(-50%);
   }
   .class-top .setting-btn {
+    display: none;
+  }
+  .class-top .link-btn {
     display: none;
   }
 }
