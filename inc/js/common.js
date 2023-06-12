@@ -461,8 +461,12 @@ $(function () {
   $("#table-1").sortable({
     handle: ".dragHandle",
   });
+  $(".table-1").disableSelection();
 
-  $("#table-1").disableSelection();
+  $(".unit-list").sortable({
+    handle: ".dragHandle",
+  });
+  $("#unit-list").disableSelection();
 
   // toggle button
   let numberBtn = $(".btn-number");
@@ -515,25 +519,42 @@ $(function () {
 
   let shareBtn = $(".btn-share");
 
-  $(function () {
-    shareBtn.on("click", function () {
-      let _this = $(this);
-      let _position = _this.parents("a").position().left;
+  shareBtn.on("click", function () {
+    let _this = $(this);
+    //let _position = _this.parents("a").position().left;
 
-      console.log(this);
+    if (!_this.hasClass("active")) {
+      shareBtn.removeClass("active");
+      _this.addClass("active");
+      // _this.parents('.test').find('.btn-share').removeClass('active');
+      // _this.addClass('active');
+    } else {
+      _this.removeClass("active");
+    }
 
-      if (!_this.hasClass("active")) {
-        shareBtn.removeClass("active");
-        _this.addClass("active");
-        // _this.parents('.test').find('.btn-share').removeClass('active');
-        // _this.addClass('active');
-      } else {
-        _this.removeClass("active");
-      }
-      console.log(_position);
-      if (_position > 500) {
-        _this.find(".open-select-list").css("left", "-190px");
-      }
-    });
+    // if (_position > 500) {
+    //   _this.find(".open-select-list").css("left", "-190px");
+    // }
   });
+
+  let shareAll = $(".all-share");
+
+  function allShareFunc(e) {
+    let _this = $(this);
+
+    if (_this.prop("checked")) {
+      _this
+        .parents(".open-select-list")
+        .find("li input[type=checkbox]")
+        .prop("checked", true);
+    } else {
+      _this
+        .parents(".open-select-list")
+        .find("li input[type=checkbox]")
+        .prop("checked", false);
+    }
+  }
+
+  shareAll.on("click", allShareFunc);
+
 });

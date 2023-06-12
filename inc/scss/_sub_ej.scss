@@ -215,29 +215,41 @@
 //로그인 전/후 목록
 .t_sub_list {
 	.class-cnt-wrap {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		margin: 50px auto 70px;
-
 		.right-cnt {
 			width: calc(100% - 230px);
-			padding-left: 40px;
 			box-sizing: border-box;
 		}
-
+		.que-class-area {
+			padding: 20px 20px 0 20px;
+		}
+		.unit-top {
+			@include font(16px, 600);
+			padding: 20px 20px 0 20px;
+		}
 		.unit-title {
+			@include layout-justify-center;
 			@include font(20px, 500);
-			padding: 40px 0 20px 0;
-
+			padding: 20px 20px 0 20px;
+			&:nth-child(1) { padding: 20px; }
 			em {
 				@include font(20px, 500);
-				color: $color-main-blue;
-				margin-left: 10px;
+				color: #a1a1a1;
+			}
+			.acc-arrow {
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				background-image: url(../../images/common/ico_acc_arrow_down_type02.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+
+			&.active {
+				em { color: $color-main-blue; }
+				.acc-arrow { background-image: url(../../images/common/ico_acc_arrow_up_type02.png); }
 			}
 		}
 	}
-
 	.dim {
 		z-index: 4;
 	}
@@ -295,7 +307,7 @@
 
 		span {
 			@include font(16px, 500);
-			margin: 20px 0 45px;
+			margin: 20px 0 35px;
 			display: block;
 		}
 
@@ -306,19 +318,20 @@
 
 	.end-day-wrap {
 		@include layout-center-center;
-
+		gap: 20px;
 		.txt {
-			@include font(18px, 600);
-			margin-right: 20px;
-
+			position: relative;
+			@include font(18px, 500);
+			padding-left: 30px;
 			&::before {
-				content: '';
+				@include virtual-selector;
+				position: absolute;
+				top: 1px;
+				left: 0;
 				display: inline-block;
 				width: 20px;
 				height: 20px;
-				margin-right: 10px;
 				background: url(../../images/common/ico_calendar02.png) no-repeat center;
-
 			}
 		}
 	}
@@ -415,69 +428,10 @@
 				}
 			}
 
-			.btn-share {
-				background: url(../../images/common/ico_share2.png) no-repeat center;
-				width: 19px;
-				height: 19px;
-				position: relative;
-				background-size: contain;
-
-				&.active {
-					.open-select-list {
-						display: block;
-					}
-				}
-			}
-
 			.mobile-btn-share {
 				display: none;
 			}
 
-			.open-select-list {
-				position: absolute;
-				width: 205px;
-				border: 1px solid #868686;
-				background: #fff;
-				z-index: 1;
-				top: 30px;
-				left: 15px;
-				display: none;
-				overflow: hidden;
-
-				.list-tit {
-					width: 100%;
-					height: 40px;
-					line-height: 40px;
-					background: #e6e6e6;
-					@include font(18px, 600);
-					text-align: center;
-				}
-
-				.list {
-					max-height: 210px;
-					padding: 15px 25px;
-					text-align: left;
-
-					li {
-						padding-bottom: 10px;
-
-						&:first-child {
-							&::after {
-								content: '';
-								width: 100%;
-								height: 1px;
-								background: #ccc;
-								display: inline-block;
-							}
-						}
-					}
-				}
-
-				.btn-wrap {
-					display: flex;
-					padding-bottom: 15px;
-				}
-			}
 		}
 	}
 
@@ -539,6 +493,7 @@
 	}
 
 	.open-wrap {
+		@include layout-center-center;
 		width: 100%;
 		height: 220px;
 		text-align: center;
@@ -546,6 +501,7 @@
 		border-radius: 26px;
 		margin: 0 auto;
 		padding: 25px 0;
+		flex-direction: column;
 
 		.txt {
 			line-height: 24px;
@@ -563,8 +519,86 @@
 			}
 		}
 
-		button {
-			margin: 0 auto;
+		.mobile-btn-share { display: none; }
+
+		.btn-share {
+			position: relative;
+			@include layout-center-center;
+			width: 159px;
+			height: 40px;
+			border-radius: 8px;
+			background-color: $color-main-blue;
+			gap: 10px;
+			span {
+				font-weight: 500;
+				color: #fff;
+			}
+			.ic-share {
+				display: inline-block;
+				background: url(../../images/common/ico_share3.png) no-repeat center;
+				width: 15px;
+				height: 16px;
+			}
+			&.active {
+				.open-select-list {
+					display: block;
+				}
+			}
+		}
+
+		.open-select-list {
+			position: absolute;
+			width: 205px;
+			border: 1px solid #868686;
+			background: #fff;
+			z-index: 1;
+			top: 50px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: none;
+			overflow: hidden;
+
+			.list-tit {
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				background: #e6e6e6;
+				@include font(18px, 600);
+				text-align: center;
+			}
+
+			.list {
+				max-height: 210px;
+				padding: 15px 25px;
+				text-align: left;
+
+				li {
+					padding-bottom: 10px;
+
+					&:first-child {
+						&::after {
+							content: '';
+							width: 100%;
+							height: 1px;
+							background: #ccc;
+							display: inline-block;
+						}
+					}
+				}
+			}
+
+			.btn-wrap {
+				display: flex;
+				padding-bottom: 15px;
+			}
+		}
+
+		.ic-add-class {
+			display: inline-block;
+			background: url(../../images/common/ico_class_add02.png) no-repeat center;
+			width: 15px;
+			height: 16px;
+			margin: 3px 10px 0 0;
 		}
 	}
 
@@ -584,7 +618,7 @@
 				padding: 10px 20px;
 				border-radius: 10px;
 				box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.09);
-
+				background-color: #fff;
 				.list {
 
 					li {
@@ -594,7 +628,11 @@
 						align-items: center;
 						padding: 10px 0;
 						position: relative;
-						border-bottom: 1px solid #ccc;
+						border-bottom: 1px solid #e8e8e8;
+
+						&:nth-last-child(1) {
+							border-bottom: 0;
+						}
 
 						.all-chk {
 							label {
@@ -943,34 +981,48 @@
 		.container {
 			.inner {
 				width: 100%;
-				padding: 0 30px;
+				padding: 0 20px;
 			}
 		}
 
 		.filter-menu {
-			top: 100px;
+			top: 145px;
 
 			.scroll-inner {
-				height: calc(100vh - 100px);
+				height: calc(100vh - 145px);
 			}
 		}
 
 		.unit-tit-wrap.has-menu {
-			top: 50px;
+			top: 95px;
 		}
 
 
 		.class-cnt-wrap {
-			padding: 60px 0 40px 0;
-
-			.unit-title {
+			.unit-top {
 				display: none;
 			}
-
+			.unit-title {
+				padding: 20px 0 0 0;
+				em {
+					font-size: 15px;
+				}
+				.acc-arrow {
+					width: 20px;
+					height: 20px;
+				}
+			}
+			.que-class-area {
+				padding: 20px 0 0 0;
+			}
 			.right-cnt {
 				width: 100%;
 				padding-left: 0;
 				box-sizing: border-box;
+				.scroll-inner {
+					height: 100%;
+					overflow: hidden;
+				}
 			}
 		}
 
@@ -1256,9 +1308,13 @@
 		}
 
 		.end-day-wrap {
+			position: relative;
+			padding-bottom: 60px;
+			margin-bottom: 20px;
+			gap: 10px;
 			.txt {
 				font-size: 16px;
-				margin-right: 10px;
+				margin-right: 0;
 
 				&::before {
 					content: '';
@@ -1270,22 +1326,25 @@
 
 				}
 			}
-		}
-
-		.date-wrap {
-			.select-wrap {
-				.select-btn {
-					min-width: 80px;
-					padding: 0 40px 0 14px;
-				}
-
-				.select-list {
-					a {
-						padding: 12px 14px;
+			.date-wrap {
+				position: absolute;
+				bottom: 0;
+				padding: 0;
+				.select-wrap {
+					.select-btn {
+						min-width: 80px;
+						padding: 0 40px 0 14px;
+					}
+	
+					.select-list {
+						a {
+							padding: 12px 14px;
+						}
 					}
 				}
 			}
 		}
+
 
 		.class-wrap {
 			flex-direction: column;
@@ -1310,15 +1369,6 @@
 
 					.btn-share {
 						display: none;
-					}
-
-					.mobile-btn-share {
-						background: url(../../images/common/ico_share2_hover.png) no-repeat center;
-						background-size: contain;
-						width: 21px;
-						height: 21px;
-						position: relative;
-						display: block;
 					}
 				}
 
@@ -1456,6 +1506,28 @@
 					width: 27px;
 					height: 28px;
 					margin: 0 auto 7px;
+				}
+			}
+			
+			.btn-share { display: none; }
+
+			.mobile-btn-share {
+				position: relative;
+				@include layout-center-center;
+				width: 159px;
+				height: 40px;
+				border-radius: 8px;
+				background-color: $color-main-blue;
+				gap: 10px;
+				span {
+					font-weight: 500;
+					color: #fff;
+				}
+				.ic-share {
+					display: inline-block;
+					background: url(../../images/common/ico_share3.png) no-repeat center;
+					width: 15px;
+					height: 16px;
 				}
 			}
 		}

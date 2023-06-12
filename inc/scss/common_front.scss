@@ -505,6 +505,22 @@
 		}
 	}
 }
+.btn-icon-blue {
+	height: 35px;
+	padding: 0 15px;
+	background-color: $color-main-blue;
+	color: #fff;
+	@include font(14px, 500);
+	border-radius: 8px;
+	gap: 7px;
+	i {
+		&.ico-class-add { 
+			width: 15px;
+			height: 16px;
+			background-image: url(../../images/common/ico_class_add.png); 
+		}
+	}
+}
 .btn-number {
 	width: 45px;
 	height: 45px;
@@ -846,6 +862,50 @@ input[type="checkbox"] {
 			}
 		}
 	}
+
+	&.type03 {
+		.select-btn {
+			border: 0;
+			background-color: transparent;
+			padding: 0 30px 0 0;
+			&::after {
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 22px;
+				height: 22px;
+				margin-top: 0px;
+				background: url(../../images/common/ico_acc_arrow_type03.png) no-repeat;
+			}
+			span {
+				@include font(20px, 700);
+				letter-spacing: -1px;
+				line-height: 1;
+			}
+			&.active {
+				&::after {
+					transform: translateY(-50%) rotate(-180deg);
+				}
+			}
+		}
+		.select-list {
+			border: 0;
+			border-radius: 9px;
+			margin-top: 5px;
+			text-align: center;
+			box-shadow: 0 0 15px rgba(0,0,0,0.15);
+			a {
+				display: block;
+				padding: 0px 18px 12px;
+				font-size: 16px;
+				box-sizing: border-box;
+				&:hover {
+					color: $color-main-blue;
+				}
+			}
+		}
+	}
+
 }
 
 
@@ -1101,16 +1161,16 @@ input[type="checkbox"] {
 	display: none;
 }
 .que-class-area {
-	display: flex;
-	flex-direction: column;
 	width: 100%;
-	gap: 10px;
 }
 .que-class-list {
 	width: 100%;
 	background-color: #fff;
 	border: 1px solid #d7d7d7; 
 	border-radius: 13px;
+	& + .que-class-list {
+		margin-top: 10px;
+	}
 	&.active {
 		border: 1px solid $color-main-blue; 
 		.que-class-btn {
@@ -1350,11 +1410,13 @@ input[type="checkbox"] {
 
 // contents menu
 .filter-menu {
-	width: 230px;
+	width: 100%;
+	height: 880px;
 	box-sizing: border-box;
-	border: 1px solid #d7d7d7;
-	border-radius: 13px;
 	background-color: #fff;
+	.scroll-inner {
+		height: 100%;
+	}
 	.menu-tit {
 		display: block;
 		font-weight: 500;
@@ -1386,8 +1448,7 @@ input[type="checkbox"] {
 		}
 	}
 	.menu-inner {
-		border-top: 1px solid #d7d7d7;
-		padding: 30px 20px;
+		padding: 0 20px 30px 20px;
 		&:nth-child(1) { border-top: 0; }
 		
 		& + .btn-wrap {
@@ -1398,13 +1459,31 @@ input[type="checkbox"] {
 	.unit-list {
 		display: flex;
 		flex-direction: column;
-		margin-left: 8px;
-		gap: 10px;
+		gap: 20px;
 		li {
-			font-size: 15px;
+			a {
+				display: -webkit-box;
+				width: 100%;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+			}
+
 			&.active {
 				font-weight: 500;
 				color: $color-main-blue;
+			}
+		}
+		&.ui-sortable {
+			margin-bottom: 30px;
+			li {
+				@include layout-justify-center;
+				gap: 5px;
+				.ui-sortable-handle {
+					@include content-center;
+					height: 21px;
+				}
 			}
 		}
 	}
@@ -1596,6 +1675,81 @@ input[type="checkbox"] {
       padding: 0;
     }
   }
+}
+
+.class-cnt-wrap {
+	width: 100%;
+	height: 880px;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 70px;
+	border: 1px solid #d7d7d7;
+	border-radius: 13px;
+	overflow: hidden;
+	&.h880 {
+		height: 880px;
+	}
+	.left-cnt {
+		width: 230px;
+		border-right : 1px solid #d7d7d7;
+		.filter-top {
+			@include layout-justify-center;
+			padding: 30px 20px;
+			.title {
+				@include font(18px, 700);
+			}
+			.btn-wrap {
+				width: auto;
+				.btn-txt {
+					@include font(15px, 500);
+					color: #a1a1a1;
+					&.active {
+						color: $color-main-blue;
+						text-decoration: underline;
+						text-underline-offset : 3px;
+					}
+				}
+			}
+		}
+		.btn-defalut {
+			width: 100%;
+			height: 48px;
+		}
+	}
+	.right-cnt {
+		.scroll-inner {
+			height: 880px;
+			padding-bottom: 20px;
+			box-sizing: border-box;
+		}
+		.desc-wrap {
+			@include layout-center-center;
+			width: 100%;
+			height: 100%;
+			span {
+				text-align: center;
+				line-height: 1.5;
+			}
+			em {
+				color: #a1a1a1;
+			}
+		}
+	}
+}
+
+.class-top {
+	@include layout-center;
+	gap: 10px;
+	margin: 36px 0 18px 0;
+	.txt {
+		@include font(20px, 700);
+	}
+	.setting-btn {
+		width: 21px;
+		height: 21px;
+		background: url(../../images/common/ico_setting.png) no-repeat;
+		background-size: contain;
+	}
 }
 
 @media screen and (max-width: 1023px) {
@@ -1872,6 +2026,15 @@ input[type="checkbox"] {
 	.btn-icon {
 		width: 27px;
 		height: 27px;
+	}
+	.btn-icon-blue {
+		height: 28px;
+		padding: 0 10px;
+		@include font(13px, 500);
+		border-radius: 8px;
+		i {
+			display: none;
+		}
 	}
 	.btn-number {
 		width: 40px;
@@ -2240,6 +2403,17 @@ input[type="checkbox"] {
 		.scroll-inner {
 			height: calc(100vh - 150px);
 		}
+		.unit-list {
+			gap: 17px;
+			li {
+				font-size: 15px;
+			}
+			&.ui-sortable {
+				li {
+					gap: 10px;
+				}
+			}
+		}
 	}
 
 	// popup
@@ -2287,7 +2461,6 @@ input[type="checkbox"] {
 		&.que-type02 {
 			.table-wrap {
 				&.type02 {
-
 					th, td {
 						padding: 20px;
 						box-sizing: border-box;
@@ -2295,6 +2468,74 @@ input[type="checkbox"] {
 					}
 				}
 			}
+		}
+	}
+
+	.class-cnt-wrap {
+		height: 100%;
+		min-height: 600px;
+		margin-top: 145px;
+		margin-bottom: 0;
+		border: 0;
+		border-radius: 0;
+		.left-cnt {
+			width: 0;
+			border-right: 0;
+			padding: 0;
+			.filter-top {
+				padding: 20px;
+			}
+			.btn-defalut {
+				height: 36px;
+			}
+		}
+	}
+	
+	.class-top {
+		justify-content: center;
+		position: fixed;
+		top: 50px;
+		left: 0;
+		background-color: #fff;
+		width: 100%;
+		height: 45px;
+		margin: 0;
+		z-index: 3;
+		.select-wrap {
+			&.type03 {
+				width: auto;
+				.select-btn {
+					span {
+						@include font(17px, 600);
+					}
+				}
+				.select-list {
+					margin-top: 2px;
+					li {
+						&:nth-child(1) {
+							padding-top: 12px;
+						}
+					}
+					a {
+						font-size: 14px;
+						padding: 0px 12px 10px;
+					}
+				}
+			}
+		}
+		.txt {
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+			@include font(16px, 700);
+		}
+		.btn-icon-blue {
+			position: absolute;
+			top: 50%; right: 20px;
+			transform: translateY(-50%);
+		}
+		.setting-btn {
+			display: none;
 		}
 	}
 }
