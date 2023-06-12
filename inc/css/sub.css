@@ -2421,6 +2421,7 @@
   font-size: 20px;
   font-weight: 500;
   padding: 20px 20px 0 20px;
+  cursor: pointer;
 }
 .t_sub_list .class-cnt-wrap .unit-title:nth-child(1) {
   padding: 20px;

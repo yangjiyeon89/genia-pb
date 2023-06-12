@@ -230,6 +230,7 @@
 			@include layout-justify-center;
 			@include font(20px, 500);
 			padding: 20px 20px 0 20px;
+			cursor: pointer;
 			&:nth-child(1) { padding: 20px; }
 			em {
 				@include font(20px, 500);
