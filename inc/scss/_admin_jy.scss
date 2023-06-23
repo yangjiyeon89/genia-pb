@@ -459,6 +459,7 @@
     }
   }
   .que-info-wrap {
+    position: relative;
     width: 100%;
     height: 100%;
     .scroll-inner {
@@ -655,6 +656,7 @@
       width: calc(100% - 900px);
       height: 890px;
       border: 1px solid #cbcbcb;
+      padding: 20px;
     }
     .que-list {
       margin-top: 60px;
@@ -692,6 +694,23 @@
     .radio-area {
       margin-bottom: 12px;
     }
+  }
+  .test-add-top {
+    @include layout-center;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    .title {
+      @include font(18px, 600);
+    }
+    input {
+      width: 200px;
+    }
+  }
+  .test-add-btn {
+    @include layout-center-center;
+    width: 100%;
+    margin-top: 20px;
   }
 
   // 기초 데이터 관리  

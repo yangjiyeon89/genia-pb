@@ -939,3 +939,7 @@ input[type=checkbox]:checked + label::before {
 .ui-sortable-helper {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
+.ui-change-text {
+  cursor: pointer;
+}

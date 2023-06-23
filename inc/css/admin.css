@@ -462,6 +462,7 @@
   background-color: #ffeaee;
 }
 .admin01 .que-info-wrap {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -656,6 +657,7 @@
   width: calc(100% - 900px);
   height: 890px;
   border: 1px solid #cbcbcb;
+  padding: 20px;
 }
 .admin01 .test-add-step02 .que-list {
   margin-top: 60px;
@@ -693,6 +695,27 @@
 }
 .admin01 .data-add-wrap .radio-area {
   margin-bottom: 12px;
+}
+.admin01 .test-add-top {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.admin01 .test-add-top .title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.admin01 .test-add-top input {
+  width: 200px;
+}
+.admin01 .test-add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
 .admin01 .admin02-content-area {
   position: relative;

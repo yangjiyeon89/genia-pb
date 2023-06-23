@@ -93,9 +93,7 @@
             <li class="ui-tab-btn active">
               <a href="javascript:;">교과서</a>
             </li>
-            <li class="ui-tab-btn">
-              <a href="javascript:;">성취기준</a>
-            </li>
+            <!-- 230626 성취기준 삭제 -->
             <li class="ui-tab-btn">
               <a href="javascript:;">시중교재</a>
             </li>
@@ -226,6 +224,7 @@
               <button type="button" class="btn-md">초기화</button>
               <button type="button" class="btn-md bg-blue">검색</button>
             </div>
+            <!--S: 230626 ui-change-text 추가 -->
             <div class="table-wrap type02">
               <div class="table-top">
                 <div class="left-cnt">
@@ -283,7 +282,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구</td>
+                    <td class="ui-change-text">초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -297,7 +296,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구</td>
+                    <td class="ui-change-text">초등 수학 5-2 박만구</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -311,7 +310,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구</td>
+                    <td class="ui-change-text">초등 수학 5-2 박만구</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -325,7 +324,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -339,7 +338,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -353,7 +352,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -367,7 +366,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -381,7 +380,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -395,7 +394,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -409,7 +408,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -419,6 +418,7 @@
                 </tbody>
               </table>
             </div>
+            <!--E: 230626 ui-change-text 추가 -->
             <div class="paging-wrap">
               <a href="javascript:;" class="first"></a>
               <a href="javascript:;" class="prev"></a>
@@ -431,9 +431,7 @@
               <a href="javascript:;" class="last"></a>
             </div>
           </div>
-          <div class="contents">
-            [sub03_01_02.html] 탭으로 구현
-          </div>
+          <!-- 230626 성취기준 삭제 -->
           <div class="contents">
             [sub03_01_03.html] 탭으로 구현
           </div>
@@ -640,6 +638,21 @@
       </div>
     </div>
     <!--E: 교과서 등록 팝업 > 미입력한 항목 존재 -->
+
+    <!--S: 230626 교과서명 수정 알럿 팝업-->
+    <div class="pop-wrap alert-type" data-pop="delete-pop">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">선택한 항목을<br>삭제하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">취소</button>
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 230626 교과서명 수정 알럿 팝업-->
   </div>
 </body>
 </html>
