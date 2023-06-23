@@ -557,4 +557,14 @@ $(function () {
 
   shareAll.on("click", allShareFunc);
 
+  // 230622 추가 :: text 더블 클릭 시 input으로 바뀌도록
+  let changeText = $('.ui-change-text');
+  
+  function changeTextFunc() {
+    let currentText = $(this).text();
+    $(this).html('<input type="text" class="full" value="' + currentText + '">');
+  };
+
+  changeText.on("dblclick", changeTextFunc);
+
 });

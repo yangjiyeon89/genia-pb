@@ -232,6 +232,7 @@
               <button type="button" class="btn-md">초기화</button>
               <button type="button" class="btn-md bg-blue">검색</button>
             </div>
+            <!--S: 230624 ui-change-text 추가 -->
             <div class="table-wrap type02">
               <div class="table-top">
                 <div class="left-cnt">
@@ -289,7 +290,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구</td>
+                    <td class="ui-change-text">초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구초등 수학 5-2 박만구</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -303,7 +304,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구</td>
+                    <td class="ui-change-text">초등 수학 5-2 박만구</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -317,7 +318,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>초등 수학 5-2 박만구</td>
+                    <td class="ui-change-text">초등 수학 5-2 박만구</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -331,7 +332,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -345,7 +346,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -359,7 +360,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -373,7 +374,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -387,7 +388,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -401,7 +402,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -415,7 +416,7 @@
                     </td>
                     <td>30</td>
                     <td>천재교과서</td>
-                    <td>교과서명</td>
+                    <td class="ui-change-text">교과서명</td>
                     <td>초등</td>
                     <td>5학년</td>
                     <td>2학기</td>
@@ -425,6 +426,7 @@
                 </tbody>
               </table>
             </div>
+            <!--E: 230624 ui-change-text 추가 -->
             <div class="paging-wrap">
               <a href="javascript:;" class="first"></a>
               <a href="javascript:;" class="prev"></a>
@@ -640,6 +642,21 @@
       </div>
     </div>
     <!--E: 교과서 등록 팝업 > 미입력한 항목 존재 -->
+
+    <!--S: 230624 교과서명 수정 알럿 팝업-->
+    <div class="pop-wrap alert-type" data-pop="delete-pop">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">선택한 항목을<br>삭제하시겠습니까?</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-lg">취소</button>
+          <button type="button" class="btn-lg">확인</button>
+        </div>
+      </div>
+    </div>
+    <!--E: 230624 교과서명 수정 알럿 팝업-->
   </div>
 </body>
 </html>
