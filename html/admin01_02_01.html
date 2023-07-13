@@ -376,7 +376,7 @@
         <div class="pop-content">
           <div class="inner">
             <!-- 시험지 속성 추가 -->
-            <div class="test-add-step02 step-cnt">
+            <div class="test-add-step02 step-cnt" style="display: none;">
               <div class="test-add-top">
                 <div class="title">시험지 ID</div>
                 <input type="text" placeholder="시험지 ID 입력">
@@ -686,6 +686,437 @@
                 <button type="button" class="btn-lg">등록</button>
               </div>
             </div>
+
+            <!-- s: 20230714 시험지 선택 화면 추가 -->
+            <div class="test-add-step01 step-cnt">
+              <div class="test-add-top">
+                <div class="title">시험지 선택</div>
+              </div>
+              <div class="justify-section">
+                <div class="class-list-wrap">
+                  <div class="tab-wrap">
+                    <div class="contents on">
+                      <div class="scroll-inner">
+                        <ul class="class-area depth1-area">
+                        <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5013')">[형성평가]T셀파 중등_수학(류) test 시험지</a>
+                              <input type="hidden" id="examNm_5013" value="T셀파 중등_수학(류) test 시험지">
+                              <input type="hidden" id="classifyExamName_5013" value="형성평가">
+                              <input type="hidden" id="classifyExamCode_5013" value="02">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5014')">[진단평가]T셀파 중등_영어1(이재영)_test 시험지</a>
+                              <input type="hidden" id="examNm_5014" value="T셀파 중등_영어1(이재영)_test 시험지">
+                              <input type="hidden" id="classifyExamName_5014" value="진단평가">
+                              <input type="hidden" id="classifyExamCode_5014" value="01">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5015')">[진단평가] T셀파 중등_국어_2-1 박영목_test 시험지</a>
+                              <input type="hidden" id="examNm_5015" value=" T셀파 중등_국어_2-1 박영목_test 시험지">
+                              <input type="hidden" id="classifyExamName_5015" value="진단평가">
+                              <input type="hidden" id="classifyExamCode_5015" value="01">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5016')">[진단평가]T셀파 중등_사회2(구정화)_test 시험지</a>
+                              <input type="hidden" id="examNm_5016" value="T셀파 중등_사회2(구정화)_test 시험지">
+                              <input type="hidden" id="classifyExamName_5016" value="진단평가">
+                              <input type="hidden" id="classifyExamCode_5016" value="01">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5030')">[진단평가]과학 3 7단원</a>
+                              <input type="hidden" id="examNm_5030" value="과학 3 7단원">
+                              <input type="hidden" id="classifyExamName_5030" value="진단평가">
+                              <input type="hidden" id="classifyExamCode_5030" value="01">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5033')">[진단평가]123</a>
+                              <input type="hidden" id="examNm_5033" value="123">
+                              <input type="hidden" id="classifyExamName_5033" value="진단평가">
+                              <input type="hidden" id="classifyExamCode_5033" value="01">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5034')">[진단평가]test</a>
+                              <input type="hidden" id="examNm_5034" value="test">
+                              <input type="hidden" id="classifyExamName_5034" value="진단평가">
+                              <input type="hidden" id="classifyExamCode_5034" value="01">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5035')">[진단평가]23</a>
+                              <input type="hidden" id="examNm_5035" value="23">
+                              <input type="hidden" id="classifyExamName_5035" value="진단평가">
+                              <input type="hidden" id="classifyExamCode_5035" value="01">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5037')">[단원평가]중_수학1(이준열)_1단원_1회</a>
+                              <input type="hidden" id="examNm_5037" value="중_수학1(이준열)_1단원_1회">
+                              <input type="hidden" id="classifyExamName_5037" value="단원평가">
+                              <input type="hidden" id="classifyExamCode_5037" value="03">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5038')">[형성평가]초_수학5-1(박만구)_1단원_4차시_형성평가</a>
+                              <input type="hidden" id="examNm_5038" value="초_수학5-1(박만구)_1단원_4차시_형성평가">
+                              <input type="hidden" id="classifyExamName_5038" value="형성평가">
+                              <input type="hidden" id="classifyExamCode_5038" value="02">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5039')">[진단평가]test</a>
+                              <input type="hidden" id="examNm_5039" value="test">
+                              <input type="hidden" id="classifyExamName_5039" value="진단평가">
+                              <input type="hidden" id="classifyExamCode_5039" value="01">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5040')">[단원평가]중_국어2-1(노미숙)_1단원_1회</a>
+                              <input type="hidden" id="examNm_5040" value="중_국어2-1(노미숙)_1단원_1회">
+                              <input type="hidden" id="classifyExamName_5040" value="단원평가">
+                              <input type="hidden" id="classifyExamCode_5040" value="03">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5041')">[진단평가]123</a>
+                              <input type="hidden" id="examNm_5041" value="123">
+                              <input type="hidden" id="classifyExamName_5041" value="진단평가">
+                              <input type="hidden" id="classifyExamCode_5041" value="01">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5042')">[형성평가]초_수학5-1(박만구)_1단원_5차시_형성평가</a>
+                              <input type="hidden" id="examNm_5042" value="초_수학5-1(박만구)_1단원_5차시_형성평가">
+                              <input type="hidden" id="classifyExamName_5042" value="형성평가">
+                              <input type="hidden" id="classifyExamCode_5042" value="02">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5043')">[형성평가]중_수학1(이준열)_1-1-1_형성평가</a>
+                              <input type="hidden" id="examNm_5043" value="중_수학1(이준열)_1-1-1_형성평가">
+                              <input type="hidden" id="classifyExamName_5043" value="형성평가">
+                              <input type="hidden" id="classifyExamCode_5043" value="02">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5044')">[형성평가]중_수학1(이준열)_1-1-2_형성평가</a>
+                              <input type="hidden" id="examNm_5044" value="중_수학1(이준열)_1-1-2_형성평가">
+                              <input type="hidden" id="classifyExamName_5044" value="형성평가">
+                              <input type="hidden" id="classifyExamCode_5044" value="02">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5045')">[형성평가]중_수학1(이준열)_1-1-3_형성평가</a>
+                              <input type="hidden" id="examNm_5045" value="중_수학1(이준열)_1-1-3_형성평가">
+                              <input type="hidden" id="classifyExamName_5045" value="형성평가">
+                              <input type="hidden" id="classifyExamCode_5045" value="02">
+                            </div>
+                          </li>
+                          <li class="class-list">
+                            <div class="class-item chk-item">
+                              <a href="javascript:REQ.viewExam('5046')">[형성평가]111</a>
+                              <input type="hidden" id="examNm_5046" value="111">
+                              <input type="hidden" id="classifyExamName_5046" value="형성평가">
+                              <input type="hidden" id="classifyExamCode_5046" value="02">
+                            </div>
+                          </li>
+                          </ul>
+                      </div>
+                    </div>                   
+                  </div>
+                </div>         
+                <div class="que-content-wrap ui-radio-wrap">
+                  <div class="scroll-inner">
+                    <div class="top-wrap">
+                      <input type="radio" id="radio02_01" name="viewType" value="01" class="ui-radio-sel" data-tab="radio02_01" onclick="REQ.viePre('01')" checked="">
+                      <label for="radio02_01">미리보기</label>
+                      <input type="radio" id="radio02_02" name="viewType" value="02" class="ui-radio-sel" data-tab="radio02_02" onclick="REQ.viePre('02')">
+                      <label for="radio02_02">문항목록</label>
+                    </div>
+                    <div class="que-content" id="que-content_id"><!-- 미리보기 문항 화면 -->
+                      <div class="que-list-wrap ui-radio-cnt" id="preview_radio02_01" style="display: block;">
+                        <ul class="que-area">
+                         <li class="que-list">
+                            <div class="chk-box">                             
+                            </div>
+                            <div class="que-item">
+                              <span class="que-tit">문항 ID  476870</span>
+                              <div class="que-view">
+                                <!-- s: 20230714 수정 -->
+                                <div class="que-view-detail">
+                                  <div class="que-view-tit">
+                                    <em>1.</em>질문입니다.
+                                  </div>
+                                  <div class="que-view-cnt">
+                                    <div class="txt-type">
+                                      지문입니다.
+                                    </div>
+                                    <ul class="answers-list">
+                                      <li>
+                                        <em>①</em>보기
+                                      </li>
+                                      <li>
+                                        <em>②</em>보기
+                                      </li>
+                                      <li>
+                                        <em>③</em>보기
+                                      </li>
+                                      <li>
+                                        <em>④</em>보기
+                                      </li>
+                                      <li>
+                                        <em>⑤</em>보기
+                                      </li>
+                                    </ul>
+                                    <div class="answers-area">
+                                      <em>(정답)</em>⑤
+                                    </div>
+                                    <div class="commentary-area">
+                                      <em>(해설)</em>
+                                      해설입니다
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- e: 20230714 수정 -->
+                              </div>
+                            </div>
+                          </li>
+                          <li class="que-list">
+                            <div class="chk-box">                             
+                            </div>
+                            <div class="que-item">
+                              <span class="que-tit">문항 ID  476871</span>
+                              <div class="que-view">
+                                <!-- s: 20230714 수정 -->
+                                <div class="que-view-detail">
+                                  <div class="que-view-tit">
+                                    <em>1.</em>질문입니다.
+                                  </div>
+                                  <div class="que-view-cnt">
+                                    <div class="txt-type">
+                                      지문입니다.
+                                    </div>
+                                    <ul class="answers-list">
+                                      <li>
+                                        <em>①</em>보기
+                                      </li>
+                                      <li>
+                                        <em>②</em>보기
+                                      </li>
+                                      <li>
+                                        <em>③</em>보기
+                                      </li>
+                                      <li>
+                                        <em>④</em>보기
+                                      </li>
+                                      <li>
+                                        <em>⑤</em>보기
+                                      </li>
+                                    </ul>
+                                    <div class="answers-area">
+                                      <em>(정답)</em>⑤
+                                    </div>
+                                    <div class="commentary-area">
+                                      <em>(해설)</em>
+                                      해설입니다
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- e: 20230714 수정 -->
+                              </div>
+                            </div>
+                          </li>
+                          <li class="que-list">
+                            <div class="chk-box">                             
+                            </div>
+                            <div class="que-item">
+                              <span class="que-tit">문항 ID  476872</span>
+                              <div class="que-view">
+                                <!-- s: 20230714 수정 -->
+                                <div class="que-view-detail">
+                                  <div class="que-view-tit">
+                                    <em>1.</em>질문입니다.
+                                  </div>
+                                  <div class="que-view-cnt">
+                                    <div class="txt-type">
+                                      지문입니다.
+                                    </div>
+                                    <ul class="answers-list">
+                                      <li>
+                                        <em>①</em>보기
+                                      </li>
+                                      <li>
+                                        <em>②</em>보기
+                                      </li>
+                                      <li>
+                                        <em>③</em>보기
+                                      </li>
+                                      <li>
+                                        <em>④</em>보기
+                                      </li>
+                                      <li>
+                                        <em>⑤</em>보기
+                                      </li>
+                                    </ul>
+                                    <div class="answers-area">
+                                      <em>(정답)</em>⑤
+                                    </div>
+                                    <div class="commentary-area">
+                                      <em>(해설)</em>
+                                      해설입니다
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- e: 20230714 수정 -->
+                              </div>
+                            </div>
+                          </li>
+                          <li class="que-list">
+                            <div class="chk-box">                             
+                            </div>
+                            <div class="que-item">
+                              <span class="que-tit">문항 ID  476873</span>
+                              <div class="que-view">
+                                <!-- s: 20230714 수정 -->
+                                <div class="que-view-detail">
+                                  <div class="que-view-tit">
+                                    <em>1.</em>질문입니다.
+                                  </div>
+                                  <div class="que-view-cnt">
+                                    <div class="txt-type">
+                                      지문입니다.
+                                    </div>
+                                    <ul class="answers-list">
+                                      <li>
+                                        <em>①</em>보기
+                                      </li>
+                                      <li>
+                                        <em>②</em>보기
+                                      </li>
+                                      <li>
+                                        <em>③</em>보기
+                                      </li>
+                                      <li>
+                                        <em>④</em>보기
+                                      </li>
+                                      <li>
+                                        <em>⑤</em>보기
+                                      </li>
+                                    </ul>
+                                    <div class="answers-area">
+                                      <em>(정답)</em>⑤
+                                    </div>
+                                    <div class="commentary-area">
+                                      <em>(해설)</em>
+                                      해설입니다
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- e: 20230714 수정 -->
+                              </div>
+                            </div>
+                          </li>
+                          </ul>
+                      </div>
+                      <!-- 문항목록 문항 화면 -->
+                      
+                      <div class="table-wrap type02 ui-radio-cnt" id="preview_radio02_02" style="display: none;">
+                        <table>
+                          <colgroup>
+                            <col width="64px;">
+                            <col width="102px;">
+                            <col width="101px">
+                            <col width="95px;">
+                            <col width="*;">
+                            <col width="141px;">
+                            <col width="125px;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>번호</th>
+                              <th>문항ID</th>
+                              <th>지문ID</th>
+                              <th>문항형태</th>
+                              <th>내용영역</th>
+                              <th>교과역량</th>
+                              <th>
+                                난이도
+                                <button type="button" class="arrow ui-arr">▼</button>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          
+                         <tr>
+                              <td>1</td>
+                              <td class="font-c">476870</td>
+                              <td>11540</td>
+                              <td>5지 선택</td>
+                              <td>소개하기</td>
+                              <td>의사소통 역량</td>
+                              <td>중</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td class="font-c">476871</td>
+                              <td></td>
+                              <td>단답 무순형</td>
+                              <td>소개하기</td>
+                              <td>의사소통 역량</td>
+                              <td>중</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td class="font-c">476872</td>
+                              <td></td>
+                              <td>5지 선택</td>
+                              <td>작품의 특징</td>
+                              <td>비판적·창의적 사고 역량</td>
+                              <td>중</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td class="font-c">476873</td>
+                              <td>11541</td>
+                              <td>단답 무순형</td>
+                              <td>작품의 특징</td>
+                              <td>비판적·창의적 사고 역량</td>
+                              <td>중</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                     
+                      <div class="btn-wrap">
+                        <button type="button" class="btn-lg pop-btn" data-pop="testpage-pop">선택완료</button>
+                      </div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- e: 20230714 시험지 선택 화면 추가 -->
           </div>
         </div>
       </div>
@@ -771,7 +1202,7 @@
     <!-- 230626 문항 선택 완료 팝업 삭제 -->
     <!-- 230626 문항 미선택 팝업 삭제-->
     <!-- S: 230626 시험지 미등록 팝업 추가 -->
-    <div class="pop-wrap alert-type">
+    <div class="pop-wrap alert-type" data-pop="testpage-pop">
       <div class="pop-inner">
         <div class="pop-content">
           <button type="button" class="pop-close"></button>
