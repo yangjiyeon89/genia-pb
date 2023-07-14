@@ -516,6 +516,82 @@
   }
 } 
 
+// 문항 영역
+.que-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc( 100% - 100px );
+  padding: 10px 0;
+  box-sizing: border-box;
+  .que-view-detail {
+    display: flex;
+    max-width: 50%;
+    height: auto;
+    max-height: 100%;
+    font-size: 18px;
+    flex-direction: column;
+    &.row-type {
+      gap: 30px;
+      flex-direction: row;
+      > div {
+        width: 50%;
+      }
+      .que-view-cnt {
+        padding-left: 0;
+      }
+      .que-view-top {
+        margin-bottom: 0;
+        .que-cnt-box {
+          margin: 20px 0 0 20px;
+        }
+      }
+    }
+  }
+  .que-view-top {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    .que-title {
+      display: block;
+      position: relative;
+      padding-left: 30px;
+      word-break: break-all;
+      em {
+        @include font(24px, 700);
+        position: absolute;
+        left: 0;
+        top: -3px;
+      }
+    }
+  }
+  .que-view-cnt {
+    padding-left: 30px;
+  }
+  .que-cnt-box {
+    padding: 10px;
+    border: 1px solid #aaa;
+    margin-bottom: 20px;
+  }
+  .answers-list {
+    li {
+      display: flex;
+      margin-bottom: 7px;
+      gap: 10px;
+      line-height: 1.5;
+      word-break: break-all;
+    }
+    &.row-type {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      li {
+        width: 50%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1023px) {
 	[class^='web-'] {
     display: none !important;
@@ -812,5 +888,47 @@
       }
     }
   }
+
+  // 문항 영역
+.que-view {
+  height: calc(100% - 142px);
+  padding: 5px 0;
+  .que-view-detail {
+    max-width: 100%;
+    font-size: 16px;
+    padding: 0 30px;
+    &.row-type {
+      gap: 15px;
+      .que-view-top {
+        .que-cnt-box {
+          margin: 10px 0 0 10px;
+        }
+      }
+    }
+  }
+  .que-view-top {
+    margin-bottom: 10px;
+    .que-title {
+      padding-left: 20px;
+      em {
+        @include font(16px, 700);
+        top: 0;
+      }
+    }
+  }
+  .que-view-cnt {
+    padding-left: 20px;
+  }
+  .que-cnt-box {
+    margin-bottom: 10px;
+  }
+  .answers-list {
+    li {
+      margin-bottom: 5px;
+      gap: 7px;
+    }
+  }
+}
+
 
 }
