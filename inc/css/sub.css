@@ -1966,6 +1966,80 @@
   transform: translate(-50%, -50%);
 }
 
+.que-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.que-view .que-view-detail {
+  display: flex;
+  max-width: 50%;
+  height: auto;
+  max-height: 100%;
+  font-size: 18px;
+  flex-direction: column;
+}
+.que-view .que-view-detail.row-type {
+  gap: 30px;
+  flex-direction: row;
+}
+.que-view .que-view-detail.row-type > div {
+  width: 50%;
+}
+.que-view .que-view-detail.row-type .que-view-cnt {
+  padding-left: 0;
+}
+.que-view .que-view-detail.row-type .que-view-top {
+  margin-bottom: 0;
+}
+.que-view .que-view-detail.row-type .que-view-top .que-cnt-box {
+  margin: 20px 0 0 20px;
+}
+.que-view .que-view-top {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.que-view .que-view-top .que-title {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  word-break: break-all;
+}
+.que-view .que-view-top .que-title em {
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+.que-view .que-view-cnt {
+  padding-left: 30px;
+}
+.que-view .que-cnt-box {
+  padding: 10px;
+  border: 1px solid #aaa;
+  margin-bottom: 20px;
+}
+.que-view .answers-list li {
+  display: flex;
+  margin-bottom: 7px;
+  gap: 10px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+.que-view .answers-list.row-type {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.que-view .answers-list.row-type li {
+  width: 50%;
+}
+
 @media screen and (max-width: 1023px) {
   [class^=web-] {
     display: none !important;
@@ -2218,6 +2292,42 @@
   }
   .s_sub02 .report-view-wrap .label-wrap.bar-type .label-color {
     margin-top: 2px;
+  }
+  .que-view {
+    height: calc(100% - 142px);
+    padding: 5px 0;
+  }
+  .que-view .que-view-detail {
+    max-width: 100%;
+    font-size: 16px;
+    padding: 0 30px;
+  }
+  .que-view .que-view-detail.row-type {
+    gap: 15px;
+  }
+  .que-view .que-view-detail.row-type .que-view-top .que-cnt-box {
+    margin: 10px 0 0 10px;
+  }
+  .que-view .que-view-top {
+    margin-bottom: 10px;
+  }
+  .que-view .que-view-top .que-title {
+    padding-left: 20px;
+  }
+  .que-view .que-view-top .que-title em {
+    font-size: 16px;
+    font-weight: 700;
+    top: 0;
+  }
+  .que-view .que-view-cnt {
+    padding-left: 20px;
+  }
+  .que-view .que-cnt-box {
+    margin-bottom: 10px;
+  }
+  .que-view .answers-list li {
+    margin-bottom: 5px;
+    gap: 7px;
   }
 }
 /**

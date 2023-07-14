@@ -438,12 +438,11 @@
 }
 .admin01 .que-list-wrap .que-item {
   position: relative;
-  padding: 10px 10px 50px 10px;
+  padding: 10px;
   border: 1px solid #cbcbcb;
 }
 .admin01 .que-list-wrap .que-tit {
   display: block;
-  padding-left: 5px;
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 500;
@@ -640,6 +639,12 @@
 .admin01 .test-add-step01 .table-wrap {
   padding: 0 20px;
 }
+.admin01 .test-add-step01 .class-list-wrap {
+  border-top: 1px solid #cbcbcb;
+}
+.admin01 .test-add-step01 .class-list-wrap + .que-content-wrap {
+  height: 841px;
+}
 .admin01 .test-add-step02 .que-list-wrap {
   width: 900px;
   height: 890px;
@@ -716,6 +721,59 @@
   align-items: center;
   width: 100%;
   margin-top: 20px;
+}
+.admin01 .que-view-detail {
+  padding-left: 10px;
+}
+.admin01 .que-view-detail .que-view-tit {
+  position: relative;
+  padding-left: 20px;
+}
+.admin01 .que-view-detail .que-view-tit em {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+}
+.admin01 .que-view-detail .que-view-cnt {
+  padding: 10px 20px;
+  word-break: break-all;
+}
+.admin01 .que-view-detail .que-view-cnt .txt-type {
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+.admin01 .que-view-detail .que-view-cnt .answers-list {
+  margin: 10px 0;
+}
+.admin01 .que-view-detail .que-view-cnt .answers-list li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+.admin01 .que-view-detail .que-view-cnt .answers-list li em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #7ab7dd;
+  font-weight: 600;
+}
+.admin01 .que-view-detail .que-view-cnt .answers-area {
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 10px;
+}
+.admin01 .que-view-detail .que-view-cnt .answers-area em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 10px;
+  font-weight: 600;
+}
+.admin01 .que-view-detail .que-view-cnt .commentary-area em {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 .admin01 .admin02-content-area {
   position: relative;

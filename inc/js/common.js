@@ -1,3 +1,8 @@
+
+!function($) {
+
+}();
+
 $(function () {
   //menu
   function checkCurrentGnb() {
@@ -263,8 +268,12 @@ $(function () {
     let _cnt = $(this).next();
 
     if (!_this.hasClass("active")) {
+      _this.parents('div').find('.select-wrap .select-btn').removeClass('active');
+      _this.parents('div').find('.select-wrap .select-list').slideUp('fast');
+
       _this.addClass("active");
       _cnt.stop().slideDown("fast");
+      
     } else {
       _cnt.stop().slideUp("fast", function () {
         _this.removeClass("active");
@@ -292,13 +301,25 @@ $(function () {
   let _html = $("html , body");
   let popBtn = $(".pop-btn");
   let closePop = $(".pop-close");
+  let openPopups = 0;
 
   function popFunc() {
     let _this = $(this);
     let popData = _this.data("pop");
 
+    console.log(openPopups)
+
     _html.css("overflow", "hidden");
     _dim.fadeIn();
+    openPopups++;
+
+    if(openPopups > 1) {
+      $(".pop-wrap[data-pop='" + popData + "']").css("z-index", "12");
+      $('.dim').css("z-index","11");
+    } else {
+      $(".pop-wrap[data-pop='" + popData + "']").css("z-index", "10");
+      $('.dim').css("z-index","3");
+    }
 
     $(".pop-wrap[data-pop='" + popData + "']").show();
 
@@ -307,9 +328,20 @@ $(function () {
 
   function popClose() {
     let _this = $(this);
-    $(".pop-wrap").hide();
-    _html.css("overflow", "auto");
+    var popupData = _this.parents(".pop-wrap").data("pop");
+
+    closePopup(popupData);
+    openPopups--;
     _dim.fadeOut();
+
+    if(!openPopups > 0) {
+      _html.css("overflow", "auto");
+      $('.dim').css("z-index","3");
+    }
+  }
+
+  function closePopup(popupData) {
+    $(".pop-wrap[data-pop='" + popupData + "']").hide();
   }
 
   popBtn.on("click", popFunc);
@@ -411,7 +443,7 @@ $(function () {
     }
   }
 
-  accBtn.on("click", accFunc);
+  $(document).on("click", ".ui-acc-btn", accFunc);
 
   // filter arrow
   let filterArr = $(".ui-arr");
