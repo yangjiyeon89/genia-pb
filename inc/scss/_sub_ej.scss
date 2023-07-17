@@ -713,6 +713,9 @@
 					max-width: 480px;
 					object-fit: contain;
 				}
+				.que-view .que-view-top .que-title {padding-left: 0;}
+				.que-view .que-view-detail.row-type .que-view-top .que-cnt-box {margin-left: 0;}
+				.que-view .que-view-cnt {padding-left: 0;}
 			}
 
 			height: 100%;
@@ -935,6 +938,11 @@
 				display: flex;
 			}
 		}
+
+		.que-view .que-view-detail {max-width: 100%;}
+		.que-view .que-view-top .que-title,
+		.que-view .que-view-cnt {padding-left: 0;padding-right: 20px;}
+		.que-view .que-view-detail.row-type .que-view-top .que-cnt-box {margin-left: 0;}
 	}
 }
 
@@ -1170,10 +1178,14 @@
 							.swiper-rtl .swiper-button-prev:after {
 								display: none;
 							}
+							
 						}
 					}
 				}
 			}
+		}
+		.que-view {
+			height: calc(100% - 22px);
 		}
 	}
 
