@@ -693,6 +693,25 @@
         display: none;
       }
     }
+    //문제 영역
+    span:nth-child(1) {
+      width: 100%;
+    }
+    .que-view {
+      width: 100%;
+      .que-view-detail {
+        max-width: 100%;
+        font-size: 16px;
+        text-align: left;
+      }
+      .que-view-top {
+        .que-title {
+          em {
+            font-size: 20px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1369,6 +1388,13 @@
       .col {
         .td {
           min-height: auto;
+        }
+      }
+      //문제 영역
+      .que-view {
+        .que-view-detail {
+          padding: 0;
+          text-align: left;
         }
       }
     }

@@ -732,6 +732,20 @@
 .stu-view .tbl-report.type02 + .tbl-report .th {
   display: none;
 }
+.stu-view .tbl-report.type02 span:nth-child(1) {
+  width: 100%;
+}
+.stu-view .tbl-report.type02 .que-view {
+  width: 100%;
+}
+.stu-view .tbl-report.type02 .que-view .que-view-detail {
+  max-width: 100%;
+  font-size: 16px;
+  text-align: left;
+}
+.stu-view .tbl-report.type02 .que-view .que-view-top .que-title em {
+  font-size: 20px;
+}
 
 .stu-report .btn-name {
   display: inline-flex;
@@ -1283,6 +1297,10 @@
   }
   .stu-view .tbl-report.type02 .col .td {
     min-height: auto;
+  }
+  .stu-view .tbl-report.type02 .que-view .que-view-detail {
+    padding: 0;
+    text-align: left;
   }
   .report-pop .inner {
     padding-top: 116px;
