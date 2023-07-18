@@ -403,7 +403,7 @@
 	}
 	&.w280 {
 		width: 280px;
-		border-radius: 13px;
+		border-radius: 8px;
 	}
 	&.size-s {
 		width: 85px;
@@ -428,7 +428,7 @@
 .btn-type02 {
 	width: 150px;
 	height: 55px;
-	border-radius: 13px;
+	border-radius: 8px;
 	color: #fff;
 	background-color: $color-main-pink;
 	@include font(18px, 500);
@@ -445,7 +445,7 @@
 	width: 99px;
 	height: 35px;
 	@include font(15px, 500);
-	border-radius: 9px;
+	border-radius: 8px;
 	background-color: #fff;
 	&.type01 {
 		background-color: $color-main-pink;
@@ -478,7 +478,7 @@
 	color: #fff;
 	@include font(15px, 500);
 	background-color: #333;
-	border-radius: 9px;
+	border-radius: 8px;
 	i { margin-right: 10px; }
 }
 .btn-type04 {
