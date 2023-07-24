@@ -68,6 +68,68 @@
   &.type01 {
     background-color: #fafcff;
   }
+  &.col-type {
+    .time-wrap {
+      max-width: 1280px;
+      margin: auto;
+    }
+    .exam-swiper-wrap {
+      height: 50%;
+    }
+    .exam-cnt {
+      height: calc(100vh - 235px);
+    }
+    .exam-swiper-wrap {
+      height: 100%;
+    }
+    .que-view {
+      height: calc(100% - 55px);
+    }
+    .answer-cnt {
+      border-left: 1px solid #dcdcdc;
+    }
+    .answer-cnt-title {
+      padding: 17px 20px;
+      color: #fff;
+      background-color: #333;
+      .tit {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+    .que-answer-box {
+      @include layout-center;
+      border-bottom: 1px solid #dcdcdc;
+      .num {
+        display: inline-flex;
+        height: 100%;
+        padding: 30px get-vw(37px);
+        font-size: 18px;
+        font-weight: 700;
+        word-break: keep-all;
+        border-right: 1px solid #dcdcdc;
+        & + div {
+          flex: 1;
+        }
+      }
+      .btn-wrap {
+        gap: 15px;
+      }
+      .input-wrap {
+        padding: 0 20px;
+      }
+    }
+    .exam-que-answer {
+      height: calc(100% - 60px);
+      & > .btn-wrap {
+        display: flex;
+        margin: 20px 0;
+      }
+      .scroll-inner {
+        height: calc(100% - 95px);
+      }
+    }
+  }
   .exam-top {
 		width: 100%;
     height: 70px;
@@ -111,6 +173,7 @@
     margin: 0 auto;
     height: calc(100vh - 184px);
     box-sizing: border-box;
+    
   }
   .exam-tit-wrap {
     @include layout-center-center;
@@ -149,7 +212,10 @@
     }
     .desc {
       @include font(30px, 500);
-      margin-top: 100px;
+      // margin-top: 100px;
+    }
+    .loading-wrap {
+      margin: 80px 0 20px;
     }
   }
   .exam-que-wrap {
@@ -159,6 +225,15 @@
     box-sizing: border-box;
     border: 1px solid #dcdcdc;
     background-color: #fff;
+    &.col-type {
+      display: flex;
+    }
+    .box {
+      width: 37%;
+      &:nth-child(1) {
+        width: 63%;
+      }
+    }
   }
   .time-wrap {
     @include layout-center;
@@ -241,6 +316,13 @@
     }
     .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
       display: none;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+      bottom: 17px;
+      font-weight: 500;
+    }
+    .swiper-pagination-current {
+      color: #108eff;
     }
   }
   .archive-wrap {
@@ -326,6 +408,11 @@
     height: calc( 100vh - 45px);
     .exam-cnt {
       height: 100%;
+    }
+    &.col-type {
+      .time-wrap {
+        width: 1280px;
+      }
     }
     &.type01 {
       .unit-title {
@@ -702,13 +789,18 @@
         padding: 10px 20px;
         height: 50px;
         font-size: 22px;
-
         border-radius: 10px;
-        margin-top: 60px;
+        margin-top: 30px;
       }
       .desc {
         font-size: 18px;
-        margin-top: 60px;
+        // margin-top: 60px;
+      }
+      .loading-wrap {
+        margin: 50px 0 10px;
+        img {
+          width: 50px;
+        }
       }
     }
     .time-wrap {
@@ -772,6 +864,62 @@
         height: 46px;
         border-radius: 9;
         font-size: 16px;
+      }
+    }
+    &.col-type {
+      position: relative;
+      .exam-cnt {
+        overflow: hidden;
+        height: calc(100vh - 110px);
+      }
+      .exam-que-wrap {
+        flex-direction: column;
+        .box {
+          width: 100%;
+          &:nth-child(1) {
+            width: 100%;
+            height: calc(100vh - 420px);
+            margin-top: 40px;
+          }
+        }
+      }
+      .time-wrap {
+        position: absolute;
+        z-index: 1;
+        top: 77px;
+        left: 20px;
+      }
+      .answer-cnt {
+        border-left: 0;
+      }
+      .exam-que-answer {
+        height: calc(100% - 370px);
+        border-top: 1px solid #dcdcdc;
+        .scroll-inner {
+          height: 100%;
+          border-bottom: 1px solid #dcdcdc;
+        }
+        & > .btn-wrap {
+          width: 144px;
+          margin: 15px auto;
+        }
+        .btn-wrap {
+          gap: 10px;
+          justify-content: flex-start;
+        }
+      }
+      .answer-cnt-title {
+        display: none;
+      }
+      .que-answer-box {
+        background-color: #fff;
+        .num {
+          padding: 24px 15px;
+          border-right: 0;
+        }
+        .input-wrap {
+          padding: 0;
+        }
       }
     }
   }
@@ -845,6 +993,22 @@
           width: 100%;
           .btn-type02 {
             width: 100%;
+          }
+        }
+      }
+      &.col-type {
+        .time-wrap {
+          width: auto;
+          top: 20px;
+        }
+        .exam-cnt {
+          height: calc(100vh - 50px);
+        }
+        .exam-que-wrap {
+          .box {
+            &:nth-child(1) {
+              height: calc(100vh - 358px);
+            }
           }
         }
       }

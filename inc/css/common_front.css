@@ -628,11 +628,25 @@
 .btn-wrap.full button, .btn-wrap.full a {
   flex: 1;
 }
+.btn-wrap.row-type {
+  width: 100%;
+  flex-direction: column;
+}
 
 .btn-comment .arrow {
   display: inline-block;
   margin-left: 2px;
   font-size: 10px;
+}
+
+.ico-type {
+  position: relative;
+}
+.ico-type::before {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
 }
 
 i {
