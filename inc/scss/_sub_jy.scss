@@ -13,7 +13,7 @@
     .thead {
       & > span {
         &:nth-child(1) {
-          padding: 15px 5px;
+          // padding: 15px 5px;
         }
       }
     }
@@ -748,6 +748,14 @@
     .student-name {
       color: #108eff;
       @include font(24px, 600);
+      button {
+        position: relative;
+        top: 3px;
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+        background: url(../../images/common/ico_detail.png) no-repeat;
+      }
     }
     .keyword-wrap {
       em {
@@ -1447,6 +1455,10 @@
       .student-name {
         margin-bottom: 10px;
         font-size: 17px;
+        button {
+          width: 18px;height: 18px;
+          background-size: contain;
+        }
       }
       .keyword-wrap {
         em {

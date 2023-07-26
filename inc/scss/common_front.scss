@@ -1465,6 +1465,11 @@ input[type="checkbox"] {
 				width: 100%;
 			}
 		}
+		&.multi-type {
+			.btn-line {
+				min-width: 89px;
+			}
+		}
 	}
 	.menu-inner {
 		padding: 0 20px 30px 20px;
@@ -1502,6 +1507,39 @@ input[type="checkbox"] {
 				.ui-sortable-handle {
 					@include content-center;
 					height: 21px;
+				}
+			}
+		}
+	}
+	.hidden-area {
+		width: 100%;
+		min-height: 281px;
+		margin-bottom: 20px;
+		border: 1px dashed #d7d7d7;
+		border-radius: 13px;
+		background-color: #f8f8f8;
+		.defalut-box {
+			@include layout-center-center;
+			height: 281px;
+			color: #a1a1a1;
+			font-size: 15px;
+			text-align: center;
+		}
+		.hidden-list-box {
+			padding: 22px 20px;
+			.tit {
+				display: block;
+				margin-bottom: 20px;
+				font-weight: 500;
+			}
+			.unit-list {
+				gap: 18px;
+				li {
+					a {
+						display: block;
+						font-size: 15px;
+						@include text-overflow;
+					}
 				}
 			}
 		}
@@ -1694,6 +1732,44 @@ input[type="checkbox"] {
       padding: 0;
     }
   }
+	&.share-pop, &.exam-prev-pop, &.exam-edit-pop {
+		.pop-inner {
+			width: 100%;
+		}
+		.pop-header {
+			height: 45px;
+			background-color: #333;
+			padding: 10px 20px;
+			span {
+				@include font(20px, 500);
+				color: #fff;
+			}
+			em {
+				display: inline-block;
+				font-weight: 700;
+				margin-right: 5px;
+			}
+		}
+		.pop-close {
+			top: 13px;
+			width: 20px;
+			height: 20px;
+			background: url(../../images/common/ico_pop_close_type04.png) no-repeat;
+			background-size: contain;
+		}
+	}
+	&.share-pop {
+		max-width: 700px;
+		width: 90%;
+	}
+	&.exam-prev-pop {
+		max-width: 800px;
+		width: 90%;
+	}
+	&.exam-prev02, &.exam-edit-pop {
+		max-width: 1120px;
+		width: 90%;
+	}
 }
 
 .class-cnt-wrap {
@@ -1772,9 +1848,12 @@ input[type="checkbox"] {
 		margin-right: 10px;
 	}
 	.setting-btn {
-		width: 21px;
-		height: 21px;
-		background: url(../../images/common/ico_setting.png) no-repeat;
+		// width: 21px;
+		// height: 21px;
+		// background: url(../../images/common/ico_setting.png) no-repeat;
+		width: 19px;
+		height: 19px;
+		background: url(../../images/common/ico_person3.png) no-repeat;
 		background-size: contain;
 	}
 }
@@ -1812,7 +1891,8 @@ input[type="checkbox"] {
 		position: fixed;
 		width: 100%;
 		top: 0;
-		z-index: 11;
+		// z-index: 11;
+		z-index: 5;
 		.mo-cnt {
 			width: 100%;
 			.inner {

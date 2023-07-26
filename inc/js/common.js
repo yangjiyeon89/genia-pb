@@ -318,7 +318,7 @@ $(function () {
       $('.dim').css("z-index","11");
     } else {
       $(".pop-wrap[data-pop='" + popData + "']").css("z-index", "10");
-      $('.dim').css("z-index","3");
+      $('.dim').css("z-index","5");
     }
 
     $(".pop-wrap[data-pop='" + popData + "']").show();
@@ -332,11 +332,12 @@ $(function () {
 
     closePopup(popupData);
     openPopups--;
-    _dim.fadeOut();
-
-    if(!openPopups > 0) {
+    
+    if(openPopups > 0) {      
+      $('.dim').css("z-index","5");
+    } else {      
+      _dim.fadeOut();
       _html.css("overflow", "auto");
-      $('.dim').css("z-index","3");
     }
   }
 
