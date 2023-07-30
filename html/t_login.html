@@ -112,29 +112,38 @@
     </div>
     <div class="container">
       <div class="inner">
-        <!-- s: 202307 수정 -->
         <div class="login-cnt">
-          <p class="login-tit">
-            <img src="../images/common/logo_l.png" alt="Genia튜터">
-          </p>
+          <p class="login-tit">선생님 로그인</p>
           <div class="logo-wrap">
             <a href="javascript:;" class="logo"></a> 
           </div>
           <div class="login-desc">
-            <span>로그인 유형을 선택해주세요.</span>
+            <span>T셀파 계정으로 로그인해주세요.</span>
           </div>
-            <ul class="unit-list">
-              <li class="t-login active">
-                <span class="txt">선생님</span>
-                <a href="javascript:;" class="btn-defalut w154">로그인</a>
-              </li>
-              <li class="s-login">
-                <span class="txt">학생</span>
-                <a href="javascript:;" class="btn-defalut w154">로그인</a>
-              </li>
-            </ul>
+
+          <div class="form-wrap">
+            <div class="id-pw-wrap">
+              <div class="id-wrap">
+                <input type="text" placeholder="T셀파 아이디를 입력하세요." class="id-input" id="login-id">
+                <label for="login-id" class="id-label"></label>
+              </div>
+              <div class="pw-wrap">
+                <input type="password" placeholder="T셀파 비밀번호를 입력하세요." class="pw-input" id="login-pw">
+                <label for="login-pw" class="pw-label"></label>
+              </div>
+            </div>
+            <div class="chk-wrap">
+              <input type="checkbox" name="" id="chk01_01" class="id-save">
+              <label for="chk01_01">아이디 저장</label>
+            </div>
+            <button type="button" class="btn-login pop-btn" data-pop="user-pop">로그인</button>
+          </div>
+          <div class="login-wrap">
+            <a href="javascript:;">아이디 찾기</a>
+            <a href="javascript:;">비밀번호 찾기</a>
+            <a href="javascript:;">회원가입</a>
+          </div>
         </div>
-        <!-- e: 202307 수정 -->
       </div>
     </div>
     <div class="footer">

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>지니아튜터</title>
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../inc/css/font.css">
 	<link rel="stylesheet" href="../inc/css/reset.css">
 	<link rel="stylesheet" href="../inc/css/common_front.css">
@@ -13,6 +15,7 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="../inc/js/common.js"></script>
 </head>
 
@@ -198,17 +201,11 @@
 												<span class="class-item-txt">분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -217,12 +214,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -241,17 +236,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -260,12 +249,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -286,17 +273,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -305,14 +286,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn"><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -331,17 +308,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -350,12 +321,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -374,17 +343,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -393,12 +356,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -418,17 +379,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -437,12 +392,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -461,17 +414,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -480,12 +427,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -504,17 +449,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -523,12 +462,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -545,17 +482,11 @@
 												<span class="class-item-txt">분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -564,12 +495,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -592,17 +521,11 @@
 												<span class="class-item-txt">분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -611,12 +534,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -635,17 +556,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -654,12 +569,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -680,17 +593,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -699,14 +606,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn"><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -725,17 +628,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -744,12 +641,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -768,17 +663,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -787,12 +676,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -812,17 +699,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -831,12 +712,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -855,17 +734,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -874,12 +747,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -898,17 +769,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -917,12 +782,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -939,17 +802,11 @@
 												<span class="class-item-txt">분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -958,12 +815,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -986,17 +841,11 @@
 												<span class="class-item-txt">분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -1005,12 +854,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -1029,17 +876,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -1048,12 +889,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!-- 공유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -1074,17 +913,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -1093,14 +926,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn"><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -1119,17 +948,11 @@
 													나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가 분수의 나눗셈에 대해 알아보기 형성평가</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="prview"></i></button>
-												<!-- t_pop_preview.html 팝업 노출 -->
-												<!-- 미리보기 팝업 -->
-												<button type="button" class="btn-icon  pop-btn" data-pop=""><i class="edit"></i></button>
-												<!-- t_pop_edit.html 팝업 노출 -->
-												<!-- 편집하기 팝업 -->
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop"><i class="prview"></i></button>
+												<button type="button" class="btn-icon  pop-btn" data-pop="exam-edit-pop"><i class="edit"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 										<li class="que-class-item">
@@ -1138,12 +961,10 @@
 												<span class="class-item-txt">분수의 나눗셈 개념 정리 학습 동영상</span>
 											</div>
 											<div class="btn-wrap">
-												<button type="button" class="btn-icon"><i class="prview"></i></button>
-												<button type="button" class="btn-icon pop-btn" data-pop=""><i class="share"></i></button>
-												<!-- t_pop_share_01.html 팝업 노출 -->
-												<!-- 공유하기 팝업 -->
-												<!-- t_pop_share_02.html 팝업 노출 -->
-												<!--공 유하기 팝업_클래스 미개설 교사 -->
+												<!-- s: 202307 수정 -->
+												<button type="button" class="btn-icon pop-btn" data-pop="exam-prev-pop02"><i class="prview"></i></button>
+												<button type="button" class="btn-icon pop-btn" data-pop="share-pop"><i class="share"></i></button>
+												<!-- e: 202307 수정 -->
 											</div>
 										</li>
 									</ul>
@@ -1243,6 +1064,930 @@
 		</div>
 		<div class="dim"></div>
 
+		<!-- s: 202307 추가 -->
+		<!-- 공유하기 팝업 -->
+		<div class="pop-wrap share-pop" data-pop="share-pop">
+			<div class="pop-inner">
+				<div class="pop-header">
+					<span>공유하기</span>
+					<button type="button" class="pop-close"></button>
+				</div>
+				<div class="pop-content">
+					<div class="inner">
+						<div class="share-view-wrap">
+							<div class="view-cnt-wrap">
+								<div class="pop-tit">
+									<p>과제 배포</p>
+								</div>
+
+								<!-- 미개설 교사 -->
+								<div class="open-wrap" style="display:none;">
+									<span class="txt">
+										개설한 클래스가 없습니다. <br>
+										클래스 개설은 ‘우리반T셀파‘ 에서 가능합니다.
+									</span>
+									<a href="javascript:;" class="btn-defalut w154">
+										<i class="ic-add-class"></i>
+										<span>클래스 개설하기</span>
+									</a>
+								</div>
+
+								<!-- 개설 교사 -->
+								<div class="open-wrap">
+									<span class="box-tit">6학년 1반 클래스</span>
+									<div class="end-day-wrap">
+										<span class="txt">마감일 설정</span>
+										<div class="date-wrap">
+											<div class="select-wrap">
+												<button type="button" class="select-btn">
+													<span>2023년</span>
+												</button>
+												<ul class="select-list" style="display: none;">
+													<li class="select-item"><a href="javascript:;">2023년</a></li>
+													<li class="select-item"><a href="javascript:;">2022년</a></li>
+													<li class="select-item"><a href="javascript:;">2021년</a></li>
+													<li class="select-item"><a href="javascript:;">2020년</a></li>
+												</ul>
+											</div>
+											<div class="select-wrap">
+												<button type="button" class="select-btn">
+													<span>3월</span>
+												</button>
+												<ul class="select-list" style="display: none;">
+													<li class="select-item"><a href="javascript:;">3월</a></li>
+													<li class="select-item"><a href="javascript:;">4월</a></li>
+												</ul>
+											</div>
+											<div class="select-wrap">
+												<button type="button" class="select-btn">
+													<span>30일</span>
+												</button>
+												<ul class="select-list" style="display: none;">
+													<li class="select-item"><a href="javascript:;">30일</a></li>
+													<li class="select-item"><a href="javascript:;">31일</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="toggle-wrap">
+											<div class="toggle-btn">
+												<input type="checkbox" class="checkbox" checked>
+												<div class="knobs"></div>
+												<div class="layer"></div>
+											</div>
+										</div>
+									</div>
+									<div class="btn-share">
+										<i class="ic-share"></i>
+										<span>클래스 배포하기</span>
+										<div class="open-select-list">
+											<div class="list-tit">
+												과제 공유 대상 선택
+											</div>
+											<ul class="list scroll-inner">
+												<li>
+													<input type="checkbox" id="all_chk_01" class="all-share">
+													<label for="all_chk_01">전체선택</label>
+												</li>
+												<li>
+													<input type="checkbox" id="chk01_01">
+													<label for="chk01_01">김천재</label>
+												</li>
+												<li>
+													<input type="checkbox" id="chk01_02">
+													<label for="chk01_02">이천재</label>
+												</li>
+												<li>
+													<input type="checkbox" id="chk01_03">
+													<label for="chk01_03">박천재</label>
+												</li>
+												<li>
+													<input type="checkbox" id="chk01_04">
+													<label for="chk01_04">유천재</label>
+												</li>
+											</ul>
+											<div class="btn-wrap">
+												<button type="button" class="btn-defalut-line size-s">취소</button>
+												<button type="button" class="btn-defalut size-s pop-btn" data-pop="complete-pop">완료</button>
+											</div>
+										</div>
+									</div>
+									<div class="mobile-btn-share pop-btn" data-pop="choice-pop">
+										<i class="ic-share"></i>
+										<span>클래스 배포하기</span>
+									</div>
+								</div>
+	
+								<div class="open-wrap">
+									<span class="box-tit">비회원 배포</span>
+									<div class="box-txt">과제 URL 또는 QR코드를 학생들에게 공유해주세요.</div>
+									<ul class="share-wrap">
+										<li>
+											<button type="button" class="pop-btn url-btn" data-pop="copy-pop">
+												<img src="../images/common/ico_url.png" alt="url">
+											</button>
+											<div class="btn-copy pop-btn" data-pop="copy-pop"></div>
+											<span>URL 복사</span>
+										</li>
+										<li>
+											<div class="qr-img">
+												<img src="../images/common/ico_qrcode.png" alt="qrcode">
+											</div>
+											<div class="btn-down-img pop-btn" data-pop="qr-pop"></div>
+											<span>QR 코드</sp>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+		
+		<!-- 복사하기 팝업 -->
+		<div class="pop-wrap alert-type" data-pop="copy-pop">
+			<div class="pop-inner">
+				<div class="pop-content">
+					<button type="button" class="pop-close"></button>
+					<span class="txt">URL이 복사되었습니다.<br>
+						붙여넣기를 통해<br>
+						학생들에게 전달해주세요.
+					</span>
+				</div>
+				<div class="pop-footer">
+					<button type="button" class="btn-defalut">확인</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 공유 완료 팝업 -->
+		<div class="pop-wrap alert-type" data-pop="complete-pop">
+			<div class="pop-inner">
+				<div class="pop-content">
+					<button type="button" class="pop-close"></button>
+					<span class="txt">과제 공유가 완료되었습니다.</span>
+				</div>
+				<div class="pop-footer">
+					<button type="button" class="btn-defalut">확인</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- qr코드 팝업 -->
+		<div class="pop-wrap alert-type image-type" data-pop="qr-pop">
+			<div class="pop-inner">
+				<div class="pop-content">
+					<button type="button" class="pop-close"></button>
+					<span class="txt">
+						<img src="../images/common/pop_qrcode.png" alt="qrcode">
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- 과제 공유 대상 선택 팝업 -->
+		<div class="pop-wrap bottom-type" data-pop="choice-pop" style="display:none">
+			<div class="pop-inner">
+				<div class="pop-header">
+					<span>과제 공유 대상 선택</span>
+					<button type="button" class="pop-close"></button>
+				</div>
+				<div class="pop-content">
+					<div class="open-select-list scroll-inner">
+						<ul class="list">
+							<li class="all-chk">
+								<input type="checkbox" id="all_chk_00" class="all-share"> <!-- 230615 .all-share 추가 -->
+								<label for="all_chk_00">전체선택</label>
+							</li>
+							<li>
+								<input type="checkbox" id="check00_01">
+								<label for="check00_01">김천재</label>
+							</li>
+							<li>
+								<input type="checkbox" id="check00_02">
+								<label for="check00_02">이천재</label>
+							</li>
+							<li>
+								<input type="checkbox" id="check00_03">
+								<label for="check00_03">박천재</label>
+							</li>
+							<li>
+								<input type="checkbox" id="check00_04">
+								<label for="check00_04">유천재</label>
+							</li>
+							<li>
+								<input type="checkbox" id="check00_05">
+								<label for="check00_05">박천재</label>
+							</li>
+							<li>
+								<input type="checkbox" id="check00_06">
+								<label for="check00_06">유천재</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="pop-footer">
+					<!-- S: 230615 버튼 추가 및 수정  -->
+					<button type="button" class="btn-defalut-line">취소</button> 
+					<button type="button" class="btn-defalut pop-btn" data-pop="complete-pop">완료</button>
+					<!-- E: 230615 버튼 추가 및 수정  -->
+				</div>
+			</div>
+		</div>
+
+		<!-- 시험지 미리보기 팝업 -->
+		<div class="pop-wrap exam-prev-pop" data-pop="exam-prev-pop">
+			<div class="pop-inner">
+				<div class="pop-header">
+					<span>시험지 미리보기</span>
+					<button type="button" class="pop-close"></button>
+				</div>
+				<div class="pop-content">
+					<div class="test-wrap">
+						<div class="exam-view-wrap">
+							<div class="view-cnt-wrap">
+								<div class="exam-swiper-wrap">
+									<div class="swiper question-swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="que-num">
+													<span>01</span>
+												</div>
+												<div class="temp-box">
+													<!-- S: 20230717 수정-->
+													<div class="que-view scroll-inner">
+														<div class="que-view-detail row-type">
+															<div class="que-view-top">
+																<span class="que-title">
+																	5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.
+																</span>
+																<div class="que-cnt-box">문제 지문 영역</div>
+															</div>
+															<div class="que-view-cnt">
+																<ul class="answers-list">
+																	<li>
+																		<em>①</em>3 대 4
+																	</li>
+																	<li>
+																		<em>②</em>4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비
+																	</li>
+																	<li>
+																		<em>③</em>4에 대한 3의 비
+																	</li>
+																	<li>
+																		<em>④</em>3에 대한 4의 비
+																	</li>
+																	<li>
+																		<em>⑤</em>3과 4의 비
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<!-- E: 20230717 수정 -->
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="que-num">
+													<span>02</span>
+												</div>
+												<div class="temp-box">
+													<!-- S: 20230717 수정-->
+													<div class="que-view scroll-inner">
+														<div class="que-view-detail">
+															<div class="que-view-top">
+																<span class="que-title">5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+															</div>
+															<div class="que-view-cnt">
+																<div class="que-cnt-box">문제 지문 영역</div>
+																<ul class="answers-list">
+																	<li>
+																		<em>①</em>3 대 4
+																	</li>
+																	<li>
+																		<em>②</em>3의 4에 대한 비
+																	</li>
+																	<li>
+																		<em>③</em>4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 
+																	</li>
+																	<li>
+																		<em>④</em>3에 대한 4의 비
+																	</li>
+																	<li>
+																		<em>⑤</em>3과 4의 비
+																	</li>
+			
+																</ul>
+															</div>
+														</div>
+													</div>
+													<!-- E: 20230717 수정 -->
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="que-num">
+													<span>03</span>
+												</div>
+												<div class="temp-box">
+													<!-- S: 20230717 수정-->
+													<div class="que-view scroll-inner">
+														<div class="que-view-detail">
+															<div class="que-view-top">
+																<span class="que-title">5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+															</div>
+															<div class="que-view-cnt">
+																<div class="que-cnt-box">문제 지문 영역</div>
+																<ul class="answers-list row-type row-type02">
+																	<li>
+																		<em>①</em>3 대 4
+																	</li>
+																	<li>
+																		<em>②</em>3 대 4
+																	</li>
+																	<li>
+																		<em>③</em>3 대 4
+																	</li>
+																	<li>
+																		<em>④</em>3 대 4
+																	</li>
+																	<li>
+																		<em>⑤</em>3 대 4
+																	</li>
+			
+																</ul>
+															</div>
+														</div>
+													</div>
+													<!-- E: 20230717 수정 -->
+												</div>
+											</div>
+										</div>
+										<div class="swiper-button-next"></div>
+										<div class="swiper-button-prev"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 학습자료 미리보기 팝업 -->
+		<div class="pop-wrap exam-prev-pop exam-prev02" data-pop="exam-prev-pop02">
+			<div class="pop-inner">
+				<div class="pop-header">
+					<span>학습자료 미리보기</span>
+					<button type="button" class="pop-close"></button>
+				</div>
+				<div class="pop-content">
+					<div class="exam-wrap">
+						<div class="exam-cnt">
+							<div class="archive-wrap">
+								<div class="swiper archive-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<p class="title">학습자료명 임시 영역(1) 학습자료명 임시 영역(1) 학습자료명 임시 영역(1)</p>
+											<!-- 컨텐츠 임시영역 -->
+											<div class="temp-box"></div>
+										</div>
+										<div class="swiper-slide">
+											<p class="title">학습자료명 이미지 (2)</p>
+											<!-- 자료 이미지 -->
+											<!-- S: 20230717 수정-->
+											<div class="que-view scroll-inner">
+												<div class="que-view-detail">
+													<div class="que-view-top">
+														<span class="que-title"><em>1.</em>5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+													</div>
+													<div class="que-view-cnt">
+														<div class="que-cnt-box">문제 지문 영역</div>
+														<ul class="answers-list">
+															<li>
+																<em>①</em>3 대 4
+															</li>
+															<li>
+																<em>②</em>3의 4에 대한 비
+															</li>
+															<li>
+																<em>③</em>4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 
+															</li>
+															<li>
+																<em>④</em>3에 대한 4의 비
+															</li>
+															<li>
+																<em>⑤</em>3과 4의 비
+															</li>
+			
+														</ul>
+													</div>
+												</div>
+											</div>
+											<!-- E: 20230717 수정 -->
+										</div>
+										<div class="swiper-slide">
+											<p class="title">학습자료명 이미지 (3)</p>
+											<!-- 자료 이미지 -->
+											<div class="img-box">
+												<img src="../images/sub/sample_img_01.jpg" alt="">
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<p class="title">학습자료명 유튜브 (4)</p>
+											<!-- 자료 유튜브 -->
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/mkggXE5e2yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+										</div>
+										<div class="swiper-slide">
+											<p class="title">학습자료명 동영상 (5)</p>
+											<!-- 자료 동영상 -->
+											<div class="video-box">
+												<video controls><source src="../images/sub/sample_video_01.mp4" type="video/mp4"></video>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-button-prev">이전</div>
+									<div class="swiper-button-next">다음</div>
+									<!--마지막 슬라이드인 경우 과제목록 버튼 노출 -->
+									<!-- <div class="swiper-button-next">과제목록</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 형성평가 편집하기 팝업 -->
+		<div class="pop-wrap exam-edit-pop" data-pop="exam-edit-pop">
+			<div class="pop-inner">
+				<div class="pop-header">
+					<span>형성평가 편집하기</span>
+					<button type="button" class="pop-close"></button>
+				</div>
+				<div class="pop-content">
+					<div class="test-wrap">
+						<div class="exam-edit-wrap">
+							<div class="view-cnt-wrap">
+								<div class="class-tit">
+									<span>수학 6-2</span>
+									<span>1. 분수의 나눗셈</span><br class="mo-only-br">
+									<span>[2차시] <em>분수의 나눗셈에 대해 알아보기</em></span>
+								</div>
+								<div class="que-list-wrap">
+									<div class="web-cnt que-list type01 scroll-inner">
+										<div class="top-txt">문제 목록</div>
+										<div class="que-box-wrap">
+											<div class="que-box">
+												<div class="top-area">
+													<div class="que_num">1</div>
+													<button class="btn-icon-type02">
+														<i class="delete"></i>
+													</button>
+												</div>
+												<div class="bottom-area">
+													<div class="temp-box">
+														<!-- S: 20230717 수정-->
+														<div class="que-view scroll-inner">
+															<div class="que-view-detail">
+																<div class="que-view-top">
+																	<span class="que-title">5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+																</div>
+																<div class="que-view-cnt">
+																	<div class="que-cnt-box">문제 지문 영역</div>
+																	<ul class="answers-list row-type row-type02">
+																		<li>
+																			<em>①</em>3 대 4
+																		</li>
+																		<li>
+																			<em>②</em>3 대 4
+																		</li>
+																		<li>
+																			<em>③</em>3 대 4
+																		</li>
+																		<li>
+																			<em>④</em>3 대 4
+																		</li>
+																		<li>
+																			<em>⑤</em>3 대 4
+																		</li>			
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<!-- E: 20230717 수정 -->
+													</div>
+													<button class="btn-icon-type03 btn-rotate">
+														<i class="rotate"></i>
+													</button>
+												</div>
+											</div>
+											<div class="que-box">
+												<div class="top-area">
+													<div class="que_num">2</div>
+													<button class="btn-icon-type02">
+														<i class="delete"></i>
+													</button>
+												</div>
+												<div class="bottom-area">
+													<div class="temp-box">
+														<!-- S: 20230717 수정-->
+														<div class="que-view scroll-inner">
+															<div class="que-view-detail row-type">
+																<div class="que-view-top">
+																	<span class="que-title">
+																		5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.
+																	</span>
+																	<div class="que-cnt-box">문제 지문 영역</div>
+																</div>
+																<div class="que-view-cnt">
+																	<ul class="answers-list">
+																		<li>
+																			<em>①</em>3 대 4
+																		</li>
+																		<li>
+																			<em>②</em>4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비
+																		</li>
+																		<li>
+																			<em>③</em>4에 대한 3의 비
+																		</li>
+																		<li>
+																			<em>④</em>3에 대한 4의 비
+																		</li>
+																		<li>
+																			<em>⑤</em>3과 4의 비
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<!-- E: 20230717 수정 -->
+													</div>
+													<button class="btn-icon-type03">
+														<i class="rotate"></i>
+													</button>
+												</div>
+											</div>
+											<div class="que-box">
+												<div class="top-area">
+													<div class="que_num">3</div>
+													<button class="btn-icon-type02">
+														<i class="delete"></i>
+													</button>
+												</div>
+												<div class="bottom-area">
+													<div class="temp-box">
+														<!-- S: 20230717 수정-->
+														<div class="que-view scroll-inner">
+															<div class="que-view-detail">
+																<div class="que-view-top">
+																	<span class="que-title">5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+																</div>
+																<div class="que-view-cnt">
+																	<div class="que-cnt-box">문제 지문 영역</div>
+																	<ul class="answers-list">
+																		<li>
+																			<em>①</em>3 대 4
+																		</li>
+																		<li>
+																			<em>②</em>3의 4에 대한 비
+																		</li>
+																		<li>
+																			<em>③</em>4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 
+																		</li>
+																		<li>
+																			<em>④</em>3에 대한 4의 비
+																		</li>
+																		<li>
+																			<em>⑤</em>3과 4의 비
+																		</li>
+				
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<!-- E: 20230717 수정 -->
+													</div>
+													<button class="btn-icon-type03">
+														<i class="rotate"></i>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="mo-cnt que-list type01 scroll-inner">
+										<div class="top-txt">문제 목록</div>
+										<div class="que-box-wrap">
+											<div class="edit-swiper-wrap">
+												<div class="swiper edit-swiper">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide que-box">
+															<div class="top-area">
+																<div class="que_num">1</div>
+																<button class="btn-icon-type02">
+																	<i class="delete"></i>
+																</button>
+															</div>
+															<div class="bottom-area">
+																<div class="temp-box">
+																	<!-- S: 20230717 수정-->
+																	<div class="que-view scroll-inner">
+																		<div class="que-view-detail">
+																			<div class="que-view-top">
+																				<span class="que-title">5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+																			</div>
+																			<div class="que-view-cnt">
+																				<div class="que-cnt-box">문제 지문 영역</div>
+																				<ul class="answers-list row-type row-type02">
+																					<li>
+																						<em>①</em>3 대 4
+																					</li>
+																					<li>
+																						<em>②</em>3 대 4
+																					</li>
+																					<li>
+																						<em>③</em>3 대 4
+																					</li>
+																					<li>
+																						<em>④</em>3 대 4
+																					</li>
+																					<li>
+																						<em>⑤</em>3 대 4
+																					</li>			
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- E: 20230717 수정 -->
+																</div>
+																<button class="btn-icon-type03 btn-rotate">
+																	<i class="rotate"></i>
+																</button>
+															</div>
+														</div>
+														<div class="swiper-slide que-box">
+															<div class="top-area">
+																<div class="que_num">1</div>
+																<button class="btn-icon-type02">
+																	<i class="delete"></i>
+																</button>
+															</div>
+															<div class="bottom-area">
+																<div class="temp-box">
+																	<!-- S: 20230717 수정-->
+																	<div class="que-view scroll-inner">
+																		<div class="que-view-detail row-type">
+																			<div class="que-view-top">
+																				<span class="que-title">
+																					5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.
+																				</span>
+																				<div class="que-cnt-box">문제 지문 영역</div>
+																			</div>
+																			<div class="que-view-cnt">
+																				<ul class="answers-list">
+																					<li>
+																						<em>①</em>3 대 4
+																					</li>
+																					<li>
+																						<em>②</em>4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비
+																					</li>
+																					<li>
+																						<em>③</em>4에 대한 3의 비
+																					</li>
+																					<li>
+																						<em>④</em>3에 대한 4의 비
+																					</li>
+																					<li>
+																						<em>⑤</em>3과 4의 비
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- E: 20230717 수정 -->
+																</div>
+																<button class="btn-icon-type03">
+																	<i class="rotate"></i>
+																</button>
+															</div>
+														</div>
+														<div class="swiper-slide que-box">
+															<div class="top-area">
+																<div class="que_num">1</div>
+																<button class="btn-icon-type02">
+																	<i class="delete"></i>
+																</button>
+															</div>
+															<div class="bottom-area">
+																<div class="temp-box">
+																	<!-- S: 20230717 수정-->
+																	<div class="que-view scroll-inner">
+																		<div class="que-view-detail">
+																			<div class="que-view-top">
+																				<span class="que-title">5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+																			</div>
+																			<div class="que-view-cnt">
+																				<div class="que-cnt-box">문제 지문 영역</div>
+																				<ul class="answers-list">
+																					<li>
+																						<em>①</em>3 대 4
+																					</li>
+																					<li>
+																						<em>②</em>3의 4에 대한 비
+																					</li>
+																					<li>
+																						<em>③</em>4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 
+																					</li>
+																					<li>
+																						<em>④</em>3에 대한 4의 비
+																					</li>
+																					<li>
+																						<em>⑤</em>3과 4의 비
+																					</li>
+							
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- E: 20230717 수정 -->
+																</div>
+																<button class="btn-icon-type03">
+																	<i class="rotate"></i>
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-button-next"></div>
+													<div class="swiper-button-prev"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="que-list type02 scroll-inner">
+										<div class="top-txt">유사 문제</div>
+										<!-- 문항 선택 전 -->
+										<div class="que-box-wrap default-box" style="display:none;">
+											<span>문제 목록에서<img src="../images/common/rotate_img.png" alt="">버튼을 선택해주세요.</span>
+										</div>
+	
+										<!-- 문항 선택 후 -->
+										<div class="que-box-wrap">
+											<div class="que-box">
+												<div class="top-area">
+													<div class="que_num">1</div>
+													<div class="btn-wrap">
+														<button class="btn-icon-type02"><i class="add"></i>추가</button>
+														<button class="btn-icon-type02"><i class="rotate"></i>교체</button>
+													</div>
+												</div>
+												<div class="bottom-area">
+													<div class="temp-box">
+														<!-- S: 20230717 수정-->
+														<div class="que-view scroll-inner">
+															<div class="que-view-detail">
+																<div class="que-view-top">
+																	<span class="que-title">5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+																</div>
+																<div class="que-view-cnt">
+																	<div class="que-cnt-box">문제 지문 영역</div>
+																	<ul class="answers-list row-type row-type02">
+																		<li>
+																			<em>①</em>3 대 4
+																		</li>
+																		<li>
+																			<em>②</em>3 대 4
+																		</li>
+																		<li>
+																			<em>③</em>3 대 4
+																		</li>
+																		<li>
+																			<em>④</em>3 대 4
+																		</li>
+																		<li>
+																			<em>⑤</em>3 대 4
+																		</li>			
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<!-- E: 20230717 수정 -->
+													</div>
+												</div>
+											</div>
+											<div class="que-box">
+												<div class="top-area">
+													<div class="que_num">1</div>
+													<div class="btn-wrap">
+														<button class="btn-icon-type02"><i class="add"></i>추가</button>
+														<button class="btn-icon-type02"><i class="rotate"></i>교체</button>
+													</div>
+												</div>
+												<div class="bottom-area">
+													<div class="temp-box">
+														<!-- S: 20230717 수정-->
+														<div class="que-view scroll-inner">
+															<div class="que-view-detail row-type">
+																<div class="que-view-top">
+																	<span class="que-title">
+																		5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.
+																	</span>
+																	<div class="que-cnt-box">문제 지문 영역</div>
+																</div>
+																<div class="que-view-cnt">
+																	<ul class="answers-list">
+																		<li>
+																			<em>①</em>3 대 4
+																		</li>
+																		<li>
+																			<em>②</em>4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비
+																		</li>
+																		<li>
+																			<em>③</em>4에 대한 3의 비
+																		</li>
+																		<li>
+																			<em>④</em>3에 대한 4의 비
+																		</li>
+																		<li>
+																			<em>⑤</em>3과 4의 비
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<!-- E: 20230717 수정 -->
+													</div>
+												</div>
+											</div>
+											<div class="que-box">
+												<div class="top-area">
+													<div class="que_num">1</div>
+													<div class="btn-wrap">
+														<button class="btn-icon-type02"><i class="add"></i>추가</button>
+														<button class="btn-icon-type02"><i class="rotate"></i>교체</button>
+													</div>
+												</div>
+												<div class="bottom-area">
+													<div class="temp-box">
+														<!-- S: 20230717 수정-->
+														<div class="que-view scroll-inner">
+															<div class="que-view-detail">
+																<div class="que-view-top">
+																	<span class="que-title">5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+																</div>
+																<div class="que-view-cnt">
+																	<div class="que-cnt-box">문제 지문 영역</div>
+																	<ul class="answers-list">
+																		<li>
+																			<em>①</em>3 대 4
+																		</li>
+																		<li>
+																			<em>②</em>3의 4에 대한 비
+																		</li>
+																		<li>
+																			<em>③</em>4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 4에 대한 3의 비 
+																		</li>
+																		<li>
+																			<em>④</em>3에 대한 4의 비
+																		</li>
+																		<li>
+																			<em>⑤</em>3과 4의 비
+																		</li>
+				
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<!-- E: 20230717 수정 -->
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="btn-wrap type01">
+									<button type="button" class="btn-defalut pop-btn" data-pop="save-pop">저장</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- 저장 완료 팝업 -->
+		<div class="pop-wrap alert-type" data-pop="save-pop">
+			<div class="pop-inner">
+				<div class="pop-content">
+					<button type="button" class="pop-close"></button>
+					<span class="txt">저장이 완료되었습니다.</span>
+				</div>
+				<div class="pop-footer">
+					<button type="button" class="btn-defalut">확인</button>
+				</div>
+			</div>
+		</div>
+		<!-- e: 202307 추가 -->
+
 		<!-- 로그인 팝업 -->
 		<div class="pop-wrap alert-type" data-pop="login-pop">
 			<div class="pop-inner">
@@ -1257,5 +2002,31 @@
 		</div>
 	</div>
 </body>
+<!-- s: 202307 추가 -->
+<script>
+	$(function () {
+		const queSwiper = new Swiper('.question-swiper', {
+			navigation: {
+				nextEl: ".question-swiper .swiper-button-next",
+				prevEl: ".question-swiper .swiper-button-prev",
+			},
+		});
 
+		const queSwiper02 = new Swiper(".archive-swiper", {
+       navigation: {
+         nextEl: ".archive-swiper .swiper-button-next",
+         prevEl: ".archive-swiper .swiper-button-prev",
+       },
+       allowTouchMove: false,
+     });
+
+		 const queSwiper03 = new Swiper('.edit-swiper', {
+			navigation: {
+				nextEl: ".edit-swiper .swiper-button-next",
+				prevEl: ".edit-swiper .swiper-button-prev",
+			},
+		});
+	});
+</script>
+<!-- e: 202307 추가 -->
 </html>
