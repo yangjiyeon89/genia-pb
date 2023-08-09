@@ -1727,6 +1727,14 @@ input[type=checkbox]:checked + label::before {
   height: 16px;
   background: url(../../images/common/ico_pop_close_type02.png) no-repeat;
 }
+.pop-wrap .ui-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  background: url(../../images/common/ico_pop_close_type02.png) no-repeat;
+}
 .pop-wrap .pop-footer {
   display: flex;
   padding: 0 20px 20px;
@@ -1736,6 +1744,14 @@ input[type=checkbox]:checked + label::before {
   flex: 1;
   height: 50px;
   font-size: 16px;
+}
+.pop-wrap .pop-footer .pop-close {
+  position: relative;
+  top: inherit;
+  right: inherit;
+  width: auto;
+  height: 50px;
+  background: #108eff;
 }
 .pop-wrap.que-type .pop-inner {
   width: 595px;
@@ -1805,6 +1821,13 @@ input[type=checkbox]:checked + label::before {
   margin-right: 5px;
 }
 .pop-wrap.full-type .pop-close {
+  top: 13px;
+  width: 20px;
+  height: 20px;
+  background: url(../../images/common/ico_pop_close_type04.png) no-repeat;
+  background-size: contain;
+}
+.pop-wrap.full-type .ui-close {
   top: 13px;
   width: 20px;
   height: 20px;

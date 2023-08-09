@@ -860,7 +860,9 @@
 }
 .notice-view .table-wrap .cnt .scroll-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
   height: 400px;
   padding-right: 5px;
   text-align: left;
@@ -1569,8 +1571,10 @@
 }
 .exam-wrap.col-type .que-answer-box .num {
   display: inline-flex;
+  justify-content: center;
+  width: 84px;
   height: 100%;
-  padding: 30px 1.9270833333vw;
+  padding: 15px 1.9270833333vw;
   font-size: 18px;
   font-weight: 700;
   word-break: keep-all;
@@ -2109,6 +2113,9 @@
 .que-view .que-view-detail.row-type .que-view-top .que-cnt-box {
   margin: 20px 0 0 20px;
 }
+.que-view .que-view-detail .input_question_text_box {
+  height: 30px;
+}
 .que-view .que-view-top {
   line-height: 1.5;
   margin-bottom: 20px;
@@ -2151,6 +2158,53 @@
 }
 .que-view .answers-list.row-type02 li {
   width: 20%;
+}
+.que-view .que-sel-box {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 285px;
+  border-radius: 5px;
+  border: 1px solid #d1d1d1;
+  background-color: #fafafa;
+}
+.que-view .que-sel-box .tit-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 10px;
+  color: #fff;
+  background-color: #222222;
+}
+.que-view .que-sel-box .tit-wrap span {
+  font-weight: 600;
+}
+.que-view .que-sel-box .tit-wrap .layer-close {
+  width: 10px;
+  height: 10px;
+  background: url(../../images/common/ico_exam_close.png) no-repeat;
+  background-size: contain;
+}
+.que-view .que-sel-box .sel-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0 11px;
+}
+.que-view .que-sel-box .sel-box button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  color: #787878;
+  border-radius: 100%;
+  background-color: #ececec;
+}
+.que-view .que-sel-box.on {
+  display: block;
 }
 
 @media screen and (max-width: 1023px) {
@@ -2859,6 +2913,9 @@
 .pop-wrap .test-wrap {
   width: 100%;
   background: #f8f8f8;
+}
+.pop-wrap.share-pop .select-list {
+  max-height: 120px;
 }
 .pop-wrap.exam-prev-pop .test-wrap {
   display: flex;

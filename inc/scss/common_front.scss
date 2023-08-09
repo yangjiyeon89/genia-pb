@@ -1599,6 +1599,14 @@ input[type="checkbox"] {
 		height: 16px;
     background: url(../../images/common/ico_pop_close_type02.png) no-repeat;
   }
+	.ui-close {
+		position: absolute;
+    top: 20px;
+		right: 20px;
+    width: 16px;
+		height: 16px;
+    background: url(../../images/common/ico_pop_close_type02.png) no-repeat;
+	}
   .pop-footer {
     display: flex;
 		padding: 0 20px 20px;
@@ -1608,6 +1616,14 @@ input[type="checkbox"] {
       height: 50px;
 			font-size: 16px;
     }
+		.pop-close {
+			position: relative;
+			top: inherit;
+			right: inherit;
+			width: auto;
+			height: 50px;
+			background: #108eff;
+		}
   }
 
 	&.que-type {
@@ -1678,6 +1694,13 @@ input[type="checkbox"] {
 			}
 		}
 		.pop-close {
+			top: 13px;
+			width: 20px;
+			height: 20px;
+			background: url(../../images/common/ico_pop_close_type04.png) no-repeat;
+			background-size: contain;
+		}
+		.ui-close {
 			top: 13px;
 			width: 20px;
 			height: 20px;

@@ -1151,6 +1151,16 @@
 												<ul class="select-list" style="display: none;">
 													<li class="select-item"><a href="javascript:;">30일</a></li>
 													<li class="select-item"><a href="javascript:;">31일</a></li>
+													<li class="select-item"><a href="javascript:;">30일</a></li>
+													<li class="select-item"><a href="javascript:;">31일</a></li>
+													<li class="select-item"><a href="javascript:;">30일</a></li>
+													<li class="select-item"><a href="javascript:;">31일</a></li>
+													<li class="select-item"><a href="javascript:;">30일</a></li>
+													<li class="select-item"><a href="javascript:;">31일</a></li>
+													<li class="select-item"><a href="javascript:;">30일</a></li>
+													<li class="select-item"><a href="javascript:;">31일</a></li>
+													<li class="select-item"><a href="javascript:;">30일</a></li>
+													<li class="select-item"><a href="javascript:;">31일</a></li>
 												</ul>
 											</div>
 										</div>
@@ -1522,7 +1532,7 @@
 										<div class="swiper-slide">
 											<p class="title">학습자료명 유튜브 (4)</p>
 											<!-- 자료 유튜브 -->
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/mkggXE5e2yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+											<iframe width="560" height="315" src="https://www.youtube.com/embed/mkggXE5e2yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 	picture-in-picture; web-share" allowfullscreen></iframe>
 										</div>
 										<div class="swiper-slide">
 											<p class="title">학습자료명 동영상 (5)</p>
@@ -2032,17 +2042,21 @@
 
 	</div>
 </body>
-<!-- s: 202307 추가 -->
+<!-- s: 202308 수정 -->
 <script>
 	$(function () {
-		const queSwiper = new Swiper('.question-swiper', {
-			navigation: {
-				nextEl: ".question-swiper .swiper-button-next",
-				prevEl: ".question-swiper .swiper-button-prev",
-			},
-		});
+		// const queSwiper = new Swiper('.question-swiper', {
+		// 	observer: true,
+		// 	observeParents: true,
+		// 	navigation: {
+		// 		nextEl: ".question-swiper .swiper-button-next",
+		// 		prevEl: ".question-swiper .swiper-button-prev",
+		// 	},
+		// });
 
 		const queSwiper02 = new Swiper(".archive-swiper", {
+			observer: true,
+			observeParents: true,
        navigation: {
          nextEl: ".archive-swiper .swiper-button-next",
          prevEl: ".archive-swiper .swiper-button-prev",
@@ -2051,13 +2065,33 @@
      });
 
 		 const queSwiper03 = new Swiper('.edit-swiper', {
+			observer: true,
+			observeParents: true,
 			navigation: {
 				nextEl: ".edit-swiper .swiper-button-next",
 				prevEl: ".edit-swiper .swiper-button-prev",
 			},
 		});
+
+		var queSwiper = null;
+
+		function init(){
+
+				if(queSwiper != null) queSwiper.destroy();
+
+				queSwiper = new Swiper( '.question-swiper', {
+						eobserver: true,
+						observeParents: true,
+						navigation: {
+							nextEl: ".question-swiper .swiper-button-next",
+							prevEl: ".question-swiper .swiper-button-prev",
+						},
+				});
+		}
+
+		init();
 	});
 </script>
-<!-- e: 202307 추가 -->
+<!-- e: 202308 수정 -->
 
 </html>

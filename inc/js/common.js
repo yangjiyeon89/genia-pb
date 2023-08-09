@@ -521,7 +521,8 @@ $(function () {
   }
 
   numberBtn.on("click", toggleBtnFunc);
-  commentBtn.on("click", toggleBtnFunc);
+  // commentBtn.on("click", toggleBtnFunc);
+  $(document).on("click", ".btn-comment", toggleBtnFunc);
 
   // click button
   let lineBtn = $(".btn-line");
