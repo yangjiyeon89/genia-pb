@@ -132,7 +132,29 @@
                       <div class="que-view scroll-inner">
                         <div class="que-view-detail">
                           <div class="que-view-top">
-                            <span class="que-title"><em>1.</em>5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.</span>
+                            <span class="que-title">
+                              <em>1.</em>5×5×13×13×13×13을 거듭제곱으로 나타낼 5의 지수를 a, 13의 거듭제곱의 밑을 b라 하자. 이때 b−a의 값을 구하시오.
+                              <!-- s: 20230807 input에 data-pop 값 추가 -->
+                              <div class="paragraph" style="text-align: Right;border-left:0.2mm none;border-right:0.2mm none;border-top:0.2mm none;border-bottom:0.2mm none;margin-left: 0px;margin-right: 0px;"><span class="txt input_txt">(<span class="cc-container" style="display : inline-block;vertical-align : top;width : 93px;position : relative;height : 25px;"><span class="cc-component " style="top : 0px;left : 0px;display : inline-flex;width : 93px;border-width : 1px;position : absolute;border-style : none;height : 25px;"></span><span class="cc-component " style="top : 0px;left : 0px;display : inline-flex;width : 93px;border-width : 1px;position : absolute;border-style : none;height : 25px;"><input class="input_question_text_box" style="width : 100%; border-style : none; background-color : transparent;" type="text" data-pop="input01">
+                                <div class="paragraph" style="text-align: Center;border-left:0.2mm none;border-right:0.2mm none;border-top:0.2mm none;border-bottom:0.2mm none;margin-left: 0px;margin-right: 0px;"><span class="txt "><span class="txt "><span class="txt "></span></span></span>
+                                </div></span></span>)</span>
+                              </div>
+                              <!-- e: 20230807 input에 data-pop 값 추가 -->
+                              <!-- s: 20230807 추가 -->
+                              <div class="que-sel-box" data-pop="input01">
+                                <div class="tit-wrap">
+                                  <span>선택</span>
+                                  <button type="button" class="layer-close"></button>
+                                </div>
+                                <div class="sel-box">
+                                  <button type="button">㉠</button>
+                                  <button type="button">㉡</button>
+                                  <button type="button">㉢</button>
+                                  <button type="button">㉣</button>
+                                </div>
+                              </div>
+                              <!-- e: 20230807 추가 -->
+                            </span>
                           </div>
                           <div class="que-view-cnt">
                             <div class="que-cnt-box">문제 지문 영역</div>
@@ -435,6 +457,20 @@
     });
   });
   // e: 202307 수정
+  // s: 20230807 추가
+  $(document).on('click' , '.input_question_text_box' , function(){
+    let _this = $(this);
+    let popData = _this.data("pop");
+    let _cnt = $(".que-sel-box");
+
+    _cnt.removeClass('on')
+    $(".que-sel-box[data-pop='" + popData + "']").addClass('on');   
+  })
+
+  $(document).on('click' , '.layer-close' , function(){
+    $(this).parents('.que-sel-box').removeClass('on');
+  })
+  // e: 20230807 추가
 </script>
 </html>
   

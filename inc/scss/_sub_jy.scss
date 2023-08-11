@@ -857,7 +857,10 @@
     .cnt {
       padding: 30px 20px;
       .scroll-inner {
-        @include layout-center;        
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
         height: 400px;
         padding-right: 5px;
         text-align: left;        

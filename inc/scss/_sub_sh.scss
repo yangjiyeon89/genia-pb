@@ -102,8 +102,10 @@
       border-bottom: 1px solid #dcdcdc;
       .num {
         display: inline-flex;
+        justify-content: center;
+        width: 84px;
         height: 100%;
-        padding: 30px get-vw(37px);
+        padding: 15px get-vw(37px);
         font-size: 18px;
         font-weight: 700;
         word-break: keep-all;
@@ -635,6 +637,9 @@
         }
       }
     }
+    .input_question_text_box {
+      height: 30px;
+    }
   }
   .que-view-top {
     line-height: 1.5;
@@ -680,6 +685,46 @@
       li {
         width: 20%;
       }
+    }
+  }
+  .que-sel-box {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 285px;
+    border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    background-color: #fafafa;
+    .tit-wrap {
+      @include layout-justify-center;
+      padding: 4px 10px;
+      color: #fff;
+      background-color: #222222;
+      span {
+        font-weight: 600;
+      }
+      .layer-close {
+        width: 10px;height: 10px;
+        background: url(../../images/common/ico_exam_close.png) no-repeat;
+        background-size: contain;
+      }      
+    }
+    .sel-box {
+      @include layout-center-center;
+      gap: 15px;
+      padding: 10px 0 11px;
+      button {
+        @include content-center-center;
+        width: 35px;
+        height: 35px;
+        color: #787878;
+        border-radius: 100%;
+        background-color: #ececec;
+      }
+    }
+    &.on {
+      display: block;
     }
   }
 }
