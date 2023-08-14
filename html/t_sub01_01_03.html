@@ -2117,6 +2117,33 @@
 			},
 		});
 	});
+
+	$(document).ready(function() {
+		$(".unit-list").sortable({
+			connectWith: ".unit-list",
+			placeholder: "ui-state-highlight",
+			start: function(event, ui) {
+				ui.item.data("origPosition", ui.item.index());
+			},
+			stop: function(event, ui) {
+				ui.item.removeAttr("style");
+				var origPosition = ui.item.data("origPosition");
+				var newPosition = ui.item.index();
+
+				if (origPosition !== newPosition) {
+					ui.item.data("origPosition", null);
+				}
+			}
+		}).disableSelection();
+
+		$(".hidden-list-box .unit-list").sortable({
+			connectWith: ".unit-list",
+			placeholder: "ui-state-highlight",
+			receive: function(event, ui) {
+				 ui.item.removeAttr("style");
+			}
+		}).disableSelection();
+	});
 </script>
 <!-- e: 202307 추가 -->
 </html>
