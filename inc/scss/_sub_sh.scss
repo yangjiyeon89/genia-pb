@@ -952,6 +952,18 @@
           gap: 10px;
           justify-content: flex-start;
         }
+        &.type02 {
+          height: calc(100% - 442px);
+          .scroll-inner {
+            height: 147px;
+          }
+          .que-num {
+            padding: 15px;
+          }
+          .que-answer {
+            padding: 15px 10px 15px 0;
+          }
+        }
       }
       .answer-cnt-title {
         display: none;
