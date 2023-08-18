@@ -2419,6 +2419,18 @@
     gap: 10px;
     justify-content: flex-start;
   }
+  .exam-wrap.col-type .exam-que-answer.type02 {
+    height: calc(100% - 442px);
+  }
+  .exam-wrap.col-type .exam-que-answer.type02 .scroll-inner {
+    height: 147px;
+  }
+  .exam-wrap.col-type .exam-que-answer.type02 .que-num {
+    padding: 15px;
+  }
+  .exam-wrap.col-type .exam-que-answer.type02 .que-answer {
+    padding: 15px 10px 15px 0;
+  }
   .exam-wrap.col-type .answer-cnt-title {
     display: none;
   }

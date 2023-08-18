@@ -12,11 +12,13 @@
 	<link rel="stylesheet" href="../inc/css/reset.css">
 	<link rel="stylesheet" href="../inc/css/common_front.css">
 	<link rel="stylesheet" href="../inc/css/sub.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
-		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<!-- s: 20230818 수정 -->	
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 	<script src="../inc/js/common.js"></script>
+	<!-- e: 20230818 수정 -->
 </head>
 
 <body>
@@ -2116,6 +2118,33 @@
 				prevEl: ".edit-swiper .swiper-button-prev",
 			},
 		});
+	});
+
+	$(document).ready(function() {
+		$(".unit-list").sortable({
+			connectWith: ".unit-list",
+			placeholder: "ui-state-highlight",
+			start: function(event, ui) {
+				ui.item.data("origPosition", ui.item.index());
+			},
+			stop: function(event, ui) {
+				ui.item.removeAttr("style");
+				var origPosition = ui.item.data("origPosition");
+				var newPosition = ui.item.index();
+
+				if (origPosition !== newPosition) {
+					ui.item.data("origPosition", null);
+				}
+			}
+		}).disableSelection();
+
+		$(".hidden-list-box .unit-list").sortable({
+			connectWith: ".unit-list",
+			placeholder: "ui-state-highlight",
+			receive: function(event, ui) {
+				 ui.item.removeAttr("style");
+			}
+		}).disableSelection();
 	});
 </script>
 <!-- e: 202307 추가 -->
