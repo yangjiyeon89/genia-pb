@@ -1,8 +1,3 @@
-
-!function($) {
-
-}();
-
 $(function () {
   //menu
   function checkCurrentGnb() {
@@ -496,10 +491,10 @@ $(function () {
   });
   $(".table-1").disableSelection();
 
-  $(".unit-list").sortable({
-    handle: ".dragHandle",
-  });
-  $("#unit-list").disableSelection();
+  // $(".unit-list").sortable({
+  //   handle: ".dragHandle",
+  // });
+  // $("#unit-list").disableSelection();
 
   // toggle button
   let numberBtn = $(".btn-number");
