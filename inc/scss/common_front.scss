@@ -1852,6 +1852,15 @@ input[type="checkbox"] {
 				color: #a1a1a1;
 			}
 		}
+		&.inner-btn {
+			.scroll-inner {
+				height: 783px;
+			}
+			.btn-wrap {
+				width: 100%;
+				margin: 20px 0;
+			}
+		}
 	}
 }
 

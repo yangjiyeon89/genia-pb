@@ -1978,6 +1978,13 @@ input[type=checkbox]:checked + label::before {
 .class-cnt-wrap .right-cnt .desc-wrap em {
   color: #a1a1a1;
 }
+.class-cnt-wrap .right-cnt.inner-btn .scroll-inner {
+  height: 783px;
+}
+.class-cnt-wrap .right-cnt.inner-btn .btn-wrap {
+  width: 100%;
+  margin: 20px 0;
+}
 
 .class-top {
   display: flex;
