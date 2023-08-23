@@ -537,9 +537,10 @@
   </div>
 </body>
 <script>
-  // s: 202307 수정
+  // s: 20230823 수정
  $(function(){
     const queSwiper = new Swiper(".question-swiper", {
+      touchRatio: 0,
       pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -550,7 +551,7 @@
       },
     });
   });
-  // e: 202307 수정
+  // e: 20230823 수정
   // s: 20230807 추가
   $(document).on('click' , '.input_question_text_box' , function(){
     let _this = $(this);

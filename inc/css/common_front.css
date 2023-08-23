@@ -982,7 +982,8 @@ input[type=checkbox]:checked + label::before {
   border: 0;
   border-radius: 9px;
   margin-top: 5px;
-  text-align: center;
+  text-align: left;
+  width: 150%;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 .select-wrap.type03 .select-list a {
@@ -1981,7 +1982,7 @@ input[type=checkbox]:checked + label::before {
 .class-cnt-wrap .right-cnt.inner-btn .scroll-inner {
   height: 783px;
 }
-.class-cnt-wrap .right-cnt.inner-btn .btn-wrap {
+.class-cnt-wrap .right-cnt.inner-btn > .btn-wrap {
   width: 100%;
   margin: 20px 0;
 }

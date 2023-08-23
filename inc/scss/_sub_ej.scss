@@ -675,13 +675,17 @@
 		}
 
 		.open-select-list {
-			position: absolute;
+			// position: absolute;
+			// top: -300%;
+			// right: -142%;
+			position: fixed;
+			top: 50%;
+			right: 8%;
 			width: 205px;
 			border: 1px solid #868686;
 			background: #fff;
 			z-index: 1;
-			top: -300%;
-			right: -142%;
+			
 			display: none;
 			overflow: hidden;
 
@@ -907,7 +911,7 @@
 .exam-prev02 {
 	.exam-wrap {
 		.exam-cnt {
-			height: 760px;
+			height: 610px;
 		}
 		.archive-swiper {
 			.swiper-button-next, .swiper-button-prev {
@@ -1000,7 +1004,7 @@
 				}
 
 				width: 520px;
-				height: 592px;
+				height: 537px;
 				padding: 20px;
 				border: 1px solid #e8e8e8;
 				box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.09);
@@ -1135,7 +1139,7 @@
 
 		.btn-wrap {
 			&.type01 {
-				margin: 30px auto 15px;
+				margin: 20px auto 0;
 				display: flex;
 			}
 		}
@@ -1191,7 +1195,7 @@
 		.container {
 			.inner {
 				width: 100%;
-				padding: 0 20px;
+				padding: 0 10px;
 			}
 		}
 
@@ -1230,7 +1234,7 @@
 				padding-left: 0;
 				box-sizing: border-box;
 				.scroll-inner {
-					height: 100%;
+					height: calc(100% - 80px);
 					overflow: hidden;
 				}
 			}

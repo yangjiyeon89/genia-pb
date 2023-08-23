@@ -1853,19 +1853,6 @@
   height: 100%;
   background-color: #000;
 }
-.exam-wrap .archive-swiper .temp-box::before {
-  content: "";
-  display: block;
-  clear: both;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 52px;
-  height: 52px;
-  background: url(../../images/common/ico_video_play.png) center no-repeat;
-  background-size: contain;
-}
 .exam-wrap .archive-swiper .swiper-button-next, .exam-wrap .archive-swiper .swiper-button-prev {
   top: calc(100% - 33px);
   width: 150px;
@@ -2429,7 +2416,7 @@
     padding: 15px;
   }
   .exam-wrap.col-type .exam-que-answer.type02 .que-answer {
-    padding: 15px 10px 15px 0;
+    padding: 10px 10px 10px 0;
   }
   .exam-wrap.col-type .answer-cnt-title {
     display: none;
@@ -2454,7 +2441,7 @@
     border-left: 0;
   }
   .que-omr-cnt .que-cmt {
-    padding: 15px 10px;
+    padding: 10px;
     font-size: 15px;
   }
   .que-omr-cnt .que-omr .que-num {
@@ -2509,7 +2496,13 @@
     height: calc(100vh - 50px);
   }
   .pop-exam .exam-wrap.col-type .exam-que-wrap .box:nth-child(1) {
-    height: calc(100vh - 358px);
+    height: calc(60% - 40px);
+  }
+  .pop-exam .exam-wrap.col-type .exam-que-wrap .box.answer-cnt {
+    height: 40%;
+  }
+  .pop-exam .exam-wrap.col-type .exam-que-wrap .box.answer-cnt .exam-que-answer {
+    height: calc(100% - 85px);
   }
   .s_sub02 .report-view-wrap .report-cnt {
     padding-top: 70px;
@@ -3168,13 +3161,13 @@
   display: block;
 }
 .share-view-wrap .open-wrap .open-select-list {
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  right: 8%;
   width: 205px;
   border: 1px solid #868686;
   background: #fff;
   z-index: 1;
-  top: -300%;
-  right: -142%;
   display: none;
   overflow: hidden;
 }
@@ -3370,7 +3363,7 @@
 }
 
 .exam-prev02 .exam-wrap .exam-cnt {
-  height: 760px;
+  height: 610px;
 }
 .exam-prev02 .exam-wrap .archive-swiper .swiper-button-next, .exam-prev02 .exam-wrap .archive-swiper .swiper-button-prev {
   width: 174px;
@@ -3425,7 +3418,7 @@
 }
 .exam-edit-wrap .view-cnt-wrap .que-list-wrap .que-list {
   width: 520px;
-  height: 592px;
+  height: 537px;
   padding: 20px;
   border: 1px solid #e8e8e8;
   box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.09);
@@ -3552,7 +3545,7 @@
   height: 21px;
 }
 .exam-edit-wrap .view-cnt-wrap .btn-wrap.type01 {
-  margin: 30px auto 15px;
+  margin: 20px auto 0;
   display: flex;
 }
 .exam-edit-wrap .view-cnt-wrap .que-view .que-view-detail {
@@ -3585,7 +3578,7 @@
   }
   .t_sub_list .container .inner {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
   }
   .t_sub_list .filter-menu {
     top: 145px;
@@ -3618,7 +3611,7 @@
     box-sizing: border-box;
   }
   .t_sub_list .class-cnt-wrap .right-cnt .scroll-inner {
-    height: 100%;
+    height: calc(100% - 80px);
     overflow: hidden;
   }
   .t_sub_list .tab-menu-type01 {
