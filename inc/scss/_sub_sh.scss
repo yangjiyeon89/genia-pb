@@ -961,7 +961,7 @@
             padding: 15px;
           }
           .que-answer {
-            padding: 15px 10px 15px 0;
+            padding: 10px 10px 10px 0;
           }
         }
       }
@@ -999,7 +999,7 @@
       border-left: 0;
     }
     .que-cmt {
-      padding: 15px 10px;
+      padding: 10px;
       font-size: 15px;
     }
     .que-omr {
@@ -1064,9 +1064,17 @@
         .exam-que-wrap {
           .box {
             &:nth-child(1) {
-              height: calc(100vh - 358px);
+              // height: calc(100vh - 358px);
+              height: calc(60% - 40px);
+            }
+            &.answer-cnt {
+              height: 40%;
+             .exam-que-answer {
+              height: calc(100% - 85px);
+             } 
             }
           }
+
         }
       }
     }

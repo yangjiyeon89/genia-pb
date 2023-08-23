@@ -219,14 +219,24 @@ $(function () {
 
     if (!_this.hasClass("active")) {
       _this.addClass("active");
-      _menuhtml.css("overflow", "hidden");
+      _menuhtml.css("overflow", "hidden");      
     } else {
       _this.removeClass("active");
-      _menuhtml.css("overflow", "auto");
+      _menuhtml.css("overflow", "auto");      
+    }
+  }
+
+  function menuCloseFunc(){
+    if(menuBtn.hasClass("active")) {
+      $(".header").find(_menucnt).css("right", "-50%");
+      _menudim.fadeOut();
+      menuBtn.removeClass("active");
+      _menuhtml.css("overflow", "auto");     
     }
   }
 
   menuBtn.on("click", menuFunc);
+  _menudim.on("click", menuCloseFunc);
 
   // tab
   let tabBtn = $(".ui-tab-btn");
