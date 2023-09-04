@@ -1609,7 +1609,6 @@
 }
 .exam-wrap .exam-top .inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
@@ -1632,6 +1631,7 @@
   width: 12px;
   height: 18px;
   background: url(../../images/common/ico_arrow_left_type02.png) no-repeat;
+  margin-right: 10px;
 }
 .exam-wrap .exam-top .btn-close {
   width: 18px;
@@ -2070,10 +2070,10 @@
 .que-view {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: calc(100% - 100px);
-  padding: 10px 0;
+  padding: 60px 0 10px;
   box-sizing: border-box;
 }
 .que-view .que-view-detail {
@@ -2265,7 +2265,10 @@
     background: url(../../images/common/ico_arrow_left_type02.png) no-repeat;
   }
   .exam-wrap .exam-top .btn-close {
-    display: none;
+    flex: none;
+    width: 14px;
+    height: 14px;
+    background-size: contain;
   }
   .exam-wrap .exam-cnt {
     height: calc(100vh - 110px);
@@ -2391,7 +2394,7 @@
     border-left: 0;
   }
   .exam-wrap.col-type .exam-que-answer {
-    height: calc(100% - 370px);
+    height: 143px;
     border-top: 1px solid #dcdcdc;
   }
   .exam-wrap.col-type .exam-que-answer .scroll-inner {

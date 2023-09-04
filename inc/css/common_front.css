@@ -1291,6 +1291,11 @@ input[type=checkbox]:checked + label::before {
   font-size: 18px;
   font-weight: 700;
 }
+.que-class-tit img {
+  position: relative;
+  top: -2px;
+  margin-right: 9px;
+}
 
 .que-class-cnt {
   border-top: 1px solid #d7d7d7;
@@ -1607,12 +1612,17 @@ input[type=checkbox]:checked + label::before {
   gap: 20px;
 }
 .filter-menu .unit-list li a {
-  display: -webkit-box;
-  width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  display: inline;
+  width: fit-content;
+}
+.filter-menu .unit-list li a + .ic-new {
+  position: relative;
+  top: -1px;
+  margin-left: 5px;
 }
 .filter-menu .unit-list li.active {
   font-weight: 500;
@@ -2314,6 +2324,9 @@ input[type=checkbox]:checked + label::before {
     width: 40px;
     height: 40px;
     font-size: 20px;
+  }
+  .edit-pop-btn {
+    display: none;
   }
   i.report {
     width: 16px;

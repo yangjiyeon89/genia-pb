@@ -1226,6 +1226,11 @@ input[type="checkbox"] {
 	em {
 		@include font(18px, 700);
 	}
+	img {
+		position: relative;
+		top: -2px;
+		margin-right: 9px;
+	}
 }
 .que-class-cnt {
 	border-top: 1px solid #d7d7d7;
@@ -1488,12 +1493,19 @@ input[type="checkbox"] {
 		gap: 20px;
 		li {
 			a {
-				display: -webkit-box;
-				width: 100%;
+				// display: -webkit-box;
+				// width: 100%;
 				text-overflow: ellipsis;
 				overflow: hidden;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
+				display: inline;
+				width: fit-content;
+				& + .ic-new {
+					position: relative;
+					top: -1px;
+					margin-left: 5px;
+				}
 			}
 
 			&.active {
@@ -2181,6 +2193,9 @@ input[type="checkbox"] {
 		width: 40px;
 		height: 40px;
 		font-size: 20px;
+	}
+	.edit-pop-btn {
+		display: none;
 	}
 	
 	// icon 
