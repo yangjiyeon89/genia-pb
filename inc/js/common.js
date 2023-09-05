@@ -156,6 +156,12 @@ $(function () {
         _gnbMenuLink.eq(3).find("> a").addClass("active");
         _gnbMenuLinkMo.eq(3).find("> a").addClass("active");
         break;
+
+        // 소개페이지
+      case "sub":
+        _gnbMenuLink.eq(4).find("> a").addClass("active");
+        _gnbMenuLinkMo.eq(4).find("> a").addClass("active");
+        break;
     }
   }
   $(document).ready(function () {
