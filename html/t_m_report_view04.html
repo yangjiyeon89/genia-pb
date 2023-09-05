@@ -555,7 +555,7 @@
         ],
         datasets: [{
           label: '성취율',
-          data: [80, 78, 76, 60, 94, 70, 71, 80, 78, 76, 60, 94, 70, 71, 94, 70, 71],
+          data: [80, 78, 76, 60, 100, 70, 71, 80, 78, 76, 60, 94, 70, 71, 94, 70, 71],
           backgroundColor: (ctx) => {
             // 가장 낮은 데이터 인덱스 찾기
             let minIndex = 0;
@@ -633,6 +633,12 @@
                 currentValue = dataset.data[context.dataIndex];
                 return Math.round(value) + '%';
               }
+            }
+          },
+          // 20230905 추가
+          layout: {
+            padding: {
+              top : 20
             }
           }
         }
