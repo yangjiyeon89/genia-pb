@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7d7012f-4ba1-4e2f-a245-6c816e95fe0f" name="Changes" comment="종합리포트 페이지 수정">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/css/sub.css" beforeDir="false" afterPath="$PROJECT_DIR$/inc/css/sub.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/scss/_sub_jy.scss" beforeDir="false" afterPath="$PROJECT_DIR$/inc/scss/_sub_jy.scss" afterDir="false" />
-    </list>
+    <list default="true" id="d7d7012f-4ba1-4e2f-a245-6c816e95fe0f" name="Changes" comment="종합리포트 페이지 수정" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,14 +18,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/workspace/gichulro&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/workspace/genia"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -42,7 +38,7 @@
       <workItem from="1684202674829" duration="31000" />
       <workItem from="1690180093102" duration="5000" />
       <workItem from="1693789831874" duration="249000" />
-      <workItem from="1693872065696" duration="628000" />
+      <workItem from="1693872065696" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="종합리포트 페이지 수정">
       <created>1693872092684</created>
