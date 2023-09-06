@@ -682,8 +682,16 @@
     }
     .que {
       width: 50%;
+      flex: 1;
       .th, .td {
         border-left: 1px solid #e8e8e8;
+      }
+      &:last-child {
+        .td {
+          padding: 5px;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
       }
     }
     img {
@@ -861,7 +869,7 @@
       .scroll-inner {
         display: flex;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
         height: 400px;
         padding-right: 5px;
@@ -1673,7 +1681,6 @@
       .cnt {
         padding: 16px 10px;
         .scroll-inner {
-          height: 180px;
           padding-right: 0;
         }
       }
