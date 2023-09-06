@@ -2392,6 +2392,9 @@
   align-items: center;
   gap: 15px;
   padding: 10px 0 11px;
+  position: relative;
+  background-color: #fff;
+  z-index: 9;
 }
 .que-view .que-sel-box .sel-box button {
   display: inline-flex;

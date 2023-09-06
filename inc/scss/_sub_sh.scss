@@ -720,6 +720,9 @@
       @include layout-center-center;
       gap: 15px;
       padding: 10px 0 11px;
+      position: relative;
+      background-color: #fff;
+      z-index: 9;
       button {
         @include content-center-center;
         width: 35px;

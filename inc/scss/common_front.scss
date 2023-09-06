@@ -2,6 +2,19 @@
 @import "_mixin.scss";
 @import "_setting.scss";
 
+// @page {
+// 	size: auto;
+// 	margin: 0;
+// }
+
+// @media print {
+// 	html, body {
+// 		width: 210mm;
+// 		height: 297mm;
+// 		background: #fff;
+// 	}
+// }
+
 [class^='web-'] {
   display: block !important;
 }

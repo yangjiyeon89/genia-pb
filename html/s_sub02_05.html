@@ -365,7 +365,7 @@
       let data = {
           labels: ['학급', '김천재'],
           datasets: [{
-            data: [65, 80],
+            data: [65, 100],
             borderColor: 'transparent',
             borderWidth: 3,
             backgroundColor: ['#f0ecff', gradient],
@@ -430,6 +430,12 @@
                 currentValue = dataset.data[context.dataIndex];
                 return Math.round(value) + '%';
               }
+            }
+          },
+          // 20230905 추가
+          layout: {
+            padding: {
+              top : 20
             }
           }
         }
@@ -558,7 +564,7 @@
           labels: ['1단원', '2단원', '3단원', '4단원', '5단원', '6단원', '7단원', '8단원', '9단원', '10단원', '11단원', '12단원', '13단원', '14단원', '15단원', '16단원', '17단원'],
           datasets: [{
             label: '성취율',
-            data: [80, 78, 76, 60, 94, 70, 71, 80, 78, 76, 60, 94, 70, 71, 94, 70, 71],
+            data: [80, 78, 76, 60, 100, 70, 71, 80, 78, 76, 60, 94, 70, 71, 94, 70, 71],
             backgroundColor: (ctx) => {
               // 가장 낮은 데이터 인덱스 찾기
               let minIndex = 0;
@@ -635,6 +641,12 @@
                 currentValue = dataset.data[context.dataIndex];
                 return Math.round(value) + '%';
               }
+            }
+          },
+          // 20230905 추가
+          layout: {
+            padding: {
+              top : 20
             }
           }
         }
