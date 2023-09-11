@@ -729,12 +729,25 @@
         width: 35px;
         height: 35px;
         color: #787878;
-        border-radius: 100%;
+        // border-radius: 100%;
         background-color: #ececec;
       }
     }
     &.on {
       display: block;
+    }
+    &.type02 {
+      
+      .sel-box {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 25px;
+        button {
+          width: 100%;
+          height: auto;
+          padding: 2px 0;
+        }
+      }
     }
   }
 }

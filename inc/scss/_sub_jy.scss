@@ -871,7 +871,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
-        height: 400px;
+        height: auto;
         padding-right: 5px;
         text-align: left;        
       }
@@ -1447,7 +1447,7 @@
     }
     .w340 {
       table {
-        width: 340px;
+        min-width: 340px;
       }
     }
     .box {
@@ -1809,6 +1809,22 @@
         }
         .tit {
           font-size: 22px;
+        }
+      }
+    }
+  }
+  .report-view-wrap {
+    .report-cnt {
+      .box {
+        &.none-border {
+          border: 0;        
+          border-radius: 0;
+          box-shadow: none;
+          .table-wrap {
+            .scroll-inner {
+              padding: 0;
+            }
+          }
         }
       }
     }
