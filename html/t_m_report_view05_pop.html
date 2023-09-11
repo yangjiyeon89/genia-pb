@@ -278,6 +278,7 @@
       });
     };
 
+    // s: 20230830 수정
     // 내용 영역별 성취율 차트
     function contentChartRender(){
       let radarCanvas = document.getElementById("contentChart").getContext('2d');
@@ -287,10 +288,16 @@
       let data = {
           labels: ['수와 연산', '도형', '측정', '규칙성', ['자료와', '가능성']],
           datasets: [{
-            label: '내용 영역별 성취율',
+            label: '김천재',
             data: [80, 90, 80, 75, 65],
-            backgroundColor: 'rgba(130, 88, 255, 0.1)',
+            backgroundColor: 'transparent',
             borderColor: gradient,
+            borderWidth: 3
+          },{
+            label: '학급',
+            data: [60, 70, 90, 85, 55],
+            backgroundColor: 'transparent',
+            borderColor: '#cabbff',
             borderWidth: 3
           }]
       };
@@ -344,10 +351,16 @@
       let data = {
           labels: ['추론', ['문제','해결'], ['의사','소통'], ['정보','처리'], ['창의','융합']],
           datasets: [{
-            label: '교과 영역별 성취율',
+            label: '김천재',
             data: [70, 90, 50, 75, 45],
-            backgroundColor: 'rgba(130, 88, 255, 0.1)',
+            backgroundColor: 'transparent',
             borderColor: gradient,
+            borderWidth: 3
+          },{
+            label: '학급',
+            data: [50, 70, 80, 60, 30],
+            backgroundColor: 'transparent',
+            borderColor: '#cabbff',
             borderWidth: 3
           }]
       };
@@ -392,6 +405,7 @@
         }
       });
     };
+    // e: 20230830 수정
 
     // 단원별 성취율 차트
     function unitChartRender(){

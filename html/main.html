@@ -48,7 +48,8 @@
             </div>
             <div class="gnb">
               <ul class="nav">
-                <li class="nav-list">
+                <!-- s: 202309 수정 -->
+                <!-- <li class="nav-list">
                   <a href="javascript:;" class="nav-item">초등</a>
                 </li>
                 <li class="nav-list">
@@ -56,9 +57,16 @@
                 </li>
                 <li class="nav-list">
                   <a href="javascript:;" class="nav-item">고교</a>
+                </li> -->
+                <li class="nav-list">
+                  <a href="javascript:;" class="nav-item">학습</a>
                 </li>
+                <!-- e: 202309 수정 -->
                 <li class="nav-list">
                   <a href="javascript:;" class="nav-item">리포트</a>
+                </li>
+                <li class="nav-list">
+                  <a href="javascript:;" class="nav-item">지니아튜터 소개</a>
                 </li>
               </ul>
             </div>
@@ -83,11 +91,18 @@
             <a href="javascirpt:;" class="logo"></a>
           </div>
           <!-- <span class="menu">초등</span> -->
-          <button type="button" class="btn-menu ui-menu-btn"></button>
+          <!-- s:202309 추가 -->
+          <div class="btn-area">
+            <a href="javascript:;" class="login-btn" style="display:none;"></a>
+            <span class="login-txt">홍길동 선생님</span>
+            <button type="button" class="btn-menu ui-menu-btn"></button>
+          </div>
+          <!-- e:202309 추가 -->
         </div>
         <div class="gnb mobile-menu ui-menu-cnt">
           <ul class="nav">
-            <li class="nav-list">
+            <!-- s: 202309 수정 -->
+            <!-- <li class="nav-list">
               <a href="javascript:;" class="nav-item">초등</a>
             </li>
             <li class="nav-list">
@@ -95,9 +110,16 @@
             </li>
             <li class="nav-list">
               <a href="javascript:;" class="nav-item">고교</a>
+            </li> -->
+            <li class="nav-list">
+              <a href="javascript:;" class="nav-item">학습</a>
             </li>
+            <!-- e: 202309 수정 -->
             <li class="nav-list">
               <a href="javascript:;" class="nav-item">리포트</a>
+            </li>
+            <li class="nav-list">
+              <a href="javascript:;" class="nav-item">지니아튜터 소개</a>
             </li>
           </ul>
           <div class="menu-logo">
@@ -119,14 +141,24 @@
       <!--slide area-->
       <div class="swiper visual-swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="../images/main/slide01_img01.jpg" alt="" class="web-img">
-            <img src="../images/main/mobile/mo_slide01_img02.jpg" alt="" class="mo-only-img">
+          <!-- s: 20230905 수정 -->
+          <div class="swiper-slide slide01">
+            <div class="text-box">
+              <img src="../images/common/logo_w.png" alt="">
+              <p>수업진도에 맞춘 차시별 진단·형성·단원평가 제공</p>
+              <p>오답유형에 따른 AI 유사 문제 추천을 통한<br class="mo-br"> 자기주도학습 유도</p>
+              <p>평가별 리포트 및 종합 리포트 제공</p>
+            </div>
           </div>
-          <div class="swiper-slide">
-            <img src="../images/main/slide01_img02.jpg" alt="" class="web-img">
-            <img src="../images/main/mobile/mo_slide01_img02.jpg" alt="" class="mo-only-img">
+          <div class="swiper-slide slide02">
+            <div class="text-box">
+              <img src="../images/common/logo_w.png" alt="">
+              <p>수업진도에 맞춘 차시별 진단·형성·단원평가 제공</p>
+              <p>오답유형에 따른 AI 유사 문제 추천을 통한<br class="mo-br"> 자기주도학습 유도</p>
+              <p>평가별 리포트 및 종합 리포트 제공</p>
+            </div>
           </div>
+          <!-- e: 20230905 수정 -->
         </div>
         <div class="pagination">
           <div class="swiper-pagination"></div>
@@ -301,14 +333,14 @@
                   사업자 등록번호 : 119 - 81 - 70643
                 </p>
               </li>
-              <li>
+              <!-- <li>
                 <img src="../images/common/ft_logo_type03.png" alt="">
                 <p>
                   인증범위 - 온라인 교육 및 학습지원 서비스 운영<br>
                   인증기간 - 2023년 3월 25일 ~ 2026년 3월 24일
                 </p>
                 <p class="copy">COPYRIGHT© 2023 BY CHUNJAE CO.LTD ALL RIGHTS RESERVED.</p>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>

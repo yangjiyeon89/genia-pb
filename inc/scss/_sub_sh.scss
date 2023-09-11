@@ -140,7 +140,8 @@
     border-bottom: 0;
     padding-bottom: 0;
     .inner {
-      @include layout-justify-center;
+      // @include layout-justify-center;
+      @include layout-center;
       height: 100%;
     }
     .tit {
@@ -160,6 +161,8 @@
 			width: 12px;
 			height: 18px;
 			background: url(../../images/common/ico_arrow_left_type02.png) no-repeat;
+
+      margin-right: 10px;
 		}
     .btn-close {
       width: 18px;
@@ -609,14 +612,17 @@
 .que-view {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: calc( 100% - 100px );
-  padding: 10px 0;
+  // padding: 10px 0;
+  padding: 60px 0 10px;
   box-sizing: border-box;
   .que-view-detail {
     display: flex;
-    max-width: 50%;
+    // max-width: 50%;
+    max-width: 85%;
     height: auto;
     max-height: 100%;
     font-size: 18px;
@@ -647,6 +653,7 @@
     .que-title {
       display: block;
       position: relative;
+      width: 100% !important;
       padding-left: 30px;
       word-break: break-all;
       em {
@@ -714,17 +721,33 @@
       @include layout-center-center;
       gap: 15px;
       padding: 10px 0 11px;
+      position: relative;
+      background-color: #fff;
+      z-index: 9;
       button {
         @include content-center-center;
         width: 35px;
         height: 35px;
         color: #787878;
-        border-radius: 100%;
+        // border-radius: 100%;
         background-color: #ececec;
       }
     }
     &.on {
       display: block;
+    }
+    &.type02 {
+      
+      .sel-box {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 25px;
+        button {
+          width: 100%;
+          height: auto;
+          padding: 2px 0;
+        }
+      }
     }
   }
 }
@@ -805,7 +828,10 @@
         background: url(../../images/common/ico_arrow_left_type02.png) no-repeat;
       }
       .btn-close {
-        display: none;
+        flex: none;
+        width: 14px;
+        height: 14px;
+        background-size: contain;
       }
     }
     .exam-cnt {
@@ -938,7 +964,8 @@
         border-left: 0;
       }
       .exam-que-answer {
-        height: calc(100% - 370px);
+        // height: calc(100% - 370px);
+        height: 143px;
         border-top: 1px solid #dcdcdc;
         .scroll-inner {
           height: 100%;

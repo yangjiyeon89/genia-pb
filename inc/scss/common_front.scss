@@ -2,6 +2,19 @@
 @import "_mixin.scss";
 @import "_setting.scss";
 
+// @page {
+// 	size: auto;
+// 	margin: 0;
+// }
+
+// @media print {
+// 	html, body {
+// 		width: 210mm;
+// 		height: 297mm;
+// 		background: #fff;
+// 	}
+// }
+
 [class^='web-'] {
   display: block !important;
 }
@@ -1226,6 +1239,11 @@ input[type="checkbox"] {
 	em {
 		@include font(18px, 700);
 	}
+	img {
+		position: relative;
+		top: -2px;
+		margin-right: 9px;
+	}
 }
 .que-class-cnt {
 	border-top: 1px solid #d7d7d7;
@@ -1488,12 +1506,19 @@ input[type="checkbox"] {
 		gap: 20px;
 		li {
 			a {
-				display: -webkit-box;
-				width: 100%;
+				// display: -webkit-box;
+				// width: 100%;
 				text-overflow: ellipsis;
 				overflow: hidden;
 				-webkit-box-orient: vertical;
 				-webkit-line-clamp: 2;
+				display: inline;
+				width: fit-content;
+				& + .ic-new {
+					position: relative;
+					top: -1px;
+					margin-left: 5px;
+				}
 			}
 
 			&.active {
@@ -1670,6 +1695,40 @@ input[type="checkbox"] {
 		}
 		.pop-footer {
 			padding: 0 75px 45px 75px;
+		}
+		&.type02 {
+			.pop-header {
+				height: auto;
+				padding: 14px 20px;
+				color: #fff;
+				background-color: #108eff;
+				.tit {
+					@include font(17px, 500);
+				}
+			}
+			.pop-close {
+				width: 13px;
+				height: 13px;
+				background: url(../../images/common/ico_pop_close_type03.png) no-repeat;
+				background-size: cover;
+			}
+			.pop-content {
+				padding: 40px 0;
+			}
+			.pop-footer {
+				padding: 0;
+				gap: 0;
+				border-top: 1px solid #ddd;
+				button {
+					color: #108eff;
+					@include font(15px, 500);
+					background-color: #fff;
+					border-radius: 0;
+					& + button {
+						border-left: 1px solid #ddd;
+					}
+				}
+			}
 		}
 	}
 
@@ -1946,6 +2005,19 @@ input[type="checkbox"] {
 				height: 16px;
 				background: url(../../images/common/ico_menu.png) no-repeat;
 			}
+			.login-btn {
+				width: 17px;
+				height: 17px;
+				margin-right: 15px;
+				background: url(../../images/common/ico_login.png) no-repeat;
+				background-size: cover;
+			}
+			.login-txt {
+				position: relative;
+				top: -1px;
+				margin-right: 15px;
+				font-weight: 500;
+			}
 			.menu {
 				position: absolute;
 				top: 50%;
@@ -2181,6 +2253,9 @@ input[type="checkbox"] {
 		width: 40px;
 		height: 40px;
 		font-size: 20px;
+	}
+	.edit-pop-btn {
+		display: none;
 	}
 	
 	// icon 

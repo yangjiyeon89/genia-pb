@@ -103,7 +103,9 @@
       <!-- s: 202307 수정 -->
       <div class="exam-wrap col-type">
         <div class="exam-top">
+          <!-- s: 20230904 수정 -->
           <div class="inner">
+            <button type="button" class="btn-arrow pop-btn" data-pop="pop-que-close"></button>
             <div class="tit">
               <span class="txt"><em>수학 6-1</em> 1.분수의 나눗셈 진단평가</span>
               <!--
@@ -114,8 +116,8 @@
                 <span class="txt"><em>1단원</em> 마무리 평가</span>
               -->
             </div>
-            <button type="button" class="btn-close pop-btn" data-pop="pop-que-close"></button>
           </div>
+          <!-- e: 20230904 수정 -->
         </div>
         <div class="time-wrap">
           <i class="clock"></i>
@@ -140,20 +142,27 @@
                                 </div></span></span>)</span>
                               </div>
                               <!-- e: 20230807 input에 data-pop 값 추가 -->
-                              <!-- s: 20230807 추가 -->
-                              <div class="que-sel-box" data-pop="input01">
+                              <!-- s: 20230907 수정 -->
+                              <!-- 글자 길 경우 type02 class 추가 -->
+                              <div class="que-sel-box type02" data-pop="input01">
                                 <div class="tit-wrap">
                                   <span>선택</span>
                                   <button type="button" class="layer-close"></button>
                                 </div>
-                                <div class="sel-box">
+                                <div class="sel-box" style="display:none;">
                                   <button type="button">㉠</button>
                                   <button type="button">㉡</button>
                                   <button type="button">㉢</button>
                                   <button type="button">㉣</button>
                                 </div>
+                                <div class="sel-box">
+                                  <button type="button">가나다</button>
+                                  <button type="button">가나다</button>
+                                  <button type="button">가나다</button>
+                                  <button type="button">가나다</button>
+                                </div>
                               </div>
-                              <!-- e: 20230807 추가 -->
+                              <!-- e: 20230907 수정 -->
                             </span>
                           </div>
                           <div class="que-view-cnt">

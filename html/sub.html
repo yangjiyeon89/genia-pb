@@ -11,14 +11,18 @@
   <link rel="stylesheet" href="../inc/css/reset.css">
   <link rel="stylesheet" href="../inc/css/common_front.css">
   <link rel="stylesheet" href="../inc/css/sub.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
   <script src="../inc/js/common.js"></script>
 </head>
 
 <body>
-  <div id="wrap" class="front-login">
+  <div class="sub" id="wrap">
     <div class="header">
       <div class="web-cnt">
         <div class="top-nav">
@@ -54,6 +58,9 @@
                 </li>
                 <li class="nav-list">
                   <a href="javascript:;" class="nav-item">리포트</a>
+                </li>
+                <li class="nav-list">
+                  <a href="javascript:;" class="nav-item">지니아튜터 소개</a>
                 </li>
               </ul>
             </div>
@@ -94,6 +101,9 @@
             <li class="nav-list">
               <a href="javascript:;" class="nav-item">리포트</a>
             </li>
+            <li class="nav-list">
+              <a href="javascript:;" class="nav-item">지니아튜터 소개</a>
+            </li>
           </ul>
           <div class="menu-logo">
             <img src="../images/common/menu_logo.png" alt="">
@@ -111,30 +121,85 @@
       </div>
     </div>
     <div class="container">
-      <div class="inner">
-        <!-- s: 202307 수정 -->
-        <div class="login-cnt">
-          <p class="login-tit">
-            <img src="../images/common/logo_l.png" alt="Genia튜터">
-          </p>
-          <div class="logo-wrap">
-            <a href="javascript:;" class="logo"></a> 
+      <div class="main-visual">
+        <div class="inner">
+          <img src="../images/sub/sec01_txt.png" alt="" class="tit-img">
+          <img src="../images/sub/mo_sec01_txt.png" alt="" class="mobile-only-img">
+          <div class="text-box">
+            <span class="sub-txt"><em>형성평가</em>를 위한 탁월한 선택!</span>
+            <p class="tit">지니아튜터가 <br class="mo-br"><em>학교로</em> 찾아갑니다.</p>
           </div>
-          <div class="login-desc">
-            <span>로그인 유형을 선택해주세요.</span>
-          </div>
-            <ul class="unit-list">
-              <li class="t-login active">
-                <span class="txt">선생님</span>
-                <a href="javascript:;" class="btn-defalut w154">로그인</a>
-              </li>
-              <li class="s-login">
-                <span class="txt">학생</span>
-                <a href="javascript:;" class="btn-defalut w154">로그인</a>
-              </li>
-            </ul>
         </div>
-        <!-- e: 202307 수정 -->
+        
+      </div>
+      <div class="sec sec01">
+        <div class="inner">
+          <div class="sec-txt-box">
+            <em class="num">No.1</em>
+            <p class="tit">교과서와 성취기준에<br>맞춘 학습목차</p>
+            <span class="txt">선생님이 간편하게 사용하실 수 있도록<br>교과서와 성취기준에 맞춘 학습목차를 제공합니다. </span>
+          </div>
+          <div class="img-box">
+            <img src="../images/sub/sec02_img.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="sec sec02">
+        <div class="inner">
+          <div class="img-box">
+            <img src="../images/sub/sec03_img.png" alt="">
+          </div>
+          <div class="sec-txt-box">
+            <em class="num">No.2</em>
+            <p class="tit">선생님이 손쉽게 배포하고<br>학생들은 받은 즉시 풀어볼 수 있는<br>온라인 형성평가 </p>
+            <span class="txt">수업 중에 학습한 내용에 대해서 클릭 몇번으로<br>시험을 배포할 수 있고 학생들은 문제를<br>바로 풀어볼 수 있습니다.</span>
+          </div>
+        </div>
+      </div>
+      <div class="sec sec03">
+        <div class="inner">
+          <div class="sec-txt-box">
+            <em class="num">No.3</em>
+            <p class="tit">AI가 자동으로<br>채점/분석하는 평가 시스템</p>
+            <span class="txt">평가가 끝나면 자동으로채점되고 보고서와 함께<br>오답노트가 제공됩니다.<br>평가 결과는 학생별, 문제별로 분석되어 부족한 부분들을<br>바로 파악할 수 있습니다. </span>
+          </div>
+          <div class="img-box">
+            <img src="../images/sub/sec04_img.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="sec sec04">
+        <div class="inner">
+          <div class="img-box">
+            <img src="../images/sub/sec05_img.png" alt="">
+          </div>
+          <div class="sec-txt-box">
+            <em class="num">No.4</em>
+            <p class="tit">틀린 문제에 맞춰서 제공되는<br>AI 맞춤 문제와 학습자료</p>
+            <span class="txt">평가후에 학습자의 틀린 문제와 연동하여 동일한 유형의<br>AI 오답학습, 비슷한 유형의 AI 유사학습을 제공합니다.<br>학습자료를 통해 복습 기회도 제공합니다.</span>
+          </div>
+        </div>
+      </div>
+      <div class="sec sec05">
+        <div class="inner">
+          <div class="sec-txt-box">
+            <em class="num">No.5</em>
+            <p class="tit">단원별/성취기준별/내용영역별/<br>교과역량별 리포트</p>
+            <span class="txt">연간 운영된 평가 결과를 종합하여<br class="mo-br"> 학급/학생 리포트를 제공합니다.<br>단원별/성취기준별/내용영역별/교과역량별로<br class="mo-br"> 분석한 성취도와 함께<br class="web-br">AI 지식맵도 제공합니다. </span>
+          </div>
+          <div class="img-box">
+            <img src="../images/sub/sec06_img.png" alt="">
+          </div>
+        </div>
+        
+      </div>
+      <div class="sec sec06">
+        <div class="inner">
+          <div class="text-box">
+            <span class="sub-txt">학생마다 다른, 부족한 부분의 학습 고민을<br>AI 평가 분석으로 확인하고 재학습 시켜서<br class="mo-br"> 한 명의 학생도<br class="web-br">포기하지 않는<br class="mo-br"> 수업을 만들어보세요.</span>
+            <p class="tit">지니아튜터는 <br class="mo-br"><em>우리반의 완전학습</em>을 지원합니다.</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer">
@@ -224,19 +289,8 @@
       </div>
     </div>
     <div class="dim"></div>
-
-    <div class="pop-wrap alert-type" data-pop="user-pop">
-        <div class="pop-inner">
-          <div class="pop-content">
-            <button type="button" class="pop-close"></button>
-            <span class="txt">아이디/비밀번호를<br>다시 한 번 입력해주세요.</span>
-          </div>
-          <div class="pop-footer">
-            <button type="button" class="btn-defalut">확인</button>
-          </div>
-        </div>
-      </div>
   </div>
+
 </body>
 
 </html>
