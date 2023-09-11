@@ -1696,6 +1696,40 @@ input[type="checkbox"] {
 		.pop-footer {
 			padding: 0 75px 45px 75px;
 		}
+		&.type02 {
+			.pop-header {
+				height: auto;
+				padding: 14px 20px;
+				color: #fff;
+				background-color: #108eff;
+				.tit {
+					@include font(17px, 500);
+				}
+			}
+			.pop-close {
+				width: 13px;
+				height: 13px;
+				background: url(../../images/common/ico_pop_close_type03.png) no-repeat;
+				background-size: cover;
+			}
+			.pop-content {
+				padding: 40px 0;
+			}
+			.pop-footer {
+				padding: 0;
+				gap: 0;
+				border-top: 1px solid #ddd;
+				button {
+					color: #108eff;
+					@include font(15px, 500);
+					background-color: #fff;
+					border-radius: 0;
+					& + button {
+						border-left: 1px solid #ddd;
+					}
+				}
+			}
+		}
 	}
 
 	&.full-type {
@@ -1970,6 +2004,19 @@ input[type="checkbox"] {
 				width: 18px;
 				height: 16px;
 				background: url(../../images/common/ico_menu.png) no-repeat;
+			}
+			.login-btn {
+				width: 17px;
+				height: 17px;
+				margin-right: 15px;
+				background: url(../../images/common/ico_login.png) no-repeat;
+				background-size: cover;
+			}
+			.login-txt {
+				position: relative;
+				top: -1px;
+				margin-right: 15px;
+				font-weight: 500;
 			}
 			.menu {
 				position: absolute;

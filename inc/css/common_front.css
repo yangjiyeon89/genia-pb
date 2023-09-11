@@ -1807,6 +1807,40 @@ input[type=checkbox]:checked + label::before {
 .pop-wrap.alert-type .pop-footer {
   padding: 0 75px 45px 75px;
 }
+.pop-wrap.alert-type.type02 .pop-header {
+  height: auto;
+  padding: 14px 20px;
+  color: #fff;
+  background-color: #108eff;
+}
+.pop-wrap.alert-type.type02 .pop-header .tit {
+  font-size: 17px;
+  font-weight: 500;
+}
+.pop-wrap.alert-type.type02 .pop-close {
+  width: 13px;
+  height: 13px;
+  background: url(../../images/common/ico_pop_close_type03.png) no-repeat;
+  background-size: cover;
+}
+.pop-wrap.alert-type.type02 .pop-content {
+  padding: 40px 0;
+}
+.pop-wrap.alert-type.type02 .pop-footer {
+  padding: 0;
+  gap: 0;
+  border-top: 1px solid #ddd;
+}
+.pop-wrap.alert-type.type02 .pop-footer button {
+  color: #108eff;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 0;
+}
+.pop-wrap.alert-type.type02 .pop-footer button + button {
+  border-left: 1px solid #ddd;
+}
 .pop-wrap.full-type {
   overflow: auto;
   position: fixed;
@@ -2074,6 +2108,19 @@ input[type=checkbox]:checked + label::before {
     width: 18px;
     height: 16px;
     background: url(../../images/common/ico_menu.png) no-repeat;
+  }
+  .header .mo-cnt .login-btn {
+    width: 17px;
+    height: 17px;
+    margin-right: 15px;
+    background: url(../../images/common/ico_login.png) no-repeat;
+    background-size: cover;
+  }
+  .header .mo-cnt .login-txt {
+    position: relative;
+    top: -1px;
+    margin-right: 15px;
+    font-weight: 500;
   }
   .header .mo-cnt .menu {
     position: absolute;
