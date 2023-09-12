@@ -426,6 +426,9 @@
   box-sizing: border-box;
   cursor: pointer;
 }
+[class^=btn-].btn-wrap, [class^=btn-].btn-area, [class^="a.btn-"].btn-wrap, [class^="a.btn-"].btn-area {
+  cursor: none;
+}
 
 .btn-defalut {
   width: 174px;
@@ -520,6 +523,18 @@
 .btn-state.type04 {
   background-color: #ffa630;
   color: #fff;
+}
+.btn-state.type05 {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1;
+  border: 1px solid #108eff;
+  color: #108eff;
+  background-color: #fff;
+}
+.btn-state.type05 span {
+  font-size: 13px;
 }
 
 .btn-type03 {
@@ -2342,10 +2357,10 @@ input[type=checkbox]:checked + label::before {
     font-size: 12px;
     border-radius: 6px;
   }
-  .btn-state.type03 {
+  .btn-state.type03, .btn-state.type05 {
     height: 35px;
   }
-  .btn-state.type03 span {
+  .btn-state.type03 span, .btn-state.type05 span {
     font-size: 12px;
   }
   .btn-type03 {
@@ -2560,6 +2575,9 @@ input[type=checkbox]:checked + label::before {
   }
   .que-class-tit em {
     font-size: 15px;
+  }
+  .que-class-btn {
+    padding: 0 15px;
   }
   .que-class-btn .acc-arrow {
     width: 11px;

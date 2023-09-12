@@ -2960,6 +2960,11 @@
   background: url(../../images/common/ico_kakao.png) no-repeat;
   transform: translateY(-50%);
 }
+.login-cnt .my-sns {
+  margin-top: 20px;
+  color: #a4a4a4;
+  border-bottom: 1px solid #a4a4a4;
+}
 .login-cnt .chk-wrap {
   margin: 24px 0 20px;
   text-align: left;
