@@ -1529,7 +1529,7 @@
         &.w650 {
           .scroll-inner {
             padding: 10px ;
-            max-height: 339px;
+            // max-height: 339px;
           }
         }
       }
@@ -1549,7 +1549,7 @@
         width: 100%;
       }
       & + .tbl-report {
-        margin-top: 20px;
+        // margin-top: 20px;
         border-top: 1px solid #757575;
         .th {
           display: inline-flex;

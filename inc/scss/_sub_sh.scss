@@ -837,6 +837,25 @@
     .exam-cnt {
       height: calc(100vh - 110px);
       padding: 20px;
+      &.mo-cnt {
+        padding: 0;
+        .scroll-inner {
+          height: calc(100% - 133px);
+        }
+        .tit {
+          padding: 10px;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        .btn-wrap {
+          width: 100%;
+          margin: 20px 0;
+          a {
+            width: 200px;
+            margin: auto;
+          }
+        }
+      }
     }
     .exam-tit-wrap {
       .tit-wrap {
@@ -949,7 +968,8 @@
           width: 100%;
           &:nth-child(1) {
             width: 100%;
-            height: calc(100vh - 420px);
+            // height: calc(100vh - 420px);
+            height: calc(100vh - 277px);
             margin-top: 40px;
           }
         }
@@ -965,9 +985,11 @@
       }
       .exam-que-answer {
         // height: calc(100% - 370px);
-        height: 143px;
+        // height: 143px;
+        height: auto;
         border-top: 1px solid #dcdcdc;
         .scroll-inner {
+          display: none;
           height: 100%;
           border-bottom: 1px solid #dcdcdc;
         }
@@ -1003,6 +1025,41 @@
         }
         .input-wrap {
           padding: 0;
+        }
+      }
+      .que-view {
+        overflow-x: hidden;
+      }
+      &.result-type {
+        .time-wrap {
+          display: none;
+        }
+        .exam-cnt {
+          padding: 0;
+        }
+        .box:nth-child(1) {
+          display: none;
+        }
+        .exam-que-wrap {
+          border: 0;
+        }
+        .answer-cnt-title {
+          display: block;
+          color: #333;
+          background-color: #fff;
+          .tit {
+            font-size: 16px;
+          }
+        }
+        .exam-que-answer {
+          .scroll-inner {
+            display: block;
+            height: calc(100vh - 190px);
+          }
+        }
+        .que-omr {
+          border-top: 0;
+          
         }
       }
     }
@@ -1092,12 +1149,15 @@
           .box {
             &:nth-child(1) {
               // height: calc(100vh - 358px);
-              height: calc(60% - 40px);
+              // height: calc(60% - 40px);
+              height: calc(100vh - 218px);
             }
             &.answer-cnt {
-              height: 40%;
+              // height: 40%;
+              height: auto;
              .exam-que-answer {
-              height: calc(100% - 85px);
+              // height: calc(100% - 85px);
+              height: auto;
              } 
             }
           }

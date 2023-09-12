@@ -489,6 +489,9 @@
 	@include layout-center-center;
 	box-sizing: border-box;
 	cursor: pointer;
+	&.btn-wrap, &.btn-area {
+		cursor: none;
+	}	
 }
 
 .btn-defalut {
@@ -586,6 +589,17 @@
 	&.type04 {
 		background-color: #ffa630;
 		color: #fff;
+	}
+	&.type05 {
+		@include content-center;
+		flex-direction: column;
+		line-height: 1;
+		border: 1px solid #108eff;
+		color: #108eff;
+		background-color: #fff;
+		span {
+			font-size: 13px;
+		}
 	}
 }
 
@@ -2777,8 +2791,7 @@ input[type="checkbox"] {
 		height: 25px;
 		font-size: 12px;
 		border-radius: 6px;
-
-		&.type03 {
+		&.type03, &.type05 {
 			height: 35px;
 
 			span {
@@ -3112,6 +3125,7 @@ input[type="checkbox"] {
 	}
 
 	.que-class-btn {
+		padding: 0 15px;
 		.acc-arrow {
 			width: 11px;
 			height: 6px;
