@@ -254,7 +254,12 @@
                     </div>
                   </div>
                   <!-- e: 20230908 수정 -->
-                  <span class="title mt100">오답노트</span>
+                  <!-- s: 202309 수정 -->
+                  <div class="title-wrap">
+                    <span class="title">채점 결과</span>
+                    <button type="button" class="pop-btn" data-pop="error-pop">오류 문항 신고 </button>
+                  </div>
+                  <!-- e: 202309 수정 -->
                   <div class="box w650 none-border"><!-- 20230907 class 추가 -->
                     <div class="table-wrap type01 style01">
                       <div class="scroll-inner type02">
@@ -360,8 +365,51 @@
         </div>
       </div>
     </div>
-  </div>
-  
+    <!-- s: 202309 추가 -->
+    <!-- 오류 문항 신고 팝업 -->
+    <div class="pop-wrap que-type" data-pop="error-pop">
+      <div class="pop-inner">
+        <div class="pop-header">
+          <span>오류 문항 신고</span>
+          <button type="button" class="pop-close"></button>
+        </div>
+        <div class="pop-content">
+          <div class="table-type">
+            <div class="row">
+              <p class="tit">시험지</p>
+              <input type="text" value="수학6-1(박만구) 1-1 진단평가" disabled>
+            </div>
+            <div class="row">
+              <p class="tit">문항 번호</p>
+              <input type="text">
+            </div>
+            <div class="row">
+              <p class="tit">오류 내용</p>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-defalut">확인</button>
+          <button type="button" class="btn-defalut">취소</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 접수 완료 팝업 -->
+    <div class="pop-wrap alert-type">
+      <div class="pop-inner">
+        <div class="pop-content">
+          <button type="button" class="pop-close"></button>
+          <span class="txt">오류 문항신고가<br>정상적으로 접수되었습니다.</span>
+        </div>
+        <div class="pop-footer">
+          <button type="button" class="btn-defalut">확인</button>
+        </div>
+      </div>
+    </div>
+    <!-- e: 202309 추가 -->
+  </div>  
 </body>
 <script>
   $(function () {    

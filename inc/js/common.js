@@ -318,7 +318,7 @@ $(function () {
     let _this = $(this);
     let popData = _this.data("pop");
 
-    console.log(openPopups)
+    console.log(_this.parents('div'))
 
     _html.css("overflow", "hidden");
     _dim.fadeIn();
@@ -327,14 +327,21 @@ $(function () {
     if(openPopups > 1) {
       $(".pop-wrap[data-pop='" + popData + "']").css("z-index", "12");
       $('.dim').css("z-index","11");
+      // if(_this.parents('div').hasClass('inner-type')) {
+      //   $(".pop-wrap[data-pop='" + popData + "']").css("z-index", "14");
+      //   $('.dim').css("z-index","13");
+      // }
+    } else if(_this.parents('div').hasClass('full-type')) {
+      $(".pop-wrap[data-pop='" + popData + "']").css("z-index", "12");
+      $('.dim').css("z-index","11");
+      console.log('b')
     } else {
       $(".pop-wrap[data-pop='" + popData + "']").css("z-index", "10");
       $('.dim').css("z-index","5");
+      console.log('d')
     }
 
     $(".pop-wrap[data-pop='" + popData + "']").show();
-
-    console.log($(".pop-wrap[data-pop='" + popData + "']"));
   }
 
   function popClose() {
@@ -346,6 +353,10 @@ $(function () {
     
     if(openPopups > 0) {      
       $('.dim').css("z-index","5");
+      // if(_this.parents("div").hasClass('inner-type')){
+      //   _dim.fadeOut();
+      //   $('.pop-wrap.inner-type').hide();
+      // }
     } else {      
       _dim.fadeOut();
       _html.css("overflow", "auto");
