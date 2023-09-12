@@ -26,6 +26,7 @@
 	.form-wrap {
 		width: 384px;
 		margin: 0 auto;
+
 		.txt {
 			display: block;
 			margin: 29px 0 14px;
@@ -108,8 +109,10 @@
 		font-size: 18px;
 		background-color: #108eff;
 	}
+
 	.btn-naver {
 		background-color: #21cc04;
+
 		&::before {
 			top: 50%;
 			left: 20px;
@@ -119,9 +122,11 @@
 			transform: translateY(-50%);
 		}
 	}
+
 	.btn-kakao {
 		color: #333;
 		background-color: #f8e600;
+
 		&::before {
 			top: 50%;
 			left: 20px;
@@ -168,6 +173,7 @@
 
 	.login-wrap {
 		margin-top: 20px;
+
 		a {
 			font-size: 16px;
 			color: #a4a4a4;
@@ -186,12 +192,14 @@
 			}
 		}
 	}
+
 	.unit-list {
 		@include layout-center-center;
 		width: 100%;
 		gap: 30px;
+
 		li {
-			position: relative;		
+			position: relative;
 			width: 229px;
 			height: 281px;
 			padding: 20px;
@@ -199,27 +207,34 @@
 			border-radius: 26px;
 			box-shadow: 2px 2px 14px 0px rgba(0, 0, 0, 0.09);
 			box-sizing: border-box;
+
 			&.active {
 				padding: 19px;
 				border: 2px solid #108eff;
+
 				&::before {
 					position: absolute;
-					top: -14px;left: 50%;
+					top: -14px;
+					left: 50%;
 					@include virtual-selector;
-					width: 28px;height: 28px;
+					width: 28px;
+					height: 28px;
 					margin-left: -14px;
 					background: url(../../images/common/ico_check_on.png) no-repeat;
 					background-size: cover;
 				}
+
 				.txt {
 					color: #108eff;
 				}
+
 				a {
 					color: #fff;
 					background-color: #108eff;
 				}
 			}
 		}
+
 		.txt {
 			position: relative;
 			display: block;
@@ -227,13 +242,16 @@
 			padding-top: 97px;
 			font-size: 18px;
 			font-weight: 500;
+
 			&::before {
 				position: absolute;
-				top: 0;left: 50%;
+				top: 0;
+				left: 50%;
 				@include virtual-selector;
 				transform: translateX(-50%);
 			}
 		}
+
 		a {
 			width: 100%;
 			color: #108eff;
@@ -241,6 +259,7 @@
 			border: 2px solid #108eff;
 			margin-top: 46px;
 		}
+
 		.t-login {
 			.txt {
 				&::before {
@@ -249,6 +268,7 @@
 					background: url(../../images/common/ico_login_img01.png) no-repeat;
 				}
 			}
+
 			&.active {
 				.txt {
 					&::before {
@@ -257,6 +277,7 @@
 				}
 			}
 		}
+
 		.s-login {
 			.txt {
 				&::before {
@@ -265,6 +286,7 @@
 					background: url(../../images/common/ico_login_img02.png) no-repeat;
 				}
 			}
+
 			&.active {
 				.txt {
 					&::before {
@@ -277,7 +299,7 @@
 
 }
 
-//공시자항 
+//공지사항 
 .content-wrap {
 	padding: 50px 0 80px;
 
@@ -339,23 +361,31 @@
 			width: calc(100% - 230px);
 			box-sizing: border-box;
 		}
+
 		.que-class-area {
 			padding: 20px 20px 0 20px;
 		}
+
 		.unit-top {
 			@include font(16px, 600);
 			padding: 20px 20px 0 20px;
 		}
+
 		.unit-title {
 			@include layout-justify-center;
 			@include font(20px, 500);
 			padding: 20px 20px 0 20px;
 			cursor: pointer;
-			&:nth-child(1) { padding: 20px; }
+
+			&:nth-child(1) {
+				padding: 20px;
+			}
+
 			em {
 				@include font(20px, 500);
 				color: #a1a1a1;
 			}
+
 			.acc-arrow {
 				display: inline-block;
 				width: 25px;
@@ -366,11 +396,17 @@
 			}
 
 			&.active {
-				em { color: $color-main-blue; }
-				.acc-arrow { background-image: url(../../images/common/ico_acc_arrow_up_type02.png); }
+				em {
+					color: $color-main-blue;
+				}
+
+				.acc-arrow {
+					background-image: url(../../images/common/ico_acc_arrow_up_type02.png);
+				}
 			}
 		}
 	}
+
 	.dim {
 		z-index: 4;
 	}
@@ -405,6 +441,7 @@
 	}
 
 	&.exam-edit-pop {
+
 		// z-index: 1;
 		.test-wrap {
 			@include layout-center-center;
@@ -424,11 +461,13 @@
 	height: auto;
 	box-sizing: border-box;
 	position: inherit;
+
 	.pop-tit {
 		p {
 			margin-bottom: 30px;
 			@include font(24px, 700);
 		}
+
 		span {
 			@include font(16px, 500);
 			margin: 20px 0 35px;
@@ -439,6 +478,7 @@
 			padding-top: 50px;
 		}
 	}
+
 	// .end-day-wrap {
 	// 	@include layout-center-center;
 	// 	gap: 20px;
@@ -626,16 +666,20 @@
 		// padding: 25px 0;
 		padding: 30px 0;
 		flex-direction: column;
+
 		.box-tit {
 			@include font(20px, 600);
 		}
+
 		.box-txt {
 			display: block;
 			margin-top: 14px;
 		}
-		& > .txt {
+
+		&>.txt {
 			margin-bottom: 30px;
 		}
+
 		.txt {
 			line-height: 24px;
 			display: inline-block;
@@ -652,7 +696,9 @@
 			}
 		}
 
-		.mobile-btn-share { display: none; }
+		.mobile-btn-share {
+			display: none;
+		}
 
 		.btn-share {
 			position: relative;
@@ -662,16 +708,19 @@
 			border-radius: 8px;
 			background-color: $color-main-blue;
 			gap: 10px;
+
 			span {
 				font-weight: 500;
 				color: #fff;
 			}
+
 			.ic-share {
 				display: inline-block;
 				background: url(../../images/common/ico_share3.png) no-repeat center;
 				width: 15px;
 				height: 16px;
 			}
+
 			&.active {
 				.open-select-list {
 					display: block;
@@ -690,7 +739,7 @@
 			border: 1px solid #868686;
 			background: #fff;
 			z-index: 1;
-			
+
 			display: none;
 			overflow: hidden;
 
@@ -736,14 +785,17 @@
 			height: 16px;
 			margin: 3px 10px 0 0;
 		}
+
 		.end-day-wrap {
 			@include layout-center-center;
 			gap: 20px;
 			margin: 20px 0 30px;
+
 			.txt {
 				position: relative;
 				@include font(18px, 500);
 				padding-left: 30px;
+
 				&::before {
 					@include virtual-selector;
 					position: absolute;
@@ -756,7 +808,8 @@
 				}
 			}
 		}
-		& + .open-wrap {
+
+		&+.open-wrap {
 			margin-top: 20px;
 		}
 	}
@@ -778,6 +831,7 @@
 				border-radius: 10px;
 				box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.09);
 				background-color: #fff;
+
 				.list {
 
 					li {
@@ -872,9 +926,18 @@
 					max-width: 480px;
 					object-fit: contain;
 				}
-				.que-view .que-view-top .que-title {padding-left: 0;}
-				.que-view .que-view-detail.row-type .que-view-top .que-cnt-box {margin-left: 0;}
-				.que-view .que-view-cnt {padding-left: 0;}
+
+				.que-view .que-view-top .que-title {
+					padding-left: 0;
+				}
+
+				.que-view .que-view-detail.row-type .que-view-top .que-cnt-box {
+					margin-left: 0;
+				}
+
+				.que-view .que-view-cnt {
+					padding-left: 0;
+				}
 			}
 
 			height: 100%;
@@ -919,12 +982,17 @@
 		.exam-cnt {
 			height: 610px;
 		}
+
 		.archive-swiper {
-			.swiper-button-next, .swiper-button-prev {
+
+			.swiper-button-next,
+			.swiper-button-prev {
 				width: 174px;
 				height: 49px;
 			}
-			.swiper-button-next, .swiper-rtl .swiper-button-prev {
+
+			.swiper-button-next,
+			.swiper-rtl .swiper-button-prev {
 				color: #fff;
 				border: 0;
 				background-color: #ff569a;
@@ -983,6 +1051,7 @@
 				&.type02 {
 					background: #eff8ff;
 					border-color: #9dd1ff;
+
 					.btn-wrap {
 						button {
 							width: 69px;
@@ -991,21 +1060,26 @@
 							border-radius: 5px;
 							background-color: #fff;
 						}
+
 						i {
 							position: relative;
 							top: 1px;
-							width: 16px;height: 16px;
+							width: 16px;
+							height: 16px;
 							margin-right: 5px;
 						}
+
 						.add {
-							
-							
+
+
 							background: url(../../images/common/ico_add_type03.png) no-repeat;
 						}
+
 						.rotate {
 							background: url(../../images/common/ico_rotate_off.png) no-repeat;
 							background-size: contain;
 						}
+
 						.change {
 							width: 14px;
 							height: 14px;
@@ -1032,14 +1106,17 @@
 					display: flex;
 					flex-direction: column;
 					gap: 20px;
+
 					&.default-box {
 						height: calc(100% - 41px);
 						align-items: center;
 						justify-content: center;
+
 						img {
 							margin: -1px 6px 0 9px;
 						}
 					}
+
 					.que-box {
 						width: 100%;
 						height: 290px;
@@ -1094,6 +1171,7 @@
 
 								i {
 									margin-right: 7px;
+
 									&.rotate {
 										background: url(../../images/common/ico_rotate_off.png) no-repeat center;
 										width: 16px;
@@ -1114,6 +1192,7 @@
 							.btn-icon-type03 {
 								border: 1px solid $color-main-blue;
 								color: $color-main-blue;
+
 								i {
 									&.rotate {
 										background: url(../../images/common/ico_rotate_on.png) no-repeat center;
@@ -1160,13 +1239,120 @@
 			}
 		}
 
-		.que-view .que-view-detail {max-width: 100%;}
+		.que-view .que-view-detail {
+			max-width: 100%;
+		}
+
 		.que-view .que-view-top .que-title,
-		.que-view .que-view-cnt {padding-left: 0;padding-right: 20px;}
-		.que-view .que-view-detail.row-type .que-view-top .que-cnt-box {margin-left: 0;}
+		.que-view .que-view-cnt {
+			padding-left: 0;
+			padding-right: 20px;
+		}
+
+		.que-view .que-view-detail.row-type .que-view-top .que-cnt-box {
+			margin-left: 0;
+		}
 	}
 }
 
+
+//고객센터 페이지
+
+.cs-list-wrap {
+	margin-top: 30px;
+
+	.btn-wrap {
+		display: flex;
+	}
+
+	.table-wrap {
+		&.type01 {
+			td {
+				text-align: inherit;
+			}
+		}
+	}
+
+	.table-list {
+		margin-top: 60px;
+
+		table {
+
+			th,
+			td {
+				&:last-child {
+					border-right: 0;
+				}
+			}
+		}
+	}
+
+	.btn-wrap {
+		.btn-defalut {
+			width: 194px;
+			height: 55px;
+			margin: 0;
+		}
+	}
+}
+
+.table-form {
+	margin: 60px 0;
+	font-size: 16px;
+
+	tr {
+		border-top: 20px solid transparent;
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+
+	th {
+		vertical-align: top;
+		padding: 20px 0;
+		@include font(18px, 500);
+		color: #333;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		outline-color: #108eff;
+		border: 1px solid #d7d7d7;
+		border-radius: 13px;
+		padding: 20px;
+	}
+
+	::placeholder {
+		font-size: 16px;
+		color: #a1a1a1;
+	}
+
+	.input-tit {
+		height: 60px;
+	}
+
+	.input-txt {
+		resize: none;
+	}
+
+	.btn-wrap {
+		margin-top: 30px;
+	}
+}
+
+.table-list {
+	tr {
+
+		th,
+		td {
+			&:first-child {
+				display: table-cell;
+			}
+		}
+	}
+}
 
 
 
@@ -1232,23 +1418,29 @@
 			.unit-top {
 				display: none;
 			}
+
 			.unit-title {
 				padding: 20px 0 0 0;
+
 				em {
 					font-size: 15px;
 				}
+
 				.acc-arrow {
 					width: 20px;
 					height: 20px;
 				}
 			}
+
 			.que-class-area {
 				padding: 20px 0 0 0;
 			}
+
 			.right-cnt {
 				width: 100%;
 				padding-left: 0;
 				box-sizing: border-box;
+
 				.scroll-inner {
 					height: calc(100% - 80px);
 					overflow: hidden;
@@ -1321,10 +1513,11 @@
 			.pop-content {
 				padding-bottom: 20px;
 			}
+
 			.test-wrap {
 				overflow: auto;
 				height: 560px;
-				
+
 			}
 		}
 	}
@@ -1342,9 +1535,11 @@
 					}
 				}
 			}
+
 			.btn-wrap.type01 {
 				margin: 20px 0;
 			}
+
 			.que-list-wrap {
 				flex-direction: column;
 
@@ -1355,22 +1550,27 @@
 					border: 0;
 					box-shadow: none;
 					border-radius: 0;
+
 					&.type01,
 					&.type02 {
 						background: transparent;
 					}
+
 					&.type01 {
 						margin-bottom: 20px;
 					}
+
 					&.type02 {
 						// margin-top: 20px;
 						height: 198px;
 						padding: 0;
 					}
+
 					.top-txt {
 						margin-bottom: 10px;
 						font-size: 16px;
 					}
+
 					.que-box-wrap {
 						.que-box {
 
@@ -1412,8 +1612,9 @@
 							.swiper-rtl .swiper-button-prev:after {
 								display: none;
 							}
-							
+
 						}
+
 						&.default-box {
 							height: 176px;
 							font-size: 15px;
@@ -1424,12 +1625,47 @@
 				}
 			}
 		}
+
 		.que-view {
 			height: calc(100% - 22px);
 		}
-		
+
 	}
-	
+
+	//고객센터 페이지
+	.cs-list-wrap {
+		.paging-wrap {
+			display: none;
+		}
+
+		.btn-wrap {
+			.btn-more {
+				margin-top: 20px;
+			}
+
+			.btn-defalut {
+				width: 100%;
+				height: 40px;
+			}
+		}
+
+		.table-list {
+			margin-top: 0;
+		}
+	}
+
+	.table-form {
+
+		tr {
+			border-top: 10px solid transparent;
+		}
+
+		.btn-wrap {
+			margin-top: 10px;
+		}
+	}
+
+
 }
 
 
@@ -1446,6 +1682,7 @@
 		display: block !important;
 	}
 
+	//사용자 로그인
 	.front-login {
 		.container {
 			.inner {
@@ -1523,27 +1760,33 @@
 				height: 20px;
 				background-size: contain;
 			}
+
 			.unit-list {
 				gap: 10px;
+
 				li {
 					width: 50%;
 					min-width: 155px;
 					height: 191px;
 					padding: 12px;
+
 					&.active {
 						padding: 11px;
 					}
+
 					.txt {
 						margin-top: 30px;
 						padding-top: 68px;
 						font-size: 14px;
 					}
+
 					a {
 						height: 30px;
 						margin-top: 19px;
 						font-size: 14px;
 					}
 				}
+
 				.t-login {
 					.txt {
 						&::before {
@@ -1553,6 +1796,7 @@
 						}
 					}
 				}
+
 				.s-login {
 					.txt {
 						&::before {
@@ -1567,8 +1811,6 @@
 
 		}
 	}
-
-
 
 	//공유하기 팝업
 	.pop-wrap {
@@ -1629,7 +1871,7 @@
 		// 				min-width: 80px;
 		// 				padding: 0 40px 0 14px;
 		// 			}
-	
+
 		// 			.select-list {
 		// 				a {
 		// 					padding: 12px 14px;
@@ -1765,7 +2007,8 @@
 					background: url(../../images/common/ico_url_c.png) no-repeat center;
 				}
 
-				.qr-img, .url-btn {
+				.qr-img,
+				.url-btn {
 					display: none;
 				}
 
@@ -1788,13 +2031,16 @@
 		.open-wrap {
 			// height: 175px;
 			padding: 20px 9px;
+
 			.box-tit {
 				font-size: 16px;
 			}
+
 			.box-txt {
 				margin-top: 10px;
 				font-size: 14px;
 			}
+
 			.txt {
 				line-height: 20px;
 				font-size: 14px;
@@ -1807,8 +2053,10 @@
 					margin: 0 auto 7px;
 				}
 			}
-			
-			.btn-share { display: none; }
+
+			.btn-share {
+				display: none;
+			}
 
 			.mobile-btn-share {
 				position: relative;
@@ -1818,10 +2066,12 @@
 				border-radius: 8px;
 				background-color: $color-main-blue;
 				gap: 10px;
+
 				span {
 					font-weight: 500;
 					color: #fff;
 				}
+
 				.ic-share {
 					display: inline-block;
 					background: url(../../images/common/ico_share3.png) no-repeat center;
@@ -1829,15 +2079,18 @@
 					height: 16px;
 				}
 			}
+
 			.end-day-wrap {
 				position: relative;
 				padding-bottom: 60px;
 				margin-bottom: 20px;
 				gap: 10px;
+
 				.txt {
 					font-size: 16px;
 					margin-right: 0;
 					margin-bottom: 0;
+
 					&::before {
 						content: '';
 						display: inline-block;
@@ -1845,22 +2098,25 @@
 						height: 20px;
 						margin-right: 10px;
 						background: url(../../images/common/ico_calendar02.png) no-repeat center;
-	
+
 					}
 				}
+
 				.date-wrap {
 					position: absolute;
 					bottom: 0;
 					padding: 0;
+
 					.select-wrap {
 						.select-btn {
 							min-width: 70px;
 							padding: 0 32px 0 10px;
+
 							&::after {
 								right: 9px;
 							}
 						}
-		
+
 						.select-list {
 							a {
 								padding: 12px 14px;
@@ -1888,7 +2144,7 @@
 
 	//형성평가 편집하기 팝업
 	.exam-edit-wrap {
-		
+
 
 		.view-cnt-wrap {
 			.class-tit {
@@ -1970,21 +2226,92 @@
 				height: auto;
 			}
 		}
+
 		.exam-view-wrap {
 			padding: 10px;
 		}
 	}
+
 	//학습자료 미리보기 팝업
 	.exam-prev02 {
 		.exam-wrap {
 			.exam-cnt {
 				height: 500px;
 			}
+
 			.archive-swiper {
-				.swiper-button-next, .swiper-button-prev {
+
+				.swiper-button-next,
+				.swiper-button-prev {
 					width: 48%;
 					height: 40px;
 				}
+			}
+		}
+	}
+
+	//고객센터 페이지
+	.table-form {
+		margin: 20px 0;
+		font-size: 14px;
+
+		input,
+		textarea {
+			border-radius: 9px;
+			padding: 10px;
+		}
+
+		th {
+			display: none;
+		}
+
+		.input-tit {
+			height: 40px;
+		}
+
+		.input-txt {
+			height: 210px;
+		}
+	}
+
+	.table-list {
+		font-size: 14px;
+
+		table {
+			td {
+				text-align: left;
+			}
+
+			thead {
+				display: none;
+			}
+
+			tr {
+				td {
+
+					border-right: 0;
+					padding: 0 10px;
+
+					&:first-child {
+						display: none;
+					}
+
+					&:nth-child(2) {
+						@include text-overflow;
+					}
+
+					&:nth-child(3) {
+						width: 100%;
+					}
+				}
+			}
+
+			.tit {
+				padding: 0;
+				font-size: 14px;
+				text-align: initial;
+				max-width: 190px;
+				padding: 10px;
 			}
 		}
 	}

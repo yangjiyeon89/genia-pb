@@ -3686,11 +3686,13 @@
 .exam-prev02 .exam-wrap .exam-cnt {
   height: 610px;
 }
-.exam-prev02 .exam-wrap .archive-swiper .swiper-button-next, .exam-prev02 .exam-wrap .archive-swiper .swiper-button-prev {
+.exam-prev02 .exam-wrap .archive-swiper .swiper-button-next,
+.exam-prev02 .exam-wrap .archive-swiper .swiper-button-prev {
   width: 174px;
   height: 49px;
 }
-.exam-prev02 .exam-wrap .archive-swiper .swiper-button-next, .exam-prev02 .exam-wrap .archive-swiper .swiper-rtl .swiper-button-prev {
+.exam-prev02 .exam-wrap .archive-swiper .swiper-button-next,
+.exam-prev02 .exam-wrap .archive-swiper .swiper-rtl .swiper-button-prev {
   color: #fff;
   border: 0;
   background-color: #ff569a;
@@ -3893,6 +3895,72 @@
   margin-left: 0;
 }
 
+.cs-list-wrap {
+  margin-top: 30px;
+}
+.cs-list-wrap .btn-wrap {
+  display: flex;
+}
+.cs-list-wrap .table-wrap.type01 td {
+  text-align: inherit;
+}
+.cs-list-wrap .table-list {
+  margin-top: 60px;
+}
+.cs-list-wrap .table-list table th:last-child,
+.cs-list-wrap .table-list table td:last-child {
+  border-right: 0;
+}
+.cs-list-wrap .btn-wrap .btn-defalut {
+  width: 194px;
+  height: 55px;
+  margin: 0;
+}
+
+.table-form {
+  margin: 60px 0;
+  font-size: 16px;
+}
+.table-form tr {
+  border-top: 20px solid transparent;
+}
+.table-form tr:first-child {
+  border-top: 0;
+}
+.table-form th {
+  vertical-align: top;
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.table-form input,
+.table-form textarea {
+  width: 100%;
+  outline-color: #108eff;
+  border: 1px solid #d7d7d7;
+  border-radius: 13px;
+  padding: 20px;
+}
+.table-form ::placeholder {
+  font-size: 16px;
+  color: #a1a1a1;
+}
+.table-form .input-tit {
+  height: 60px;
+}
+.table-form .input-txt {
+  resize: none;
+}
+.table-form .btn-wrap {
+  margin-top: 30px;
+}
+
+.table-list tr th:first-child,
+.table-list tr td:first-child {
+  display: table-cell;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1390px) {
   .front-login .container .inner {
     width: 100%;
@@ -4056,6 +4124,25 @@
   }
   .exam-edit-wrap .que-view {
     height: calc(100% - 22px);
+  }
+  .cs-list-wrap .paging-wrap {
+    display: none;
+  }
+  .cs-list-wrap .btn-wrap .btn-more {
+    margin-top: 20px;
+  }
+  .cs-list-wrap .btn-wrap .btn-defalut {
+    width: 100%;
+    height: 40px;
+  }
+  .cs-list-wrap .table-list {
+    margin-top: 0;
+  }
+  .table-form tr {
+    border-top: 10px solid transparent;
+  }
+  .table-form .btn-wrap {
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -4266,7 +4353,8 @@
     height: 22px;
     background: url(../../images/common/ico_url_c.png) no-repeat center;
   }
-  .share-view-wrap .share-wrap li .qr-img, .share-view-wrap .share-wrap li .url-btn {
+  .share-view-wrap .share-wrap li .qr-img,
+.share-view-wrap .share-wrap li .url-btn {
     display: none;
   }
   .share-view-wrap .share-wrap li .btn-down-img {
@@ -4421,8 +4509,60 @@
   .exam-prev02 .exam-wrap .exam-cnt {
     height: 500px;
   }
-  .exam-prev02 .exam-wrap .archive-swiper .swiper-button-next, .exam-prev02 .exam-wrap .archive-swiper .swiper-button-prev {
+  .exam-prev02 .exam-wrap .archive-swiper .swiper-button-next,
+.exam-prev02 .exam-wrap .archive-swiper .swiper-button-prev {
     width: 48%;
     height: 40px;
+  }
+  .table-form {
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  .table-form input,
+.table-form textarea {
+    border-radius: 9px;
+    padding: 10px;
+  }
+  .table-form th {
+    display: none;
+  }
+  .table-form .input-tit {
+    height: 40px;
+  }
+  .table-form .input-txt {
+    height: 210px;
+  }
+  .table-list {
+    font-size: 14px;
+  }
+  .table-list table td {
+    text-align: left;
+  }
+  .table-list table thead {
+    display: none;
+  }
+  .table-list table tr td {
+    border-right: 0;
+    padding: 0 10px;
+  }
+  .table-list table tr td:first-child {
+    display: none;
+  }
+  .table-list table tr td:nth-child(2) {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-binding: url(ellipsis.xml#ellipsis);
+  }
+  .table-list table tr td:nth-child(3) {
+    width: 100%;
+  }
+  .table-list table .tit {
+    padding: 0;
+    font-size: 14px;
+    text-align: initial;
+    max-width: 190px;
+    padding: 10px;
   }
 }
