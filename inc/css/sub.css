@@ -252,6 +252,21 @@
   color: #9e9e9e;
   margin-left: 15px;
 }
+.report-view-wrap .report-cnt .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0 30px;
+}
+.report-view-wrap .report-cnt .title-wrap .title {
+  margin-bottom: 0;
+}
+.report-view-wrap .report-cnt .title-wrap button {
+  padding: 5px 14px 7px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #333;
+}
 .report-view-wrap .report-cnt .title {
   display: block;
   position: relative;
@@ -1672,6 +1687,12 @@
   }
   .report-view-wrap .report-cnt .box.none-border .table-wrap .scroll-inner {
     padding: 0;
+  }
+  .report-view-wrap .report-cnt .title-wrap {
+    margin: 30px 0 20px;
+  }
+  .report-view-wrap .report-cnt .title-wrap button {
+    font-size: 13px;
   }
 }
 /**

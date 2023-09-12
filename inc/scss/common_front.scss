@@ -1673,6 +1673,24 @@ input[type="checkbox"] {
 		.pop-content {
 			padding: 20px;
 		}
+		.table-type {
+			.row {
+				& + .row {
+					margin-top: 20px;
+				}
+				.tit {
+					margin-bottom: 10px;
+				}
+				input, textarea {
+					width: 100%;
+					border: 1px solid #c2c2c2;
+					border-radius: 9px;
+				}
+				textarea {
+					resize: none;
+				}
+			}
+		}
 	}
 	
 	&.alert-type {
@@ -1701,7 +1719,7 @@ input[type="checkbox"] {
 				height: auto;
 				padding: 14px 20px;
 				color: #fff;
-				background-color: #108eff;
+				background-color: #333;
 				.tit {
 					@include font(17px, 500);
 				}
@@ -1716,18 +1734,7 @@ input[type="checkbox"] {
 				padding: 40px 0;
 			}
 			.pop-footer {
-				padding: 0;
-				gap: 0;
-				border-top: 1px solid #ddd;
-				button {
-					color: #108eff;
-					@include font(15px, 500);
-					background-color: #fff;
-					border-radius: 0;
-					& + button {
-						border-left: 1px solid #ddd;
-					}
-				}
+				padding: 0 75px 30px;
 			}
 		}
 	}
@@ -2675,6 +2682,7 @@ input[type="checkbox"] {
 		&.que-type {
 			.pop-inner {
 				width: 100%;
+				min-width: 320px;
 			}
 		}
 		&.que-type02 {
