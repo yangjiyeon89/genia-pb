@@ -97,6 +97,9 @@
   height: 5px;
   border: 0;
 }
+.scroll-inner.h100 {
+  height: 100% !important;
+}
 
 .dim {
   display: none;

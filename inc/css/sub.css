@@ -546,6 +546,10 @@
   font-size: 16px;
   font-weight: 600;
 }
+.report-view-wrap .report-cnt > .btn-wrap {
+  margin-top: 20px;
+  width: 100%;
+}
 .report-view-wrap .btn-print {
   display: inline-block;
   width: 30px;
@@ -2346,7 +2350,8 @@
   margin: 20px 0 0 20px;
 }
 .que-view .que-view-detail .input_question_text_box {
-  height: 30px;
+  height: 25px;
+  padding: 0;
 }
 .que-view .que-view-top {
   line-height: 1.5;

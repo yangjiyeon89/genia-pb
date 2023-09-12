@@ -91,6 +91,9 @@
 			border: 0;
 		}
 	}
+	&.h100 {
+		height: 100% !important; 
+	}
 }
 .dim {
   display: none;
