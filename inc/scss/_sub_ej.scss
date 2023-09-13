@@ -136,6 +136,7 @@
 			transform: translateY(-50%);
 		}
 	}
+
 	.my-sns {
 		margin-top: 20px;
 		color: #a4a4a4;
@@ -325,10 +326,12 @@
 			text-align: center;
 			border-right: 1px solid #ddd;
 			color: #333;
+			padding: 0 15px;
 		}
 
 		th {
 			@include font(16px, 600);
+			white-space: nowrap;
 		}
 
 		td {
@@ -1257,18 +1260,53 @@
 
 
 //고객센터 페이지
+.cs-cnt {
+	.cs-list, .cs-view {
+		.title {
+			font-size: 26px;
+		}
+	}
+	.cs-view {
+		.table-wrap {
+			th {
+				&:last-child {
+					border-right: 0;
+				}
+			}
+		}
+		.title-wrap {
+			@include layout-justify-center;
+			.title {
+				font-size: 16px;
+				width: 60%;
+			}
+		}
+	}
+}
 
 .cs-list-wrap {
 	margin-top: 30px;
 
 	.btn-wrap {
 		display: flex;
+		margin-top: 30px;
+		.btn-defalut {
+			width: 194px;
+			height: 55px;
+			margin: 0;
+		}
+	}
+
+	.paging-wrap {
+		margin-top: 30px;
 	}
 
 	.table-wrap {
 		&.type01 {
+
+			th,
 			td {
-				text-align: inherit;
+				text-align: left;
 			}
 		}
 	}
@@ -1277,82 +1315,79 @@
 		margin-top: 60px;
 
 		table {
+			tr {
 
-			th,
-			td {
-				&:last-child {
-					border-right: 0;
+				th,
+				td {
+					&:first-child {
+						display: table-cell;
+					}
+
+					&:last-child {
+						border-right: 0;
+					}
+				}
+
+				td {
+					&.num {
+						white-space: nowrap;
+					}
 				}
 			}
 		}
 	}
 
-	.btn-wrap {
-		.btn-defalut {
-			width: 194px;
-			height: 55px;
-			margin: 0;
-		}
-	}
-}
-
-.table-form {
-	margin: 60px 0;
-	font-size: 16px;
-
-	tr {
-		border-top: 20px solid transparent;
-
-		&:first-child {
-			border-top: 0;
-		}
-	}
-
-	th {
-		vertical-align: top;
-		padding: 20px 0;
-		@include font(18px, 500);
+	.info-txt {
+		@include font(22px, 500);
 		color: #333;
+		margin: 60px auto;
+		text-align: center;
 	}
 
-	input,
-	textarea {
-		width: 100%;
-		outline-color: #108eff;
-		border: 1px solid #d7d7d7;
-		border-radius: 13px;
-		padding: 20px;
-	}
-
-	::placeholder {
+	.table-form {
+		margin: 50px 0;
 		font-size: 16px;
-		color: #a1a1a1;
-	}
 
-	.input-tit {
-		height: 60px;
-	}
+		tr {
+			border-top: 20px solid transparent;
 
-	.input-txt {
-		resize: none;
-	}
-
-	.btn-wrap {
-		margin-top: 30px;
-	}
-}
-
-.table-list {
-	tr {
-
-		th,
-		td {
 			&:first-child {
-				display: table-cell;
+				border-top: 0;
 			}
 		}
+
+		th {
+			vertical-align: top;
+			padding: 20px 0;
+			@include font(18px, 500);
+			color: #333;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			outline-color: #108eff;
+			border: 1px solid #d7d7d7;
+			border-radius: 9px;
+			padding: 20px;
+		}
+
+		::placeholder {
+			font-size: 16px;
+			color: #a1a1a1;
+		}
+
+		.input-tit {
+			height: 40px;
+		}
+
+		.input-txt {
+			resize: none;
+		}
 	}
 }
+
+
 
 
 
@@ -1383,6 +1418,8 @@
 }
 
 @media screen and (max-width: 1023px) {
+
+	//사용자 로그인
 	.front-login {
 		.container {
 			.inner {
@@ -1453,7 +1490,7 @@
 		}
 	}
 
-
+	//공유하기 팝업
 	.share-view-wrap {
 		.mobile-btn-share {
 			display: none
@@ -1506,7 +1543,6 @@
 			}
 		}
 	}
-
 
 	.pop-wrap {
 		&.exam-edit-pop {
@@ -1633,7 +1669,17 @@
 	}
 
 	//고객센터 페이지
+	.cs-cnt {    
+    .cs-list, .cs-view {
+			padding: 20px 0;
+      .title {
+        font-size: 18px;
+      }
+    }
+
+  }
 	.cs-list-wrap {
+		margin-top: 20px;
 		.paging-wrap {
 			display: none;
 		}
@@ -1650,20 +1696,46 @@
 		}
 
 		.table-list {
+			overflow: overlay;
+			height: 450px;
+			padding-right: 10px;
 			margin-top: 0;
+
+			table {
+				th, td {
+					padding: 0 15px;
+					font-size: 14px;
+				}
+			}
 		}
+
+		.info-txt {
+			font-size: 16px;
+			margin: 40px auto;
+		}
+
+		.table-form {
+			margin: 20px 0;
+
+			th {
+				display: none;
+			}
+
+			tr {
+				border-top: 10px solid transparent;
+			}
+
+			::placeholder {
+				font-size: 14px;
+			}
+
+			.btn-wrap {
+				margin-top: 10px;
+			}
+		}
+
 	}
 
-	.table-form {
-
-		tr {
-			border-top: 10px solid transparent;
-		}
-
-		.btn-wrap {
-			margin-top: 10px;
-		}
-	}
 
 
 }
@@ -2144,8 +2216,6 @@
 
 	//형성평가 편집하기 팝업
 	.exam-edit-wrap {
-
-
 		.view-cnt-wrap {
 			.class-tit {
 				span {
@@ -2251,67 +2321,75 @@
 	}
 
 	//고객센터 페이지
-	.table-form {
-		margin: 20px 0;
-		font-size: 14px;
-
-		input,
-		textarea {
-			border-radius: 9px;
-			padding: 10px;
-		}
-
-		th {
-			display: none;
-		}
-
-		.input-tit {
-			height: 40px;
-		}
-
-		.input-txt {
-			height: 210px;
+	.cs-cnt {
+		.cs-view {
+			.title-wrap {
+				.date {
+					display: none;
+				}
+			}
+			
 		}
 	}
 
-	.table-list {
-		font-size: 14px;
+	.cs-list-wrap {
+		margin-top: 20px;
 
-		table {
-			td {
-				text-align: left;
+		.info-txt {
+			font-size: 14px;
+			margin: 25px 0;
+		}
+
+		.table-form {
+			font-size: 14px;
+
+			input,
+			textarea {
+				padding: 10px;
 			}
 
-			thead {
-				display: none;
+			.input-txt {
+				height: 210px;
 			}
+		}
 
-			tr {
-				td {
+		.table-list {
+			font-size: 14px;
 
-					border-right: 0;
-					padding: 0 10px;
+			table {
+				thead {
+					display: none;
+				}
 
-					&:first-child {
-						display: none;
-					}
+				tr {
+					td {
+						text-align: left;
+						border-right: 0;
+						padding: 0 10px;
 
-					&:nth-child(2) {
-						@include text-overflow;
-					}
+						&:first-child {
+							display: none;
+						}
 
-					&:nth-child(3) {
-						width: 100%;
+						&.status {
+							@include text-overflow;
+						}
+
+						&.tit {
+							width: 100%;
+							overflow: inherit;
+							white-space: inherit;
+						}
 					}
 				}
-			}
 
-			.tit {
-				padding: 0;
-				font-size: 14px;
-				text-align: initial;
-				max-width: 190px;
-				padding: 10px;
+				.tit {
+					padding: 0;
+					font-size: 14px;
+					text-align: initial;
+					max-width: 190px;
+					padding: 10px;
+				}
 			}
 		}
 	}
