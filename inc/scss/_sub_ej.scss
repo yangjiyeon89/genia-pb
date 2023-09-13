@@ -1122,7 +1122,8 @@
 
 					.que-box {
 						width: 100%;
-						height: 290px;
+						// height: 290px;
+						height: auto;
 						border: 1px solid #b2b2b2;
 						background: #fff;
 
@@ -1145,12 +1146,16 @@
 
 						.bottom-area {
 							width: 100%;
-							height: calc(100% - 45px);
-							padding: 0 20px;
+							// height: calc(100% - 45px);
+							height: auto;
+							padding: 40px 20px;
 							position: relative;
 
 							.temp-box {
-								@include layout-center-center;
+								// @include layout-center-center;
+								display: flex;
+								justify-content: center;
+								align-items: flex-start;
 								width: 100%;
 								height: 100%;
 
@@ -1169,8 +1174,8 @@
 								border: 1px solid #bbb;
 								background: #fff;
 								position: absolute;
-								bottom: 20px;
-								right: 20px;
+								bottom: 10px;
+								right: 10px;
 
 								i {
 									margin-right: 7px;
@@ -1182,6 +1187,11 @@
 										background-size: contain;
 									}
 								}
+							}
+							.que-view {
+								overflow:inherit;
+								height: auto;
+								padding: 0;
 							}
 						}
 
