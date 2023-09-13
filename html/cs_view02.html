@@ -119,44 +119,19 @@
 						<div class="tab-wrap">
 							<div class="cs-list-top">
 								<ul class="tab-menu-type04">
-									<li class="ui-tab-btn active">
+									<li class="ui-tab-btn">
 										<a href="javascript:;">1:1 문의</a>
 									</li>
-									<li class="ui-tab-btn">
+									<li class="ui-tab-btn active">
 										<a href="javascript:;">오류 문항 신고</a>
 									</li>
 								</ul>
 							</div>
+							<div class="contents">
+								[ cs_view01.html ] 탭으로 구현
+							</div>
 							<div class="contents on">
-
-								<div class="table-form">
-									<table>
-										<colgroup>
-											<col width="11%">
-											<col width="*">
-										</colgroup>
-										<thead></thead>
-										<tbody>
-											<tr>
-												<th>문의 제목</th>
-												<td>
-													<input type="text" class="input-tit" placeholder="제목을 입력해주세요.">
-												</td>
-											</tr>
-											<tr>
-												<th>문의 내용</th>
-												<td>
-													<textarea name="" id="" cols="30" rows="10" class="input-txt scroll-inner"
-														placeholder="문의 내용을 입력해주세요."></textarea>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-									<div class="btn-wrap">
-										<button type="button" class="btn-defalut pop-btn" data-pop="inq-pop">문의하기</button>
-										<button type="button" class="btn-defalut-line">취소</button>
-									</div>
-								</div>
+								<p class="info-txt">오류 문항 신고는 리포트 페이지의 채점 결과 영역에서<br class="mo-cnt">신청 하실 수 있습니다.</p>
 
 								<div class="table-wrap type01">
 									<table>
@@ -168,7 +143,8 @@
 											<tr>
 												<th colspan="2">
 													<div class="title-wrap">
-														<p class="title">문항 오류는 어디에서 신고하나요? </p>
+														<p class="title">수학6-1(박민구) 5-1 진단평가</p>
+														<p class="num">5번</p>
 														<p class="date">YYYY.MM.DD</p>
 													</div>
 												</th>
@@ -177,20 +153,12 @@
 										<tbody>
 											<tr>
 												<td colspan="2" class="cnt">
-													<div class="scroll-inner">
-														오류가 있는 문항을 발견하였습니다.<br>
-														그런데, 이걸 어디에 신고해야하는지 몰라서 문의드립니다.
-													</div>
+													<div>답을 정확히 썼는데, 틀린 걸로 채점되었습니다.</div>
 												</td>
 											</tr>
 											<tr>
 												<td colspan="2" class="cnt">
-													<div class="scroll-inner">
-														문항 오류 신고는 리포트 메뉴에서 하실 수 있습니다.<br>
-														학생별 리포트에 들어가셔서 채점 결과 영역에 보시면 ‘문항 오류 신고’ 버튼이 있습니다.<br>
-														그 버튼을 클릭 하신 후에 간단하게 내용을 작성하시면 됩니다.
-													</div>
-												</td>
+													<div>오류로 확인되어 정정 처리하였습니다.</td>
 											</tr>
 										</tbody>
 									</table>
@@ -200,7 +168,6 @@
 									<button type="button" class="btn-defalut">목록</button>
 								</div>
 							</div>
-							<div class="contents">[ cs_view02.html ] 탭으로 구현</div>
 						</div>
 					</div>
 
@@ -296,18 +263,6 @@
 			</div>
 		</div>
 		<div class="dim"></div>
-
-		<div class="pop-wrap alert-type" data-pop="inq-pop">
-			<div class="pop-inner">
-				<div class="pop-content">
-					<button type="button" class="pop-close"></button>
-					<span class="txt">문의하신 내용이<br>정상적으로 접수되었습니다.</span>
-				</div>
-				<div class="pop-footer">
-					<button type="button" class="btn-defalut">확인</button>
-				</div>
-			</div>
-		</div>
 	</div>
 </body>
 

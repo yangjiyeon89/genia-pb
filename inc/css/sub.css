@@ -3158,10 +3158,12 @@
   text-align: center;
   border-right: 1px solid #ddd;
   color: #333;
+  padding: 0 15px;
 }
 .table-list table th {
   font-size: 16px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .table-list table td {
   color: #666;
@@ -3890,70 +3892,96 @@
   margin-left: 0;
 }
 
+.cs-cnt .cs-list .title, .cs-cnt .cs-view .title {
+  font-size: 26px;
+}
+.cs-cnt .cs-view .table-wrap th:last-child {
+  border-right: 0;
+}
+.cs-cnt .cs-view .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cs-cnt .cs-view .title-wrap .title {
+  font-size: 16px;
+  width: 60%;
+}
+
 .cs-list-wrap {
   margin-top: 30px;
 }
 .cs-list-wrap .btn-wrap {
   display: flex;
-}
-.cs-list-wrap .table-wrap.type01 td {
-  text-align: inherit;
-}
-.cs-list-wrap .table-list {
-  margin-top: 60px;
-}
-.cs-list-wrap .table-list table th:last-child,
-.cs-list-wrap .table-list table td:last-child {
-  border-right: 0;
+  margin-top: 30px;
 }
 .cs-list-wrap .btn-wrap .btn-defalut {
   width: 194px;
   height: 55px;
   margin: 0;
 }
-
-.table-form {
-  margin: 60px 0;
+.cs-list-wrap .paging-wrap {
+  margin-top: 30px;
+}
+.cs-list-wrap .table-wrap.type01 th,
+.cs-list-wrap .table-wrap.type01 td {
+  text-align: left;
+}
+.cs-list-wrap .table-list {
+  margin-top: 60px;
+}
+.cs-list-wrap .table-list table tr th:first-child,
+.cs-list-wrap .table-list table tr td:first-child {
+  display: table-cell;
+}
+.cs-list-wrap .table-list table tr th:last-child,
+.cs-list-wrap .table-list table tr td:last-child {
+  border-right: 0;
+}
+.cs-list-wrap .table-list table tr td.num {
+  white-space: nowrap;
+}
+.cs-list-wrap .info-txt {
+  font-size: 22px;
+  font-weight: 500;
+  color: #333;
+  margin: 60px auto;
+  text-align: center;
+}
+.cs-list-wrap .table-form {
+  margin: 50px 0;
   font-size: 16px;
 }
-.table-form tr {
+.cs-list-wrap .table-form tr {
   border-top: 20px solid transparent;
 }
-.table-form tr:first-child {
+.cs-list-wrap .table-form tr:first-child {
   border-top: 0;
 }
-.table-form th {
+.cs-list-wrap .table-form th {
   vertical-align: top;
   padding: 20px 0;
   font-size: 18px;
   font-weight: 500;
   color: #333;
 }
-.table-form input,
-.table-form textarea {
+.cs-list-wrap .table-form input,
+.cs-list-wrap .table-form textarea {
   width: 100%;
   outline-color: #108eff;
   border: 1px solid #d7d7d7;
-  border-radius: 13px;
+  border-radius: 9px;
   padding: 20px;
 }
-.table-form ::placeholder {
+.cs-list-wrap .table-form ::placeholder {
   font-size: 16px;
   color: #a1a1a1;
 }
-.table-form .input-tit {
-  height: 60px;
+.cs-list-wrap .table-form .input-tit {
+  height: 40px;
 }
-.table-form .input-txt {
+.cs-list-wrap .table-form .input-txt {
   resize: none;
-}
-.table-form .btn-wrap {
-  margin-top: 30px;
-}
-
-.table-list tr th:first-child,
-.table-list tr td:first-child {
-  display: table-cell;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1390px) {
@@ -4120,6 +4148,15 @@
   .exam-edit-wrap .que-view {
     height: calc(100% - 22px);
   }
+  .cs-cnt .cs-list, .cs-cnt .cs-view {
+    padding: 20px 0;
+  }
+  .cs-cnt .cs-list .title, .cs-cnt .cs-view .title {
+    font-size: 18px;
+  }
+  .cs-list-wrap {
+    margin-top: 20px;
+  }
   .cs-list-wrap .paging-wrap {
     display: none;
   }
@@ -4131,12 +4168,32 @@
     height: 40px;
   }
   .cs-list-wrap .table-list {
+    overflow: overlay;
+    height: 450px;
+    padding-right: 10px;
     margin-top: 0;
   }
-  .table-form tr {
+  .cs-list-wrap .table-list table th, .cs-list-wrap .table-list table td {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+  .cs-list-wrap .info-txt {
+    font-size: 16px;
+    margin: 40px auto;
+  }
+  .cs-list-wrap .table-form {
+    margin: 20px 0;
+  }
+  .cs-list-wrap .table-form th {
+    display: none;
+  }
+  .cs-list-wrap .table-form tr {
     border-top: 10px solid transparent;
   }
-  .table-form .btn-wrap {
+  .cs-list-wrap .table-form ::placeholder {
+    font-size: 14px;
+  }
+  .cs-list-wrap .table-form .btn-wrap {
     margin-top: 10px;
   }
 }
@@ -4509,51 +4566,53 @@
     width: 48%;
     height: 40px;
   }
-  .table-form {
-    margin: 20px 0;
+  .cs-cnt .cs-view .title-wrap .date {
+    display: none;
+  }
+  .cs-list-wrap {
+    margin-top: 20px;
+  }
+  .cs-list-wrap .info-txt {
+    font-size: 14px;
+    margin: 25px 0;
+  }
+  .cs-list-wrap .table-form {
     font-size: 14px;
   }
-  .table-form input,
-.table-form textarea {
-    border-radius: 9px;
+  .cs-list-wrap .table-form input,
+.cs-list-wrap .table-form textarea {
     padding: 10px;
   }
-  .table-form th {
-    display: none;
-  }
-  .table-form .input-tit {
-    height: 40px;
-  }
-  .table-form .input-txt {
+  .cs-list-wrap .table-form .input-txt {
     height: 210px;
   }
-  .table-list {
+  .cs-list-wrap .table-list {
     font-size: 14px;
   }
-  .table-list table td {
-    text-align: left;
-  }
-  .table-list table thead {
+  .cs-list-wrap .table-list table thead {
     display: none;
   }
-  .table-list table tr td {
+  .cs-list-wrap .table-list table tr td {
+    text-align: left;
     border-right: 0;
     padding: 0 10px;
   }
-  .table-list table tr td:first-child {
+  .cs-list-wrap .table-list table tr td:first-child {
     display: none;
   }
-  .table-list table tr td:nth-child(2) {
+  .cs-list-wrap .table-list table tr td.status {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     -moz-binding: url(ellipsis.xml#ellipsis);
   }
-  .table-list table tr td:nth-child(3) {
+  .cs-list-wrap .table-list table tr td.tit {
     width: 100%;
+    overflow: inherit;
+    white-space: inherit;
   }
-  .table-list table .tit {
+  .cs-list-wrap .table-list table .tit {
     padding: 0;
     font-size: 14px;
     text-align: initial;

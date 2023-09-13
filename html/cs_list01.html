@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<div id="wrap" class="common-cnt h100 notice-cnt">
+	<div id="wrap" class="common-cnt h100 cs-cnt">
 		<div class="header">
 			<div class="web-cnt">
 				<div class="top-nav">
@@ -153,7 +153,7 @@
 										</tbody>
 									</table>
 									<div class="btn-wrap">
-										<button type="button" class="btn-defalut">문의하기</button>
+										<button type="button" class="btn-defalut pop-btn" data-pop="inq-pop">문의하기</button>
 										<button type="button" class="btn-defalut-line">취소</button>
 									</div>
 								</div>
@@ -161,8 +161,8 @@
 								<div class="table-list">
 									<table>
 										<colgroup>
-											<col width="11%">
-											<col width="15%">
+											<col width="8%">
+											<col width="16%">
 											<col width="*">
 											<col width="15%">
 										</colgroup>
@@ -177,50 +177,50 @@
 										<tbody>
 											<tr>
 												<td>8</td>
-												<td>답변 중</td>
-												<td><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>
+												<td class="status">답변 중</td>
+												<td class="tit"><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>
 												<td>YYYY.MM.DD</td>
 											</tr>
 											<tr>
 												<td>7</td>
-												<td>답변 중</td>
-												<td><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
+												<td class="status">답변 중</td>
+												<td class="tit"><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
 												<td>YYYY.MM.DD</td>
 											</tr>
 											<tr>
 												<td>6</td>
-												<td>답변 중</td>
-												<td><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
+												<td class="status">답변 중</td>
+												<td class="tit"><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
 												<td>YYYY.MM.DD</td>
 											</tr>
 											<tr>
 												<td>5</td>
-												<td>답변 완료</td>
-												<td><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
+												<td class="status">답변 완료</td>
+												<td class="tit"><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
 												<td>YYYY.MM.DD</td>
 											</tr>
 											<tr>
 												<td>4</td>
-												<td>답변 완료</td>
-												<td><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
+												<td class="status">답변 완료</td>
+												<td class="tit"><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
 												<td>YYYY.MM.DD</td>
 											</tr>
 											<tr>
 												<td>3</td>
-												<td>답변 완료</td>
-												<td><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
+												<td class="status">답변 완료</td>
+												<td class="tit"><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
 												<td>YYYY.MM.DD</td>
 											</tr>
 											<tr>
 												<td>2</td>
-												<td>답변 완료</td>
-												<td><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
+												<td class="status">답변 완료</td>
+												<td class="tit"><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
 												<td>YYYY.MM.DD</td>
 											</tr>
 											<tr>
 												<td>1</td>
-												<td>답변 완료</td>
-												<td><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
+												<td class="status">답변 완료</td>
+												<td class="tit"><a href="javascript:;">문항 오류는 어디에서 신고하나요?</a></td>	
 												<td>YYYY.MM.DD</td>
 											</tr>
 										</tbody>
@@ -338,6 +338,18 @@
 			</div>
 		</div>
 		<div class="dim"></div>
+
+    <div class="pop-wrap alert-type" data-pop="inq-pop">
+        <div class="pop-inner">
+          <div class="pop-content">
+            <button type="button" class="pop-close"></button>
+            <span class="txt">문의하신 내용이<br>정상적으로 접수되었습니다.</span>
+          </div>
+          <div class="pop-footer">
+            <button type="button" class="btn-defalut">확인</button>
+          </div>
+        </div>
+      </div>
 	</div>
 </body>
 
