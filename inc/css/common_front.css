@@ -1875,6 +1875,12 @@ input[type=checkbox]:checked + label::before {
 .pop-wrap.que-type .table-type .row textarea {
   resize: none;
 }
+.pop-wrap.que-type .table-type .row .select-wrap {
+  width: 100%;
+}
+.pop-wrap.que-type .table-type .row .select-wrap button {
+  width: 100%;
+}
 .pop-wrap.alert-type .pop-inner {
   width: 384px;
   border-radius: 19px;

@@ -1963,6 +1963,7 @@
 }
 .exam-wrap .exam-que-wrap .box:nth-child(1) {
   width: 63%;
+  padding-top: 30px;
 }
 .exam-wrap .time-wrap {
   display: flex;
@@ -2322,7 +2323,7 @@
   align-items: flex-start;
   width: 100%;
   height: calc(100% - 100px);
-  padding: 60px 0 10px;
+  padding: 0;
   box-sizing: border-box;
 }
 .que-view .que-view-detail {
@@ -2338,10 +2339,11 @@
   flex-direction: row;
 }
 .que-view .que-view-detail.row-type > div {
-  width: 50%;
+  width: 100%;
 }
 .que-view .que-view-detail.row-type .que-view-cnt {
   padding-left: 0;
+  display: none;
 }
 .que-view .que-view-detail.row-type .que-view-top {
   margin-bottom: 0;
@@ -4606,6 +4608,9 @@
     text-align: left;
     border-right: 0;
     padding: 0 10px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 13px;
   }
   .cs-list-wrap .table-list table tr td:first-child {
     display: none;

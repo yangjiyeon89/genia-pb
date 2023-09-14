@@ -2142,6 +2142,12 @@ input[type="checkbox"] {
 				textarea {
 					resize: none;
 				}
+				.select-wrap {
+					width: 100%;
+					button {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}

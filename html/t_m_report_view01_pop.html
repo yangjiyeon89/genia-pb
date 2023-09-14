@@ -381,7 +381,16 @@
             </div>
             <div class="row">
               <p class="tit">문항 번호</p>
-              <input type="text">
+              <!-- s: 20230914 수정 -->
+              <div class="select-wrap">
+                <button type="button" class="select-btn">
+                  <span>문항번호를 선택하세요</span>
+                </button>
+                <ul class="select-list" style="display: none;">
+                  <li class="select-item"><a href="javascript:;">문항번호를 선택하세요</a></li>
+                </ul>
+              </div>
+              <!-- e: 20230914 수정 -->
             </div>
             <div class="row">
               <p class="tit">오류 내용</p>

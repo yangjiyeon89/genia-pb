@@ -2376,6 +2376,9 @@
 						text-align: left;
 						border-right: 0;
 						padding: 0 10px;
+						white-space: nowrap;
+						text-align: center;
+						font-size: 13px;
 
 						&:first-child {
 							display: none;

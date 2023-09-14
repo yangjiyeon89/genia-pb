@@ -237,6 +237,7 @@
       width: 37%;
       &:nth-child(1) {
         width: 63%;
+        padding-top: 30px;
       }
     }
   }
@@ -617,7 +618,8 @@
   width: 100%;
   height: calc( 100% - 100px );
   // padding: 10px 0;
-  padding: 60px 0 10px;
+  // padding: 60px 0 10px;
+  padding: 0;
   box-sizing: border-box;
   .que-view-detail {
     display: flex;
@@ -631,10 +633,12 @@
       gap: 30px;
       flex-direction: row;
       > div {
-        width: 50%;
+        // width: 50%;
+        width: 100%;
       }
       .que-view-cnt {
         padding-left: 0;
+        display: none;
       }
       .que-view-top {
         margin-bottom: 0;
